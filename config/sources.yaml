@@ -214,6 +214,7 @@ alerts:
     University of Central Florida: [Orange, University of Central Florida, ucf]
     University of Central Florida Procurement Services: [Orange, University of Central Florida, ucfprocurement]
     Hillsborough County: [Hillsborough, Hillsborough County BOCC, hillsboroughcounty]
+    Pasco County: [Pasco, Pasco County BOCC, pascocountyfl]
 
 skipped:
   - county: Lee
