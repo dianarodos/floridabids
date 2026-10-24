@@ -221,3 +221,15 @@ def test_bidsandtenders():
     bids = bidsandtenders.to_bids(rows, src)
     assert len(bids) == 1 and bids[0].number == "27-04B"
     assert bids[0].bid_url == "https://tamarac.bidsandtenders.net/Module/Tenders/en/Tender/Detail/651557dc"
+
+
+def test_infor_fsm():
+    from scraper.readers import infor_fsm
+    src = {"id": "f", "county": "Broward", "agency": "City of Fort Lauderdale", "url": "https://x/list"}
+    payload = {"dataViewSet": {"pagingInfo": {"hasNext": False}, "data": [{"fields": {
+        "Name": {"value": "Install, Repair, Replace Chain Link Fence"},
+        "_op_EventVersionString_spc_translation_cp_": {"value": "684-0"},
+        "DerivedCloseDate": {"value": "2099113019000000"}, "OpenDate": {"value": "2026102318000000"},
+        "SourcingEventType": {"value": "IFB"}, "RequireBidBond": {"value": False}}}]}}
+    b = infor_fsm.to_bids(payload, src)[0]
+    assert b.number == "684-0" and b.due == "2099-11-30T14:00-05:00" and b.posted == "2026-10-23"

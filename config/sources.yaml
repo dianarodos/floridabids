@@ -116,6 +116,12 @@ direct:
     agency: City of Sebastian
     url: https://www.cityofsebastian.org/bids.aspx
 
+  - id: fort-lauderdale-infor
+    reader: infor_fsm
+    county: Broward
+    agency: City of Fort Lauderdale
+    url: https://sms-fortlauderdale-prd.inforcloudsuite.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=COFL
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
