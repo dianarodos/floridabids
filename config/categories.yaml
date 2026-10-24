@@ -19,7 +19,7 @@ categories:
     weight: 1.3
     keywords: [engineering, engineering services, architectural, architect, design services, design-build, design build,
                CEI, construction engineering, inspection services, surveying, survey services, geotechnical,
-               CCNA, continuing services, professional engineering, environmental engineering, traffic study, master plan, map revision, watershed, flood study]
+               CCNA, continuing professional services, professional engineering, environmental engineering, traffic study, master plan, map revision, watershed, flood study]
   - name: Construction
     weight: 1.0
     keywords: [phase, facility, watermain, pavilion, warehouse, apron, development of, electrical contracting, ac replacement, elevation of, ballfield, construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
@@ -47,7 +47,7 @@ categories:
                case management, social services, counseling services, substance use, operator services, legislative advocacy, land development code, answering service, armored, code enforcement, insurance agent, dialysis, medical services]
   - name: Facilities & Maintenance
     weight: 1.0
-    keywords: [indoor air quality, iguana, pest, scaffolding, rejuvenat, inspections, testing, ac repair, maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
+    keywords: [fire alarm contractor, fire alarm, fire sprinkler, indoor air quality, iguana, pest, scaffolding, rejuvenat, inspections, testing, ac repair, maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
                pest control, tree trimming, tree removal, elevator, HVAC, air conditioning, chiller, plumbing,
                electrical services, generator, fire alarm, fire sprinkler, backflow, pressure washing, painting,
                trash, dumpster, garbage, solid waste, waste hauling, hauling, disposal, recycling, towing, uniform rental, security guard,
