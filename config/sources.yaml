@@ -96,6 +96,14 @@ direct:
     agency_guid: 4cfc11bd-9874-4bb1-9fd6-a0fec5e16311
     rule: active
 
+  - id: sunrise-demandstar
+    reader: demandstar
+    county: Broward
+    agency: City of Sunrise
+    url: https://www.demandstar.com/app/agencies/florida/city-of-sunrise/procurement-opportunities/628b628c-effc-47f5-8aed-f3057aa89b5c/
+    agency_guid: 628b628c-effc-47f5-8aed-f3057aa89b5c
+    rule: active
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
