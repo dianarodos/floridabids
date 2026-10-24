@@ -110,6 +110,12 @@ direct:
     agency: City of Tamarac
     url: https://tamarac.bidsandtenders.net/
 
+  - id: sebastian-civicplus
+    reader: civicplus
+    county: Indian River
+    agency: City of Sebastian
+    url: https://www.cityofsebastian.org/bids.aspx
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns

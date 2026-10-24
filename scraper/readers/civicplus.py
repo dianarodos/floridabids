@@ -22,6 +22,31 @@ def _value(text: str, label: str) -> str:
     return m.group(1).strip() if m else ""
 
 
+def _status_fields(box) -> dict:
+    """The usual layout: <div class="bidStatus"><div>labels…</div><div>values…</div></div>."""
+    sb = box.select_one(".bidStatus")
+    if not sb:
+        return {}
+    cols = sb.find_all("div", recursive=False)
+    if len(cols) < 2:
+        return {}
+    raw = [s.get_text(strip=True) for s in cols[0].find_all("span")]
+    if not raw or not all(r.endswith(":") for r in raw):
+        return {}   # label and value side by side; the text fallback handles it
+    labels = [r.rstrip(":").lower() for r in raw]
+    values = [s.get_text(" ", strip=True) for s in cols[1].find_all("span")]
+    return dict(zip(labels, values))
+
+
+DATES = re.compile(r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2},? (\d{4})\b|\b\d{1,2}/\d{1,2}/(\d{4})\b")
+
+
+def _stale(text: str) -> bool:
+    from datetime import date
+    years = [int(a or b) for a, b in DATES.findall(text)]
+    return bool(years) and max(years) < date.today().year - 1
+
+
 def parse(html: str, src: dict) -> list:
     soup = BeautifulSoup(html, "lxml")
     out, seen = [], set()
@@ -39,10 +64,13 @@ def parse(html: str, src: dict) -> list:
         if box is None:
             continue
         text = " ".join(box.get_text(" ").split())
-        status = _value(text, "Status") or "Open"
-        if status.split()[0].lower() not in OPEN:
+        fields = _status_fields(box)
+        status = fields.get("status") or _value(text, "Status") or "Open"
+        if status.split()[0].lower().strip(":") not in OPEN:
             continue
-        closes = _value(text, "Closes")
+        closes = fields.get("closes", _value(text, "Closes"))
+        if not re.search(r"\d", closes) and _stale(text):
+            continue   # "Open / Upon Contract" listings whose only dates are over a year old
         number = ""
         label = box.find(string=re.compile(r"^\s*Bid No\.?\s*:?\s*$", re.I))
         if label is not None:

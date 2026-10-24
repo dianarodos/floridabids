@@ -193,7 +193,9 @@ def test_email_parser_opengov():
 
 CIVIC = """<div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=163">2026-16 Lift Station No. 1 Replacement</a></span><br>
 <span><strong>Bid No.</strong> 2026-16</span><br><span>Replace lift station one.</span> <a href="bids.aspx?bidID=163">Read on</a></div>
-<div class="bidStatus"><div><span>Status:</span> <span>Open</span></div><div><span>Closes:</span> <span>Upon Contract</span></div></div></div>
+<div class="bidStatus"><div><span>Status:</span><br><span>Closes:</span></div><div><span>Open</span><br><span>Upon Contract</span></div></div></div>
+<div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=1">Shoreline (Re-Bid)</a></span><br><span><strong>Bid No.</strong> ITB 20-07</span><br><span>Release Date: Tuesday, July 14, 2020</span></div>
+<div class="bidStatus"><div><span>Status:</span><br><span>Closes:</span></div><div><span>Open</span><br><span>Upon Contract</span></div></div></div>
 <div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=170">Old Bid</a></span></div>
 <div class="bidStatus"><div><span>Status:</span> <span>Closed</span></div><div><span>Closes:</span> <span>1/2/2025</span></div></div></div>
 <div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=171">2026-20 Paving</a></span></div>
