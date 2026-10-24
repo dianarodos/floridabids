@@ -19,14 +19,15 @@ categories:
     weight: 1.3
     keywords: [engineering services, architectural, architect, design services, design-build, design build,
                CEI, construction engineering, inspection services, surveying, survey services, geotechnical,
-               CCNA, continuing services, professional engineering, environmental engineering, traffic study, master plan]
+               CCNA, continuing services, professional engineering, environmental engineering, traffic study, master plan, map revision, watershed, flood study]
   - name: Construction
     weight: 1.0
     keywords: [construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
                bridge, culvert, renovation, remodel, rehabilitation, demolition, CMAR, construction manager,
                widening, intersection improvement, lift station, force main, water main, sewer, pipe, dredg,
                seawall, bulkhead, building addition, fencing, fence, concrete, asphalt, site work, wastewater treatment,
-               well construction, irrigation well, trail, pile, rehab, dock, boardwalk, playground, parking lot, crushing, buildout, build-out, waterproof, reclamation facility, reclaimed water, water reclamation,
+               well construction, irrigation well, trail, pile, rehab, dock, boardwalk, playground, parking lot, crushing, traffic signal, roadway improvement, reconstruction, ramp, bank improvement, pedestrian improvement,
+               awning, reef, buildout, build-out, waterproof, reclamation facility, reclaimed water, water reclamation,
                service lines, park expansion, expansion, new building, warehouse building, public-private partnership, P3, shelter installation, beach nourishment, HVAC replacement, generator installation]
   - name: IT & Technology
     weight: 1.4
@@ -49,7 +50,8 @@ categories:
                pest control, tree trimming, tree removal, elevator, HVAC, air conditioning, chiller, plumbing,
                electrical services, generator, fire alarm, fire sprinkler, backflow, pressure washing, painting,
                trash, dumpster, garbage, solid waste, waste hauling, hauling, disposal, recycling, towing, uniform rental, security guard,
-               street sweeping, pump, inspection, on-call, as-needed services, annual contract services, remediation, abatement,
+               street sweeping, pump, inspection, on-call, as-needed services, annual contract services, remediation, sign removal, moving services, mosquito control,
+               remanufacture, transmission, water testing, laboratory, lab testing, leachate, abatement,
                storm drain, cleaning services]
   - name: Goods & Supplies
     weight: 0.9
@@ -57,7 +59,10 @@ categories:
                diesel, gasoline, parts, materials, chemicals, uniforms, apparel, furniture, sod, aggregate, rock,
                medical supplies, pharmaceuticals, bus shelters, signs, sign material, carbon dioxide, tires,
                ammunition, airboat, mower, boat, buses, fleet, polymer, chemical, bags, body bags, pipe and fittings,
-               switches, grating, bunker gear, x-ray equipment]
+               switches, grating, bunker gear, x-ray equipment, goods & services, emergency goods]
+  - name: Notices & Events
+    weight: 3.0
+    keywords: [notice only, trade show, procurement conference, vendor workshop, vendor outreach, doing business with, reverse trade]
   - name: Property & Real Estate
     weight: 1.5
     keywords: [sale of property, sale of county, surplus property, lease and option, lease of, acres, parcel,
