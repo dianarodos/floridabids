@@ -1,0 +1,16 @@
+Procurement Portal
+St. Lucie School District
+
+Status	Ref. #	Project	Close Date	Days Left	Action
+Open
+GZK8 - Phase 3	Green Zone K-8 Phase 3	Oct 29th 2026, 2:00 PM EDT	
+5
+Open
+ITB 27-02	ALLISON Transmissions, Installations, Overhauls, Exchanges and Repairs	Nov 4th 2026, 3:00 PM EST	
+11
+Open
+ITB 27-03	Digital PBX Systems	Nov 12th 2026, 3:00 PM EST	
+19
+Open
+RFQ 27-04	Continuing Contracts for Environmental Health & Safety Engineering Services	Nov 16th 2026, 3:00 PM EST	
+23
