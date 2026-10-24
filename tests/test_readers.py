@@ -189,3 +189,22 @@ def test_email_parser_opengov():
     assert (b.county, b.agency, b.origin) == ("Volusia", "Volusia County", "email")
     assert b.bid_url.endswith("/volusia/projects/229911") and b.due.startswith("2099-11-20T15:00")
     assert b.category == "Facilities & Maintenance"
+
+
+CIVIC = """<div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=163">2026-16 Lift Station No. 1 Replacement</a></span><br>
+<span><strong>Bid No.</strong> 2026-16</span><br><span>Replace lift station one.</span> <a href="bids.aspx?bidID=163">Read on</a></div>
+<div class="bidStatus"><div><span>Status:</span> <span>Open</span></div><div><span>Closes:</span> <span>Upon Contract</span></div></div></div>
+<div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=170">Old Bid</a></span></div>
+<div class="bidStatus"><div><span>Status:</span> <span>Closed</span></div><div><span>Closes:</span> <span>1/2/2025</span></div></div></div>
+<div class="listItemsRow bid"><div class="bidTitle"><span><a href="bids.aspx?bidID=171">2026-20 Paving</a></span></div>
+<div class="bidStatus"><div><span>Status:</span> <span>Open</span></div><div><span>Closes:</span> <span>12/1/2099 2:00 PM</span></div></div></div>"""
+
+
+def test_civicplus():
+    from scraper.readers import civicplus
+    src = {"id": "x", "county": "Broward", "agency": "City", "url": "https://example.gov/bids.aspx"}
+    bids = civicplus.parse(CIVIC, src)
+    assert [b.number for b in bids] == ["2026-16", "2026-20"]
+    assert bids[0].bid_url == "https://example.gov/bids.aspx?bidID=163"
+    assert bids[0].due == "" and "Upon Contract" in bids[0].notes
+    assert bids[1].due.startswith("2099-12-01T14:00")

@@ -82,6 +82,12 @@ direct:
     agency_guid: cb5da01b-483b-42ca-aeb0-f27e5cf6e6d6
     rule: active
 
+  - id: wilton-manors-civicplus
+    reader: civicplus
+    county: Broward
+    agency: City of Wilton Manors
+    url: https://www.wiltonmanors.gov/bids.aspx
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns

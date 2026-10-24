@@ -22,7 +22,7 @@ categories:
                CCNA, continuing professional services, professional engineering, environmental engineering, traffic study, master plan, map revision, watershed, flood study]
   - name: Construction
     weight: 1.0
-    keywords: [curbing, delineator, canopy, transit shelter, bus stop, ada improvements, signalization, intersection, mast arm, hydrant, phase, facility, watermain, pavilion, warehouse, apron, development of, electrical contracting, ac replacement, elevation of, ballfield, construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
+    keywords: [electrical upgrade, tidal valve, check valve, curbing, delineator, canopy, transit shelter, bus stop, ada improvements, signalization, intersection, mast arm, hydrant, phase, facility, watermain, pavilion, warehouse, apron, development of, electrical contracting, ac replacement, elevation of, ballfield, construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
                bridge, culvert, renovation, remodel, rehabilitation, demolition, CMAR, construction manager,
                widening, intersection improvement, lift station, force main, water main, sewer, pipe, dredg,
                seawall, bulkhead, building addition, fencing, fence, concrete, asphalt, site work, wastewater treatment,
@@ -67,7 +67,7 @@ categories:
     keywords: [notice only, not a solicitation, industry day, how to do business, trade show, procurement conference, vendor workshop, vendor outreach, doing business with, reverse trade]
   - name: Concessions & Programs
     weight: 1.2
-    keywords: [spay, neuter, animal program, marina management, merchandising, cell tower, permit application, market operator, rental operations, programming, concession, fireworks, catering, agriculture program,
+    keywords: [parking management, spay, neuter, animal program, marina management, merchandising, cell tower, permit application, market operator, rental operations, programming, concession, fireworks, catering, agriculture program,
                pickleball, tennis, aquatic management, operation and management, golf cart, youth soccer]
   - name: Property & Real Estate
     weight: 1.5
