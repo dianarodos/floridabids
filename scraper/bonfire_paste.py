@@ -33,7 +33,7 @@ def parse(text: str, cfg: dict) -> tuple[list[dict], set[str]]:
     by_slug = cfg.get("bonfire", {}) or {}
     by_name = {k.lower(): v for k, v in (cfg.get("bonfire_names", {}) or {}).items()}
     rows, unknown = [], set()
-    pages = re.split(r"(?m)^\s*Procurement Portal\s*$", text)
+    pages = re.split(r"(?m)^[ \t]*(?:[A-Za-z]+ )*(?:Procurement|Purchasing|Bid|Bidding|Vendor|Solicitations?) Portal[ \t]*$", text)
     for page in pages[1:]:
         lines = [l.rstrip("\r") for l in page.splitlines()]
         agency = next((l.strip() for l in lines if l.strip()), "")

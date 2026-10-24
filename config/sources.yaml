@@ -211,6 +211,7 @@ alerts:
     Solid Waste Authority of Palm Beach County: [Palm Beach, Solid Waste Authority of Palm Beach County, swa]
     South Florida Regional Transportation Authority: [Broward, South Florida Regional Transportation Authority (Tri-Rail), sfrta]
     St. Lucie School District: [St. Lucie, St. Lucie Public Schools, stlucieschools]
+    University of Central Florida: [Orange, University of Central Florida, ucf]
 
 skipped:
   - county: Lee
