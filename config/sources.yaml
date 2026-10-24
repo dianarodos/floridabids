@@ -213,6 +213,7 @@ alerts:
     St. Lucie School District: [St. Lucie, St. Lucie Public Schools, stlucieschools]
     University of Central Florida: [Orange, University of Central Florida, ucf]
     University of Central Florida Procurement Services: [Orange, University of Central Florida, ucfprocurement]
+    Hillsborough County: [Hillsborough, Hillsborough County BOCC, hillsboroughcounty]
 
 skipped:
   - county: Lee

@@ -1,0 +1,46 @@
+Procurement Portal
+Hillsborough County
+
+Status	Ref. #	Project	Close Date	Days Left	Action
+Open
+RPS-26-00400	Misc. Professional Stormwater Services	Oct 26th 2026, 2:00 PM EDT	
+Open
+IFB-26-00348	Countywide Fire Hydrant Replacement - WORCS-5	Oct 27th 2026, 2:00 PM EDT	
+Open
+IFB-26-00363	Roadway Resurfacing Repair and Preservation Districts 3&4 WORCS	Oct 27th 2026, 2:00 PM EDT	
+Open
+ITB-27-00002	Rental of Traffic Control Devices	Oct 28th 2026, 2:00 PM EDT	
+Open
+RPS-26-00366	Miscellaneous Construction Engineering and Inspection (CEI) Services - CDBG-DR	Oct 29th 2026, 2:00 PM EDT	
+Open
+ITB-26-00424	Tire Disposal Services	Oct 30th 2026, 2:00 PM EDT	
+Open
+ITB-27-00003	Laboratory Courier Services	Oct 30th 2026, 2:00 PM EDT	
+Open
+ITB-27-00008	Various Fleet Vehicles and Equipment	Oct 30th 2026, 2:00 PM EDT	
+Open
+ITQ-27-00013	Uniforms and Protective Clothing	Nov 2nd 2026, 2:00 PM EST	
+Open
+RPS-26-00367	Miscellaneous Subsurface Investigation & Testing	Nov 3rd 2026, 2:00 PM EST	
+Open
+ITB-27-00005	Lift Station Landscaping Maintenance Services (SBE Set-Aside)	Nov 6th 2026, 2:00 PM EST	
+Open
+RFI-27-00004	Computer Assisted Mass Appraisal (CAMA) System	Nov 6th 2026, 5:00 PM EST	
+Open
+IFB-26-00398	Intersection Improvements for East County Line Road at Grand Hampton Drive	Nov 10th 2026, 2:00 PM EST	
+Open
+IFB-26-00413	Columbus Drive Bridge #105504 Painting and Repair	Nov 10th 2026, 2:00 PM EST	
+Open
+IFB-26-00399	Miscellaneous Parking Lot Repaving Services Term Contract B	Nov 13th 2026, 2:00 PM EST	
+Open
+IFB-26-00404	Kirby Street Pump Station #08 Rehabilitation	Nov 13th 2026, 2:00 PM EST	
+Open
+ITB-27-00018	Community Feral Cat Spay and Neuter Program	Nov 16th 2026, 2:00 PM EST	
+Open
+IFB-26-00346	Low Pressure Sewer System Installations and Repairs (WORCS-2)	Nov 17th 2026, 2:00 PM EST	
+Open
+IFB-26-00401	R3M Miscellaneous Facilities Construction Term Contract 11	Nov 17th 2026, 2:00 PM EST	
+Open
+IFB-26-00406	Valrico Reclaimed Water Facility Diesel Generator Project	Nov 18th 2026, 2:00 PM EST	
+Open
+RPS-26-00423	Waters Avenue Force Main Replacement CEI Services	Dec 4th 2026, 2:00 PM EST	
