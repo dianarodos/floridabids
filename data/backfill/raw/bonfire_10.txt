@@ -1,0 +1,58 @@
+Procurement Portal
+BPRO Electronic Procurement System
+
+Status	Ref. #	Project	Department	Close Date	Days Left	Action
+Open
+BLD2131742P1	Artiﬁcial Intelligence-Enabled System for Employee Screening X-Ray Machines	FASD - Purchasing	Oct 26th 2026, 2:00 PM EDT	
+Open
+TES1021260700	Pexco FG300 Curbing and Delineators (SW 30th & Flamingo, Miramar)	CAB	Oct 26th 2026, 2:00 PM EDT	
+Open
+Draft TRN2131593P1	Pre-Solicitation Notice - Draft Computer Aided Dispatch/Automatic Vehicle Location System	FASD - Purchasing	Oct 26th 2026, 5:00 PM EDT	
+Open
+WWOD102226228	Gary Fox Building Outdoor Patio Canopy	Public Works - Water & Wastewater Operations	Oct 27th 2026, 2:00 PM EDT	
+Open
+OPN2132461B1	FEMA Pipe and Valve Maintenance & Installation Services	FASD - Purchasing	Oct 28th 2026, 2:00 PM EDT	
+Open
+PRA102126946	Fitness Equipment	Parks and Recreation	Oct 28th 2026, 2:00 PM EDT	
+Open
+GEN2131264P1	Master Banking Services	FASD - Purchasing	Oct 30th 2026, 2:00 PM EDT	
+Open
+PNC2131299P1	Environmental Planning and Consulting Services at FLL and HWO	FASD - Purchasing	Oct 30th 2026, 2:00 PM EDT	
+Open
+PNC2132220C1	Separated Shared Use Path - Phase 1	FASD - Purchasing	Oct 30th 2026, 2:00 PM EDT	
+Open
+TCH2132899F1	Request for Information (RFI) - Physical Security Integration	FASD - Purchasing	Oct 30th 2026, 2:00 PM EDT	
+Open
+TRN2133001B1	Transit Shelters and Amenities (FTA)	FASD - Purchasing	Oct 30th 2026, 2:00 PM EDT	
+Open
+TCH2133040F1	Request for Information (RFI) - Autodesk AutoCAD Software	FASD - Purchasing	Oct 30th 2026, 2:00 PM EDT	
+Open
+ARC151020260308	Catering for BARC Central	Human Services Department	Oct 30th 2026, 2:00 PM EDT	
+Open
+Public Notice	Public Notice: West Copans Rehabilitation and Redevelopment Project	FASD - Purchasing	Oct 30th 2026, 5:00 PM EDT	
+Open
+TRN2132943B1	Transit Bus Stop ADA Improvements (FTA)	FASD - Purchasing	Nov 2nd 2026, 2:00 PM EST	
+Open
+BLD2132313B1	Walk-Through Metal Detector Preventive Maintenance and Repair Services	FASD - Purchasing	Nov 3rd 2026, 2:00 PM EST	
+Open
+TCH2132898B1	Trend Micro TippingPoint Support	FASD - Purchasing	Nov 3rd 2026, 2:00 PM EST	
+Open
+TCH2133105F1	Volgistics - Volunteer Management Software Solutions	FASD - Purchasing	Nov 3rd 2026, 2:00 PM EST	
+Open
+PNC2131298P1	Consulting Services for Environmental Compliance at FLL and HWO	FASD - Purchasing	Nov 5th 2026, 2:00 PM EST	
+Open
+OPN2132660B1	Seating Upholstery Services for FLL	FASD - Purchasing	Nov 5th 2026, 2:00 PM EST	
+Open
+TCH2133145F1	Request for Information - Algo Communications – Airport Mass Notification System	FASD - Purchasing	Nov 16th 2026, 2:00 PM EST	
+Open
+TCH2133147F1	Request for Information - Genea Security Access Control System	FASD - Purchasing	Nov 16th 2026, 2:00 PM EST	
+Open
+TCH2133146F1	Request for Information - Verkada – CCTV System	FASD - Purchasing	Nov 16th 2026, 2:00 PM EST	
+Open
+TCH2133148F1	Request for Information - OpenEye – CCTV Recording and Analytics	FASD - Purchasing	Nov 16th 2026, 2:00 PM EST	
+Open
+BLD2131488P1	Risk Management and Claims Administration System	FASD - Purchasing	Nov 17th 2026, 2:00 PM EST	
+Open
+GEN2132533P1	External Audit Services	FASD - Purchasing	Nov 19th 2026, 2:00 PM EST	
+Open
+PNC2132739C1	Broward County Judicial Court West Tower Repairs	FASD - Purchasing	Nov 20th 2026, 2:00 PM EST	

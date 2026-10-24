@@ -16,6 +16,7 @@ otherwise the agency name is looked up in sources.yaml (alerts.bonfire_names).
 from __future__ import annotations
 
 import csv
+import unicodedata
 import re
 import sys
 from pathlib import Path
@@ -82,7 +83,7 @@ def main(paths):
     cfg = yaml.safe_load((ROOT / "config" / "sources.yaml").read_text())["alerts"]
     rows, unknown = [], set()
     for p in paths:
-        r, u = parse(Path(p).read_text(), cfg)
+        r, u = parse(unicodedata.normalize("NFKC", Path(p).read_text()), cfg)
         rows += r
         unknown |= u
     seen, unique = set(), []

@@ -22,7 +22,7 @@ categories:
                CCNA, continuing professional services, professional engineering, environmental engineering, traffic study, master plan, map revision, watershed, flood study]
   - name: Construction
     weight: 1.0
-    keywords: [signalization, intersection, mast arm, hydrant, phase, facility, watermain, pavilion, warehouse, apron, development of, electrical contracting, ac replacement, elevation of, ballfield, construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
+    keywords: [curbing, delineator, canopy, transit shelter, bus stop, ada improvements, signalization, intersection, mast arm, hydrant, phase, facility, watermain, pavilion, warehouse, apron, development of, electrical contracting, ac replacement, elevation of, ballfield, construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
                bridge, culvert, renovation, remodel, rehabilitation, demolition, CMAR, construction manager,
                widening, intersection improvement, lift station, force main, water main, sewer, pipe, dredg,
                seawall, bulkhead, building addition, fencing, fence, concrete, asphalt, site work, wastewater treatment,
@@ -32,7 +32,7 @@ categories:
                service lines, park expansion, expansion, new building, warehouse building, public-private partnership, P3, shelter installation, beach nourishment, HVAC replacement, generator installation]
   - name: IT & Technology
     weight: 1.4
-    keywords: [software, SaaS, hardware, computer, network, cybersecurity, cyber, IT services, information technology,
+    keywords: [security integration, mass notification, trend micro, tippingpoint, claims administration system, software, SaaS, hardware, computer, network, cybersecurity, cyber, IT services, information technology,
                data, database, cloud, ERP, CMMS, GIS, website, web site, telecommunications, telecom, internet,
                E-Rate, radio system, P25, CCTV, camera, access control, security system, AI, artificial intelligence,
                digital, technology, application, VOIP, phone system, asset management solution, security modernization, CPU, HMI, controllers, interface boards, revenue control system, parking access, system integration, integration services, licens, subscription, Autodesk, AutoCAD, servers, platform, cabling]
@@ -47,7 +47,7 @@ categories:
                case management, social services, counseling services, substance use, operator services, legislative advocacy, land development code, answering service, armored, code enforcement, insurance agent, dialysis, medical services]
   - name: Facilities & Maintenance
     weight: 1.0
-    keywords: [fire alarm contractor, fire alarm, fire sprinkler, indoor air quality, iguana, pest, scaffolding, rejuvenat, inspections, testing, ac repair, maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
+    keywords: [upholstery, fire alarm contractor, fire alarm, fire sprinkler, indoor air quality, iguana, pest, scaffolding, rejuvenat, inspections, testing, ac repair, maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
                pest control, tree trimming, tree removal, elevator, HVAC, air conditioning, chiller, plumbing,
                electrical services, generator, fire alarm, fire sprinkler, backflow, pressure washing, painting,
                trash, dumpster, garbage, solid waste, waste hauling, hauling, disposal, recycling, towing, uniform rental, security guard,
