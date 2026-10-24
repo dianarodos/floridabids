@@ -207,6 +207,7 @@ alerts:
   # Bonfire pastes without a link are matched by the agency name on the page: [county, agency, slug]
   bonfire_names:
     City of St. Pete Beach: [Pinellas, City of St. Pete Beach, stpetebeach]
+    Palm Coast: [Flagler, City of Palm Coast, palmcoast]
 
 skipped:
   - county: Lee
