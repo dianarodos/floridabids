@@ -104,6 +104,12 @@ direct:
     agency_guid: 628b628c-effc-47f5-8aed-f3057aa89b5c
     rule: active
 
+  - id: tamarac-bidsandtenders
+    reader: bidsandtenders
+    county: Broward
+    agency: City of Tamarac
+    url: https://tamarac.bidsandtenders.net/
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns

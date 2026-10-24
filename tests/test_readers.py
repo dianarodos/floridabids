@@ -208,3 +208,14 @@ def test_civicplus():
     assert bids[0].bid_url == "https://example.gov/bids.aspx?bidID=163"
     assert bids[0].due == "" and "Upon Contract" in bids[0].notes
     assert bids[1].due.startswith("2099-12-01T14:00")
+
+
+def test_bidsandtenders():
+    from scraper.readers import bidsandtenders
+    src = {"id": "t", "county": "Broward", "agency": "City of Tamarac", "url": "https://tamarac.bidsandtenders.net/"}
+    rows = [{"Id": "651557dc", "Title": "27-04B - EV CHARGING STATION INFRASTRUCTURE", "Scope": "Public",
+             "Status": "Open", "DateClosing": "/Date(4102444800000)/", "DateAvailableDisplay": "Fri Oct 23, 2026 1:00:00 PM"},
+            {"Id": "x", "Title": "Old", "Scope": "Public", "Status": "Closed", "DateClosing": "/Date(4102444800000)/"}]
+    bids = bidsandtenders.to_bids(rows, src)
+    assert len(bids) == 1 and bids[0].number == "27-04B"
+    assert bids[0].bid_url == "https://tamarac.bidsandtenders.net/Module/Tenders/en/Tender/Detail/651557dc"
