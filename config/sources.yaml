@@ -88,6 +88,14 @@ direct:
     agency: City of Wilton Manors
     url: https://www.wiltonmanors.gov/bids.aspx
 
+  - id: wellington-demandstar
+    reader: demandstar
+    county: Palm Beach
+    agency: Village of Wellington
+    url: https://www.demandstar.com/app/agencies/florida/village-of-wellington/procurement-opportunities/4cfc11bd-9874-4bb1-9fd6-a0fec5e16311/
+    agency_guid: 4cfc11bd-9874-4bb1-9fd6-a0fec5e16311
+    rule: active
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
