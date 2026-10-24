@@ -1,0 +1,63 @@
+# One category per bid. Highest keyword score wins; ties go to the earlier category.
+# Add words freely. Matching is case-insensitive and matches word starts
+# ("pav" matches paving, pavement).
+fallback: Other
+
+# If the agency supplies its own category, map it here first.
+agency_category_map:
+  Construction: Construction
+  Professional Services: Consulting & Professional Services
+  Architect: Engineering & Architecture
+  Engineering: Engineering & Architecture
+  Information Technology: IT & Technology
+  Technology: IT & Technology
+  Commodities: Goods & Supplies
+  Goods: Goods & Supplies
+
+categories:
+  - name: Engineering & Architecture
+    weight: 1.3
+    keywords: [engineering services, architectural, architect, design services, design-build, design build,
+               CEI, construction engineering, inspection services, surveying, survey services, geotechnical,
+               CCNA, continuing services, professional engineering, environmental engineering, traffic study, master plan]
+  - name: Construction
+    weight: 1.0
+    keywords: [construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
+               bridge, culvert, renovation, remodel, rehabilitation, demolition, CMAR, construction manager,
+               widening, intersection improvement, lift station, force main, water main, sewer, pipe, dredg,
+               seawall, bulkhead, building addition, fencing, fence, concrete, asphalt, site work, wastewater treatment,
+               well construction, irrigation well, trail, pile, rehab, dock, boardwalk, playground, parking lot, crushing, shelter installation, beach nourishment, HVAC replacement, generator installation]
+  - name: IT & Technology
+    weight: 1.4
+    keywords: [software, SaaS, hardware, computer, network, cybersecurity, cyber, IT services, information technology,
+               data, database, cloud, ERP, CMMS, GIS, website, web site, telecommunications, telecom, internet,
+               E-Rate, radio system, P25, CCTV, camera, access control, security system, AI, artificial intelligence,
+               digital, technology, application, revenue control system, parking access, system integration, integration services, licens, subscription, Autodesk, AutoCAD, servers, platform, cabling]
+  - name: Consulting & Professional Services
+    weight: 1.1
+    keywords: [consult, audit, auditing, advisory, legal services, attorney, special magistrate, actuarial, financial advisor,
+               banking services, investment management, insurance broker, broker, staffing, temporary employment,
+               study, feasibility, planning services, grant administration, lobbying, appraisal, real estate brokerage,
+               training, marketing, public relations, collection agency, billing services, claims administration,
+               benefits consulting, program management, owner's representative,
+               public relation, advertising, exam, testing services, assessment center, grant, HOPWA, housing opportunities,
+               case management, social services, counseling services, substance use, operator services]
+  - name: Facilities & Maintenance
+    weight: 1.0
+    keywords: [maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
+               pest control, tree trimming, tree removal, elevator, HVAC, air conditioning, chiller, plumbing,
+               electrical services, generator, fire alarm, fire sprinkler, backflow, pressure washing, painting,
+               trash, dumpster, garbage, solid waste, waste hauling, hauling, disposal, recycling, towing, uniform rental, security guard,
+               street sweeping, pump, inspection, on-call, as-needed services, annual contract services, remediation, abatement,
+               storm drain, cleaning services]
+  - name: Goods & Supplies
+    weight: 0.9
+    keywords: [purchase of, supply, supplies, furnish, deliver, delivery, equipment, vehicle, truck, trailer, fuel,
+               diesel, gasoline, parts, materials, chemicals, uniforms, apparel, furniture, sod, aggregate, rock,
+               medical supplies, pharmaceuticals, bus shelters, signs, sign material, carbon dioxide, tires,
+               ammunition, airboat, mower, boat, buses, fleet, polymer, chemical, bags, body bags, pipe and fittings,
+               switches, grating, bunker gear, x-ray equipment]
+  - name: Property & Real Estate
+    weight: 1.5
+    keywords: [sale of property, sale of county, surplus property, lease and option, lease of, acres, parcel,
+               real property, concession, concessionaire, vending]

@@ -1,0 +1,220 @@
+# Every place floridabids.org gets bids from.
+#
+# direct:  pages the daily job reads itself (robots.txt checked on every run).
+# alerts:  portals that block automated reading. We get their bids from the email alerts sent to
+#          floridabidsalerts@gmail.com. `match` is text that identifies the agency in the alert email.
+# skipped: shown on the site's coverage list so visitors know where to look themselves.
+
+direct:
+  - id: brevard-vendorlink
+    reader: vendorlink
+    county: Brevard
+    agency: Brevard County BOCC
+    url: https://www.myvendorlink.com/external/bids?a=70
+    statuses: [Active, All bids rejected]
+    agency_names: {"Brevard County Board of County Commissioners": "Brevard County BOCC"}
+
+  - id: osceola-vendorlink
+    reader: vendorlink
+    county: Osceola
+    agency: Osceola County BOCC
+    url: https://vendorlink.osceola.org/external/bids
+    statuses: [Active, All bids rejected]
+    agency_names:
+      "Osceola County Board of County Commissioners": Osceola County BOCC
+      "Osceola County School Board": School District of Osceola County
+
+  - id: charlotte-county
+    reader: charlotte
+    county: Charlotte
+    agency: Charlotte County BOCC
+    url: https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs
+
+  - id: columbia-county
+    reader: columbia
+    county: Columbia
+    agency: Columbia County BOCC
+    url: https://www.columbiacountyfla.com/PurchasingBids.aspx
+
+  - id: lake-county
+    reader: lake
+    county: Lake
+    agency: Lake County BOCC
+    url: https://c.lakecountyfl.gov/offices/procurement_services/view_all_bids.aspx
+
+  - id: polk-county
+    reader: polk
+    county: Polk
+    agency: Polk County BOCC
+    url: https://www.polkfl.gov/business/procurement/
+
+  - id: putnam-county
+    reader: putnam
+    county: Putnam
+    agency: Putnam County BOCC
+    url: https://apps.putnam-fl.com/bocc/callForBidsViewer/
+
+  - id: jacksonville-oracle
+    reader: oracle_jax
+    county: Duval
+    agency: City of Jacksonville
+    url: https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179
+
+  - id: jaxport
+    reader: jaxport
+    county: Duval
+    agency: JAXPORT
+    url: https://www.jaxport.com/procurement/active-solicitations/?sort[7]=asc
+
+  - id: duval-schools-demandstar
+    reader: demandstar
+    county: Duval
+    agency: Duval County Public Schools
+    url: https://www.demandstar.com/app/agencies/florida/duval-county-public-schools-purchasing-services/procurement-opportunities/70ee73c4-883b-4d02-adf7-859f473fd9e1
+    agency_guid: 70ee73c4-883b-4d02-adf7-859f473fd9e1
+    rule: active
+
+  - id: st-johns-demandstar
+    reader: demandstar
+    county: St. Johns
+    agency: St. Johns County BOCC
+    url: https://www.demandstar.com/app/agencies/florida/st-johns-county-purchasing-department/procurement-opportunities/5a5c8611-ac18-4c9a-9614-284ee7adaf43/
+    agency_guid: 5a5c8611-ac18-4c9a-9614-284ee7adaf43
+    rule: active
+
+  - id: st-lucie-demandstar
+    reader: demandstar
+    county: St. Lucie
+    agency: St. Lucie County BOCC
+    url: https://www.demandstar.com/app/agencies/florida/st-lucie-county-purchasing-department/procurement-opportunities/dba839e8-c1f1-4ea4-8e46-57cbc2d9aad2
+    agency_guid: dba839e8-c1f1-4ea4-8e46-57cbc2d9aad2
+    rule: future_due
+
+  - id: highlands-bidnet
+    reader: bidnet
+    county: Highlands
+    agency: Highlands County BOCC
+    url: https://www.bidnetdirect.com/florida/highlandscountyfl/solicitations/open-bids?selectedContent=BUYER
+
+  - id: okeechobee-bidnet
+    reader: bidnet
+    county: Okeechobee
+    agency: Okeechobee County BOCC
+    url: https://www.bidnetdirect.com/florida/okeechobeecounty/solicitations/open-bids?selectedContent=BUYER
+
+  - id: nassau-planetbids
+    reader: planetbids
+    county: Nassau
+    agency: Nassau County BOCC
+    url: https://vendors.planetbids.com/portal/49083/bo/bo-search
+    company_id: 49083
+
+  - id: palm-beach-vss
+    reader: pbc_vss
+    county: Palm Beach
+    agency: Palm Beach County BOCC
+    url: https://pbcvssp.pbc.gov/vssprd/Advantage4
+
+  - id: miami-dade-informs
+    reader: miamidade_informs
+    county: Miami-Dade
+    agency: Miami-Dade County
+    url: https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL
+
+  - id: miami-dade-construction
+    reader: miamidade_construction
+    county: Miami-Dade
+    agency: Miami-Dade County
+    url: https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations
+    may_be_empty: true
+
+  - id: miami-dade-future
+    reader: miamidade_future
+    county: Miami-Dade
+    agency: Miami-Dade County
+    url: https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitations
+    may_be_empty: true
+
+alerts:
+  opengov:
+    # portal slug: [county, agency name as shown on the site]
+    alachuacounty: [Alachua, Alachua County BOCC]
+    baycountyfl: [Bay, Bay County BOCC]
+    citrusfl: [Citrus, Citrus County BOCC]
+    claycounty: [Clay, Clay County BOCC]
+    collier-county-fl: [Collier, Collier County BOCC]
+    escambiacountyfl: [Escambia, Escambia County BOCC]
+    hernandocounty: [Hernando, Hernando County BOCC]
+    leoncounty: [Leon, Leon County BOCC]
+    martin-fl: [Martin, Martin County BOCC]
+    myokaloosa: [Okaloosa, Okaloosa County BOCC]
+    orangecountyfl: [Orange, Orange County BOCC]
+    pinellasfl: [Pinellas, Pinellas County BOCC]
+    santarosafl: [Santa Rosa, Santa Rosa County BOCC]
+    scgov: [Sarasota, Sarasota County BOCC]
+    seminolefl: [Seminole, Seminole County BOCC]
+    volusia: [Volusia, Volusia County]
+    waltoncountyfl: [Walton, Walton County BOCC]
+    gadsdencountyfl: [Gadsden, Gadsden County BOCC]
+    daniabeachfl: [Broward, City of Dania Beach]
+    hollywoodfl: [Broward, City of Hollywood]
+    copbfl: [Broward, City of Pompano Beach]
+    davie-fl: [Broward, Town of Davie]
+    pembrokepines: [Broward, City of Pembroke Pines]
+    clermontfl: [Lake, City of Clermont]
+    cityofhomestead: [Miami-Dade, City of Homestead]
+    citynmb: [Miami-Dade, City of North Miami Beach]
+    cityofhialeahfl: [Miami-Dade, City of Hialeah]
+    cityofdoral: [Miami-Dade, City of Doral]
+    cityoftampa: [Hillsborough, City of Tampa]
+    plantcitygov: [Hillsborough, City of Plant City]
+    tampaairport: [Hillsborough, Tampa International Airport]
+    stpete: [Pinellas, City of St. Petersburg]
+    myclearwater: [Pinellas, City of Clearwater]
+    pcsb: [Pinellas, Pinellas County Schools]
+    jacksonvillebeachfl: [Duval, City of Jacksonville Beach]
+    bartowfl: [Polk, City of Bartow]
+    lakelandgov: [Polk, City of Lakeland]
+    winterhavenfl: [Polk, City of Winter Haven]
+    cityofpsl: [St. Lucie, City of Port St. Lucie]
+    staugustine: [St. Johns, City of St. Augustine]
+    cfxway: [Orange, Central Florida Expressway Authority]
+    orlando: [Orange, City of Orlando]
+    goaa: [Orange, Greater Orlando Aviation Authority]
+    cityftmyers: [Lee, City of Fort Myers]
+    capecoralfl: [Lee, City of Cape Coral]
+    flylcpa: [Lee, Lee County Port Authority]
+    clayutility: [Clay, Clay County Utility Authority]
+    greencovesprings: [Clay, City of Green Cove Springs]
+    myputnamschools: [Putnam, Putnam County School District]
+    stcloud: [Osceola, City of St. Cloud]
+    gru: [Alachua, Gainesville Regional Utilities]
+    portorangefl: [Volusia, City of Port Orange]
+    cityofnsb: [Volusia, City of New Smyrna Beach]
+    edgewater: [Volusia, City of Edgewater]
+    codb: [Volusia, City of Daytona Beach]
+    brevardschools: [Brevard, Brevard Public Schools]
+    keyschools-mcsd: [Monroe, Monroe County School District]
+    pbgfl: [Palm Beach, City of Palm Beach Gardens]
+    flysfb: [Seminole, Orlando Sanford International Airport]
+    zephyrhillsfl: [Pasco, City of Zephyrhills]
+    districtgov: [Sumter, Villages Community Development Districts]
+  bonfire:
+    broward: [Broward, Broward County BOCC]
+    hillsboroughcounty: [Hillsborough, Hillsborough County BOCC]
+    monroecounty-fl: [Monroe, Monroe County BOCC]
+    pascocountyfl: [Pasco, Pasco County BOCC]
+
+skipped:
+  - county: Lee
+    agency: Lee County BOCC
+    url: https://leegov.ionwave.net/SourcingEvents.aspx?SourceType=1
+    reason: The county's bid site blocks automated reading.
+  - county: Orange
+    agency: Orange County (monday.com board)
+    url: https://view.monday.com/3986120871-d6adba4727a788037242e532df2ac76e?with_filter=true
+    reason: Board blocks automated reading. Orange County's OpenGov bids are included.
+  - county: Flagler
+    agency: Flagler County BOCC
+    url: https://flaglercounty.gov/departments/financial-services/purchasing/open-bids-flagler
+    reason: Portal address not found yet.

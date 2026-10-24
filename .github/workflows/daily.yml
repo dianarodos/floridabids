@@ -1,0 +1,68 @@
+name: Daily bid update
+
+on:
+  schedule:
+    - cron: "17 10 * * *"     # 6:17 AM Eastern (EDT); 5:17 AM in winter
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated source ids to test (blank = everything)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Unit tests
+        run: python -m pytest -q tests
+
+      - name: Read sources and build site data
+        env:
+          ALERTS_EMAIL: ${{ secrets.ALERTS_EMAIL }}
+          ALERTS_APP_PASSWORD: ${{ secrets.ALERTS_APP_PASSWORD }}
+        run: |
+          if [ -n "${{ github.event.inputs.only }}" ]; then
+            python run.py --only "${{ github.event.inputs.only }}"
+          else
+            python run.py
+          fi
+
+      - name: Keep unparsed alert emails for review (7 days)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unparsed-alerts
+          path: data/unparsed/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Commit updated data
+        run: |
+          git config user.name "floridabids-bot"
+          git config user.email "floridabidsalerts@gmail.com"
+          git add data/bids.json data/email_state.json site/data/ 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Daily update $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
+            git push
+          fi
