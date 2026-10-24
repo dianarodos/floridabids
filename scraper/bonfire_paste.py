@@ -45,6 +45,8 @@ def parse(text: str, cfg: dict) -> tuple[list[dict], set[str]]:
         elif agency.lower() in by_name:
             entry = by_name[agency.lower()]
             county = entry[0] if isinstance(entry, list) else entry
+            if isinstance(entry, list) and len(entry) > 1:
+                name = entry[1]
             if isinstance(entry, list) and len(entry) > 2:
                 slug = slug or entry[2]
         if not county:
