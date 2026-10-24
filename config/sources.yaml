@@ -209,6 +209,7 @@ alerts:
     City of St. Pete Beach: [Pinellas, City of St. Pete Beach, stpetebeach]
     Palm Coast: [Flagler, City of Palm Coast, palmcoast]
     Solid Waste Authority of Palm Beach County: [Palm Beach, Solid Waste Authority of Palm Beach County, swa]
+    South Florida Regional Transportation Authority: [Broward, South Florida Regional Transportation Authority (Tri-Rail), sfrta]
 
 skipped:
   - county: Lee

@@ -52,6 +52,12 @@ def parse(text: str, cfg: dict) -> tuple[list[dict], set[str]]:
         if not county:
             unknown.add(agency + (f" ({slug})" if slug else ""))
         portal = f"https://{slug}.bonfirehub.com/portal/?tab=openOpportunities" if slug else ""
+        # column order comes from the header; rows omit the Status cell (it sits on its own line)
+        header = next(([c.strip().lower() for c in l.split("\t")] for l in lines
+                       if l.lower().startswith("status\t")), [])
+        cols = header[1:] if header else []
+        p_idx = cols.index("project") if "project" in cols else None
+        r_idx = cols.index("ref. #") if "ref. #" in cols else None
         for i, l in enumerate(lines):
             if l.strip().lower() != "open" or i + 1 >= len(lines):
                 continue
@@ -59,8 +65,12 @@ def parse(text: str, cfg: dict) -> tuple[list[dict], set[str]]:
             d = next((k for k, c in enumerate(cells) if DATE.match(c)), None)
             if d is None or d == 0:
                 continue
-            title = cells[d - 1]
-            number = " ".join(c for c in cells[:d - 1] if c)
+            if p_idx is not None and p_idx < d:
+                title = cells[p_idx]
+                number = cells[r_idx] if r_idx is not None and r_idx < len(cells) else ""
+            else:
+                title = cells[d - 1]
+                number = " ".join(c for c in cells[:d - 1] if c)
             if not title:
                 continue
             rows.append({"county": county, "agency": name, "number": number, "title": title, "due": cells[d],
