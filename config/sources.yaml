@@ -224,6 +224,7 @@ alerts:
     Hillsborough County: [Hillsborough, Hillsborough County BOCC, hillsboroughcounty]
     Pasco County: [Pasco, Pasco County BOCC, pascocountyfl]
     BPRO Electronic Procurement System: [Broward, Broward County BOCC, broward]
+    Indian River County: [Indian River, Indian River County BOCC, indianriver]
 
 skipped:
   - county: Lee
