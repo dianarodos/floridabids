@@ -22,7 +22,7 @@ categories:
                CCNA, continuing services, professional engineering, environmental engineering, traffic study, master plan, map revision, watershed, flood study]
   - name: Construction
     weight: 1.0
-    keywords: [construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
+    keywords: [facility, watermain, pavilion, warehouse, apron, development of, electrical contracting, ac replacement, elevation of, ballfield, construction, construct, roof, paving, pav, resurfac, milling, sidewalk, drainage, stormwater pond,
                bridge, culvert, renovation, remodel, rehabilitation, demolition, CMAR, construction manager,
                widening, intersection improvement, lift station, force main, water main, sewer, pipe, dredg,
                seawall, bulkhead, building addition, fencing, fence, concrete, asphalt, site work, wastewater treatment,
@@ -38,7 +38,7 @@ categories:
                digital, technology, application, VOIP, phone system, asset management solution, security modernization, CPU, HMI, controllers, interface boards, revenue control system, parking access, system integration, integration services, licens, subscription, Autodesk, AutoCAD, servers, platform, cabling]
   - name: Consulting & Professional Services
     weight: 1.1
-    keywords: [consult, audit, auditing, advisory, legal services, attorney, special magistrate, actuarial, financial advisor,
+    keywords: [lobbyist, accreditation, staffing, professional learning, consult, audit, auditing, advisory, legal services, attorney, special magistrate, actuarial, financial advisor,
                banking services, investment management, insurance broker, broker, staffing, temporary employment,
                study, feasibility, planning services, grant administration, lobbying, appraisal, real estate brokerage,
                training, marketing, public relations, collection agency, billing services, claims administration,
@@ -47,7 +47,7 @@ categories:
                case management, social services, counseling services, substance use, operator services, legislative advocacy, land development code, answering service, armored, code enforcement, insurance agent, dialysis, medical services]
   - name: Facilities & Maintenance
     weight: 1.0
-    keywords: [maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
+    keywords: [indoor air quality, iguana, pest, scaffolding, rejuvenat, inspections, testing, ac repair, maintenance, repair, janitorial, custodial, cleaning, mowing, lawn, landscape, landscaping, grounds,
                pest control, tree trimming, tree removal, elevator, HVAC, air conditioning, chiller, plumbing,
                electrical services, generator, fire alarm, fire sprinkler, backflow, pressure washing, painting,
                trash, dumpster, garbage, solid waste, waste hauling, hauling, disposal, recycling, towing, uniform rental, security guard,
@@ -56,7 +56,7 @@ categories:
                storm drain, cleaning services, overhead door, calibration, derelict vessel, vessel removal, decoration]
   - name: Goods & Supplies
     weight: 0.9
-    keywords: [purchase of, supply, supplies, furnish, deliver, delivery, equipment, vehicle, truck, trailer, fuel,
+    keywords: [seed, gas, propane, meter products, banner, printing, foam, sole source, single source, purchase of, supply, supplies, furnish, deliver, delivery, equipment, vehicle, truck, trailer, fuel,
                diesel, gasoline, parts, materials, chemicals, uniforms, apparel, furniture, sod, aggregate, rock,
                medical supplies, pharmaceuticals, bus shelters, signs, sign material, carbon dioxide, tires,
                ammunition, airboat, mower, boat, buses, fleet, polymer, chemical, bags, body bags, pipe and fittings,
@@ -67,7 +67,7 @@ categories:
     keywords: [notice only, not a solicitation, industry day, how to do business, trade show, procurement conference, vendor workshop, vendor outreach, doing business with, reverse trade]
   - name: Concessions & Programs
     weight: 1.2
-    keywords: [market operator, rental operations, programming, concession, fireworks, catering, agriculture program,
+    keywords: [marina management, merchandising, cell tower, permit application, market operator, rental operations, programming, concession, fireworks, catering, agriculture program,
                pickleball, tennis, aquatic management, operation and management, golf cart, youth soccer]
   - name: Property & Real Estate
     weight: 1.5
