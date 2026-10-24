@@ -271,6 +271,10 @@ skipped:
     agency: Lee County BOCC
     url: https://leegov.ionwave.net/SourcingEvents.aspx?SourceType=1
     reason: The county's bid site blocks automated reading.
+  - county: Palm Beach
+    agency: City of Boca Raton
+    url: https://brpurch.ionwave.net/SourcingEvents.aspx?SourceType=1
+    reason: The city's bid site blocks automated reading.
   - county: Orange
     agency: Orange County (monday.com board)
     url: https://view.monday.com/3986120871-d6adba4727a788037242e532df2ac76e?with_filter=true
