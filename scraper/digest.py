@@ -39,14 +39,28 @@ def _d(iso: str):
     return dt if dt.tzinfo else dt.replace(tzinfo=ET)
 
 
-def pick(bids, freq, now):
-    window = timedelta(days=1 if freq == "daily" else 7)
-    since = now - window - timedelta(hours=2)
-    new = [b for b in bids if (_d(b.get("posted")) or _d(b.get("first_seen")) or now) >= since]
+def pick(bids, freq, now, since=None):
+    """New = first appeared on floridabids.org since the last email of this kind (fallback: 1 or 7 days)."""
+    if since is None:
+        since = now - timedelta(days=1 if freq == "daily" else 7)
+    new = [b for b in bids if _d(b.get("first_seen")) and _d(b["first_seen"]) > since]
     soon = [b for b in bids if b.get("due") and now <= (_d(b["due"]) or now) <= now + timedelta(days=7)]
-    new.sort(key=lambda b: b.get("due") or "9999")
-    soon.sort(key=lambda b: b.get("due") or "9999")
+    new.sort(key=lambda b: (b.get("county") or "", b.get("due") or "9999"))
     return new, soon
+
+
+STATE = ROOT / "data" / "digest_state.json"
+
+
+def load_state():
+    try:
+        return json.loads(STATE.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def save_state(state):
+    STATE.write_text(json.dumps(state, indent=1))
 
 
 def _row(b, site):
@@ -62,9 +76,9 @@ def _row(b, site):
             f'font-family:monospace">{due_s}</td></tr>')
 
 
-def build(bids, meta, freq, site, unsub_url, now):
-    new, soon = pick(bids, freq, now)
-    label = "today" if freq == "daily" else "this week"
+def build(bids, meta, freq, site, unsub_url, now, since=None):
+    new, soon = pick(bids, freq, now, since)
+    label = "this morning" if freq == "daily" else "this week"
     e = html.escape
 
     def table(rows, limit):
@@ -122,10 +136,8 @@ def build(bids, meta, freq, site, unsub_url, now):
 <td style="text-align:right;vertical-align:middle">{button}</td></tr></table>
 {stats}
 {charts}
-<h2 style="font-size:17px;margin:20px 0 6px">New {label}</h2>
-{table(new, 15)}
-<h2 style="font-size:17px;margin:20px 0 6px">Closing in the next 7 days</h2>
-{table(soon, 10)}
+<h2 style="font-size:17px;margin:20px 0 6px">New {label} ({len(new)})</h2>
+{table(new, 100) if new else '<p style="color:#5b6b67">No new bids since the last email. Every open bid is on the site and in the attached Excel file.</p>'}
 <p style="margin:20px 0 0">{button}</p>
 <p style="font-size:13px;color:#5b6b67;margin:8px 0 0">The full list of {total} open bids is attached as an Excel file.</p>
 <p style="font-size:12px;color:#5b6b67;margin-top:24px">Always confirm details and deadlines on the agency's page before
@@ -191,15 +203,21 @@ def main(argv=None):
             r.raise_for_status()
             recipients[f] = r.json()["subscribers"]
 
+    state = load_state()
     sent = failed = 0
     for f in freqs:
+        since = _d(state.get(f, ""))
+        new_count = len(pick(bids, f, now, since)[0])
+        if f == "daily" and new_count == 0 and not args.to:
+            log.info("no new bids since the last daily email; daily email skipped")
+            continue
         for sub in recipients.get(f, []):
             if sent >= DAILY_LIMIT:
                 log.warning("daily sending limit reached; %s subscribers not emailed today",
                             sum(len(v) for v in recipients.values()) - sent - failed)
                 return 0
             unsub = f"{site}/api/unsubscribe?t={sub['token']}"
-            subject, html_body, text = build(bids, meta, f, site, unsub, now)
+            subject, html_body, text = build(bids, meta, f, site, unsub, now, since)
             if args.dry_run:
                 log.info("[dry run] %s -> %s: %s", f, sub["email"], subject)
                 sent += 1
@@ -210,6 +228,10 @@ def main(argv=None):
             except Exception as e:      # one bad address must not stop the rest
                 failed += 1
                 log.error("could not email %s: %s", sub["email"], e)
+        if not args.dry_run and not args.to:
+            state[f] = now.isoformat(timespec="minutes")   # next email lists what's new after this one
+    if not args.dry_run and not args.to:
+        save_state(state)
     log.info("digest: %d sent, %d failed (%s)", sent, failed, ", ".join(freqs))
     return 0
 

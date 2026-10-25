@@ -49,6 +49,8 @@ def dedupe(bids):
             if hit is not None:          # the loser goes away under every key it held
                 if b.number.startswith("#") and hit.number and not hit.number.startswith("#"):
                     b.number = hit.number    # keep the agency's real bid number over a portal id
+                if hit.first_seen and (not b.first_seen or hit.first_seen < b.first_seen):
+                    b.first_seen = hit.first_seen   # a bid we already listed isn't "new" again
                 for k in [k for k, v in best.items() if v is hit]:
                     del best[k]
             for k in keys:
