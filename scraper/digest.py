@@ -78,16 +78,56 @@ def build(bids, meta, freq, site, unsub_url, now):
 
     subject = (f"Florida bids {label}: {len(new)} new, {meta.get('total', len(bids))} open"
                if new else f"Florida bids {label}: {meta.get('total', len(bids))} open")
+    total = meta.get("total", len(bids))
+    button = (f'<a href="{site}" style="display:inline-block;background:#0d5c50;color:#ffffff;padding:11px 18px;'
+              f'border-radius:6px;text-decoration:none;font-weight:bold">See every open bid &rarr;</a>')
+
+    def tile(n, label_):
+        return (f'<td style="padding:12px 14px;background:#eef4f2;border-radius:8px;width:33%;text-align:left">'
+                f'<div style="font-family:Georgia,serif;font-size:26px;font-weight:bold;color:#0d5c50">{n}</div>'
+                f'<div style="font-size:12px;color:#5b6b67;text-transform:uppercase;letter-spacing:.04em">{label_}</div></td>')
+
+    def bars(title, counts, limit=8):
+        if not counts:
+            return ""
+        top = counts.most_common(limit)
+        peak = top[0][1]
+        rows = "".join(
+            f'<tr><td style="padding:3px 8px 3px 0;font-size:13px;white-space:nowrap;width:1%">{e(k)}</td>'
+            f'<td style="padding:3px 0;width:100%"><table role="presentation" cellpadding="0" cellspacing="0" '
+            f'style="width:{max(4, round(v / peak * 100))}%"><tr><td style="background:#0d5c50;height:12px;'
+            f'border-radius:3px;font-size:0;line-height:0">&nbsp;</td></tr></table></td>'
+            f'<td style="padding:3px 0 3px 8px;font-size:13px;font-weight:bold;text-align:right;width:1%">{v}</td></tr>'
+            for k, v in top)
+        rest = sum(counts.values()) - sum(v for _, v in top)
+        plural = {"county": "counties", "category": "categories"}.get(title.split()[-1].lower(), "")
+        more = f'<div style="font-size:12px;color:#5b6b67">+{rest} more in other {plural}</div>' if rest else ""
+        return (f'<td style="vertical-align:top;padding:0 10px 0 0;width:50%">'
+                f'<div style="font-size:13px;font-weight:bold;margin:0 0 6px">{title}</div>'
+                f'<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">{rows}</table>{more}</td>')
+
+    from collections import Counter
+    by_county = Counter(f'{b.get("county") or "Other"}' for b in new)
+    by_cat = Counter(b.get("category") or "Other" for b in new)
+    stats = (f'<table role="presentation" cellpadding="0" cellspacing="6" style="width:100%;margin:4px 0 14px"><tr>'
+             f'{tile(len(new), "new " + label)}{tile(len(soon), "closing in 7 days")}{tile(total, "open in Florida")}'
+             f'</tr></table>')
+    charts = (f'<h2 style="font-size:17px;margin:18px 0 8px">Where the new bids are</h2>'
+              f'<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%"><tr>'
+              f'{bars("By county", by_county)}{bars("By category", by_cat)}</tr></table>') if new else ""
     html_body = f"""<div style="font-family:Arial,Helvetica,sans-serif;color:#1b2b28;max-width:680px;line-height:1.45">
-<h1 style="font-family:Georgia,serif;font-size:26px;margin:0 0 4px">Florida Bids</h1>
-<p style="margin:0 0 16px;color:#5b6b67">{e(now.strftime('%A, %B %-d, %Y'))} &middot; <b>{meta.get('total', len(bids))}</b> open bids
- across <b>{meta.get('counties', '')}</b> counties. The full list is attached as Excel.</p>
-<h2 style="font-size:18px;margin:18px 0 6px">New {label} ({len(new)})</h2>
-{table(new, 60)}
-<h2 style="font-size:18px;margin:22px 0 6px">Closing in the next 7 days ({len(soon)})</h2>
-{table(soon, 30)}
-<p style="margin-top:22px"><a href="{site}" style="display:inline-block;background:#0d5c50;color:#fff;padding:10px 16px;
-border-radius:6px;text-decoration:none;font-weight:bold">See every open bid</a></p>
+<table role="presentation" style="width:100%"><tr>
+<td><h1 style="font-family:Georgia,serif;font-size:26px;margin:0">Florida Bids</h1>
+<div style="color:#5b6b67;font-size:14px">{e(now.strftime('%A, %B %-d, %Y'))}</div></td>
+<td style="text-align:right;vertical-align:middle">{button}</td></tr></table>
+{stats}
+{charts}
+<h2 style="font-size:17px;margin:20px 0 6px">New {label}</h2>
+{table(new, 15)}
+<h2 style="font-size:17px;margin:20px 0 6px">Closing in the next 7 days</h2>
+{table(soon, 10)}
+<p style="margin:20px 0 0">{button}</p>
+<p style="font-size:13px;color:#5b6b67;margin:8px 0 0">The full list of {total} open bids is attached as an Excel file.</p>
 <p style="font-size:12px;color:#5b6b67;margin-top:24px">Always confirm details and deadlines on the agency's page before
  you respond. You get this {'every morning' if freq == 'daily' else 'every Monday'} because you signed up at floridabids.org.
  No ads, ever. <a href="{e(unsub_url)}" style="color:#5b6b67">Unsubscribe</a> with one click.</p></div>"""
