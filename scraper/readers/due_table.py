@@ -50,7 +50,7 @@ def parse(html, src, page_url):
             due_raw = re.sub(r"(?i)no later than|\bby\b|@", " ", dates[-1]) if dates else ""
             name = txt(t_i)
             m = NUMBER.match(name)
-            number, title = (m.group(1), m.group(2) or name) if m else ("", name)
+            number, title = (m.group(1), m.group(2).lstrip("-–—: ") or name) if m else ("", name)
             link = None
             for i in (doc_i, t_i):
                 if i is not None and i < len(cells) and cells[i].find("a", href=True):
