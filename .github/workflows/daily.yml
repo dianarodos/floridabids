@@ -9,6 +9,10 @@ on:
         description: "Comma-separated source ids to test (blank = everything)"
         required: false
         default: ""
+      send_email:
+        description: "Also email subscribers? (yes/no)"
+        required: false
+        default: "no"
 
 permissions:
   contents: write
@@ -49,6 +53,15 @@ jobs:
           else
             python run.py 2>&1 | tee data/run_log.txt
           fi
+
+      - name: Email the list to subscribers
+        if: github.event_name == 'schedule' || github.event.inputs.send_email == 'yes'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          SITE_URL: https://floridabids.org
+          FROM_EMAIL: list@floridabids.org
+        run: python -m scraper.digest 2>&1 | tee -a data/run_log.txt
 
       - name: Keep unparsed alert emails for review (7 days)
         if: always()

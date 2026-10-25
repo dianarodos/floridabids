@@ -52,6 +52,7 @@ input[type=radio]{accent-color:var(--accent)}
 .counts b{font:600 26px/1.1 var(--display)}
 .counts span{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .updated{font-size:13px;color:var(--muted)}
+.banner{background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:10px 14px;font-weight:600}
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;display:grid;gap:10px;border-bottom:1px solid var(--line)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -127,6 +128,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <div><b id="c-subs">–</b><span>subscribers</span></div>
     </div>
     <div class="updated" id="updated">Loading…</div>
+    <div class="banner" id="banner" role="status" hidden></div>
   </header>
 
   <div class="bar">
@@ -168,6 +170,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
       <h2 id="subttl">Get Florida bids by email</h2>
       <p>Every open bid in Florida, with the Excel file attached. Free. Unsubscribe anytime with one click.</p>
       <input type="email" id="email" required placeholder="you@company.com" aria-label="Email address" autocomplete="email">
+      <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <fieldset><legend class="note" style="margin-bottom:6px">How often</legend>
         <label><input type="radio" name="freq" value="daily" checked> Daily</label>
         <label><input type="radio" name="freq" value="weekly"> Weekly (Monday)</label>
@@ -265,6 +268,14 @@ document.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click
 $("#q").addEventListener("input", render);
 $("#county").addEventListener("change", render);
 
+(() => {   // messages after clicking the links in our emails
+  const q = new URLSearchParams(location.search), b = $("#banner");
+  const msg = q.get("confirmed") === "1" ? "You're subscribed. The list will arrive in your inbox, starting with the next morning's update."
+    : q.get("confirmed") === "0" ? "That confirmation link didn't work. Please sign up again."
+    : q.get("unsubscribed") === "1" ? "You're unsubscribed. You won't get any more emails from us."
+    : q.get("unsubscribed") === "0" ? "That unsubscribe link didn't work. If you keep getting emails, reply to one and we'll remove you." : "";
+  if (msg) { b.textContent = msg; b.hidden = false; history.replaceState(null, "", location.pathname); }
+})();
 const dlg = $("#subdlg");
 document.querySelectorAll("[data-open-sub]").forEach(b => b.addEventListener("click", () => {
   dlg.showModal(); setTimeout(() => $("#email").focus(), 30);
@@ -279,10 +290,14 @@ $("#subform").addEventListener("submit", async e => {
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent = "Enter a valid email address."; return; }
   msg.textContent = "Sending…";
   try{
-    const r = await fetch(SUBSCRIBE_API, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({email, freq})});
+    const r = await fetch(SUBSCRIBE_API, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({email, freq, website: $("#website").value})});
+    if (r.status === 429) { msg.textContent = "Too many sign-ups from here. Please try again in an hour."; return; }
+    if (r.status === 400) { msg.textContent = "That email address doesn't look right."; return; }
     if(!r.ok) throw new Error();
-    msg.textContent = "Check your inbox and click the link to confirm.";
-  }catch{ msg.textContent = "Email sign-up opens soon. Please check back in a few days."; }
+    const d = await r.json();
+    msg.textContent = d.already ? "You're already on the list. We've updated how often you get it."
+                                : "Almost done: check your inbox and click the link to confirm.";
+  }catch{ msg.textContent = "Something went wrong. Please try again in a few minutes."; }
 });
 
 fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
