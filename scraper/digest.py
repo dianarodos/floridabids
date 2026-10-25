@@ -130,7 +130,9 @@ def build(bids, meta, freq, site, unsub_url, now):
 <p style="font-size:13px;color:#5b6b67;margin:8px 0 0">The full list of {total} open bids is attached as an Excel file.</p>
 <p style="font-size:12px;color:#5b6b67;margin-top:24px">Always confirm details and deadlines on the agency's page before
  you respond. You get this {'every morning' if freq == 'daily' else 'every Monday'} because you signed up at floridabids.org.
- No ads, ever. <a href="{e(unsub_url)}" style="color:#5b6b67">Unsubscribe</a> with one click.</p></div>"""
+ No ads, ever.</p>
+<p style="margin:10px 0 0"><a href="{e(unsub_url)}" style="display:inline-block;border:1px solid #9aa8a4;color:#5b6b67;
+padding:7px 14px;border-radius:6px;text-decoration:none;font-size:13px">Unsubscribe</a></p></div>"""
     text = (f"Florida Bids - {meta.get('total', len(bids))} open bids. New {label}: {len(new)}.\n\n"
             + "\n".join(f"- {b['title']} ({b.get('agency','')}, due {(b.get('due') or '')[:10]}) "
                         f"{b.get('bid_url') or b.get('source_url') or ''}" for b in new[:60])
