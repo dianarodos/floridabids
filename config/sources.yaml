@@ -241,6 +241,12 @@ direct:
     agency: Town of Pembroke Park
     url: https://www.tppfl.gov/319/Solicitations
 
+  - id: south-palm-beach-civicplus
+    reader: civicplus
+    county: Palm Beach
+    agency: Town of South Palm Beach
+    url: https://www.southpalmbeach.com/bids.aspx
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
