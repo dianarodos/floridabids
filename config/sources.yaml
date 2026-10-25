@@ -195,6 +195,12 @@ direct:
     agency: Town of Jupiter Inlet Colony
     url: https://www.jupiterinletcolony.gov/283/BidsRFPs
 
+  - id: lake-clarke-shores-govaccess
+    reader: govaccess
+    county: Palm Beach
+    agency: Town of Lake Clarke Shores
+    url: https://www.townoflcs.gov/rfps
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
