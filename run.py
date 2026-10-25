@@ -46,6 +46,11 @@ def dedupe(bids):
             keys.append(("n", _norm(b.agency), _norm(b.number)))
         hit = next((best[k] for k in keys if k in best), None)
         if hit is None or rank.get(b.origin, 9) < rank.get(hit.origin, 9):
+            if hit is not None:          # the loser goes away under every key it held
+                if b.number.startswith("#") and hit.number and not hit.number.startswith("#"):
+                    b.number = hit.number    # keep the agency's real bid number over a portal id
+                for k in [k for k, v in best.items() if v is hit]:
+                    del best[k]
             for k in keys:
                 best[k] = b
     return list({id(b): b for b in best.values()}.values())

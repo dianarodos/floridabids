@@ -265,3 +265,13 @@ def test_due_table():
     b = bids[0]
     assert b.number == "BID 99-01" and b.title == "NEW PARK RESTROOMS"
     assert b.due.startswith("2099-06-16T11:00") and b.bid_url == "https://x.gov/DocumentCenter/View/1"
+
+
+def test_dedupe_prefers_email_over_backfill_without_leaving_copies():
+    import run
+    from scraper.models import Bid
+    base = dict(county="Hillsborough", agency="Hillsborough County BOCC", title="Tire Disposal Services")
+    a = Bid(source_id="backfill-x", number="ITB-26-00424", origin="backfill", **base)
+    b = Bid(source_id="bonfire-x", number="#251584", origin="email", **base)
+    out = run.dedupe([a, b])
+    assert len(out) == 1 and out[0].origin == "email"
