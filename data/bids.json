@@ -1,37 +1,8 @@
 {
  "meta": {
-  "updated": "2026-10-24 09:51 PM",
-  "updated_iso": "2026-10-24T21:51-04:00",
+  "updated": "2026-10-24 10:52 PM",
+  "updated_iso": "2026-10-24T22:52-04:00",
   "sources": [
-   {
-    "id": "brevard-vendorlink",
-    "county": "Brevard",
-    "agency": "Brevard County BOCC",
-    "url": "https://www.myvendorlink.com/external/bids?a=70",
-    "status": "ok",
-    "count": 37,
-    "new": 28,
-    "seconds": 5.4
-   },
-   {
-    "id": "osceola-vendorlink",
-    "county": "Osceola",
-    "agency": "Osceola County BOCC",
-    "url": "https://vendorlink.osceola.org/external/bids",
-    "status": "error",
-    "error": "TimeoutError: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until 'load'\n============================================================",
-    "seconds": 35.7
-   },
-   {
-    "id": "charlotte-county",
-    "county": "Charlotte",
-    "agency": "Charlotte County BOCC",
-    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs",
-    "status": "ok",
-    "count": 20,
-    "new": 0,
-    "seconds": 2.8
-   },
    {
     "id": "columbia-county",
     "county": "Columbia",
@@ -41,434 +12,10 @@
     "count": 3,
     "new": 0,
     "seconds": 0.5
-   },
-   {
-    "id": "lake-county",
-    "county": "Lake",
-    "agency": "Lake County BOCC",
-    "url": "https://c.lakecountyfl.gov/offices/procurement_services/view_all_bids.aspx",
-    "status": "error",
-    "error": "TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.",
-    "seconds": 61.3
-   },
-   {
-    "id": "polk-county",
-    "county": "Polk",
-    "agency": "Polk County BOCC",
-    "url": "https://www.polkfl.gov/business/procurement/",
-    "status": "ok",
-    "count": 24,
-    "new": 0,
-    "seconds": 0.6
-   },
-   {
-    "id": "putnam-county",
-    "county": "Putnam",
-    "agency": "Putnam County BOCC",
-    "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/",
-    "status": "ok",
-    "count": 1,
-    "new": 0,
-    "seconds": 2.3
-   },
-   {
-    "id": "jacksonville-oracle",
-    "county": "Duval",
-    "agency": "City of Jacksonville",
-    "url": "https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179",
-    "status": "error",
-    "error": "RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=lg3gda2ti24ijc_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'",
-    "seconds": 62.0
-   },
-   {
-    "id": "jaxport",
-    "county": "Duval",
-    "agency": "JAXPORT",
-    "url": "https://www.jaxport.com/procurement/active-solicitations/?sort[7]=asc",
-    "status": "ok",
-    "count": 8,
-    "new": 0,
-    "seconds": 23.5
-   },
-   {
-    "id": "duval-schools-demandstar",
-    "county": "Duval",
-    "agency": "Duval County Public Schools",
-    "url": "https://www.demandstar.com/app/agencies/florida/duval-county-public-schools-purchasing-services/procurement-opportunities/70ee73c4-883b-4d02-adf7-859f473fd9e1",
-    "status": "ok",
-    "count": 5,
-    "new": 0,
-    "seconds": 0.5
-   },
-   {
-    "id": "martin-demandstar",
-    "county": "Martin",
-    "agency": "Martin County BOCC",
-    "url": "https://www.demandstar.com/app/agencies/florida/martin-county-purchasing/procurement-opportunities/cb5da01b-483b-42ca-aeb0-f27e5cf6e6d6/",
-    "status": "ok",
-    "count": 5,
-    "new": 0,
-    "seconds": 2.4
-   },
-   {
-    "id": "wilton-manors-civicplus",
-    "county": "Broward",
-    "agency": "City of Wilton Manors",
-    "url": "https://www.wiltonmanors.gov/bids.aspx",
-    "status": "ok",
-    "count": 8,
-    "new": 0,
-    "seconds": 0.8
-   },
-   {
-    "id": "wellington-demandstar",
-    "county": "Palm Beach",
-    "agency": "Village of Wellington",
-    "url": "https://www.demandstar.com/app/agencies/florida/village-of-wellington/procurement-opportunities/4cfc11bd-9874-4bb1-9fd6-a0fec5e16311/",
-    "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 4.0
-   },
-   {
-    "id": "sunrise-demandstar",
-    "county": "Broward",
-    "agency": "City of Sunrise",
-    "url": "https://www.demandstar.com/app/agencies/florida/city-of-sunrise/procurement-opportunities/628b628c-effc-47f5-8aed-f3057aa89b5c/",
-    "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 5.8
-   },
-   {
-    "id": "tamarac-bidsandtenders",
-    "county": "Broward",
-    "agency": "City of Tamarac",
-    "url": "https://tamarac.bidsandtenders.net/",
-    "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 2.3
-   },
-   {
-    "id": "sebastian-civicplus",
-    "county": "Indian River",
-    "agency": "City of Sebastian",
-    "url": "https://www.cityofsebastian.org/bids.aspx",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.9
-   },
-   {
-    "id": "fort-lauderdale-infor",
-    "county": "Broward",
-    "agency": "City of Fort Lauderdale",
-    "url": "https://sms-fortlauderdale-prd.inforcloudsuite.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=COFL",
-    "status": "error",
-    "error": "RuntimeError: expected JSON, got None: ''",
-    "seconds": 2.2
-   },
-   {
-    "id": "fellsmere-govaccess",
-    "county": "Indian River",
-    "agency": "City of Fellsmere",
-    "url": "https://www.cityoffellsmere.org/rfps",
-    "status": "blocked",
-    "error": "HTTP 403 from https://www.cityoffellsmere.org/rfps",
-    "seconds": 0.4
-   },
-   {
-    "id": "westlake-govaccess",
-    "county": "Palm Beach",
-    "agency": "City of Westlake",
-    "url": "https://www.westlakegov.com/rfps",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.5
-   },
-   {
-    "id": "fort-pierce-civicplus",
-    "county": "St. Lucie",
-    "agency": "City of Fort Pierce",
-    "url": "https://www.cityoffortpierce.com/Bids.aspx?CatID=17",
-    "status": "ok",
-    "count": 1,
-    "new": 0,
-    "seconds": 0.5
-   },
-   {
-    "id": "greenacres-demandstar",
-    "county": "Palm Beach",
-    "agency": "City of Greenacres",
-    "url": "https://www.demandstar.com/app/agencies/florida/city-of-greenacres/procurement-opportunities/63133434-ac0d-48fb-84cb-d1289ae4b212/",
-    "status": "ok",
-    "count": 3,
-    "new": 0,
-    "seconds": 5.6
-   },
-   {
-    "id": "hallandale-beach-page",
-    "county": "Broward",
-    "agency": "City of Hallandale Beach",
-    "url": "https://www.hallandalebeachfl.gov/417/Solicitation-Notifications",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 1.7
-   },
-   {
-    "id": "haverhill-watch",
-    "county": "Palm Beach",
-    "agency": "Town of Haverhill",
-    "url": "https://www.townofhaverhill-fl.gov/1271/Bids-RFPs",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.5
-   },
-   {
-    "id": "highland-beach-demandstar",
-    "county": "Palm Beach",
-    "agency": "Town of Highland Beach",
-    "url": "https://www.demandstar.com/app/agencies/florida/town-of-highland-beach/procurement-opportunities/6d6b280e-f755-4675-bce5-4993f74626bc/",
-    "status": "ok",
-    "count": 1,
-    "new": 0,
-    "seconds": 7.2
-   },
-   {
-    "id": "hillsboro-beach-watch",
-    "county": "Broward",
-    "agency": "Town of Hillsboro Beach",
-    "url": "https://www.townofhillsborobeach.com/363/Bid-Opportunities",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.6
-   },
-   {
-    "id": "hypoluxo-govaccess",
-    "county": "Palm Beach",
-    "agency": "Town of Hypoluxo",
-    "url": "https://www.hypoluxo.org/rfps",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.7
-   },
-   {
-    "id": "indiantown-govaccess",
-    "county": "Martin",
-    "agency": "Village of Indiantown",
-    "url": "https://www.indiantownfl.gov/rfps",
-    "status": "blocked",
-    "error": "HTTP 403 from https://www.indiantownfl.gov/rfps",
-    "seconds": 0.3
-   },
-   {
-    "id": "jupiter-inlet-colony-watch",
-    "county": "Palm Beach",
-    "agency": "Town of Jupiter Inlet Colony",
-    "url": "https://www.jupiterinletcolony.gov/283/BidsRFPs",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.6
-   },
-   {
-    "id": "lake-clarke-shores-govaccess",
-    "county": "Palm Beach",
-    "agency": "Town of Lake Clarke Shores",
-    "url": "https://www.townoflcs.gov/rfps",
-    "status": "blocked",
-    "error": "HTTP 403 from https://www.townoflcs.gov/rfps",
-    "seconds": 0.4
-   },
-   {
-    "id": "lake-park-watch",
-    "county": "Palm Beach",
-    "agency": "Town of Lake Park",
-    "url": "https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651",
-    "status": "blocked",
-    "error": "HTTP 403 from https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651",
-    "seconds": 0.3
-   },
-   {
-    "id": "lake-worth-beach-bidsandtenders",
-    "county": "Palm Beach",
-    "agency": "City of Lake Worth Beach",
-    "url": "https://lakeworthbeachfl.bidsandtenders.net/",
-    "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 2.2
-   },
-   {
-    "id": "margate-civicplus",
-    "county": "Broward",
-    "agency": "City of Margate",
-    "url": "https://www.margatefl.com/bids.aspx",
-    "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 0.7
-   },
-   {
-    "id": "oakland-park-civicplus",
-    "county": "Broward",
-    "agency": "City of Oakland Park",
-    "url": "https://oaklandparkfl.gov/bids.aspx",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.6
-   },
-   {
-    "id": "pahokee-demandstar",
-    "county": "Palm Beach",
-    "agency": "City of Pahokee",
-    "url": "https://www.demandstar.com/app/agencies/florida/city-of-pahokee/procurement-opportunities/9508ace6-c58d-4095-9b5d-01b72a037bb9/",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 7.4
-   },
-   {
-    "id": "pembroke-park-page",
-    "county": "Broward",
-    "agency": "Town of Pembroke Park",
-    "url": "https://www.tppfl.gov/319/Solicitations",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.5
-   },
-   {
-    "id": "south-palm-beach-civicplus",
-    "county": "Palm Beach",
-    "agency": "Town of South Palm Beach",
-    "url": "https://www.southpalmbeach.com/bids.aspx",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 0.8
-   },
-   {
-    "id": "st-johns-demandstar",
-    "county": "St. Johns",
-    "agency": "St. Johns County BOCC",
-    "url": "https://www.demandstar.com/app/agencies/florida/st-johns-county-purchasing-department/procurement-opportunities/5a5c8611-ac18-4c9a-9614-284ee7adaf43/",
-    "status": "ok",
-    "count": 10,
-    "new": 0,
-    "seconds": 8.4
-   },
-   {
-    "id": "st-lucie-demandstar",
-    "county": "St. Lucie",
-    "agency": "St. Lucie County BOCC",
-    "url": "https://www.demandstar.com/app/agencies/florida/st-lucie-county-purchasing-department/procurement-opportunities/dba839e8-c1f1-4ea4-8e46-57cbc2d9aad2",
-    "status": "ok",
-    "count": 7,
-    "new": 0,
-    "seconds": 10.2
-   },
-   {
-    "id": "highlands-bidnet",
-    "county": "Highlands",
-    "agency": "Highlands County BOCC",
-    "url": "https://www.bidnetdirect.com/florida/highlandscountyfl/solicitations/open-bids?selectedContent=BUYER",
-    "status": "ok",
-    "count": 4,
-    "new": 0,
-    "seconds": 0.8
-   },
-   {
-    "id": "riviera-beach-bidnet",
-    "county": "Palm Beach",
-    "agency": "City of Riviera Beach",
-    "url": "https://www.bidnetdirect.com/florida/cityofrivierabeach/solicitations/open-bids?selectedContent=BUYER",
-    "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 2.4
-   },
-   {
-    "id": "okeechobee-bidnet",
-    "county": "Okeechobee",
-    "agency": "Okeechobee County BOCC",
-    "url": "https://www.bidnetdirect.com/florida/okeechobeecounty/solicitations/open-bids?selectedContent=BUYER",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 4.0
-   },
-   {
-    "id": "nassau-planetbids",
-    "county": "Nassau",
-    "agency": "Nassau County BOCC",
-    "url": "https://vendors.planetbids.com/portal/49083/bo/bo-search",
-    "status": "blocked",
-    "error": "HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=49083&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3",
-    "seconds": 0.3
-   },
-   {
-    "id": "parkland-planetbids",
-    "county": "Broward",
-    "agency": "City of Parkland",
-    "url": "https://vendors.planetbids.com/portal/80328/bo/bo-search",
-    "status": "blocked",
-    "error": "HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=80328&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3",
-    "seconds": 2.0
-   },
-   {
-    "id": "palm-beach-vss",
-    "county": "Palm Beach",
-    "agency": "Palm Beach County BOCC",
-    "url": "https://pbcvssp.pbc.gov/vssprd/Advantage4",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 73.7
-   },
-   {
-    "id": "miami-dade-informs",
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL",
-    "status": "ok",
-    "count": 13,
-    "new": 0,
-    "seconds": 3.8
-   },
-   {
-    "id": "miami-dade-construction",
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
-    "status": "ok",
-    "count": 24,
-    "new": 0,
-    "seconds": 0.2
-   },
-   {
-    "id": "miami-dade-future",
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitations",
-    "status": "ok",
-    "count": 6,
-    "new": 0,
-    "seconds": 2.0
    }
   ],
   "email": {
-   "status": "ok",
-   "messages": 12,
-   "bids": 0,
-   "unparsed": 12
+   "status": "skipped"
   },
   "alert_portals": {
    "opengov": 62,
@@ -507,7 +54,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 28
+  "removed_today": 0
  },
  "bids": [
   {
@@ -2207,7 +1754,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-10-24T21:47-04:00",
+   "last_seen": "2026-10-24T22:52-04:00",
    "extra": {},
    "key": "columbia-county::2026-o"
   },
@@ -2228,7 +1775,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-10-24T21:47-04:00",
+   "last_seen": "2026-10-24T22:52-04:00",
    "extra": {},
    "key": "columbia-county::s25-01"
   },
@@ -9956,7 +9503,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-10-24T21:47-04:00",
+   "last_seen": "2026-10-24T22:52-04:00",
    "extra": {},
    "key": "columbia-county::t27-04"
   },
