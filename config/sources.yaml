@@ -183,6 +183,12 @@ direct:
     url: https://www.hypoluxo.org/rfps
     note: Layout not inspected (site asks AI tools not to read it); check the first live run.
 
+  - id: indiantown-govaccess
+    reader: govaccess
+    county: Martin
+    agency: Village of Indiantown
+    url: https://www.indiantownfl.gov/rfps
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
