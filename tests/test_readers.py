@@ -249,3 +249,19 @@ def test_govaccess():
     b = bids[0]
     assert b.title == "BROOKSIDE CEMETERY PERIMETER FENCE INSTALLATION" and b.due == "2099-11-17"
     assert b.bid_url == "https://www.cityoffellsmere.org/administration/bids-rfp/bid-fence" and b.posted == "2026-10-12"
+
+
+DUE_TABLE = """<table><tr><td>SOLICITATION DOCUMENTS</td><td>SOLICITATION NUMBER &amp; NAME</td><td>RELEASED</td><td>DUE DATE</td><td>STATUS/ RESOLUTION</td></tr>
+<tr><td><a href="/DocumentCenter/View/1">BID 99-01 NEW PARK</a></td><td>BID 99-01<br>NEW PARK RESTROOMS</td><td>SEPTEMBER 16, 2098</td>
+<td>JUNE 2, 2099 NO LATER THAN 11:00 A.M. JUNE 16, 2099 NO LATER THAN 11:00 A.M.</td><td></td></tr>
+<tr><td></td><td>RFP 25-26-10 STATE LOBBYIST SERVICES</td><td>APRIL 16, 2026</td><td>MAY 21, 2099 NO LATER THAN 11:00 A.M.</td><td>AWARDED RESO 2026-110</td></tr></table>"""
+
+
+def test_due_table():
+    from scraper.readers import due_table
+    src = {"id": "h", "county": "Broward", "agency": "City", "url": "https://x.gov/417/S"}
+    bids = due_table.parse(DUE_TABLE, src, src["url"])
+    assert len(bids) == 1
+    b = bids[0]
+    assert b.number == "BID 99-01" and b.title == "NEW PARK RESTROOMS"
+    assert b.due.startswith("2099-06-16T11:00") and b.bid_url == "https://x.gov/DocumentCenter/View/1"

@@ -149,6 +149,12 @@ direct:
     agency_guid: 63133434-ac0d-48fb-84cb-d1289ae4b212
     rule: active
 
+  - id: hallandale-beach-page
+    reader: due_table
+    county: Broward
+    agency: City of Hallandale Beach
+    url: https://www.hallandalebeachfl.gov/417/Solicitation-Notifications
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
