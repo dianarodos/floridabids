@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-25 10:26 AM",
-  "updated_iso": "2026-10-25T10:26-04:00",
+  "updated": "2026-10-25 12:14 PM",
+  "updated_iso": "2026-10-25T12:14-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -37,10 +37,9 @@
     "county": "Columbia",
     "agency": "Columbia County BOCC",
     "url": "https://www.columbiacountyfla.com/PurchasingBids.aspx",
-    "status": "ok",
-    "count": 3,
-    "new": 0,
-    "seconds": 0.4
+    "status": "error",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='www.columbiacountyfla.com', port=443): Max retries exceeded with url: /PurchasingBids.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.columbiacountyfla.com', port=443) at 0x7f6aefeb1700>, 'Connection to www.columbiacountyfla.com timed out. (connect timeout=45)'))",
+    "seconds": 65.2
    },
    {
     "id": "lake-county",
@@ -465,10 +464,7 @@
    }
   ],
   "email": {
-   "status": "ok",
-   "messages": 8,
-   "bids": 41,
-   "unparsed": 7
+   "status": "skipped"
   },
   "alert_portals": {
    "opengov": 62,
@@ -507,7 +503,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 28
+  "removed_today": 0
  },
  "bids": [
   {
