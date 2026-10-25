@@ -209,6 +209,12 @@ direct:
     empty_text: No results found
     note: Granicus bids module (Open/Closed/Awarded filter) shows "No results found"; the 2026 document archive below it has no status.
 
+  - id: lake-worth-beach-bidsandtenders
+    reader: bidsandtenders
+    county: Palm Beach
+    agency: City of Lake Worth Beach
+    url: https://lakeworthbeachfl.bidsandtenders.net/
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
