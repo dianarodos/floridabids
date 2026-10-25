@@ -185,6 +185,7 @@ direct:
 
 alerts:
   opengov:
+    coralsprings: [Broward, City of Coral Springs]
     # portal slug: [county, agency name as shown on the site]
     alachuacounty: [Alachua, Alachua County BOCC]
     baycountyfl: [Bay, Bay County BOCC]
