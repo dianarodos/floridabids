@@ -125,8 +125,11 @@ async function stats(env) {
 }
 
 function authorized(request, env) {
+  if (!env.ADMIN_TOKEN) return false;
   const h = request.headers.get("authorization") || "";
-  return env.ADMIN_TOKEN && h === `Bearer ${env.ADMIN_TOKEN}`;
+  // ?key= lets Diana open the CSV export straight from a browser bookmark
+  const key = new URL(request.url).searchParams.get("key") || "";
+  return h === `Bearer ${env.ADMIN_TOKEN}` || key === env.ADMIN_TOKEN;
 }
 
 async function adminList(request, url, env) {
@@ -145,7 +148,7 @@ async function adminCsv(request, env) {
     "SELECT email, freq, status, created_at, confirmed_at, unsubscribed_at FROM subscribers ORDER BY created_at").all();
   const cols = ["email", "freq", "status", "created_at", "confirmed_at", "unsubscribed_at"];
   const csv = [cols.join(",")].concat(results.map(r => cols.map(c => `"${String(r[c] ?? "").replace(/"/g, '""')}"`).join(","))).join("\n");
-  return new Response(csv, { headers: { "Content-Type": "text/csv; charset=utf-8",
+  return new Response(csv, { headers: { "Content-Type": "text/csv; charset=utf-8", "Cache-Control": "no-store",
     "Content-Disposition": 'attachment; filename="floridabids-subscribers.csv"' } });
 }
 
