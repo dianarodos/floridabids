@@ -270,6 +270,13 @@ direct:
     url: https://vendors.planetbids.com/portal/49083/bo/bo-search
     company_id: 49083
 
+  - id: parkland-planetbids
+    reader: planetbids
+    county: Broward
+    agency: City of Parkland
+    url: https://vendors.planetbids.com/portal/80328/bo/bo-search
+    company_id: 80328
+
   - id: palm-beach-vss
     reader: pbc_vss
     county: Palm Beach
