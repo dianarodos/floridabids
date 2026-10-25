@@ -221,6 +221,12 @@ direct:
     agency: City of Margate
     url: https://www.margatefl.com/bids.aspx
 
+  - id: oakland-park-civicplus
+    reader: civicplus
+    county: Broward
+    agency: City of Oakland Park
+    url: https://oaklandparkfl.gov/bids.aspx
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
