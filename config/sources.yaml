@@ -215,6 +215,12 @@ direct:
     agency: City of Lake Worth Beach
     url: https://lakeworthbeachfl.bidsandtenders.net/
 
+  - id: margate-civicplus
+    reader: civicplus
+    county: Broward
+    agency: City of Margate
+    url: https://www.margatefl.com/bids.aspx
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
