@@ -128,6 +128,13 @@ direct:
     agency: City of Fellsmere
     url: https://www.cityoffellsmere.org/rfps
 
+  - id: westlake-govaccess
+    reader: govaccess
+    county: Palm Beach
+    agency: City of Westlake
+    url: https://www.westlakegov.com/rfps
+    note: Layout not inspected (site asks AI tools not to read it); check the first live run.
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
