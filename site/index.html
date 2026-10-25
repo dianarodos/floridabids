@@ -181,8 +181,6 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <h2>Where the bids come from</h2>
     <p class="lede">We read these public pages every morning, and we also include bids announced through agency email alerts. Always confirm details and deadlines on the agency's page before you respond.</p>
     <div class="cov" id="cov"></div>
-    <p class="note" id="alerts-note"></p>
-    <p class="note" id="skipped-note"></p>
   </section>
 
   <footer>
@@ -257,10 +255,6 @@ function buildCoverage(){
   const label = {ok:["Read today","ok"], empty:["Nothing open","warn"], error:["Couldn't read today","err"], blocked:["Blocked","err"]};
   $("#cov").innerHTML = (META.sources || []).map(s => { const [t, c] = label[s.status] || [s.status, ""];
     return `<div><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.agency)}</a><span class="${c}">${s.count ?? ""} ${t}</span></div>`; }).join("");
-  const ap = META.alert_portals || {}, n = Object.values(ap).reduce((a, b) => a + b, 0);
-  $("#alerts-note").textContent = n ? `Plus ${n} agency portals that send bid alerts by email (OpenGov and Bonfire), which we add as they arrive.` : "";
-  const sk = META.skipped || [];
-  $("#skipped-note").innerHTML = sk.length ? "Not included yet: " + sk.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.agency)}</a>`).join(", ") + "." : "";
 }
 
 document.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click", () => {
