@@ -155,6 +155,12 @@ direct:
     agency: City of Hallandale Beach
     url: https://www.hallandalebeachfl.gov/417/Solicitation-Notifications
 
+  - id: haverhill-watch
+    reader: watch
+    county: Palm Beach
+    agency: Town of Haverhill
+    url: https://www.townofhaverhill-fl.gov/1271/Bids-RFPs
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
