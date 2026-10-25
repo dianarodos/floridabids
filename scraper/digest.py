@@ -141,8 +141,11 @@ def main(argv=None):
     else:
         recipients = {}
         for f in freqs:
-            r = requests.get(f"{site}/api/admin/subscribers", params={"freq": f}, timeout=30,
-                             headers={"Authorization": f"Bearer {admin}"})
+            # go through the workers.dev address: Cloudflare's bot protection on floridabids.org blocks
+            # requests from GitHub's servers, while workers.dev reaches the same Worker directly
+            api = os.environ.get("API_URL", site).rstrip("/")
+            r = requests.get(f"{api}/api/admin/subscribers", params={"freq": f}, timeout=30,
+                             headers={"Authorization": f"Bearer {admin}", "User-Agent": "FloridaBids-digest/1.0"})
             r.raise_for_status()
             recipients[f] = r.json()["subscribers"]
 

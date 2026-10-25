@@ -60,6 +60,7 @@ jobs:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
           SITE_URL: https://floridabids.org
+          API_URL: https://floridabids.weddingboca.workers.dev
           FROM_EMAIL: list@floridabids.org
         run: python -m scraper.digest 2>&1 | tee -a data/run_log.txt
 
