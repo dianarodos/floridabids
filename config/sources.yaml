@@ -122,6 +122,12 @@ direct:
     agency: City of Fort Lauderdale
     url: https://sms-fortlauderdale-prd.inforcloudsuite.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=COFL
 
+  - id: fellsmere-govaccess
+    reader: govaccess
+    county: Indian River
+    agency: City of Fellsmere
+    url: https://www.cityoffellsmere.org/rfps
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns

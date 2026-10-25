@@ -233,3 +233,19 @@ def test_infor_fsm():
         "SourcingEventType": {"value": "IFB"}, "RequireBidBond": {"value": False}}}]}}
     b = infor_fsm.to_bids(payload, src)[0]
     assert b.number == "684-0" and b.due == "2099-11-30T14:00-05:00" and b.posted == "2026-10-23"
+
+
+GOVACCESS = """<div class="view-content"><table class="tablesaw views-table cols-3"><thead><tr><th>Title</th><th>Posted Date</th><th>Closing Date</th></tr></thead><tbody>
+<tr><td><strong class="tablesaw-cell-label">Title</strong> <span><a href="/administration/bids-rfp/bid-fence">BID- BROOKSIDE CEMETERY PERIMETER FENCE INSTALLATION</a></span></td>
+<td><strong class="tablesaw-cell-label">Posted Date</strong> <span><time>Mon 10/12/2026</time></span></td>
+<td><strong class="tablesaw-cell-label">Closing Date</strong> <span>Tue 11/17/2099 </span></td></tr></tbody></table></div>"""
+
+
+def test_govaccess():
+    from scraper.readers import govaccess
+    src = {"id": "g", "county": "Indian River", "agency": "City of Fellsmere", "url": "https://www.cityoffellsmere.org/rfps"}
+    bids, nxt = govaccess.parse(GOVACCESS, src, src["url"])
+    assert nxt is None and len(bids) == 1
+    b = bids[0]
+    assert b.title == "BROOKSIDE CEMETERY PERIMETER FENCE INSTALLATION" and b.due == "2099-11-17"
+    assert b.bid_url == "https://www.cityoffellsmere.org/administration/bids-rfp/bid-fence" and b.posted == "2026-10-12"
