@@ -1,7 +1,8 @@
 """Pages we only watch, because their layout can't tell us what is open.
 
 Two modes, set in sources.yaml:
-- default: the page says "there are no bids..."; when that sentence disappears, fail loudly.
+- default: the page says "there are no bids..." (or the source's own `empty_text`); when that
+  sentence disappears, fail loudly.
 - `latest: <text>`: an archive-style page listing past solicitations newest first; when the
   newest solicitation link is no longer <text>, fail loudly.
 A failure shows up in the run's health report so the page can get a proper reader.
@@ -33,6 +34,7 @@ def read(src):
         if top.lower().startswith(src["latest"].lower()):
             return []
         raise RuntimeError(f"newest listing changed to {top!r} - check the page for a new solicitation")
-    if EMPTY.search(" ".join(soup.get_text(" ").split())):
+    text = " ".join(soup.get_text(" ").split())
+    if (src.get("empty_text") and src["empty_text"].lower() in text.lower()) or EMPTY.search(text):
         return []
     raise RuntimeError("page no longer says 'no bids' - it now lists something and needs a reader")

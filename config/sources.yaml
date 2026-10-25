@@ -201,6 +201,14 @@ direct:
     agency: Town of Lake Clarke Shores
     url: https://www.townoflcs.gov/rfps
 
+  - id: lake-park-watch
+    reader: watch
+    county: Palm Beach
+    agency: Town of Lake Park
+    url: https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651
+    empty_text: No results found
+    note: Granicus bids module (Open/Closed/Awarded filter) shows "No results found"; the 2026 document archive below it has no status.
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
