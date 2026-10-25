@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-25 12:14 PM",
-  "updated_iso": "2026-10-25T12:14-04:00",
+  "updated": "2026-10-25 01:22 PM",
+  "updated_iso": "2026-10-25T13:22-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -38,7 +38,7 @@
     "agency": "Columbia County BOCC",
     "url": "https://www.columbiacountyfla.com/PurchasingBids.aspx",
     "status": "error",
-    "error": "ConnectTimeout: HTTPSConnectionPool(host='www.columbiacountyfla.com', port=443): Max retries exceeded with url: /PurchasingBids.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.columbiacountyfla.com', port=443) at 0x7f6aefeb1700>, 'Connection to www.columbiacountyfla.com timed out. (connect timeout=45)'))",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='www.columbiacountyfla.com', port=443): Max retries exceeded with url: /PurchasingBids.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.columbiacountyfla.com', port=443) at 0x7fb862b0f6e0>, 'Connection to www.columbiacountyfla.com timed out. (connect timeout=45)'))",
     "seconds": 65.2
    },
    {
