@@ -20,7 +20,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -42,10 +42,11 @@ jobs:
           ALERTS_EMAIL: ${{ secrets.ALERTS_EMAIL }}
           ALERTS_APP_PASSWORD: ${{ secrets.ALERTS_APP_PASSWORD }}
         run: |
+          set -o pipefail
           if [ -n "${{ github.event.inputs.only }}" ]; then
-            python run.py --only "${{ github.event.inputs.only }}"
+            python run.py --only "${{ github.event.inputs.only }}" 2>&1 | tee data/run_log.txt
           else
-            python run.py
+            python run.py 2>&1 | tee data/run_log.txt
           fi
 
       - name: Keep unparsed alert emails for review (7 days)
@@ -58,10 +59,11 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit updated data
+        if: always()
         run: |
           git config user.name "floridabids-bot"
           git config user.email "floridabidsalerts@gmail.com"
-          git add data/bids.json data/email_state.json site/data/ 2>/dev/null || true
+          git add data/bids.json data/email_state.json data/run_log.txt site/data/ 2>/dev/null || true
           if git diff --cached --quiet; then echo "No changes"; else
             git commit -m "Daily update $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
             git push

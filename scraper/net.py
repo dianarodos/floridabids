@@ -1,6 +1,7 @@
 """Polite network access: identify ourselves, honor robots.txt and crawl-delay."""
 from __future__ import annotations
 
+import threading
 import time
 import urllib.robotparser
 from functools import lru_cache
@@ -11,9 +12,26 @@ import requests
 USER_AGENT = "FloridaBidsBot/1.0 (+https://floridabids.org/about; daily list of public solicitations)"
 DEFAULT_DELAY = 2.0          # seconds between requests to the same host
 _last_hit: dict[str, float] = {}
+_host_locks: dict[str, threading.Lock] = {}
+_locks_guard = threading.Lock()
+_local = threading.local()
 
-session = requests.Session()
-session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"})
+
+def _new_session() -> requests.Session:
+    s = requests.Session()
+    s.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"})
+    return s
+
+
+class _SessionProxy:
+    """Sources run in parallel threads; each thread gets its own session (own cookies)."""
+    def __getattr__(self, name):
+        if not hasattr(_local, "s"):
+            _local.s = _new_session()
+        return getattr(_local.s, name)
+
+
+session = _SessionProxy()
 
 
 class Blocked(Exception):
@@ -47,11 +65,15 @@ def check(url: str) -> float:
 
 
 def wait_turn(url: str, delay: float) -> None:
+    """Space out requests to one host, even when several sources share it (e.g. DemandStar)."""
     host = urlsplit(url).netloc
-    elapsed = time.monotonic() - _last_hit.get(host, 0)
-    if elapsed < delay:
-        time.sleep(delay - elapsed)
-    _last_hit[host] = time.monotonic()
+    with _locks_guard:
+        lock = _host_locks.setdefault(host, threading.Lock())
+    with lock:
+        elapsed = time.monotonic() - _last_hit.get(host, 0)
+        if elapsed < delay:
+            time.sleep(delay - elapsed)
+        _last_hit[host] = time.monotonic()
 
 
 def get(url: str, **kw) -> requests.Response:

@@ -10,7 +10,10 @@ import argparse
 import json
 import logging
 import re
+import os
+import queue
 import sys
+import threading
 import time
 import traceback
 from pathlib import Path
@@ -47,6 +50,98 @@ def dedupe(bids):
     return list({id(b): b for b in best.values()}.values())
 
 
+# Readers that drive the headless browser. Playwright's sync API stays on the main thread;
+# everything else runs in a small pool of worker threads so one slow site can't hold up the rest.
+BROWSER_READERS = {"lake", "vendorlink", "oracle_jax", "pbc_vss", "miamidade_informs"}
+WORKERS = 8
+BUDGET = float(os.environ.get("RUN_BUDGET_MIN", "35")) * 60      # whole source step
+PER_SOURCE = float(os.environ.get("SOURCE_BUDGET_MIN", "8")) * 60
+_closed = threading.Event()
+
+
+def read_one(src, bids, lock):
+    t0 = time.monotonic()
+    entry = {"id": src["id"], "county": src["county"], "agency": src["agency"], "url": src["url"]}
+    try:
+        fresh = get_reader(src["reader"])(src)
+        with lock:
+            if _closed.is_set():          # abandoned after its time ran out; leave yesterday's bids alone
+                return entry
+            count, new = store.replace_source(bids, src["id"], fresh)
+        entry.update(status="ok", count=count, new=new)
+        if count == 0 and not src.get("may_be_empty"):
+            entry["status"] = "empty"     # page read fine but nothing open; worth a look if it persists
+    except Blocked as e:
+        entry.update(status="blocked", error=str(e))
+    except Exception as e:   # one broken site must not stop the rest
+        entry.update(status="error", error=f"{type(e).__name__}: {e}")
+        log.error("%s failed:\n%s", src["id"], traceback.format_exc())
+    entry["seconds"] = round(time.monotonic() - t0, 1)
+    log.info("%-32s %-7s %6.1fs %s", src["id"], entry["status"], entry["seconds"],
+             entry.get("count", entry.get("error", "")))
+    return entry
+
+
+def run_sources(sources, bids):
+    start = time.monotonic()
+    deadline = start + BUDGET
+    lock = threading.Lock()
+    results, started = {}, {}
+    work = queue.Queue()
+    for s in sources:
+        if s["reader"] not in BROWSER_READERS:
+            work.put(s)
+
+    def worker():
+        while True:
+            try:
+                s = work.get_nowait()
+            except queue.Empty:
+                return
+            if time.monotonic() > deadline:
+                results[s["id"]] = {"id": s["id"], "county": s["county"], "agency": s["agency"], "url": s["url"],
+                                    "status": "skipped", "error": "out of time this run"}
+                continue
+            started[s["id"]] = time.monotonic()
+            results[s["id"]] = read_one(s, bids, lock)
+
+    threads = [threading.Thread(target=worker, daemon=True) for _ in range(WORKERS)]
+    for t in threads:
+        t.start()
+
+    # browser sources, one at a time on this thread, while the pool works
+    for s in sources:
+        if s["reader"] in BROWSER_READERS:
+            if time.monotonic() > deadline:
+                results[s["id"]] = {"id": s["id"], "county": s["county"], "agency": s["agency"], "url": s["url"],
+                                    "status": "skipped", "error": "out of time this run"}
+                continue
+            results[s["id"]] = read_one(s, bids, lock)
+    browser.close()
+
+    # wait for the pool; a source stuck past its own budget (or the run budget) is abandoned
+    while any(t.is_alive() for t in threads) and time.monotonic() < deadline:
+        now = time.monotonic()
+        stuck = [sid for sid, t0 in started.items() if sid not in results and now - t0 > PER_SOURCE]
+        if stuck and len(stuck) >= sum(t.is_alive() for t in threads):
+            break                      # every live worker is stuck on one source
+        time.sleep(2)
+
+    with lock:
+        _closed.set()
+    health = []
+    for s in sources:
+        e = results.get(s["id"])
+        if e is None:
+            e = {"id": s["id"], "county": s["county"], "agency": s["agency"], "url": s["url"],
+                 "status": "timeout" if s["id"] in started else "skipped",
+                 "error": "took too long; kept yesterday's bids" if s["id"] in started else "out of time this run"}
+            log.warning("%-32s %s", s["id"], e["status"])
+        health.append(e)
+    log.info("sources done in %.0fs", time.monotonic() - start)
+    return health
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", default="")
@@ -59,26 +154,8 @@ def main(argv=None):
     bids = store.load()
     health = []
 
-    for src in cfg["direct"]:
-        if only and src["id"] not in only:
-            continue
-        t0 = time.monotonic()
-        entry = {"id": src["id"], "county": src["county"], "agency": src["agency"], "url": src["url"]}
-        try:
-            fresh = get_reader(src["reader"])(src)
-            count, new = store.replace_source(bids, src["id"], fresh)
-            entry.update(status="ok", count=count, new=new)
-            if count == 0 and not src.get("may_be_empty"):
-                entry["status"] = "empty"     # page read fine but nothing open; worth a look if it persists
-        except Blocked as e:
-            entry.update(status="blocked", error=str(e))
-        except Exception as e:   # one broken site must not stop the rest
-            entry.update(status="error", error=f"{type(e).__name__}: {e}")
-            log.error("%s failed:\n%s", src["id"], traceback.format_exc())
-        entry["seconds"] = round(time.monotonic() - t0, 1)
-        log.info("%-28s %-7s %s", src["id"], entry["status"], entry.get("count", entry.get("error", "")))
-        health.append(entry)
-    browser.close()
+    sources = [s for s in cfg["direct"] if not only or s["id"] in only]
+    health = run_sources(sources, bids)
 
     email_info = {"status": "skipped"}
     if not args.no_email and not only:
