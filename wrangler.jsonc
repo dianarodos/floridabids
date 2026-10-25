@@ -1,0 +1,28 @@
+// Cloudflare Worker for floridabids.org: the static site in site/ plus the email-list API in worker/index.js.
+// Secrets (set in the Cloudflare dashboard, never here): BREVO_API_KEY, ADMIN_TOKEN.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "floridabids",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "floridabids", "database_id": "1ae6132b-947b-4dd9-bf6c-1999d1487e03" }
+  ],
+  "vars": {
+    "SITE_URL": "https://floridabids.org",
+    "FROM_EMAIL": "list@floridabids.org",
+    "FROM_NAME": "Florida Bids"
+  },
+  "routes": [
+    { "pattern": "floridabids.org", "custom_domain": true },
+    { "pattern": "www.floridabids.org", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "keep_vars": true
+}
