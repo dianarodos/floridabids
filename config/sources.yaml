@@ -189,6 +189,12 @@ direct:
     agency: Village of Indiantown
     url: https://www.indiantownfl.gov/rfps
 
+  - id: jupiter-inlet-colony-watch
+    reader: watch
+    county: Palm Beach
+    agency: Town of Jupiter Inlet Colony
+    url: https://www.jupiterinletcolony.gov/283/BidsRFPs
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns

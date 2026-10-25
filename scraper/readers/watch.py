@@ -12,7 +12,8 @@ from bs4 import BeautifulSoup
 
 from .. import net
 
-EMPTY = re.compile(r"there (?:are|is) (?:currently )?no (?:open |active |current )?(?:bids|rfps|solicitations)", re.I)
+EMPTY = re.compile(r"(?:there (?:are|is) (?:currently )?no|(?:does|do) not (?:currently )?have any|no (?:open|active|current))"
+                   r"\s+(?:open |active |current )?(?:bids?|rfps?|solicitations?)", re.I)
 SOLICITATION = re.compile(r"^\s*(?:RFP|RFQ|RFI|ITB|IFB|ITN|BID)\b", re.I)
 
 
