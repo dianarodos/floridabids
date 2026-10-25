@@ -30,7 +30,7 @@ def load() -> list[Bid]:
                 src = {"id": f"backfill-{slug}", "county": row.get("county", ""), "agency": row.get("agency", ""),
                        "url": row.get("source_url") or row.get("bid_url", "")}
                 b = make_bid(src, title=row["title"], number=row.get("number", ""), due_raw=row.get("due", ""),
-                             type_=row.get("type", ""), status=row.get("status") or "Open",
+                             type_=row.get("type", ""), status=row.get("status") or "Open", posted_raw=row.get("posted", ""),
                              bid_url=row.get("bid_url", ""), notes="Added by one-time backfill.")
                 b.origin = "backfill"
                 out.append(b)

@@ -260,7 +260,9 @@ fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
   const week = 7 * 864e5;
   $("#c-total").textContent = ALL.length.toLocaleString();
   $("#c-soon").textContent = ALL.filter(b => daysLeft(b) <= 7).length;
-  $("#c-new").textContent = ALL.filter(b => b.first_seen && (now() - new Date(b.first_seen)) < week).length;
+  // "new" = posted in the last 7 days; fall back to when we first saw it only if the agency gives no posted date
+  const seenSince = b => b.posted ? new Date(b.posted + "T00:00:00") : (b.first_seen ? new Date(b.first_seen) : null);
+  $("#c-new").textContent = ALL.filter(b => { const d = seenSince(b); return d && (now() - d) < week; }).length;
   $("#c-counties").textContent = META.counties ?? new Set(ALL.map(b => b.county)).size;
   $("#updated").textContent = `Updated ${META.updated} Eastern. Sorted by due date, soonest first.`;
   buildChips(); buildCoverage(); render();
