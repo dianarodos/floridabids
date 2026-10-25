@@ -64,6 +64,14 @@ jobs:
           FROM_EMAIL: list@floridabids.org
         run: python -m scraper.digest 2>&1 | tee -a data/run_log.txt
 
+      - name: Status report to Diana (Mondays, or when something breaks)
+        if: always()
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          REPORT_EMAIL: ${{ secrets.REPORT_EMAIL }}
+          FROM_EMAIL: list@floridabids.org
+        run: python -m scraper.report ${{ github.event.inputs.send_email == 'yes' && '--always' || '' }} 2>&1 | tee -a data/run_log.txt
+
       - name: Keep unparsed alert emails for review (7 days)
         if: always()
         uses: actions/upload-artifact@v4

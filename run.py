@@ -164,6 +164,13 @@ def main(argv=None):
 
     sources = [s for s in cfg["direct"] if not only or s["id"] in only]
     health = run_sources(sources, bids)
+    if only:   # a test run of a few sources keeps everyone else's last status in the report
+        try:
+            prev = json.loads((ROOT / "data" / "bids.json").read_text()).get("meta", {}).get("sources", [])
+        except (OSError, ValueError):
+            prev = []
+        fresh = {h["id"]: h for h in health}
+        health = [fresh.pop(h["id"], h) for h in prev] + list(fresh.values())
 
     email_info = {"status": "skipped"}
     if not args.no_email and not only:
