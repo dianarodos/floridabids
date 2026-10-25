@@ -161,6 +161,14 @@ direct:
     agency: Town of Haverhill
     url: https://www.townofhaverhill-fl.gov/1271/Bids-RFPs
 
+  - id: highland-beach-demandstar
+    reader: demandstar
+    county: Palm Beach
+    agency: Town of Highland Beach
+    url: https://www.demandstar.com/app/agencies/florida/town-of-highland-beach/procurement-opportunities/6d6b280e-f755-4675-bce5-4993f74626bc/
+    agency_guid: 6d6b280e-f755-4675-bce5-4993f74626bc
+    rule: active
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
