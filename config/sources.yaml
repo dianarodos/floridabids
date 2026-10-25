@@ -176,6 +176,13 @@ direct:
     url: https://www.townofhillsborobeach.com/363/Bid-Opportunities
     latest: RFP 2025-07-01
 
+  - id: hypoluxo-govaccess
+    reader: govaccess
+    county: Palm Beach
+    agency: Town of Hypoluxo
+    url: https://www.hypoluxo.org/rfps
+    note: Layout not inspected (site asks AI tools not to read it); check the first live run.
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
