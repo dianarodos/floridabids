@@ -63,7 +63,7 @@ jobs:
         run: |
           git config user.name "floridabids-bot"
           git config user.email "floridabidsalerts@gmail.com"
-          git add data/bids.json data/email_state.json data/run_log.txt site/data/ 2>/dev/null || true
+          git add --all -- data site/data   # one missing file must not stop the others
           if git diff --cached --quiet; then echo "No changes"; else
             git commit -m "Daily update $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
             git push
