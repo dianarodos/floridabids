@@ -367,6 +367,10 @@ alerts:
     Indian River County: [Indian River, Indian River County BOCC, indianriver]
 
 skipped:
+  - county: Broward
+    agency: City of North Lauderdale
+    url: https://www.nlauderdale.org/business/procurement/index.php
+    reason: The city's site blocks automated reading; its bids are on DemandStar (add that agency page instead).
   - county: Lee
     agency: Lee County BOCC
     url: https://leegov.ionwave.net/SourcingEvents.aspx?SourceType=1
