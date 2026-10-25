@@ -169,6 +169,13 @@ direct:
     agency_guid: 6d6b280e-f755-4675-bce5-4993f74626bc
     rule: active
 
+  - id: hillsboro-beach-watch
+    reader: watch
+    county: Broward
+    agency: Town of Hillsboro Beach
+    url: https://www.townofhillsborobeach.com/363/Bid-Opportunities
+    latest: RFP 2025-07-01
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
