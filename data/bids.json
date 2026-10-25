@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-25 12:23 AM",
-  "updated_iso": "2026-10-25T00:23-04:00",
+  "updated": "2026-10-25 12:24 AM",
+  "updated_iso": "2026-10-25T00:24-04:00",
   "sources": [
    {
     "id": "columbia-county",
@@ -11,7 +11,7 @@
     "status": "ok",
     "count": 3,
     "new": 0,
-    "seconds": 0.5
+    "seconds": 0.4
    }
   ],
   "email": {
@@ -1754,7 +1754,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-10-25T00:23-04:00",
+   "last_seen": "2026-10-25T00:24-04:00",
    "extra": {},
    "key": "columbia-county::2026-o"
   },
@@ -1775,7 +1775,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-10-25T00:23-04:00",
+   "last_seen": "2026-10-25T00:24-04:00",
    "extra": {},
    "key": "columbia-county::s25-01"
   },
@@ -9503,7 +9503,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-10-25T00:23-04:00",
+   "last_seen": "2026-10-25T00:24-04:00",
    "extra": {},
    "key": "columbia-county::t27-04"
   },

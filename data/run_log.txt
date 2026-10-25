@@ -1,14 +1,4 @@
-INFO run: columbia-county                  ok         0.5s 3
+INFO run: columbia-county                  ok         0.4s 3
 INFO run: sources done in 2s
 INFO run: open bids: 538 across 38 counties (removed 0 closed)
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/floridabids/floridabids/scraper/digest.py", line 173, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/home/runner/work/floridabids/floridabids/scraper/digest.py", line 146, in main
-    r.raise_for_status()
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://floridabids.org/api/admin/subscribers?freq=daily
+INFO digest: digest: 1 sent, 0 failed (daily)
