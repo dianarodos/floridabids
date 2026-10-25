@@ -135,6 +135,12 @@ direct:
     url: https://www.westlakegov.com/rfps
     note: Layout not inspected (site asks AI tools not to read it); check the first live run.
 
+  - id: fort-pierce-civicplus
+    reader: civicplus
+    county: St. Lucie
+    agency: City of Fort Pierce
+    url: https://www.cityoffortpierce.com/Bids.aspx?CatID=17
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
