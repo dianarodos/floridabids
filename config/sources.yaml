@@ -263,6 +263,12 @@ direct:
     agency: Highlands County BOCC
     url: https://www.bidnetdirect.com/florida/highlandscountyfl/solicitations/open-bids?selectedContent=BUYER
 
+  - id: riviera-beach-bidnet
+    reader: bidnet
+    county: Palm Beach
+    agency: City of Riviera Beach
+    url: https://www.bidnetdirect.com/florida/cityofrivierabeach/solicitations/open-bids?selectedContent=BUYER
+
   - id: okeechobee-bidnet
     reader: bidnet
     county: Okeechobee
