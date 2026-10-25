@@ -141,6 +141,14 @@ direct:
     agency: City of Fort Pierce
     url: https://www.cityoffortpierce.com/Bids.aspx?CatID=17
 
+  - id: greenacres-demandstar
+    reader: demandstar
+    county: Palm Beach
+    agency: City of Greenacres
+    url: https://www.demandstar.com/app/agencies/florida/city-of-greenacres/procurement-opportunities/63133434-ac0d-48fb-84cb-d1289ae4b212/
+    agency_guid: 63133434-ac0d-48fb-84cb-d1289ae4b212
+    rule: active
+
   - id: st-johns-demandstar
     reader: demandstar
     county: St. Johns
