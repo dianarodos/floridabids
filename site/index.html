@@ -88,6 +88,12 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
   td.c-county{grid-column:1;grid-row:2} td.c-num{grid-column:1/-1} td.c-links{grid-column:1/-1}
   td.c-county::before{content:"";}
   .links{flex-direction:row;gap:14px}
+  /* keep the sticky bar short on phones: categories scroll sideways in one line */
+  #cats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}
+  #cats::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .bar .row:first-child{display:grid;grid-template-columns:1fr auto}
+  .bar .row:first-child input{grid-column:1/-1}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
