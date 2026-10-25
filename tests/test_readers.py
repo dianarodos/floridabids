@@ -67,7 +67,7 @@ def test_polk(monkeypatch):
     html = """<table><tr><th>Bid #</th></tr>
     <tr class="oneRow"><td class="bid"><a href="https://www.polkfl.gov/bid-form/bid-26-389/">Bid 26-389</a></td>
     <td class="bid-title">COUNTYWIDE DUMPSTER AND TRASH PICKUP SERVICES</td><td class="bid-date">November 18, 2099</td></tr>
-    <tr class="oneRow"><td class="bid"><a href="x">CQ 26-128 SM</a></td><td class="bid-title">Wall - NOTICE OF REJECTION OF BIDS</td><td class="bid-date"></td></tr>
+    <tr class="twoRow"><td class="bid"><a href="x">CQ 26-128 SM</a></td><td class="bid-title">Wall - NOTICE OF REJECTION OF BIDS</td><td class="bid-date"></td></tr>
     </table>"""
     patch(monkeypatch, lambda url, **k: Resp(html))
     out = polk.read(src())

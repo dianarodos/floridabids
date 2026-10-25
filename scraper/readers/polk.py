@@ -14,7 +14,8 @@ from . import make_bid
 def read(src):
     soup = BeautifulSoup(net.get(src["url"]).text, "lxml")
     out = []
-    for tr in soup.select("tr.oneRow"):
+    # rows alternate classes (oneRow / twoRow), so take every row that has a title cell
+    for tr in soup.select("tr"):
         num_td, title_td, date_td = tr.select_one("td.bid"), tr.select_one("td.bid-title"), tr.select_one("td.bid-date")
         if not (num_td and title_td):
             continue
