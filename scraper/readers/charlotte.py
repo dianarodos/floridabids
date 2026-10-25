@@ -28,13 +28,17 @@ def _href(html):
 
 def read(src):
     api = urljoin(src["url"], "/ContractsCatalogs/GetContractData")
-    out, page = [], 0
-    while True:
+    out, page, seen = [], 0, set()
+    while page < 40:
         params = {"filterscount": 0, "groupscount": 0, "pagenum": page, "pagesize": PAGE_SIZE,
                   "recordstartindex": page * PAGE_SIZE, "recordendindex": (page + 1) * PAGE_SIZE}
         rows = net.get(api, params=params, headers={"X-Requested-With": "XMLHttpRequest"}).json()
         if not rows:
             break
+        ids = {(r.get("FileNo"), r.get("Description")) for r in rows}
+        if ids <= seen:          # the endpoint ignored the page number and sent the same rows again
+            break
+        seen |= ids
         for r in rows:
             if r.get("bcancelled") or r.get("bAwarded"):
                 continue

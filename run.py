@@ -18,6 +18,7 @@ import time
 import traceback
 from pathlib import Path
 
+import requests
 import yaml
 
 from scraper import backfill, browser, emails, store
@@ -73,6 +74,13 @@ def read_one(src, bids, lock):
             entry["status"] = "empty"     # page read fine but nothing open; worth a look if it persists
     except Blocked as e:
         entry.update(status="blocked", error=str(e))
+    except requests.HTTPError as e:
+        code = e.response.status_code if e.response is not None else 0
+        if code in (401, 403, 429):   # the site refuses automated reading; we don't work around that
+            entry.update(status="blocked", error=f"HTTP {code} from {e.request.url if e.request else ''}")
+        else:
+            entry.update(status="error", error=f"HTTPError: {e}")
+            log.error("%s failed:\n%s", src["id"], traceback.format_exc())
     except Exception as e:   # one broken site must not stop the rest
         entry.update(status="error", error=f"{type(e).__name__}: {e}")
         log.error("%s failed:\n%s", src["id"], traceback.format_exc())

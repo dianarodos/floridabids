@@ -19,7 +19,7 @@ def _ensure():
 
 
 @contextmanager
-def page(url: str, wait_for: str | None = None, timeout_ms: int = 45000):
+def page(url: str, wait_for: str | None = None, timeout_ms: int = 60000):
     """Open url in a fresh page (robots.txt checked first). Yields the Playwright page."""
     delay = check(url)
     wait_turn(url, delay)
@@ -27,14 +27,25 @@ def page(url: str, wait_for: str | None = None, timeout_ms: int = 45000):
     pg = ctx.new_page()
     pg.set_default_timeout(timeout_ms)
     try:
-        pg.goto(url, wait_until="domcontentloaded")
-        if wait_for:
-            pg.wait_for_selector(wait_for)
-        else:
-            pg.wait_for_load_state("networkidle")
+        try:
+            pg.goto(url, wait_until="domcontentloaded")
+            if wait_for:
+                pg.wait_for_selector(wait_for)
+            else:
+                pg.wait_for_load_state("networkidle")
+        except Exception as e:
+            raise RuntimeError(f"{type(e).__name__} on {pg.url} - page title {_safe(pg.title)!r}, "
+                               f"text {_safe(lambda: pg.inner_text('body'))[:200]!r}") from None
         yield pg
     finally:
         ctx.close()
+
+
+def _safe(fn):
+    try:
+        return " ".join(str(fn()).split())
+    except Exception:
+        return ""
 
 
 def close():

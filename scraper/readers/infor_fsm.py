@@ -57,4 +57,9 @@ def read(src):
     q = {k: v[0] for k, v in parse_qs(u.query).items()}
     q.update({"pageop": "load", "pagesize": PAGE})
     api = urlunparse(u._replace(query=urlencode(q)))
-    return to_bids(net.get(api, headers={"Accept": "application/json"}).json(), src)
+    r = net.get(api, headers={"Accept": "application/json", "X-Requested-With": "XMLHttpRequest", "Referer": src["url"]})
+    try:
+        payload = r.json()
+    except ValueError:
+        raise RuntimeError(f"expected JSON, got {r.headers.get('content-type')}: {r.text[:200]!r}") from None
+    return to_bids(payload, src)

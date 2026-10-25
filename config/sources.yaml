@@ -233,7 +233,7 @@ direct:
     agency: City of Pahokee
     url: https://www.demandstar.com/app/agencies/florida/city-of-pahokee/procurement-opportunities/9508ace6-c58d-4095-9b5d-01b72a037bb9/
     agency_guid: 9508ace6-c58d-4095-9b5d-01b72a037bb9
-    rule: active
+    rule: future_due
 
   - id: pembroke-park-page
     reader: due_table

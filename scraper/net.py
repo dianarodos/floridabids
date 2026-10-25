@@ -19,7 +19,8 @@ _local = threading.local()
 
 def _new_session() -> requests.Session:
     s = requests.Session()
-    s.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"})
+    s.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9",
+                      "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8"})
     return s
 
 
