@@ -1,7 +1,4 @@
-INFO run: langd-bidnet                     empty      1.1s 0
-INFO run: langd-bidnet                     empty      3.1s 0
-INFO run: lutheran-services-bidnet         ok         4.9s 1
-INFO run: miami-housing-bidnet             empty      6.8s 0
-INFO run: sources done in 8s
-INFO run: open bids: 625 across 38 counties (removed 3 closed)
+INFO run: baker-county                     blocked    0.3s HTTP 403 from https://www.bakercountyfl.org/purchasing.php
+INFO run: sources done in 2s
+INFO run: open bids: 624 across 38 counties (removed 5 closed)
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent

@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-26 03:13 PM",
-  "updated_iso": "2026-10-26T15:13-04:00",
+  "updated": "2026-10-26 05:01 PM",
+  "updated_iso": "2026-10-26T17:01-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -922,6 +922,15 @@
     "count": 0,
     "new": 0,
     "seconds": 3.1
+   },
+   {
+    "id": "baker-county",
+    "county": "Baker",
+    "agency": "Baker County BOCC",
+    "url": "https://www.bakercountyfl.org/purchasing.php",
+    "status": "blocked",
+    "error": "HTTP 403 from https://www.bakercountyfl.org/purchasing.php",
+    "seconds": 0.3
    }
   ],
   "email": {
@@ -964,7 +973,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 3
+  "removed_today": 5
  },
  "bids": [
   {
@@ -1239,48 +1248,6 @@
    "last_seen": "2026-10-24T21:35-04:00",
    "extra": {},
    "key": "backfill-walton-county-bocc::26-25"
-  },
-  {
-   "source_id": "backfill-south-florida-regional-transportation-authority-tri-rail",
-   "county": "Broward",
-   "agency": "South Florida Regional Transportation Authority (Tri-Rail)",
-   "title": "Sale of Surplus Rail Equipment",
-   "number": "26-1015",
-   "type": "",
-   "status": "Open",
-   "category": "Property & Real Estate",
-   "agency_category": "",
-   "posted": "",
-   "due": "2026-10-26T16:00-04:00",
-   "bid_url": "https://sfrta.bonfirehub.com/portal/?tab=openOpportunities",
-   "source_url": "https://sfrta.bonfirehub.com/portal/?tab=openOpportunities",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-south-florida-regional-transportation-authority-tri-rail::26-1015"
-  },
-  {
-   "source_id": "backfill-broward-county-bocc",
-   "county": "Broward",
-   "agency": "Broward County BOCC",
-   "title": "Pre-Solicitation Notice - Draft Computer Aided Dispatch/Automatic Vehicle Location System",
-   "number": "Draft TRN2131593P1",
-   "type": "Draft / Future",
-   "status": "Open",
-   "category": "IT & Technology",
-   "agency_category": "",
-   "posted": "",
-   "due": "2026-10-26T17:00-04:00",
-   "bid_url": "https://broward.bonfirehub.com/portal/?tab=openOpportunities",
-   "source_url": "https://broward.bonfirehub.com/portal/?tab=openOpportunities",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-broward-county-bocc::draft trn2131593p1"
   },
   {
    "source_id": "backfill-collier-county-bocc",
