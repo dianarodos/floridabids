@@ -56,7 +56,7 @@ def make_bid(src: dict, *, title: str, number: str = "", due_raw: str = "", due_
 
 
 def get_reader(name: str):
-    from . import (watch, bidnet, bidsandtenders, charlotte, due_table, govaccess, infor_fsm, civicplus, columbia, demandstar, jaxport, lake, miamidade, oracle_jax,
+    from . import (watch, labeled_blocks, bidnet, bidsandtenders, charlotte, due_table, govaccess, infor_fsm, civicplus, columbia, demandstar, jaxport, lake, miamidade, oracle_jax,
                    pbc_vss, planetbids, polk, putnam, vendorlink)
     readers = {
         "vendorlink": vendorlink.read,
@@ -66,6 +66,7 @@ def get_reader(name: str):
         "charlotte": charlotte.read,
         "columbia": columbia.read,
         "watch": watch.read,
+        "labeled_blocks": labeled_blocks.read,
         "due_table": due_table.read,
         "govaccess": govaccess.read,
         "infor_fsm": infor_fsm.read,

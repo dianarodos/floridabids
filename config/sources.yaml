@@ -558,6 +558,12 @@ direct:
     agency: Lake Apopka Natural Gas District
     url: https://www.bidnetdirect.com/florida/langd/solicitations/open-bids?selectedContent=BUYER
 
+  - id: baker-county
+    reader: labeled_blocks
+    county: Baker
+    agency: Baker County BOCC
+    url: https://www.bakercountyfl.org/purchasing.php
+
   - id: nassau-planetbids
     reader: planetbids
     county: Nassau

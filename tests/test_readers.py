@@ -295,3 +295,23 @@ def test_county_from_title():
     assert make_bid(src, title="Statewide services").county == "Hillsborough"
     src.pop("county_from_title")
     assert make_bid(src, title="Child Care Providers Palm Beach County").county == "Hillsborough"
+
+
+def test_labeled_blocks():
+    from scraper.readers import labeled_blocks
+    src = {"id": "baker-county", "county": "Baker", "agency": "Baker County BOCC", "url": "u"}
+    text = """2099-16
+Contact: Troy Tarbox
+Due: 02/19/2099 11:00 am
+CR 229 N Widening and Resurfacing
+Commodity:
+Documents:
+2025-15
+Closed on: 11/05/2025 11:00 am
+Shoals Park
+RFP 2025-12
+Due: 02/19/2025 11:00 am
+Old one"""
+    bids = labeled_blocks.parse(text, src)
+    assert [(b.number, b.title) for b in bids] == [("2099-16", "CR 229 N Widening and Resurfacing")]
+    assert bids[0].due.startswith("2099-02-19")
