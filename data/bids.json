@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-26 02:06 PM",
-  "updated_iso": "2026-10-26T14:06-04:00",
+  "updated": "2026-10-26 03:01 PM",
+  "updated_iso": "2026-10-26T15:01-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -880,8 +880,8 @@
     "url": "https://www.bidnetdirect.com/florida/lutheranservicesflorida/solicitations/open-bids?selectedContent=BUYER",
     "status": "ok",
     "count": 1,
-    "new": 1,
-    "seconds": 16.7
+    "new": 0,
+    "seconds": 5.2
    },
    {
     "id": "mbvca-bidnet",
@@ -902,6 +902,26 @@
     "count": 0,
     "new": 0,
     "seconds": 16.0
+   },
+   {
+    "id": "miami-hcd-bidnet",
+    "county": "Miami-Dade",
+    "agency": "City of Miami Housing and Community Development",
+    "url": "https://www.bidnetdirect.com/florida/departmentofhousingandcommunitydevelopment/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 1.2
+   },
+   {
+    "id": "langd-bidnet",
+    "county": "Orange",
+    "agency": "Lake Apopka Natural Gas District",
+    "url": "https://www.bidnetdirect.com/florida/langd/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 3.1
    }
   ],
   "email": {
@@ -944,7 +964,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 4
+  "removed_today": 3
  },
  "bids": [
   {
@@ -3741,27 +3761,6 @@
    "key": "backfill-city-of-tampa::a0d9b5b453b8"
   },
   {
-   "source_id": "lutheran-services-bidnet",
-   "county": "Hillsborough",
-   "agency": "Lutheran Services Florida",
-   "title": "RFP-2026-010 Child Care Providers Palm Beach County",
-   "number": "RFP-2026-010",
-   "type": "RFP",
-   "status": "Open",
-   "category": "Other",
-   "agency_category": "",
-   "posted": "2026-10-01",
-   "due": "2026-10-30",
-   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/RFP-2026-010-Child-Care-Providers-Palm-Beach-County/0000438920?purchasingGroupId=8408751&origin=2",
-   "source_url": "https://www.bidnetdirect.com/florida/lutheranservicesflorida/solicitations/open-bids?selectedContent=BUYER",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-10-26T14:06-04:00",
-   "extra": {},
-   "key": "lutheran-services-bidnet::rfp-2026-010"
-  },
-  {
    "source_id": "backfill-city-of-fort-myers",
    "county": "Lee",
    "agency": "City of Fort Myers",
@@ -3886,6 +3885,27 @@
    "last_seen": "2026-10-24T21:35-04:00",
    "extra": {},
    "key": "backfill-city-of-palm-beach-gardens::8c3d02486299"
+  },
+  {
+   "source_id": "lutheran-services-bidnet",
+   "county": "Palm Beach",
+   "agency": "Lutheran Services Florida",
+   "title": "RFP-2026-010 Child Care Providers Palm Beach County",
+   "number": "RFP-2026-010",
+   "type": "RFP",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "2026-10-01",
+   "due": "2026-10-30",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/RFP-2026-010-Child-Care-Providers-Palm-Beach-County/0000438920?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/lutheranservicesflorida/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T14:06-04:00",
+   "last_seen": "2026-10-26T15:01-04:00",
+   "extra": {},
+   "key": "lutheran-services-bidnet::rfp-2026-010"
   },
   {
    "source_id": "backfill-city-of-lakeland",

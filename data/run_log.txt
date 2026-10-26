@@ -1,36 +1,6 @@
-INFO run: north-miami-beach-bidnet         empty      0.7s 0
-INFO run: port-richey-bidnet               ok         2.9s 1
-INFO run: pensacola-bidnet                 empty      4.9s 0
-INFO run: miami-bidnet                     ok         6.9s 5
-INFO run: miami-beach-bidnet               ok         9.2s 25
-INFO run: hialeah-bidnet                   empty     10.7s 0
-INFO run: milton-bidnet                    empty     12.7s 0
-INFO run: mary-esther-bidnet               empty     14.6s 0
-INFO run: sarasota-city-bidnet             empty     16.2s 0
-INFO run: sebring-bidnet                   ok        15.9s 2
-INFO run: zephyrhills-bidnet               empty     16.0s 0
-INFO run: daytona-state-bidnet             empty     16.0s 0
-INFO run: elc-orange-bidnet                empty     15.5s 0
-INFO run: ecua-bidnet                      ok        16.1s 1
-INFO run: ecs4kids-bidnet                  ok        16.1s 2
-INFO run: escambia-schools-bidnet          ok        16.1s 1
-INFO run: escambia-schools-facilities-bidnet empty     15.8s 0
-INFO run: fairchild-bidnet                 empty     15.9s 0
-INFO run: fsw-bidnet                       empty     16.0s 0
-INFO run: fort-myers-beach-bidnet          empty     16.1s 0
-INFO run: gainesville-housing-bidnet       empty     16.2s 0
-INFO run: gmx-bidnet                       empty     16.0s 0
-INFO run: gulf-coast-state-bidnet          ok        16.9s 1
-INFO run: hernando-county-bidnet           empty     17.2s 0
-INFO run: hernando-schools-bidnet          ok        16.0s 3
-INFO run: holley-navarre-water-bidnet      ok        16.1s 1
-INFO run: ir-mosquito-bidnet               empty     16.3s 0
-INFO run: irsc-bidnet                      empty     15.9s 0
-INFO run: jackson-county-bidnet            empty     16.0s 0
-INFO run: lwr-ida-bidnet                   empty     16.3s 0
-INFO run: lutheran-services-bidnet         ok        16.7s 1
-INFO run: mbvca-bidnet                     empty     16.2s 0
-INFO run: mdc-bidnet                       empty     16.0s 0
-INFO run: sources done in 66s
-INFO run: open bids: 625 across 38 counties (removed 4 closed)
+INFO run: miami-hcd-bidnet                 empty      1.2s 0
+INFO run: langd-bidnet                     empty      3.1s 0
+INFO run: lutheran-services-bidnet         ok         5.2s 1
+INFO run: sources done in 6s
+INFO run: open bids: 625 across 38 counties (removed 3 closed)
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
