@@ -36,7 +36,51 @@ DUE_NEAR = re.compile(r"(?:due|deadline|closing|closes|submission)[^:\n]{0,30}[:
 
 
 def _subject(msg):
-    return str(make_header(decode_header(msg.get("Subject", ""))))
+    return " ".join(str(make_header(decode_header(msg.get("Subject", "")))).split())
+
+
+# OpenGov wraps every link in a click-tracking redirect (url856.opengov.com/ls/click?upn=...).
+TRACKED = re.compile(r"https?://url\d+\.opengov\.com/[^\s\"'<>]+", re.I)
+
+
+def _resolve(url: str, hops: int = 4) -> str:
+    """Follow a tracking link's redirects (without loading the final page) to learn the real address."""
+    import requests
+    for _ in range(hops):
+        if OPENGOV_LINK.match(url):
+            return url
+        try:
+            r = requests.get(url, allow_redirects=False, timeout=20,
+                             headers={"User-Agent": "FloridaBidsBot/1.0 (+https://floridabids.org/about)"})
+        except requests.RequestException:
+            return ""
+        nxt = r.headers.get("Location", "")
+        if not nxt:
+            return ""
+        url = nxt
+    return url if OPENGOV_LINK.match(url) else ""
+
+
+def _untrack(html: str, soup) -> str:
+    """Return extra text containing the real OpenGov project links hidden behind tracking redirects."""
+    if not html or not TRACKED.search(html):
+        return ""
+    # the project link is the one whose text is the bid title (the first long link), not logos or footers
+    cands = []
+    if soup is not None:
+        for a in soup.find_all("a", href=TRACKED):
+            txt = a.get_text(" ", strip=True)
+            if len(txt) > 8 and not re.search(r"unsubscribe|preferences|privacy|view in browser|opengov", txt, re.I):
+                cands.append(a["href"])
+    out = []
+    for href in cands[:3]:
+        real = _resolve(href.replace("&amp;", "&"))
+        if real:
+            out.append(real)
+            for a in soup.find_all("a", href=href):
+                a["href"] = real          # so the title lookup below finds it
+            break
+    return "\n".join(out)
 
 
 def _html_and_text(msg):
@@ -78,7 +122,7 @@ def parse_message(msg, alerts_cfg) -> list[Bid]:
     subject = _subject(msg)
     html, text = _html_and_text(msg)
     soup = BeautifulSoup(html, "lxml") if html else None
-    blob = html + "\n" + text
+    blob = html + "\n" + text + "\n" + _untrack(html, soup)
     bids: list[Bid] = []
     due_m = DUE_NEAR.search(text)
     due = parse_due(due_m.group(1)) if due_m else ""
@@ -95,7 +139,8 @@ def parse_message(msg, alerts_cfg) -> list[Bid]:
                 log.warning("alert for unknown %s portal '%s' (add it to sources.yaml)", platform, slug)
                 continue
             url = url_fmt.format(slug, pid)
-            title = _link_title(soup, f"/{pid}") or re.sub(r"^(new|updated?)\s+(opportunity|project|solicitation)\s*[:\-]\s*", "", subject, flags=re.I)
+            m_sub = re.match(r"^New Opportunity Issued by .+?:\s*(.+)$", subject, re.I)
+            title = (m_sub.group(1) if m_sub else "") or _link_title(soup, f"/{pid}") or re.sub(r"^(new|updated?)\s+(opportunity|project|solicitation)\s*[:\-]\s*", "", subject, flags=re.I)
             num_m = re.search(r"\b([A-Z]{2,6}[-\s]?\d{2,4}[-/]?\d{0,5}[A-Z]?)\b", title + " " + subject)
             b = make_bid(src, title=title, number=num_m.group(1) if num_m else f"#{pid}", due_iso=due, bid_url=url,
                          notes="From the agency's email alert.")
@@ -130,6 +175,8 @@ def fetch_and_parse(alerts_cfg: dict, max_messages: int = 500) -> tuple[list[Bid
         bids = parse_message(msg, alerts_cfg)
         if bids:
             found.extend(bids)
+        elif not re.search(r"opengov|bonfire|procurenow", (msg.get("From") or ""), re.I):
+            pass                         # not an alert (account emails, Brevo notices, etc.)
         else:
             unparsed += 1
             (UNPARSED / f"{uid}.eml").write_bytes(raw)
