@@ -315,3 +315,17 @@ Old one"""
     bids = labeled_blocks.parse(text, src)
     assert [(b.number, b.title) for b in bids] == [("2099-16", "CR 229 N Widening and Resurfacing")]
     assert bids[0].due.startswith("2099-02-19")
+    # the real page puts number, contact and due on one line, the time on the next
+    real = """2099-10Contact: Troy TarboxDue: 11/13/2099
+11:00 am
+Enterprise East Infrastructure Improvements
+Commodity: ROAD
+Questions Due:10/27/2099 5:00 pmOpening On:11/13/2099 11:00 am
+RFP 2026-09Contact: Sara LittleClosed on: 08/27/2026
+3:00 pm
+Propane Generator
+2026-02Contact: Sara LittleAwarded to McCall Service
+PEST CONTROL"""
+    bids = labeled_blocks.parse(real, src)
+    assert [(b.number, b.title) for b in bids] == [("2099-10", "Enterprise East Infrastructure Improvements")]
+    assert bids[0].due.startswith("2099-11-13T11:00")
