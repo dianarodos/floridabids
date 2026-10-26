@@ -52,6 +52,12 @@ def pick(bids, freq, now, since=None):
 STATE = ROOT / "data" / "digest_state.json"
 
 
+def _mask(email: str) -> str:
+    """The run log is public in the repo: never write a subscriber's address into it."""
+    name, _, domain = email.partition("@")
+    return f"{name[:1]}***@{domain}"
+
+
 def load_state():
     try:
         return json.loads(STATE.read_text())
@@ -219,7 +225,7 @@ def main(argv=None):
             unsub = f"{site}/api/unsubscribe?t={sub['token']}"
             subject, html_body, text = build(bids, meta, f, site, unsub, now, since)
             if args.dry_run:
-                log.info("[dry run] %s -> %s: %s", f, sub["email"], subject)
+                log.info("[dry run] %s -> %s: %s", f, _mask(sub["email"]), subject)
                 sent += 1
                 continue
             try:
@@ -227,7 +233,7 @@ def main(argv=None):
                 sent += 1
             except Exception as e:      # one bad address must not stop the rest
                 failed += 1
-                log.error("could not email %s: %s", sub["email"], e)
+                log.error("could not email %s: %s", _mask(sub["email"]), str(e).replace(sub["email"], _mask(sub["email"])))
         if not args.dry_run and not args.to:
             state[f] = now.isoformat(timespec="minutes")   # next email lists what's new after this one
     if not args.dry_run and not args.to:
