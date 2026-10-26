@@ -89,5 +89,6 @@ jobs:
           git add --all -- data site/data   # one missing file must not stop the others
           if git diff --cached --quiet; then echo "No changes"; else
             git commit -m "Daily update $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
-            git push
+            # code may have been pushed while this run was working: replay our data commit on top
+            for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
           fi
