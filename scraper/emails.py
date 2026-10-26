@@ -133,6 +133,11 @@ def fetch_and_parse(alerts_cfg: dict, max_messages: int = 500) -> tuple[list[Bid
         else:
             unparsed += 1
             (UNPARSED / f"{uid}.eml").write_bytes(raw)
+            # enough to diagnose in the (public) run log: sender domain, subject, and which sites it links to
+            html, text = _html_and_text(msg)
+            hosts = sorted(set(re.findall(r"https?://([\w.-]+)/", html + text)))[:8]
+            sender = (msg.get("From") or "").split("@")[-1].strip("> ")
+            log.info("unparsed alert from %s: %r links to %s", sender, _subject(msg)[:120], hosts)
         last_uid = max(last_uid, uid)
     imap.logout()
     STATE.write_text(json.dumps({"last_uid": last_uid}))
