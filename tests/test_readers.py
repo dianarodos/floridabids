@@ -275,3 +275,14 @@ def test_dedupe_prefers_email_over_backfill_without_leaving_copies():
     b = Bid(source_id="bonfire-x", number="#251584", origin="email", **base)
     out = run.dedupe([a, b])
     assert len(out) == 1 and out[0].origin == "email"
+
+
+def test_dedupe_fills_due_date_from_pasted_list():
+    import run
+    from scraper.models import Bid
+    base = dict(county="Hillsborough", agency="City of Tampa", title="Intent to Single Source for Hach Equipment")
+    alert = Bid(source_id="opengov-cityoftampa", number="#320261", origin="email", due="", **base)
+    pasted = Bid(source_id="backfill-tampa", number="26-0123", origin="backfill", due="2099-11-12", **base)
+    for order in ([alert, pasted], [pasted, alert]):
+        out = run.dedupe([Bid(**vars(x)) for x in order])
+        assert len(out) == 1 and out[0].due == "2099-11-12" and out[0].number == "26-0123"

@@ -14,7 +14,7 @@ from .models import Bid, now_et
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 BIDS_FILE = DATA / "bids.json"
-NO_DUE_MAX_DAYS = 60
+NO_DUE_MAX_DAYS = 45   # alert-only bids without a due date (OpenGov emails don't include one)
 
 
 def load() -> dict[str, Bid]:

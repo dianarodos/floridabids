@@ -71,7 +71,7 @@ def save_state(state):
 
 def _row(b, site):
     due = _d(b.get("due"))
-    due_s = due.strftime("%b %-d") if due else "—"
+    due_s = due.strftime("%b %-d") if due else "See posting"
     link = b.get("bid_url") or b.get("source_url") or site
     e = html.escape
     return (f'<tr><td style="padding:8px 10px;border-bottom:1px solid #e3e8e6;vertical-align:top">'

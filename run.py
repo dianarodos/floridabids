@@ -45,10 +45,17 @@ def dedupe(bids):
         if b.number and not b.number.startswith("#"):
             keys.append(("n", _norm(b.agency), _norm(b.number)))
         hit = next((best[k] for k in keys if k in best), None)
+        if hit is not None and rank.get(b.origin, 9) >= rank.get(hit.origin, 9):   # b loses: lend hit what it lacks
+            if not hit.due and b.due:
+                hit.due = b.due
+            if hit.number.startswith("#") and b.number and not b.number.startswith("#"):
+                hit.number = b.number
         if hit is None or rank.get(b.origin, 9) < rank.get(hit.origin, 9):
             if hit is not None:          # the loser goes away under every key it held
                 if b.number.startswith("#") and hit.number and not hit.number.startswith("#"):
                     b.number = hit.number    # keep the agency's real bid number over a portal id
+                if not b.due and hit.due:
+                    b.due = hit.due          # e.g. an OpenGov alert gets its due date from a pasted portal list
                 if hit.first_seen and (not b.first_seen or hit.first_seen < b.first_seen):
                     b.first_seen = hit.first_seen   # a bid we already listed isn't "new" again
                 for k in [k for k, v in best.items() if v is hit]:
