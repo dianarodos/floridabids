@@ -1,4 +1,124 @@
-INFO run: polk-county                      ok         0.3s 48
-INFO run: sources done in 2s
-INFO run: open bids: 570 across 38 counties (removed 0 closed)
+INFO run: martin-demandstar                ok         0.4s 5
+INFO run: columbia-county                  ok         0.4s 3
+INFO run: polk-county                      ok         0.5s 48
+INFO run: wilton-manors-civicplus          ok         1.0s 8
+INFO run: putnam-county                    ok         2.3s 1
+INFO run: duval-schools-demandstar         ok         2.4s 5
+INFO run: sebastian-civicplus              empty      1.7s 0
+INFO run: charlotte-county                 ok         2.7s 20
+INFO run: tamarac-bidsandtenders           ok         2.3s 2
+INFO run: fellsmere-govaccess              blocked    0.5s HTTP 403 from https://www.cityoffellsmere.org/rfps
+INFO run: westlake-govaccess               empty      0.7s 0
+INFO run: fort-pierce-civicplus            ok         0.8s 1
+INFO run: haverhill-watch                  empty      0.7s 0
+INFO run: wellington-demandstar            ok         4.0s 2
+INFO run: hallandale-beach-page            empty      1.8s 0
+ERROR run: fort-lauderdale-infor failed:
+Traceback (most recent call last):
+  File "/home/runner/work/floridabids/floridabids/run.py", line 74, in read_one
+    fresh = get_reader(src["reader"])(src)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/floridabids/floridabids/scraper/readers/infor_fsm.py", line 64, in read
+    raise RuntimeError(f"expected JSON, got {r.headers.get('content-type')}: {r.text[:200]!r}") from None
+RuntimeError: expected JSON, got None: ''
+
+INFO run: fort-lauderdale-infor            error      2.4s RuntimeError: expected JSON, got None: ''
+INFO run: hillsboro-beach-watch            empty      1.0s 0
+INFO run: indiantown-govaccess             blocked    0.4s HTTP 403 from https://www.indiantownfl.gov/rfps
+INFO run: hypoluxo-govaccess               empty      0.7s 0
+INFO run: lake-park-watch                  blocked    0.2s HTTP 403 from https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651
+INFO run: lake-clarke-shores-govaccess     blocked    0.6s HTTP 403 from https://www.townoflcs.gov/rfps
+INFO run: jupiter-inlet-colony-watch       empty      1.1s 0
+INFO run: margate-civicplus                ok         0.9s 2
+INFO run: oakland-park-civicplus           empty      0.8s 0
+INFO run: sunrise-demandstar               ok         6.0s 2
+INFO run: brevard-vendorlink               ok         7.0s 37
+INFO run: pembroke-park-page               empty      1.1s 0
+INFO run: lake-worth-beach-bidsandtenders  ok         2.2s 2
+INFO run: south-palm-beach-civicplus       empty      1.5s 0
+INFO run: highlands-bidnet                 ok         1.0s 4
+INFO run: greenacres-demandstar            ok         5.6s 3
+INFO run: nassau-planetbids                blocked    0.4s HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=49083&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3
+INFO run: highland-beach-demandstar        ok         6.9s 1
+INFO run: riviera-beach-bidnet             ok         2.7s 2
+INFO run: miami-dade-construction          ok         0.2s 24
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/dateutil/parser/_parser.py:1207: UnknownTimezoneWarning: tzname ET identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  warnings.warn("tzname {tzname} identified but not understood.  "
+INFO run: parkland-planetbids              blocked    2.0s HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=80328&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3
+INFO run: pahokee-demandstar               empty      6.6s 0
+INFO run: miami-dade-future                ok         2.1s 6
+INFO run: okeechobee-bidnet                empty      4.3s 0
+INFO run: st-johns-demandstar              ok         8.1s 10
+INFO run: st-lucie-demandstar              ok         9.3s 9
+INFO run: jaxport                          ok        23.5s 8
+ERROR run: osceola-vendorlink failed:
+Traceback (most recent call last):
+  File "/home/runner/work/floridabids/floridabids/run.py", line 74, in read_one
+    fresh = get_reader(src["reader"])(src)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/floridabids/floridabids/scraper/readers/vendorlink.py", line 57, in read
+    with pg.expect_navigation():
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 59, in value
+    raise exception
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 208, in continuation
+    event = await waiter.result()
+            ^^^^^^^^^^^^^^^^^^^^^
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until 'load'
+============================================================
+
+INFO run: osceola-vendorlink               error     35.8s TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until 'load'
+============================================================
+ERROR run: lake-county failed:
+Traceback (most recent call last):
+  File "/home/runner/work/floridabids/floridabids/run.py", line 74, in read_one
+    fresh = get_reader(src["reader"])(src)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/floridabids/floridabids/scraper/readers/lake.py", line 51, in read
+    pg.wait_for_function(
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 11537, in wait_for_function
+    self._sync(
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_page.py", line 1083, in wait_for_function
+    return await self._main_frame.wait_for_function(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 771, in wait_for_function
+    return from_channel(await self._channel.send("waitForFunction", params))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 520, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.
+
+INFO run: lake-county                      error     61.5s TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.
+ERROR run: jacksonville-oracle failed:
+Traceback (most recent call last):
+  File "/home/runner/work/floridabids/floridabids/run.py", line 74, in read_one
+    fresh = get_reader(src["reader"])(src)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/floridabids/floridabids/scraper/readers/oracle_jax.py", line 24, in read
+    with browser.page(src["url"], wait_for="tr td span") as pg:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/runner/work/floridabids/floridabids/scraper/browser.py", line 37, in page
+    raise RuntimeError(f"{type(e).__name__} on {pg.url} - page title {_safe(pg.title)!r}, "
+RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=rmtdej7528j37m_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'
+
+INFO run: jacksonville-oracle              error     64.3s RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=rmtdej7528j37m_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'
+INFO run: palm-beach-vss                   empty     77.7s 0
+INFO run: miami-dade-informs               ok         4.1s 13
+INFO run: sources done in 250s
+INFO run: open bids: 570 across 38 counties (removed 28 closed)
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
