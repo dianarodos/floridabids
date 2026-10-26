@@ -281,6 +281,72 @@ direct:
     agency: Okeechobee County BOCC
     url: https://www.bidnetdirect.com/florida/okeechobeecounty/solicitations/open-bids?selectedContent=BUYER
 
+  - id: ace-theater-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: ACE Theater Foundation
+    url: https://www.bidnetdirect.com/florida/acetheaterfoundation/solicitations/open-bids?selectedContent=BUYER
+
+  - id: alachua-housing-bidnet
+    reader: bidnet
+    county: Alachua
+    agency: Alachua County Housing Authority
+    url: https://www.bidnetdirect.com/florida/alachuacountyhousingauthority/solicitations/open-bids?selectedContent=BUYER
+
+  - id: bal-harbour-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: Bal Harbour Village
+    url: https://www.bidnetdirect.com/florida/balharbourvillage/solicitations/open-bids?selectedContent=BUYER
+
+  - id: bay-county-bidnet
+    reader: bidnet
+    county: Bay
+    agency: Bay County BOCC
+    url: https://www.bidnetdirect.com/florida/bay-county1/solicitations/open-bids?selectedContent=BUYER
+
+  - id: careersource-tampa-bay-bidnet
+    reader: bidnet
+    county: Hillsborough
+    agency: CareerSource Tampa Bay
+    url: https://www.bidnetdirect.com/florida/careersourcetampabay/solicitations/open-bids?selectedContent=BUYER
+
+  - id: cfx-bidnet
+    reader: bidnet
+    county: Orange
+    agency: Central Florida Expressway Authority
+    url: https://www.bidnetdirect.com/florida/centralfloridaexpressway/solicitations/open-bids?selectedContent=BUYER
+
+  - id: avon-park-bidnet
+    reader: bidnet
+    county: Highlands
+    agency: City of Avon Park
+    url: https://www.bidnetdirect.com/florida/cityofavonpark/solicitations/open-bids?selectedContent=BUYER
+
+  - id: brooksville-bidnet
+    reader: bidnet
+    county: Hernando
+    agency: City of Brooksville
+    url: https://www.bidnetdirect.com/florida/cityofbrooksville/solicitations/open-bids?selectedContent=BUYER
+
+  - id: callaway-bidnet
+    reader: bidnet
+    county: Bay
+    agency: City of Callaway
+    url: https://www.bidnetdirect.com/florida/cityofcallaway/solicitations/open-bids?selectedContent=BUYER
+
+  - id: delray-beach-bidnet
+    reader: bidnet
+    county: Palm Beach
+    agency: City of Delray Beach
+    url: https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER
+
+  - id: fort-walton-beach-bidnet
+    reader: bidnet
+    county: Okaloosa
+    agency: City of Fort Walton Beach
+    url: https://www.bidnetdirect.com/florida/city-of-fort-walton-beach/solicitations/open-bids?selectedContent=BUYER
+
   - id: nassau-planetbids
     reader: planetbids
     county: Nassau
