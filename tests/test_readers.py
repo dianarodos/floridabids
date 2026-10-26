@@ -286,3 +286,12 @@ def test_dedupe_fills_due_date_from_pasted_list():
     for order in ([alert, pasted], [pasted, alert]):
         out = run.dedupe([Bid(**vars(x)) for x in order])
         assert len(out) == 1 and out[0].due == "2099-11-12" and out[0].number == "26-0123"
+
+
+def test_county_from_title():
+    from scraper.readers import make_bid
+    src = {"id": "x", "county": "Hillsborough", "agency": "Lutheran Services Florida", "url": "u", "county_from_title": True}
+    assert make_bid(src, title="Child Care Providers Palm Beach County").county == "Palm Beach"
+    assert make_bid(src, title="Statewide services").county == "Hillsborough"
+    src.pop("county_from_title")
+    assert make_bid(src, title="Child Care Providers Palm Beach County").county == "Hillsborough"

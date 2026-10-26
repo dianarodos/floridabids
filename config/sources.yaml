@@ -531,6 +531,7 @@ direct:
     reader: bidnet
     county: Hillsborough
     agency: Lutheran Services Florida
+    county_from_title: true   # statewide nonprofit: the county is named in each bid title
     url: https://www.bidnetdirect.com/florida/lutheranservicesflorida/solicitations/open-bids?selectedContent=BUYER
 
   - id: mbvca-bidnet
@@ -544,6 +545,18 @@ direct:
     county: Miami-Dade
     agency: Miami Dade College
     url: https://www.bidnetdirect.com/florida/miamidadecollege/solicitations/open-bids?selectedContent=BUYER
+
+  - id: miami-hcd-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: City of Miami Housing and Community Development
+    url: https://www.bidnetdirect.com/florida/departmentofhousingandcommunitydevelopment/solicitations/open-bids?selectedContent=BUYER
+
+  - id: langd-bidnet
+    reader: bidnet
+    county: Orange
+    agency: Lake Apopka Natural Gas District
+    url: https://www.bidnetdirect.com/florida/langd/solicitations/open-bids?selectedContent=BUYER
 
   - id: nassau-planetbids
     reader: planetbids

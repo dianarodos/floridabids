@@ -8,6 +8,26 @@ from ..classify import classify, detect_type
 from ..dates import parse_due
 from ..models import Bid
 
+import re as _re
+
+FL_COUNTIES = ("Alachua Baker Bay Bradford Brevard Broward Calhoun Charlotte Citrus Clay Collier Columbia DeSoto "
+               "Dixie Duval Escambia Flagler Franklin Gadsden Gilchrist Glades Gulf Hamilton Hardee Hendry Hernando "
+               "Highlands Hillsborough Holmes Jackson Jefferson Lafayette Lake Lee Leon Levy Liberty Madison Manatee "
+               "Marion Martin Monroe Nassau Okaloosa Okeechobee Orange Osceola Pasco Pinellas Polk Putnam Sarasota "
+               "Seminole Sumter Suwannee Taylor Union Volusia Wakulla Walton Washington").split() + [
+               "Indian River", "Miami-Dade", "Palm Beach", "Santa Rosa", "St. Johns", "St. Lucie"]
+_COUNTY_RE = _re.compile(r"\b(" + "|".join(_re.escape(c).replace(r"\.", r"\.?").replace(r"\-", "[- ]?")
+                                         for c in sorted(FL_COUNTIES, key=len, reverse=True)) + r")\s+County\b", _re.I)
+
+
+def county_in_text(text: str) -> str:
+    """'Child Care Providers Palm Beach County' -> 'Palm Beach' (canonical spelling), else ''."""
+    m = _COUNTY_RE.search(text or "")
+    if not m:
+        return ""
+    key = _re.sub(r"[^a-z]", "", m.group(1).lower())
+    return next(c for c in FL_COUNTIES if _re.sub(r"[^a-z]", "", c.lower()) == key)
+
 
 def make_bid(src: dict, *, title: str, number: str = "", due_raw: str = "", due_iso: str = "",
              status: str = "Open", type_: str = "", agency: str | None = None, posted_raw: str = "",
@@ -19,7 +39,7 @@ def make_bid(src: dict, *, title: str, number: str = "", due_raw: str = "", due_
     btype = detect_type(number, title, type_)
     return Bid(
         source_id=src["id"],
-        county=src["county"],
+        county=(src.get("county_from_title") and county_in_text(title)) or src["county"],
         agency=agency or src["agency"],
         title=title,
         number=number,
