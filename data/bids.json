@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-26 11:06 AM",
-  "updated_iso": "2026-10-26T11:06-04:00",
+  "updated": "2026-10-26 11:08 AM",
+  "updated_iso": "2026-10-26T11:08-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -465,10 +465,7 @@
    }
   ],
   "email": {
-   "status": "ok",
-   "messages": 10,
-   "bids": 0,
-   "unparsed": 10
+   "status": "skipped"
   },
   "alert_portals": {
    "opengov": 62,
@@ -507,7 +504,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 28
+  "removed_today": 0
  },
  "bids": [
   {
