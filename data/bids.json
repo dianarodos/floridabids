@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-26 03:01 PM",
-  "updated_iso": "2026-10-26T15:01-04:00",
+  "updated": "2026-10-26 03:13 PM",
+  "updated_iso": "2026-10-26T15:13-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -881,7 +881,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 5.2
+    "seconds": 4.9
    },
    {
     "id": "mbvca-bidnet",
@@ -904,14 +904,14 @@
     "seconds": 16.0
    },
    {
-    "id": "miami-hcd-bidnet",
+    "id": "miami-housing-bidnet",
     "county": "Miami-Dade",
     "agency": "City of Miami Housing and Community Development",
     "url": "https://www.bidnetdirect.com/florida/departmentofhousingandcommunitydevelopment/solicitations/open-bids?selectedContent=BUYER",
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 1.2
+    "seconds": 6.8
    },
    {
     "id": "langd-bidnet",
@@ -3903,7 +3903,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-10-26T15:01-04:00",
+   "last_seen": "2026-10-26T15:13-04:00",
    "extra": {},
    "key": "lutheran-services-bidnet::rfp-2026-010"
   },
