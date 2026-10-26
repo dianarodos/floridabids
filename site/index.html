@@ -80,6 +80,8 @@ td.num{font:12.5px var(--mono);color:var(--muted);word-break:break-word;max-widt
 .title{font-weight:600}
 .agency{font-size:13px;color:var(--muted)}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap;background:var(--accent-soft);color:var(--accent)}
+td.posted{font:12.5px var(--mono);color:var(--muted);white-space:nowrap}
+.pill.new{background:#fde7d9;color:#9a3d0b;margin-left:4px}
 .pill.soon{background:var(--soon-soft);color:var(--soon)}
 .pill.up{background:var(--info-soft);color:var(--info)}
 .pill.rej{background:var(--bad-soft);color:var(--bad)}
@@ -102,7 +104,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
   table{min-width:0} thead{display:none}
   tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px;margin-bottom:10px}
   td{border:0;padding:0} td.c-title{grid-column:1/-1} td.c-due{grid-column:2;grid-row:2;text-align:right}
-  td.c-county{grid-column:1;grid-row:2} td.c-num{grid-column:1/-1} td.c-links{grid-column:1/-1}
+  td.c-county{grid-column:1;grid-row:2} td.c-posted{grid-column:1/-1;grid-row:3;font-size:12px} td.c-title{grid-row:1} td.c-num{grid-column:1/-1} td.c-links{grid-column:1/-1}
   td.c-county::before{content:"";}
   .links{flex-direction:row;gap:14px}
   /* keep the sticky bar short on phones: categories scroll sideways in one line */
@@ -137,6 +139,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <div class="row">
       <input type="search" id="q" placeholder="Search title, agency, county or bid number" aria-label="Search bids">
       <select id="county" aria-label="County"><option value="">All counties</option></select>
+      <select id="sort" aria-label="Sort"><option value="due:1">Closing soonest</option><option value="posted:-1">Newest first</option></select>
       <a class="btn" id="xlsx" href="data/florida-open-bids.xlsx">Download Excel</a>
     </div>
     <div class="row" id="cats" role="group" aria-label="Category"></div>
@@ -147,6 +150,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <table id="tbl">
       <thead><tr>
         <th data-k="due" aria-sort="ascending">Due</th>
+        <th data-k="posted">Posted</th>
         <th data-k="title">Solicitation</th>
         <th data-k="county">County</th>
         <th data-k="category">Category</th>
@@ -210,6 +214,13 @@ function fmtDue(b){
   if(b.due.length > 10) s += " " + d.toLocaleTimeString("en-US", {hour:"numeric", minute:"2-digit", timeZone:"America/New_York"});
   return s;
 }
+function postedKey(b){ return b.posted || (b.first_seen || "").slice(0, 10); }
+function fmtPosted(b){
+  const k = postedKey(b); if(!k) return "";
+  const d = new Date(k + "T12:00:00");
+  return d.toLocaleDateString("en-US", {month:"short", day:"numeric"}) + (b.posted ? "" : " (added)");
+}
+function isNew(b){ const k = postedKey(b); return k && (now() - new Date(k + "T00:00:00")) / 864e5 < 3; }
 function daysLeft(b){ const d = dueDate(b); return d ? (d - now()) / 864e5 : Infinity; }
 function statusPill(b){
   const s = b.status || "Open", low = s.toLowerCase();
@@ -226,10 +237,12 @@ function render(){
   rows.sort((a, b) => {
     let x = a[sortKey] || "", y = b[sortKey] || "";
     if(sortKey === "due"){ x = a.due || "9999"; y = b.due || "9999"; }
+    if(sortKey === "posted"){ x = postedKey(a) || "0000"; y = postedKey(b) || "0000"; }
     return x < y ? -sortDir : x > y ? sortDir : 0;
   });
   $("#rows").innerHTML = rows.map(b => `<tr>
     <td class="due c-due">${esc(fmtDue(b))}</td>
+    <td class="posted c-posted">${esc(fmtPosted(b))}${isNew(b) ? ' <span class="pill new">New</span>' : ""}</td>
     <td class="c-title"><div class="title">${esc(b.title)}</div><div class="agency">${esc(b.agency)}${b.notes && b.notes.startsWith("Draft") ? " · " + esc(b.notes) : ""}</div></td>
     <td class="c-county">${esc(b.county)}</td>
     <td>${esc(b.category)}</td>
@@ -269,6 +282,12 @@ document.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click
 }));
 $("#q").addEventListener("input", render);
 $("#county").addEventListener("change", render);
+$("#sort").addEventListener("change", e => {
+  const [k, d] = e.target.value.split(":"); sortKey = k; sortDir = +d;
+  document.querySelectorAll("th[data-k]").forEach(x => x.removeAttribute("aria-sort"));
+  const th = document.querySelector(`th[data-k="${k}"]`); if(th) th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+  render();
+});
 
 (() => {   // messages after clicking the links in our emails
   const q = new URLSearchParams(location.search), b = $("#banner");
@@ -311,7 +330,7 @@ fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
   const seenSince = b => b.posted ? new Date(b.posted + "T00:00:00") : (b.first_seen ? new Date(b.first_seen) : null);
   $("#c-new").textContent = ALL.filter(b => { const d = seenSince(b); return d && (now() - d) < week; }).length;
   $("#c-counties").textContent = META.counties ?? new Set(ALL.map(b => b.county)).size;
-  $("#updated").textContent = `Updated ${META.updated} Eastern. Sorted by due date, soonest first.`;
+  $("#updated").textContent = `Updated ${META.updated} Eastern.`;
   buildChips(); buildCoverage(); render();
 }).catch(() => { $("#updated").textContent = "Couldn't load today's list. Please try again in a minute."; });
 
