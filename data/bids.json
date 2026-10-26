@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-26 12:52 PM",
-  "updated_iso": "2026-10-26T12:52-04:00",
+  "updated": "2026-10-26 01:53 PM",
+  "updated_iso": "2026-10-26T13:53-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -462,13 +462,120 @@
     "count": 6,
     "new": 0,
     "seconds": 2.0
+   },
+   {
+    "id": "ace-theater-bidnet",
+    "county": "Miami-Dade",
+    "agency": "ACE Theater Foundation",
+    "url": "https://www.bidnetdirect.com/florida/acetheaterfoundation/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 0.9
+   },
+   {
+    "id": "alachua-housing-bidnet",
+    "county": "Alachua",
+    "agency": "Alachua County Housing Authority",
+    "url": "https://www.bidnetdirect.com/florida/alachuacountyhousingauthority/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 2.8
+   },
+   {
+    "id": "bal-harbour-bidnet",
+    "county": "Miami-Dade",
+    "agency": "Bal Harbour Village",
+    "url": "https://www.bidnetdirect.com/florida/balharbourvillage/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 7.0
+   },
+   {
+    "id": "bay-county-bidnet",
+    "county": "Bay",
+    "agency": "Bay County BOCC",
+    "url": "https://www.bidnetdirect.com/florida/bay-county1/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 5.0
+   },
+   {
+    "id": "careersource-tampa-bay-bidnet",
+    "county": "Hillsborough",
+    "agency": "CareerSource Tampa Bay",
+    "url": "https://www.bidnetdirect.com/florida/careersourcetampabay/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 10.7
+   },
+   {
+    "id": "cfx-bidnet",
+    "county": "Orange",
+    "agency": "Central Florida Expressway Authority",
+    "url": "https://www.bidnetdirect.com/florida/centralfloridaexpressway/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 14.7
+   },
+   {
+    "id": "avon-park-bidnet",
+    "county": "Highlands",
+    "agency": "City of Avon Park",
+    "url": "https://www.bidnetdirect.com/florida/cityofavonpark/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 13.2
+   },
+   {
+    "id": "brooksville-bidnet",
+    "county": "Hernando",
+    "agency": "City of Brooksville",
+    "url": "https://www.bidnetdirect.com/florida/cityofbrooksville/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 8.8
+   },
+   {
+    "id": "callaway-bidnet",
+    "county": "Bay",
+    "agency": "City of Callaway",
+    "url": "https://www.bidnetdirect.com/florida/cityofcallaway/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 15.8
+   },
+   {
+    "id": "delray-beach-bidnet",
+    "county": "Palm Beach",
+    "agency": "City of Delray Beach",
+    "url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+    "status": "ok",
+    "count": 6,
+    "new": 6,
+    "seconds": 16.1
+   },
+   {
+    "id": "fort-walton-beach-bidnet",
+    "county": "Okaloosa",
+    "agency": "City of Fort Walton Beach",
+    "url": "https://www.bidnetdirect.com/florida/city-of-fort-walton-beach/solicitations/open-bids?selectedContent=BUYER",
+    "status": "empty",
+    "count": 0,
+    "new": 0,
+    "seconds": 16.0
    }
   ],
   "email": {
-   "status": "ok",
-   "messages": 3,
-   "bids": 3,
-   "unparsed": 0
+   "status": "skipped"
   },
   "alert_portals": {
    "opengov": 62,
@@ -507,7 +614,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 28
+  "removed_today": 0
  },
  "bids": [
   {
@@ -1517,6 +1624,27 @@
    "last_seen": "2026-10-24T21:35-04:00",
    "extra": {},
    "key": "backfill-okaloosa-county-bocc::itb ap 03-27"
+  },
+  {
+   "source_id": "delray-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Delray Beach",
+   "title": "SUBMERSIBLE WASTEWATER PUMPS",
+   "number": "ITB NO.: 2027-001",
+   "type": "ITB",
+   "status": "Open",
+   "category": "Facilities & Maintenance",
+   "agency_category": "",
+   "posted": "2026-10-09",
+   "due": "2026-10-28",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/SUBMERSIBLE-WASTEWATER-PUMPS/0000439842?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T13:53-04:00",
+   "last_seen": "2026-10-26T13:53-04:00",
+   "extra": {},
+   "key": "delray-beach-bidnet::itb no.: 2027-001"
   },
   {
    "source_id": "backfill-city-of-st-petersburg",
@@ -4709,6 +4837,90 @@
    "last_seen": "2026-10-24T21:35-04:00",
    "extra": {},
    "key": "backfill-city-of-orlando::5ffa6aa51753"
+  },
+  {
+   "source_id": "delray-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Delray Beach",
+   "title": "ITBC 2026-043 Water Treatment Plant 4 Log, Chemical System and Scada Improvement",
+   "number": "ITBC 2026-043",
+   "type": "",
+   "status": "Open",
+   "category": "Goods & Supplies",
+   "agency_category": "",
+   "posted": "2026-09-20",
+   "due": "2026-11-04",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/ITBC-2026-043-Water-Treatment-Plant-4-Log-Chemical-System-and-Scada-Improvement/0000437412?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T13:53-04:00",
+   "last_seen": "2026-10-26T13:53-04:00",
+   "extra": {},
+   "key": "delray-beach-bidnet::itbc 2026-043"
+  },
+  {
+   "source_id": "delray-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Delray Beach",
+   "title": "LANDSCAPE MAINTENANCE A1A AND BEACH PROMENADE",
+   "number": "ITB 2027-007",
+   "type": "ITB",
+   "status": "Open",
+   "category": "Facilities & Maintenance",
+   "agency_category": "",
+   "posted": "2026-10-13",
+   "due": "2026-11-04",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/LANDSCAPE-MAINTENANCE-A1A-AND-BEACH-PROMENADE/0000440090?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T13:53-04:00",
+   "last_seen": "2026-10-26T13:53-04:00",
+   "extra": {},
+   "key": "delray-beach-bidnet::itb 2027-007"
+  },
+  {
+   "source_id": "delray-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Delray Beach",
+   "title": "LANDSCAPE MAINTENANCE WEST ATLANTIC AVENUE (CSX RAILROAD TO MILITARY TRAIL)",
+   "number": "ITB 2027-008",
+   "type": "ITB",
+   "status": "Open",
+   "category": "Facilities & Maintenance",
+   "agency_category": "",
+   "posted": "2026-10-13",
+   "due": "2026-11-04",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/LANDSCAPE-MAINTENANCE-WEST-ATLANTIC-AVENUE-CSX-RAILROAD-TO-MILITARY-TRAIL/0000440081?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T13:53-04:00",
+   "last_seen": "2026-10-26T13:53-04:00",
+   "extra": {},
+   "key": "delray-beach-bidnet::itb 2027-008"
+  },
+  {
+   "source_id": "delray-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Delray Beach",
+   "title": "WATER/WASTEWATER, LIFT STATION REPAIR, AND REHABILITATION SERVICES (Re-Bid)",
+   "number": "ITB 2027-12",
+   "type": "ITB",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "2026-10-14",
+   "due": "2026-11-04",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/WATER-WASTEWATER-LIFT-STATION-REPAIR-AND-REHABILITATION-SERVICES-Re-Bid/0000440151?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T13:53-04:00",
+   "last_seen": "2026-10-26T13:53-04:00",
+   "extra": {},
+   "key": "delray-beach-bidnet::itb 2027-12"
   },
   {
    "source_id": "backfill-city-of-clearwater",
@@ -10379,6 +10591,27 @@
    "last_seen": "2026-10-26T12:48-04:00",
    "extra": {},
    "key": "miami-dade-construction::20260169 (mcc 7360)"
+  },
+  {
+   "source_id": "delray-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Delray Beach",
+   "title": "SW 600, 700, & 800 BLOCKS OF WEST ATLANTIC AVENUE MIXED-USE DEVELOPMENT PROJECT",
+   "number": "CRA No. 2026-05",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "2026-10-07",
+   "due": "2026-12-02",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/SW-600-700-800-BLOCKS-OF-WEST-ATLANTIC-AVENUE-MIXED-USE-DEVELOPMENT-PROJECT/0000439301?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-26T13:53-04:00",
+   "last_seen": "2026-10-26T13:53-04:00",
+   "extra": {},
+   "key": "delray-beach-bidnet::cra no. 2026-05"
   },
   {
    "source_id": "charlotte-county",
