@@ -347,6 +347,204 @@ direct:
     agency: City of Fort Walton Beach
     url: https://www.bidnetdirect.com/florida/city-of-fort-walton-beach/solicitations/open-bids?selectedContent=BUYER
 
+  - id: hialeah-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: City of Hialeah
+    url: https://www.bidnetdirect.com/florida/cityofhialeah/solicitations/open-bids?selectedContent=BUYER
+
+  - id: mary-esther-bidnet
+    reader: bidnet
+    county: Okaloosa
+    agency: City of Mary Esther
+    url: https://www.bidnetdirect.com/florida/city-of-mary-esther/solicitations/open-bids?selectedContent=BUYER
+
+  - id: miami-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: City of Miami
+    url: https://www.bidnetdirect.com/florida/cityofmiami/solicitations/open-bids?selectedContent=BUYER
+
+  - id: miami-beach-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: City of Miami Beach
+    url: https://www.bidnetdirect.com/florida/cityofmiamibeach/solicitations/open-bids?selectedContent=BUYER
+
+  - id: milton-bidnet
+    reader: bidnet
+    county: Santa Rosa
+    agency: City of Milton
+    url: https://www.bidnetdirect.com/florida/city-of-milton/solicitations/open-bids?selectedContent=BUYER
+
+  - id: north-miami-beach-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: City of North Miami Beach
+    url: https://www.bidnetdirect.com/florida/citynmb/solicitations/open-bids?selectedContent=BUYER
+
+  - id: pensacola-bidnet
+    reader: bidnet
+    county: Escambia
+    agency: City of Pensacola
+    url: https://www.bidnetdirect.com/florida/city-of-pensacola/solicitations/open-bids?selectedContent=BUYER
+
+  - id: port-richey-bidnet
+    reader: bidnet
+    county: Pasco
+    agency: City of Port Richey
+    url: https://www.bidnetdirect.com/florida/city-of-port-richey/solicitations/open-bids?selectedContent=BUYER
+
+  - id: sarasota-city-bidnet
+    reader: bidnet
+    county: Sarasota
+    agency: City of Sarasota
+    url: https://www.bidnetdirect.com/florida/city-of-sarasota/solicitations/open-bids?selectedContent=BUYER
+
+  - id: sebring-bidnet
+    reader: bidnet
+    county: Highlands
+    agency: City of Sebring
+    url: https://www.bidnetdirect.com/florida/cityofsebring/solicitations/open-bids?selectedContent=BUYER
+
+  - id: zephyrhills-bidnet
+    reader: bidnet
+    county: Pasco
+    agency: City of Zephyrhills
+    url: https://www.bidnetdirect.com/florida/cityofzephyrhills/solicitations/open-bids?selectedContent=BUYER
+
+  - id: daytona-state-bidnet
+    reader: bidnet
+    county: Volusia
+    agency: Daytona State College
+    url: https://www.bidnetdirect.com/florida/daytonastatecollege/solicitations/open-bids?selectedContent=BUYER
+
+  - id: elc-orange-bidnet
+    reader: bidnet
+    county: Orange
+    agency: Early Learning Coalition of Orange County
+    url: https://www.bidnetdirect.com/florida/elcoforangecounty/solicitations/open-bids?selectedContent=BUYER
+
+  - id: ecua-bidnet
+    reader: bidnet
+    county: Escambia
+    agency: Emerald Coast Utilities Authority
+    url: https://www.bidnetdirect.com/florida/emeraldcoastutilitiesauthority/solicitations/open-bids?selectedContent=BUYER
+
+  - id: ecs4kids-bidnet
+    reader: bidnet
+    county: Bay
+    agency: Early Childhood Services (ECS4Kids)
+    url: https://www.bidnetdirect.com/florida/ecs4kids/solicitations/open-bids?selectedContent=BUYER
+
+  - id: escambia-schools-bidnet
+    reader: bidnet
+    county: Escambia
+    agency: Escambia County School District
+    url: https://www.bidnetdirect.com/florida/escambia-county-school-district/solicitations/open-bids?selectedContent=BUYER
+
+  - id: escambia-schools-facilities-bidnet
+    reader: bidnet
+    county: Escambia
+    agency: Escambia County School District (Facilities)
+    url: https://www.bidnetdirect.com/florida/ecsd-facscplan/solicitations/open-bids?selectedContent=BUYER
+
+  - id: fairchild-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: Fairchild Tropical Botanic Garden
+    url: https://www.bidnetdirect.com/florida/fairchildgarden/solicitations/open-bids?selectedContent=BUYER
+
+  - id: fsw-bidnet
+    reader: bidnet
+    county: Lee
+    agency: Florida SouthWestern State College
+    url: https://www.bidnetdirect.com/florida/floridasouthwestern/solicitations/open-bids?selectedContent=BUYER
+
+  - id: fort-myers-beach-bidnet
+    reader: bidnet
+    county: Lee
+    agency: Town of Fort Myers Beach
+    url: https://www.bidnetdirect.com/florida/fortmyersbeach/solicitations/open-bids?selectedContent=BUYER
+
+  - id: gainesville-housing-bidnet
+    reader: bidnet
+    county: Alachua
+    agency: Gainesville Housing Authority
+    url: https://www.bidnetdirect.com/florida/gainesvillehousingauthority/solicitations/open-bids?selectedContent=BUYER
+
+  - id: gmx-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: Greater Miami Expressway Agency
+    url: https://www.bidnetdirect.com/florida/greatermiamiexpressway/solicitations/open-bids?selectedContent=BUYER
+
+  - id: gulf-coast-state-bidnet
+    reader: bidnet
+    county: Bay
+    agency: Gulf Coast State College
+    url: https://www.bidnetdirect.com/florida/gulfcoaststatecollege/solicitations/open-bids?selectedContent=BUYER
+
+  - id: hernando-county-bidnet
+    reader: bidnet
+    county: Hernando
+    agency: Hernando County BOCC
+    url: https://www.bidnetdirect.com/florida/hernando-county-board-of-county-commissioners/solicitations/open-bids?selectedContent=BUYER
+
+  - id: hernando-schools-bidnet
+    reader: bidnet
+    county: Hernando
+    agency: Hernando County School District
+    url: https://www.bidnetdirect.com/florida/hernandoschools/solicitations/open-bids?selectedContent=BUYER
+
+  - id: holley-navarre-water-bidnet
+    reader: bidnet
+    county: Santa Rosa
+    agency: Holley-Navarre Water System
+    url: https://www.bidnetdirect.com/florida/holleynavarrewatersysteminc/solicitations/open-bids?selectedContent=BUYER
+
+  - id: ir-mosquito-bidnet
+    reader: bidnet
+    county: Indian River
+    agency: Indian River Mosquito Control District
+    url: https://www.bidnetdirect.com/florida/indianrivermosquitocontrol/solicitations/open-bids?selectedContent=BUYER
+
+  - id: irsc-bidnet
+    reader: bidnet
+    county: St. Lucie
+    agency: Indian River State College
+    url: https://www.bidnetdirect.com/florida/indianriverstatecollege/solicitations/open-bids?selectedContent=BUYER
+
+  - id: jackson-county-bidnet
+    reader: bidnet
+    county: Jackson
+    agency: Jackson County BOCC
+    url: https://www.bidnetdirect.com/florida/jackson-county/solicitations/open-bids?selectedContent=BUYER
+
+  - id: lwr-ida-bidnet
+    reader: bidnet
+    county: Manatee
+    agency: Lakewood Ranch Inter-District Authority
+    url: https://www.bidnetdirect.com/florida/lwr-ida/solicitations/open-bids?selectedContent=BUYER
+
+  - id: lutheran-services-bidnet
+    reader: bidnet
+    county: Hillsborough
+    agency: Lutheran Services Florida
+    url: https://www.bidnetdirect.com/florida/lutheranservicesflorida/solicitations/open-bids?selectedContent=BUYER
+
+  - id: mbvca-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: Miami Beach Visitor and Convention Authority
+    url: https://www.bidnetdirect.com/florida/miami-beach-visitor-and-convention-authority/solicitations/open-bids?selectedContent=BUYER
+
+  - id: mdc-bidnet
+    reader: bidnet
+    county: Miami-Dade
+    agency: Miami Dade College
+    url: https://www.bidnetdirect.com/florida/miamidadecollege/solicitations/open-bids?selectedContent=BUYER
+
   - id: nassau-planetbids
     reader: planetbids
     county: Nassau
