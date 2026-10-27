@@ -6,6 +6,7 @@
 //   GET  /api/stats         -> {subscribers, daily, weekly}  (shown on the page)
 //   GET  /api/admin/subscribers?freq=daily|weekly   (Bearer ADMIN_TOKEN; used by the daily GitHub job)
 //   GET  /api/admin/export.csv                       (Bearer ADMIN_TOKEN; full list for Diana)
+//   POST /api/admin/run-daily                        (Bearer ADMIN_TOKEN; same as the cron, for testing)
 //
 // Cron (wrangler.jsonc "triggers"): starts the daily GitHub run, because GitHub's own schedule runs hours
 // late or not at all. A second, later cron is the backup: each one starts the run only if no full run
@@ -55,6 +56,11 @@ export default {
         case "GET /api/stats": return await stats(env);
         case "GET /api/admin/subscribers": return await adminList(request, url, env);
         case "GET /api/admin/export.csv": return await adminCsv(request, env);
+        case "POST /api/admin/run-daily": {                            // test the cron path by hand
+          if (!authorized(request, env)) return json({ error: "unauthorized" }, 401);
+          await startDailyRun(env, "manual");
+          return json({ ok: true });
+        }
       }
       return json({ error: "not found" }, 404);
     } catch (e) {
