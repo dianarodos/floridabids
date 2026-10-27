@@ -674,6 +674,9 @@ alerts:
     hillsboroughcounty: [Hillsborough, Hillsborough County BOCC]
     monroecounty-fl: [Monroe, Monroe County BOCC]
     pascocountyfl: [Pasco, Pasco County BOCC]
+    talgov: [Leon, City of Tallahassee]
+    palmbayflorida: [Brevard, City of Palm Bay]
+    tri-rail: [Broward, South Florida Regional Transportation Authority (Tri-Rail)]
   # Bonfire pastes without a link are matched by the agency name on the page: [county, agency, slug]
   bonfire_names:
     City of St. Pete Beach: [Pinellas, City of St. Pete Beach, stpetebeach]

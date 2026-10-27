@@ -103,9 +103,12 @@ def _html_and_text(msg):
 
 def _src(platform: str, slug: str, alerts_cfg: dict) -> dict | None:
     entry = alerts_cfg.get(platform, {}).get(slug.lower())
+    if not entry and platform == "bonfire":   # pasted-page names also carry the portal slug: [county, agency, slug]
+        entry = next((v for v in (alerts_cfg.get("bonfire_names") or {}).values()
+                      if isinstance(v, list) and len(v) > 2 and v[2].lower() == slug.lower()), None)
     if not entry:
         return None
-    county, agency = entry
+    county, agency = entry[:2]
     base = ("https://procurement.opengov.com/portal/" + slug) if platform == "opengov" else f"https://{slug}.bonfirehub.com/portal/?tab=openOpportunities"
     return {"id": f"{platform}-{slug.lower()}", "county": county, "agency": agency, "url": base}
 
