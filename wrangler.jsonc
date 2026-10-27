@@ -24,7 +24,7 @@
   ],
   "workers_dev": true,
   // Daily GitHub run: 6:15 AM Eastern (5:15 in winter), backup at 8:15 if the first didn't start or failed.
-  "triggers": { "crons": ["15 10 * * *", "15 12 * * *", "10 14 * * *"] },
+  "triggers": { "crons": ["15 10 * * *", "15 12 * * *", "22 14 * * *"] },
   "observability": { "enabled": true },
   "keep_vars": true
 }

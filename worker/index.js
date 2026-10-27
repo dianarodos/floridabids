@@ -39,7 +39,7 @@ const RUN_NAME = "Daily bid update";          // run-name of full runs in .githu
 
 export default {
   async scheduled(event, env, ctx) {
-    const test = event.cron === "10 14 * * *" ? "baker-county" : "";   // TEMP: one-time check that GH_TOKEN works
+    const test = event.cron === "22 14 * * *" ? "baker-county" : "";   // TEMP: one-time check that GH_TOKEN works
     ctx.waitUntil(startDailyRun(env, event.cron, test).catch(e => console.error("daily run trigger failed: " + (e && e.message))));
   },
 
