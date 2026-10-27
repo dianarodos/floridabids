@@ -58,7 +58,7 @@ export default {
         case "GET /api/admin/export.csv": return await adminCsv(request, env);
         case "POST /api/admin/run-daily": {                            // test the cron path by hand
           if (!authorized(request, env)) return json({ error: "unauthorized" }, 401);
-          await startDailyRun(env, "manual");
+          await startDailyRun(env, "manual", url.searchParams.get("only") || "");
           return json({ ok: true });
         }
       }
@@ -70,7 +70,7 @@ export default {
   },
 };
 
-async function startDailyRun(env, cron) {
+async function startDailyRun(env, cron, only = "") {
   if (!env.GH_TOKEN) { console.error("GH_TOKEN secret not set; cannot start the daily run"); return; }
   const gh = (path, init = {}) => fetch(`https://api.github.com/repos/${REPO}${path}`, {
     ...init,
@@ -81,14 +81,14 @@ async function startDailyRun(env, cron) {
   const r = await gh(`/actions/workflows/daily.yml/runs?per_page=30&created=>=${today}`);
   if (!r.ok) throw new Error(`list runs ${r.status}: ${await r.text()}`);
   const { workflow_runs = [] } = await r.json();
-  const done = workflow_runs.find(w => w.display_title === RUN_NAME && (w.status !== "completed" || w.conclusion === "success"));
+  const done = !only && workflow_runs.find(w => w.display_title === RUN_NAME && (w.status !== "completed" || w.conclusion === "success"));
   if (done) { console.log(`cron ${cron}: today's run already ${done.status} (${done.html_url}); nothing to do`); return; }
   const d = await gh("/actions/workflows/daily.yml/dispatches", {
     method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ref: "main", inputs: { only: "", send_email: "yes" } }),
+    body: JSON.stringify({ ref: "main", inputs: { only, send_email: only ? "no" : "yes" } }),   // "only" = small test run, no email
   });
   if (!d.ok) throw new Error(`dispatch ${d.status}: ${await d.text()}`);
-  console.log(`cron ${cron}: started today's daily run`);
+  console.log(`cron ${cron}: started ${only ? "a test run of " + only : "today's daily run"}`);
 }
 
 async function ensureSchema(env) {
