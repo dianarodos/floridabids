@@ -3,8 +3,8 @@ name: Daily bid update
 run-name: ${{ github.event_name != 'workflow_dispatch' && 'Daily bid update' || github.event.inputs.only != '' && format('Test run - {0}', github.event.inputs.only) || github.event.inputs.send_email == 'yes' && 'Daily bid update' || 'Full run (no email)' }}
 
 on:
-  schedule:
-    - cron: "17 10 * * *"     # 6:17 AM Eastern (EDT); 5:17 AM in winter
+  # Started every morning by the Cloudflare Worker's cron (worker/index.js), not GitHub's own schedule,
+  # which ran hours late or skipped days. The cron passes send_email=yes.
   workflow_dispatch:
     inputs:
       only:
