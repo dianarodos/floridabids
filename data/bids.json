@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-10-27 09:23 AM",
-  "updated_iso": "2026-10-27T09:23-04:00",
+  "updated": "2026-10-27 10:22 AM",
+  "updated_iso": "2026-10-27T10:22-04:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -872,7 +872,7 @@
     "url": "https://www.bakercountyfl.org/purchasing.php",
     "status": "blocked",
     "error": "HTTP 403 from https://www.bakercountyfl.org/purchasing.php",
-    "seconds": 0.3
+    "seconds": 0.4
    },
    {
     "id": "nassau-planetbids",
@@ -934,10 +934,7 @@
    }
   ],
   "email": {
-   "status": "ok",
-   "messages": 25,
-   "bids": 69,
-   "unparsed": 0
+   "status": "skipped"
   },
   "alert_portals": {
    "opengov": 62,
@@ -976,7 +973,7 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 42
+  "removed_today": 14
  },
  "bids": [
   {
