@@ -1,5 +1,5 @@
 // Cloudflare Worker for floridabids.org: the static site in site/ plus the email-list API in worker/index.js.
-// Secrets (set in the Cloudflare dashboard, never here): BREVO_API_KEY, ADMIN_TOKEN.
+// Secrets (set in the Cloudflare dashboard, never here): BREVO_API_KEY, ADMIN_TOKEN, GH_TOKEN.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "floridabids",
@@ -23,6 +23,8 @@
     { "pattern": "www.floridabids.org", "custom_domain": true }
   ],
   "workers_dev": true,
+  // Daily GitHub run: 6:15 AM Eastern (5:15 in winter), backup at 8:15 if the first didn't start or failed.
+  "triggers": { "crons": ["15 10 * * *", "15 12 * * *"] },
   "observability": { "enabled": true },
   "keep_vars": true
 }

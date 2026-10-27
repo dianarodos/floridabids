@@ -1,4 +1,6 @@
 name: Daily bid update
+# Full runs keep this exact title; the Cloudflare cron looks for it to avoid starting a second run.
+run-name: ${{ github.event_name != 'workflow_dispatch' && 'Daily bid update' || github.event.inputs.only != '' && format('Test run - {0}', github.event.inputs.only) || github.event.inputs.send_email == 'yes' && 'Daily bid update' || 'Full run (no email)' }}
 
 on:
   schedule:

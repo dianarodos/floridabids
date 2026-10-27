@@ -7,7 +7,11 @@
 //   GET  /api/admin/subscribers?freq=daily|weekly   (Bearer ADMIN_TOKEN; used by the daily GitHub job)
 //   GET  /api/admin/export.csv                       (Bearer ADMIN_TOKEN; full list for Diana)
 //
-// Bindings (wrangler.jsonc): ASSETS (site/), DB (D1). Secrets: BREVO_API_KEY, ADMIN_TOKEN.
+// Cron (wrangler.jsonc "triggers"): starts the daily GitHub run, because GitHub's own schedule runs hours
+// late or not at all. A second, later cron is the backup: each one starts the run only if no full run
+// has already started or succeeded today. Needs the GH_TOKEN secret (fine-grained token, Actions: write).
+//
+// Bindings (wrangler.jsonc): ASSETS (site/), DB (D1). Secrets: BREVO_API_KEY, ADMIN_TOKEN, GH_TOKEN.
 // Vars: SITE_URL, FROM_EMAIL, FROM_NAME.
 
 const SCHEMA = [
@@ -29,7 +33,14 @@ let schemaReady = false;
 
 const EMAIL_RE = /^[^@\s<>"']{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,24}$/;
 
+const REPO = "dianarodos/floridabids";
+const RUN_NAME = "Daily bid update";          // run-name of full runs in .github/workflows/daily.yml
+
 export default {
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(startDailyRun(env, event.cron).catch(e => console.error("daily run trigger failed:", e)));
+  },
+
   async fetch(request, env) {
     const url = new URL(request.url);
     if (!url.pathname.startsWith("/api/")) return env.ASSETS.fetch(request);
@@ -52,6 +63,27 @@ export default {
     }
   },
 };
+
+async function startDailyRun(env, cron) {
+  if (!env.GH_TOKEN) { console.error("GH_TOKEN secret not set; cannot start the daily run"); return; }
+  const gh = (path, init = {}) => fetch(`https://api.github.com/repos/${REPO}${path}`, {
+    ...init,
+    headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json",
+               "X-GitHub-Api-Version": "2022-11-28", "User-Agent": "floridabids-cron", ...(init.headers || {}) },
+  });
+  const today = new Date().toISOString().slice(0, 10);       // crons fire after 10:00 UTC, i.e. same day in Florida
+  const r = await gh(`/actions/workflows/daily.yml/runs?per_page=30&created=>=${today}`);
+  if (!r.ok) throw new Error(`list runs ${r.status}: ${await r.text()}`);
+  const { workflow_runs = [] } = await r.json();
+  const done = workflow_runs.find(w => w.display_title === RUN_NAME && (w.status !== "completed" || w.conclusion === "success"));
+  if (done) { console.log(`cron ${cron}: today's run already ${done.status} (${done.html_url}); nothing to do`); return; }
+  const d = await gh("/actions/workflows/daily.yml/dispatches", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ref: "main", inputs: { only: "", send_email: "yes" } }),
+  });
+  if (!d.ok) throw new Error(`dispatch ${d.status}: ${await d.text()}`);
+  console.log(`cron ${cron}: started today's daily run`);
+}
 
 async function ensureSchema(env) {
   if (schemaReady) return;
