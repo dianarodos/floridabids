@@ -329,3 +329,18 @@ PEST CONTROL"""
     bids = labeled_blocks.parse(real, src)
     assert [(b.number, b.title) for b in bids] == [("2099-10", "Enterprise East Infrastructure Improvements")]
     assert bids[0].due.startswith("2099-11-13T11:00")
+
+
+def test_business_matching():
+    from scraper.interests import matcher, parse_keywords
+    m = matcher(["food", "automotive"], "")
+    assert m({"title": "Fruits & Vegetables"})
+    assert m({"title": "Vehicle Window Tinting Services"})
+    assert m({"title": "AUTOMOTIVE GLASS, ELECTRIC & MANUAL WINDOW REGULATORS"})
+    assert not m({"title": "Litter Pickup"})
+    assert not m({"title": "Automation of payroll"})          # 'auto' is a whole word, not a prefix
+    k = matcher([], "tint, ice cream")
+    assert k({"title": "Window tinting"}) and not k({"title": "Services agreement"})
+    assert matcher(["construction"], "")({"title": "Anything", "category": "Construction"})
+    assert matcher([], "") is None
+    assert parse_keywords("Window Tint; catering,, x") == ("window tint", "catering")

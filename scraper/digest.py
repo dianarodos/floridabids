@@ -21,6 +21,7 @@ from pathlib import Path
 
 import requests
 
+from .interests import describe, matcher
 from .models import ET, now_et
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -69,35 +70,47 @@ def save_state(state):
     STATE.write_text(json.dumps(state, indent=1))
 
 
-def _row(b, site):
+def _row(b, site, is_new=False):
     due = _d(b.get("due"))
     due_s = due.strftime("%b %-d") if due else "See posting"
     link = b.get("bid_url") or b.get("source_url") or site
     e = html.escape
     return (f'<tr><td style="padding:8px 10px;border-bottom:1px solid #e3e8e6;vertical-align:top">'
-            f'<a href="{e(link)}" style="color:#0d5c50;font-weight:bold;text-decoration:none">{e(b["title"])}</a>'
+            + ('<span style="background:#d9621c;color:#fff;font-size:11px;font-weight:bold;padding:1px 6px;'
+               'border-radius:4px;margin-right:6px">NEW</span>' if is_new else "")
+            + f'<a href="{e(link)}" style="color:#0d5c50;font-weight:bold;text-decoration:none">{e(b["title"])}</a>'
             f'<div style="color:#5b6b67;font-size:13px">{e(b.get("agency",""))} &middot; {e(b.get("county",""))} County'
             f' &middot; {e(b.get("category",""))}</div></td>'
             f'<td style="padding:8px 10px;border-bottom:1px solid #e3e8e6;white-space:nowrap;vertical-align:top;'
             f'font-family:monospace">{due_s}</td></tr>')
 
 
-def build(bids, meta, freq, site, unsub_url, now, since=None):
+def build(bids, meta, freq, site, unsub_url, now, since=None, sub=None):
     new, soon = pick(bids, freq, now, since)
     label = "this morning" if freq == "daily" else "this week"
     e = html.escape
+    sub = sub or {}
+    prefs_url = f"{site}/preferences.html?t={sub['token']}" if sub.get("token") else site
+    match = matcher(sub.get("interests"), sub.get("keywords"))
+    new_keys = {id(b) for b in new}         # same dict objects as in bids
+    mine = [b for b in bids if match(b)] if match else []
+    mine.sort(key=lambda b: (id(b) not in new_keys, b.get("due") or "9999"))   # new ones first, then closing soonest
+    mine_new = sum(1 for b in mine if id(b) in new_keys)
 
-    def table(rows, limit):
+    def table(rows, limit, flag=False):
         if not rows:
             return '<p style="color:#5b6b67">None.</p>'
-        body = "".join(_row(b, site) for b in rows[:limit])
+        body = "".join(_row(b, site, flag and id(b) in new_keys) for b in rows[:limit])
         more = (f'<p style="font-size:13px;color:#5b6b67">…and {len(rows) - limit} more on '
                 f'<a href="{site}" style="color:#0d5c50">floridabids.org</a> and in the attached Excel file.</p>'
                 if len(rows) > limit else "")
         return f'<table style="border-collapse:collapse;width:100%;font-size:14px">{body}</table>{more}'
 
-    subject = (f"Florida bids {label}: {len(new)} new, {meta.get('total', len(bids))} open"
-               if new else f"Florida bids {label}: {meta.get('total', len(bids))} open")
+    if match:
+        subject = (f"Florida bids {label}: {len(mine)} open for your business ({mine_new} new), {len(new)} new in Florida")
+    else:
+        subject = (f"Florida bids {label}: {len(new)} new, {meta.get('total', len(bids))} open"
+                   if new else f"Florida bids {label}: {meta.get('total', len(bids))} open")
     total = meta.get("total", len(bids))
     button = (f'<a href="{site}" style="display:inline-block;background:#0d5c50;color:#ffffff;padding:11px 18px;'
               f'border-radius:6px;text-decoration:none;font-weight:bold">See every open bid &rarr;</a>')
@@ -130,31 +143,49 @@ def build(bids, meta, freq, site, unsub_url, now, since=None):
     by_county = Counter(f'{b.get("county") or "Other"}' for b in new)
     by_cat = Counter(b.get("category") or "Other" for b in new)
     stats = (f'<table role="presentation" cellpadding="0" cellspacing="6" style="width:100%;margin:4px 0 14px"><tr>'
-             f'{tile(len(new), "new " + label)}{tile(len(soon), "closing in 7 days")}{tile(total, "open in Florida")}'
-             f'</tr></table>')
+             + (f'{tile(len(mine), "open for your business")}{tile(len(new), "new " + label)}{tile(total, "open in Florida")}'
+                if match else
+                f'{tile(len(new), "new " + label)}{tile(len(soon), "closing in 7 days")}{tile(total, "open in Florida")}')
+             + '</tr></table>')
     charts = (f'<h2 style="font-size:17px;margin:18px 0 8px">Where the new bids are</h2>'
               f'<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%"><tr>'
               f'{bars("By county", by_county)}{bars("By category", by_cat)}</tr></table>') if new else ""
+    pbtn = (f'<a href="{e(prefs_url)}" style="display:inline-block;border:1px solid #0d5c50;color:#0d5c50;padding:7px 14px;'
+            f'border-radius:6px;text-decoration:none;font-size:13px;font-weight:bold">%s</a>')
+    if match:
+        yours = (f'<h2 style="font-size:17px;margin:20px 0 4px">Open bids for your business ({len(mine)})</h2>'
+                 f'<p style="font-size:13px;color:#5b6b67;margin:0 0 8px">Matching: {e(describe(sub.get("interests"), sub.get("keywords")))}. '
+                 f'Every open bid that matches, new ones first and marked NEW. {pbtn % "Change my business keywords"}</p>'
+                 + table(mine, 50, flag=True))
+    else:
+        yours = (f'<div style="background:#fff4ec;border:1px solid #f0c9a8;border-radius:8px;padding:12px 14px;margin:16px 0 0">'
+                 f'<b>Get the bids for your business on top.</b> Tell us what you do (food, automotive, roofing, IT…) or type '
+                 f'your own keywords, and every matching open bid will lead this email.<div style="margin-top:8px">'
+                 f'{pbtn % "Pick my business keywords"}</div></div>')
     html_body = f"""<div style="font-family:Arial,Helvetica,sans-serif;color:#1b2b28;max-width:680px;line-height:1.45">
 <table role="presentation" style="width:100%"><tr>
 <td><h1 style="font-family:Georgia,serif;font-size:26px;margin:0">Florida Bids</h1>
 <div style="color:#5b6b67;font-size:14px">{e(now.strftime('%A, %B %-d, %Y'))}</div></td>
 <td style="text-align:right;vertical-align:middle">{button}</td></tr></table>
 {stats}
+{yours}
 {charts}
-<h2 style="font-size:17px;margin:20px 0 6px">New {label} ({len(new)})</h2>
-{table(new, 100) if new else '<p style="color:#5b6b67">No new bids since the last email. Every open bid is on the site and in the attached Excel file.</p>'}
+<h2 style="font-size:17px;margin:20px 0 6px">All new bids {label} ({len(new)})</h2>
+{table(new, 60 if match else 80) if new else '<p style="color:#5b6b67">No new bids since the last email. Every open bid is on the site and in the attached Excel file.</p>'}
 <p style="margin:20px 0 0">{button}</p>
 <p style="font-size:13px;color:#5b6b67;margin:8px 0 0">The full list of {total} open bids is attached as an Excel file.</p>
 <p style="font-size:12px;color:#5b6b67;margin-top:24px">Always confirm details and deadlines on the agency's page before
  you respond. You get this {'every morning' if freq == 'daily' else 'every Monday'} because you signed up at floridabids.org.
  No ads, ever.</p>
-<p style="margin:10px 0 0"><a href="{e(unsub_url)}" style="display:inline-block;border:1px solid #9aa8a4;color:#5b6b67;
+<p style="margin:10px 0 0">{pbtn % "Change my business keywords"} <a href="{e(unsub_url)}" style="display:inline-block;border:1px solid #9aa8a4;color:#5b6b67;
 padding:7px 14px;border-radius:6px;text-decoration:none;font-size:13px">Unsubscribe</a></p></div>"""
-    text = (f"Florida Bids - {meta.get('total', len(bids))} open bids. New {label}: {len(new)}.\n\n"
+    text = ((f"Open bids for your business ({len(mine)}):\n" + "\n".join(
+                f"- {'NEW ' if id(b) in new_keys else ''}{b['title']} ({b.get('agency','')}, due {(b.get('due') or '')[:10]}) "
+                f"{b.get('bid_url') or b.get('source_url') or ''}" for b in mine[:40]) + "\n\n" if match else "")
+            + f"Florida Bids - {meta.get('total', len(bids))} open bids. All new {label}: {len(new)}.\n\n"
             + "\n".join(f"- {b['title']} ({b.get('agency','')}, due {(b.get('due') or '')[:10]}) "
                         f"{b.get('bid_url') or b.get('source_url') or ''}" for b in new[:60])
-            + f"\n\nAll open bids: {site}\nUnsubscribe: {unsub_url}\n")
+            + f"\n\nAll open bids: {site}\nChange your business keywords: {prefs_url}\nUnsubscribe: {unsub_url}\n")
     return subject, html_body, text
 
 
@@ -177,6 +208,8 @@ def main(argv=None):
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--to", help="send one test email to this address")
     ap.add_argument("--freq", choices=["daily", "weekly"])
+    ap.add_argument("--interests", help="test email: business type ids, comma-separated (e.g. food,automotive)")
+    ap.add_argument("--keywords", help="test email: free keywords (e.g. 'window tint, catering')")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
@@ -197,7 +230,8 @@ def main(argv=None):
     freqs = [args.freq] if args.freq else (["daily", "weekly"] if now.weekday() == 0 else ["daily"])
     if args.to:
         freqs = freqs[:1]
-        recipients = {freqs[0]: [{"email": args.to, "token": "test"}]}
+        recipients = {freqs[0]: [{"email": args.to, "token": "test", "interests": args.interests.split(",") if args.interests else [],
+                                  "keywords": args.keywords or ""}]}
     else:
         recipients = {}
         for f in freqs:
@@ -223,7 +257,7 @@ def main(argv=None):
                             sum(len(v) for v in recipients.values()) - sent - failed)
                 return 0
             unsub = f"{site}/api/unsubscribe?t={sub['token']}"
-            subject, html_body, text = build(bids, meta, f, site, unsub, now, since)
+            subject, html_body, text = build(bids, meta, f, site, unsub, now, since, sub)
             if args.dry_run:
                 log.info("[dry run] %s -> %s: %s", f, _mask(sub["email"]), subject)
                 sent += 1

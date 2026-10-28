@@ -1,0 +1,158 @@
+# Business types a subscriber can pick. Each one expands into the words we look for in a bid's title
+# (and the agency's own category). A bid matches when any term appears as a word:
+#   "vehicle"  -> vehicle, vehicles          (plain term: whole word, plural s/es allowed)
+#   "tint*"    -> tint, tinted, tinting      (trailing * : any word starting with it)
+#   "auto parts" -> the phrase
+# Free keywords typed by a subscriber are treated like "word*".
+# Optional "categories": every bid the site already sorted into that category also matches.
+# Add terms freely; the sign-up form and preferences page read this file (via site/data/business_types.json).
+
+- id: food
+  label: Food, catering & concessions
+  terms: [food*, fruit*, vegetable*, produce, meal*, cater*, concession*, vending, beverage*, snack*, bakery,
+          baked goods, kitchen*, dining, cafeteria*, coffee, dairy, milk, grocer*, nutrition*, restaurant*, ice cream,
+          meat*, poultry, seafood, bread, lunch*, breakfast, culinary, food service*]
+
+- id: automotive
+  label: Automotive & vehicles
+  terms: [vehicle*, automotive, auto, autos, auto parts, auto glass, car wash*, cars, truck*, fleet, tire*, tint*,
+          windshield*, window regulat*, mechanic*, towing, tow truck*, van, vans, sedan*, suv, suvs, pickup truck*,
+          motor vehicle*, oil change*, brake*, collision, body shop, allison, transmission repair*, battery, batteries, upfit*,
+          golf cart*, utility vehicle*, school bus*, buses, chassis, trailer*]
+
+- id: construction
+  label: General construction & renovation
+  categories: [Construction]
+  terms: [construct*, renovat*, remodel*, build-out, design-build, design build, addition, expansion, rehab*,
+          restoration, demolition, building improvement*, facility improvement*, general contractor*, carpentry,
+          drywall, flooring, tile, masonry, steel, structural]
+
+- id: roofing
+  label: Roofing
+  terms: [roof*, re-roof*, gutter*, waterproof*]
+
+- id: paving
+  label: Roads, paving & concrete
+  terms: [paving, pave*, resurfac*, asphalt, road*, roadway*, sidewalk*, street*, concrete, curb*, milling,
+          striping, pavement*, bridge*, culvert*, intersection*, traffic calming, guardrail*, limerock, widening]
+
+- id: hvac
+  label: HVAC & mechanical
+  terms: [hvac, air condition*, a/c, chiller*, heating, ventilat*, boiler*, mechanical, cooling tower*, ductwork,
+          refrigerat*, cooler*, freezer*, ice machine*]
+
+- id: electrical
+  label: Electrical, lighting & solar
+  terms: [electric*, lighting, light*, generator*, solar, power, wiring, substation*, transformer*, ev charg*,
+          charging station*, fire alarm*]
+
+- id: plumbing
+  label: Plumbing, water & sewer
+  terms: [plumb*, water, sewer*, wastewater, pipe*, pipeline*, pump*, lift station*, utility, utilities, well,
+          wells, septic, backflow, meter*, hydrant*, force main*, water main*]
+
+- id: landscaping
+  label: Landscaping, lawn & trees
+  terms: [landscap*, lawn*, mowing, mow, grounds, tree*, turf, sod, irrigation, vegetation, herbicide*,
+          right-of-way maintenance, park maintenance, arbor*, palm*, mulch]
+
+- id: janitorial
+  label: Cleaning, janitorial & pest control
+  terms: [janitor*, custodial, clean*, pressure wash*, power wash*, sanitation, sanitiz*, pest*, rodent*,
+          termite*, window washing, carpet*, porta*, portable toilet*, restroom*]
+
+- id: security
+  label: Security, alarms & cameras
+  terms: [security, guard*, alarm*, surveillance, camera*, cctv, access control, keyless, locksmith*, lock*,
+          video monitoring, armored, patrol*]
+
+- id: it
+  label: IT, software & telecom
+  categories: [IT & Technology]
+  terms: [software, it services, information technology, network*, computer*, laptop*, technology, cyber*, data,
+          cloud, telecom*, phone*, website*, web, saas, erp, gis, server*, wifi, wi-fi, broadband, fiber,
+          radio*, audio visual, audiovisual, av equipment, point-of-sale, point of sale, implementation]
+
+- id: professional
+  label: Consulting, accounting & legal
+  categories: [Consulting & Professional Services]
+  terms: [consult*, audit*, accounting, legal, attorney*, law firm*, financial advisor*, actuar*, study, studies,
+          plan, planning, assessment*, evaluation*, analysis, strategic, grant writ*, grant administration,
+          administration services, lobby*, appraisal*, management services]
+
+- id: engineering
+  label: Engineering, architecture & surveying
+  categories: [Engineering & Architecture]
+  terms: [engineer*, architect*, design, survey*, geotechnical, inspection*, testing, cei, environmental assessment,
+          permitting]
+
+- id: marketing
+  label: Marketing, printing & media
+  terms: [marketing, advertis*, print*, media, video*, photograph*, signage, sign, signs, branding,
+          public relations, communications, social media, graphic*, promotional, tourism]
+
+- id: staffing
+  label: Staffing & training
+  terms: [staffing, temporary, temp services, training, recruit*, workforce, employment, background check*]
+
+- id: medical
+  label: Medical & health
+  terms: [medical, health*, ems, pharmac*, ambulance*, clinic*, dental, nurs*, behavioral, mental health,
+          laboratory, lab services, wellness, physician*, hospital*, drug*, vaccin*]
+
+- id: education
+  label: Education & child care
+  terms: [child care, childcare, early learning, tutor*, educat*, student*, school*, after-school, curriculum,
+          learning, classroom*, library, libraries, cte, career and technical, mobile lab*]
+
+- id: environmental
+  label: Environmental, waste & stormwater
+  terms: [environmental, stormwater, drainage, debris, waste, recycl*, hazardous, mosquito*, dredg*, erosion,
+          mitigation, remediation, asbestos, mold, disposal, garbage, solid waste, compost*, wetland*]
+
+- id: transit
+  label: Transportation & transit
+  terms: [transit, shuttle*, transportation, rail, railroad, paratransit, trolley*, bus service*, airport*,
+          aviation, parking]
+
+- id: equipment
+  label: Equipment & machinery
+  terms: [equipment, machinery, tractor*, mower*, forklift*, excavator*, loader*, heavy equipment, tools, rental,
+          crane*, sweeper*]
+
+- id: supplies
+  label: Office supplies & furniture
+  terms: [furniture, office supplies, office supply, paper, toner, chair*, desk*, supplies, cubicle*, shelving]
+
+- id: apparel
+  label: Uniforms & apparel
+  terms: [uniform*, apparel, clothing, boots, shirt*, footwear, protective gear, ppe, turnout gear]
+
+- id: events
+  label: Events, parks & recreation
+  terms: [event*, festival*, recreation*, sports, pool*, aquatic*, playground*, park, parks, athletic*,
+          fireworks, entertainment, stage, concert*, amenit*]
+
+- id: finance
+  label: Banking, insurance & finance
+  terms: [insurance, banking, bank*, investment*, line of credit, loan*, broker*, financing, credit card*,
+          payment processing, collection*, actuarial, benefits]
+
+- id: realestate
+  label: Real estate & property
+  categories: [Property & Real Estate]
+  terms: [lease*, leasing, property, properties, real estate, land, residential, rental, surplus, parcel*,
+          acquisition, disposition]
+
+- id: housing
+  label: Housing & community development
+  terms: [housing, cdbg, ship, home repair*, affordable, community development, homeless*, shelter*, rehabilitation]
+
+- id: fire
+  label: Fire, rescue & public safety
+  terms: [fire, rescue, safety, emergency, police, sheriff, law enforcement, 911, dispatch, firearm*, ammunition,
+          bulletproof, body camera*]
+
+- id: marine
+  label: Marine, docks & waterfront
+  terms: [marine, boat*, dock*, seawall*, ramp*, pier*, marina*, waterfront, dredg*, buoy*, vessel*]

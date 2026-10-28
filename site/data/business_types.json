@@ -1,0 +1,118 @@
+[
+ {
+  "id": "food",
+  "label": "Food, catering & concessions"
+ },
+ {
+  "id": "automotive",
+  "label": "Automotive & vehicles"
+ },
+ {
+  "id": "construction",
+  "label": "General construction & renovation"
+ },
+ {
+  "id": "roofing",
+  "label": "Roofing"
+ },
+ {
+  "id": "paving",
+  "label": "Roads, paving & concrete"
+ },
+ {
+  "id": "hvac",
+  "label": "HVAC & mechanical"
+ },
+ {
+  "id": "electrical",
+  "label": "Electrical, lighting & solar"
+ },
+ {
+  "id": "plumbing",
+  "label": "Plumbing, water & sewer"
+ },
+ {
+  "id": "landscaping",
+  "label": "Landscaping, lawn & trees"
+ },
+ {
+  "id": "janitorial",
+  "label": "Cleaning, janitorial & pest control"
+ },
+ {
+  "id": "security",
+  "label": "Security, alarms & cameras"
+ },
+ {
+  "id": "it",
+  "label": "IT, software & telecom"
+ },
+ {
+  "id": "professional",
+  "label": "Consulting, accounting & legal"
+ },
+ {
+  "id": "engineering",
+  "label": "Engineering, architecture & surveying"
+ },
+ {
+  "id": "marketing",
+  "label": "Marketing, printing & media"
+ },
+ {
+  "id": "staffing",
+  "label": "Staffing & training"
+ },
+ {
+  "id": "medical",
+  "label": "Medical & health"
+ },
+ {
+  "id": "education",
+  "label": "Education & child care"
+ },
+ {
+  "id": "environmental",
+  "label": "Environmental, waste & stormwater"
+ },
+ {
+  "id": "transit",
+  "label": "Transportation & transit"
+ },
+ {
+  "id": "equipment",
+  "label": "Equipment & machinery"
+ },
+ {
+  "id": "supplies",
+  "label": "Office supplies & furniture"
+ },
+ {
+  "id": "apparel",
+  "label": "Uniforms & apparel"
+ },
+ {
+  "id": "events",
+  "label": "Events, parks & recreation"
+ },
+ {
+  "id": "finance",
+  "label": "Banking, insurance & finance"
+ },
+ {
+  "id": "realestate",
+  "label": "Real estate & property"
+ },
+ {
+  "id": "housing",
+  "label": "Housing & community development"
+ },
+ {
+  "id": "fire",
+  "label": "Fire, rescue & public safety"
+ },
+ {
+  "id": "marine",
+  "label": "Marine, docks & waterfront"
+ }
+]

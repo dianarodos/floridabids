@@ -47,6 +47,13 @@ dialog.subdlg::backdrop{background:rgba(10,20,18,.45)}
 input[type=radio]{accent-color:var(--accent)}
 .subdlg fieldset{border:0;padding:0;margin:0;display:flex;gap:18px;font-size:14px}
 .subdlg .btn{width:100%;cursor:pointer;padding:11px 14px}
+.subdlg{max-height:calc(100dvh - 32px);overflow:auto}
+.biz{display:grid;gap:8px}
+.biz .chips{display:flex;flex-wrap:wrap;gap:6px;max-height:168px;overflow:auto;padding:2px}
+.biz .chips label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:13px;cursor:pointer;background:var(--bg)}
+.biz .chips input{accent-color:var(--accent);margin:0}
+.biz .chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
+.subdlg input[type=text].kw{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%;box-sizing:border-box}
 .counts{display:flex;flex-wrap:wrap;gap:8px 28px;font-variant-numeric:tabular-nums}
 .counts div{display:grid}
 .counts b{font:600 26px/1.1 var(--display)}
@@ -174,13 +181,18 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <button class="x" type="button" id="subclose" aria-label="Close">×</button>
     <form class="inner" id="subform" novalidate>
       <h2 id="subttl">Get Florida bids by email</h2>
-      <p>Every open bid in Florida, with the Excel file attached. Free. Unsubscribe anytime with one click.</p>
+      <p>Bids for your business on top, then everything new in Florida, with the Excel file attached. Free. Unsubscribe anytime with one click.</p>
       <input type="email" id="email" required placeholder="you@company.com" aria-label="Email address" autocomplete="email">
       <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <fieldset><legend class="note" style="margin-bottom:6px">How often</legend>
         <label><input type="radio" name="freq" value="daily" checked> Daily</label>
         <label><input type="radio" name="freq" value="weekly"> Weekly (Monday)</label>
       </fieldset>
+      <div class="biz">
+        <div class="note"><b>What does your business do?</b> Optional. Pick any that fit, and we'll put every matching open bid at the top of your email.</div>
+        <div class="chips" id="bizchips"></div>
+        <input type="text" class="kw" id="keywords" maxlength="300" placeholder="Your own keywords, e.g. window tint, catering, roof" aria-label="Your own keywords, separated by commas">
+      </div>
       <button class="btn" type="submit">Subscribe</button>
       <div class="note" id="submsg">We'll send one email to confirm your address. We only use it to send this list, and we will never send you ads.</div>
     </form>
@@ -305,18 +317,24 @@ $("#subclose").addEventListener("click", () => dlg.close());
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });   // click outside the box closes it
 if (location.hash === "#subscribe-now") dlg.showModal();
 
+fetch("data/business_types.json").then(r => r.json()).then(types => {
+  $("#bizchips").innerHTML = types.map(t => `<label><input type="checkbox" value="${t.id}"> ${t.label.replace(/&/g,"&amp;")}</label>`).join("");
+}).catch(() => {});
+
 $("#subform").addEventListener("submit", async e => {
   e.preventDefault();
   const email = $("#email").value.trim(), freq = document.querySelector("input[name=freq]:checked").value, msg = $("#submsg");
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent = "Enter a valid email address."; return; }
   msg.textContent = "Sending…";
   try{
-    const r = await fetch(SUBSCRIBE_API, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({email, freq, website: $("#website").value})});
+    const interests = [...document.querySelectorAll("#bizchips input:checked")].map(i => i.value);
+    const r = await fetch(SUBSCRIBE_API, {method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({email, freq, interests, keywords: $("#keywords").value, website: $("#website").value})});
     if (r.status === 429) { msg.textContent = "Too many sign-ups from here. Please try again in an hour."; return; }
     if (r.status === 400) { msg.textContent = "That email address doesn't look right."; return; }
     if(!r.ok) throw new Error();
     const d = await r.json();
-    msg.textContent = d.already ? "You're already on the list. We've updated how often you get it."
+    msg.textContent = d.already ? "You're already on the list. To change your business keywords, use the link at the bottom of any of our emails."
                                 : "Almost done: check your inbox and click the link to confirm.";
   }catch{ msg.textContent = "Something went wrong. Please try again in a few minutes."; }
 });

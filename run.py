@@ -23,6 +23,7 @@ import yaml
 
 from scraper import backfill, browser, emails, store
 from scraper.export import write_site_json, write_xlsx
+from scraper.interests import export_public
 from scraper.models import now_et
 from scraper.net import Blocked
 from scraper.readers import get_reader
@@ -219,6 +220,7 @@ def main(argv=None):
     meta["counties"] = len({b.county for b in public})
     write_site_json(public, meta, SITE / "data" / "bids.json")
     write_xlsx(public, SITE / "data" / "florida-open-bids.xlsx", updated)
+    export_public()                      # business types for the sign-up form and preferences page
     log.info("open bids: %d across %d counties (removed %d closed)", len(public), meta["counties"], removed)
 
     failed = [h for h in health if h["status"] in ("error",)]

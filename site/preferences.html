@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Florida Bids · Your email</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+/* Opened from the link in every email (?t=<subscriber token>): how often + business types + keywords. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --fg:#14211e; --muted:#5a6a66; --line:#d9e1de;
+  --accent:#0d5c50; --accent-ink:#ffffff; --accent-soft:#e1efeb; --bad:#a3322a;
+  --display:"Source Serif 4", Georgia, serif; --body:"IBM Plex Sans", system-ui, sans-serif; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936;
+  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-soft:#183531; --bad:#f08a80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936;
+  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-soft:#183531; --bad:#f08a80; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);
+  padding:0 max(16px,env(safe-area-inset-right,0px)) 48px max(16px,env(safe-area-inset-left,0px))}
+main{max-width:640px;margin:0 auto;padding-top:28px;display:grid;gap:18px}
+h1{font:700 30px/1.1 var(--display);margin:0}
+h1 a{color:inherit;text-decoration:none}
+h2{font:700 19px var(--display);margin:0 0 6px}
+p{margin:0}
+.muted{color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px;cursor:pointer;background:var(--bg)}
+.chips input{accent-color:var(--accent);margin:0}
+.chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
+.freq{display:flex;gap:18px;flex-wrap:wrap}
+.freq input{accent-color:var(--accent)}
+input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%}
+.btn{font:600 16px var(--body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:12px 20px;cursor:pointer}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#msg{font-weight:600}
+#msg.err{color:var(--bad)}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<main>
+  <h1><a href="/">Florida Bids</a></h1>
+  <div id="loading" class="muted">Loading your settings…</div>
+  <div id="bad" class="card hidden"><p>This link doesn't work anymore. Use the link in your latest Florida Bids email, or <a href="/#subscribe-now">sign up again</a>.</p></div>
+
+  <form id="form" class="hidden" style="display:grid;gap:18px">
+    <p class="muted">Settings for <b id="who"></b></p>
+    <div id="unsub" class="card hidden"><p>You're unsubscribed. Saving below will start your emails again.</p></div>
+
+    <section class="card">
+      <div><h2>What does your business do?</h2>
+      <p class="muted">Every open bid that matches goes at the top of your email, with new ones marked. Below that you still get every new bid in Florida.</p></div>
+      <div class="chips" id="chips"></div>
+    </section>
+
+    <section class="card">
+      <div><h2>Your own keywords</h2>
+      <p class="muted">Separate with commas. We match the start of words, so "tint" also finds "tinting".</p></div>
+      <input type="text" id="keywords" maxlength="300" placeholder="e.g. window tint, catering, roof">
+    </section>
+
+    <section class="card">
+      <h2>How often</h2>
+      <div class="freq">
+        <label><input type="radio" name="freq" value="daily"> Every morning</label>
+        <label><input type="radio" name="freq" value="weekly"> Weekly (Monday)</label>
+      </div>
+    </section>
+
+    <div class="row"><button class="btn" type="submit">Save</button><span id="msg" role="status"></span></div>
+  </form>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const t = new URLSearchParams(location.search).get("t") || "";
+let wasUnsub = false;
+Promise.all([
+  fetch("data/business_types.json").then(r => r.json()),
+  fetch("/api/prefs?t=" + encodeURIComponent(t)).then(r => r.ok ? r.json() : null),
+]).then(([types, p]) => {
+  $("#loading").classList.add("hidden");
+  if (!p) { $("#bad").classList.remove("hidden"); return; }
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  $("#chips").innerHTML = types.map(x => `<label><input type="checkbox" value="${x.id}" ${p.interests.includes(x.id) ? "checked" : ""}> ${esc(x.label)}</label>`).join("");
+  $("#keywords").value = p.keywords || "";
+  (document.querySelector(`input[name=freq][value=${p.freq}]`) || {}).checked = true;
+  $("#who").textContent = p.email;
+  wasUnsub = p.status === "unsubscribed";
+  $("#unsub").classList.toggle("hidden", !wasUnsub);
+  $("#form").classList.remove("hidden");
+}).catch(() => { $("#loading").textContent = "Something went wrong. Please try again in a few minutes."; });
+
+$("#form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const msg = $("#msg"); msg.className = ""; msg.textContent = "Saving…";
+  const body = {
+    interests: [...document.querySelectorAll("#chips input:checked")].map(i => i.value),
+    keywords: $("#keywords").value,
+    freq: (document.querySelector("input[name=freq]:checked") || {}).value || "daily",
+    resubscribe: wasUnsub,
+  };
+  try {
+    const r = await fetch("/api/prefs?t=" + encodeURIComponent(t), {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+    if (!r.ok) throw new Error();
+    msg.textContent = "Saved. Your next email will use these settings.";
+    if (wasUnsub) { wasUnsub = false; $("#unsub").classList.add("hidden"); }
+  } catch { msg.className = "err"; msg.textContent = "Couldn't save. Please try again."; }
+});
+</script>
+</body>
+</html>
