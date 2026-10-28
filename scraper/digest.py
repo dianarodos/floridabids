@@ -207,6 +207,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--to", help="send one test email to this address")
+    ap.add_argument("--to-sha256", help="send one test email to the subscriber whose address hashes to this "
+                                        "(keeps the address out of the public run log); uses their saved keywords")
     ap.add_argument("--freq", choices=["daily", "weekly"])
     ap.add_argument("--interests", help="test email: business type ids, comma-separated (e.g. food,automotive)")
     ap.add_argument("--keywords", help="test email: free keywords (e.g. 'window tint, catering')")
@@ -228,7 +230,22 @@ def main(argv=None):
     now = now_et()
 
     freqs = [args.freq] if args.freq else (["daily", "weekly"] if now.weekday() == 0 else ["daily"])
-    if args.to:
+    if args.to_sha256:
+        import hashlib
+        api = os.environ.get("API_URL", site).rstrip("/")
+        r = requests.get(f"{api}/api/admin/subscribers", timeout=30,
+                         headers={"Authorization": f"Bearer {admin}", "User-Agent": "FloridaBids-digest/1.0"})
+        r.raise_for_status()
+        sub = next((x for x in r.json()["subscribers"]
+                    if hashlib.sha256(x["email"].strip().lower().encode()).hexdigest() == args.to_sha256.strip().lower()), None)
+        if not sub:
+            log.error("no active subscriber matches that hash")
+            return 1
+        args.to = sub["email"]
+        freqs = [sub.get("freq") or "daily"]
+        recipients = {freqs[0]: [sub]}
+        log.info("test email to %s (keywords: %s)", _mask(sub["email"]), describe(sub.get("interests"), sub.get("keywords")) or "none")
+    elif args.to:
         freqs = freqs[:1]
         recipients = {freqs[0]: [{"email": args.to, "token": "test", "interests": args.interests.split(",") if args.interests else [],
                                   "keywords": args.keywords or ""}]}
