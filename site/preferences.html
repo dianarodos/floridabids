@@ -41,6 +41,13 @@ input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);bor
 .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 #msg{font-weight:600}
 #msg.err{color:var(--bad)}
+#msg.ok{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);border-radius:8px;padding:10px 14px}
+/* the confirmation also slides up at the bottom of the screen, so it's seen even when the button is scrolled away */
+#toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);transition:transform .25s ease;
+  background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:10px;padding:12px 18px;box-shadow:0 8px 24px rgba(0,0,0,.2);
+  max-width:calc(100vw - 32px);text-align:center;z-index:10}
+#toast.show{transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){#toast{transition:none}}
 .hidden{display:none}
 </style>
 </head>
@@ -77,6 +84,7 @@ input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);bor
     <div class="row"><button class="btn" type="submit">Save</button><span id="msg" role="status"></span></div>
   </form>
 </main>
+<div id="toast" role="status" aria-live="polite"></div>
 <script>
 const $ = s => document.querySelector(s);
 const t = new URLSearchParams(location.search).get("t") || "";
@@ -109,7 +117,12 @@ $("#form").addEventListener("submit", async e => {
   try {
     const r = await fetch("/api/prefs?t=" + encodeURIComponent(t), {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
     if (!r.ok) throw new Error();
-    msg.textContent = "Saved. Your next email will use these settings.";
+    msg.className = "ok";
+    msg.textContent = "✓ Your keywords were saved. Your next email will use them.";
+    const toast = $("#toast");
+    toast.textContent = "✓ Your keywords were saved";
+    toast.classList.add("show");
+    clearTimeout(window.__t); window.__t = setTimeout(() => toast.classList.remove("show"), 3500);
     if (wasUnsub) { wasUnsub = false; $("#unsub").classList.add("hidden"); }
   } catch { msg.className = "err"; msg.textContent = "Couldn't save. Please try again."; }
 });
