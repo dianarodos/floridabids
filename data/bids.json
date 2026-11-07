@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-11-06 05:19 AM",
-  "updated_iso": "2026-11-06T05:19-05:00",
+  "updated": "2026-11-07 05:19 AM",
+  "updated_iso": "2026-11-07T05:19-05:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -11,7 +11,7 @@
     "status": "ok",
     "count": 35,
     "new": 28,
-    "seconds": 6.4
+    "seconds": 5.7
    },
    {
     "id": "osceola-vendorlink",
@@ -20,7 +20,7 @@
     "url": "https://vendorlink.osceola.org/external/bids",
     "status": "error",
     "error": "TimeoutError: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until 'load'\n============================================================",
-    "seconds": 37.6
+    "seconds": 35.8
    },
    {
     "id": "charlotte-county",
@@ -30,7 +30,7 @@
     "status": "ok",
     "count": 9,
     "new": 0,
-    "seconds": 2.7
+    "seconds": 2.5
    },
    {
     "id": "columbia-county",
@@ -57,9 +57,9 @@
     "agency": "Polk County BOCC",
     "url": "https://www.polkfl.gov/business/procurement/",
     "status": "ok",
-    "count": 48,
-    "new": 0,
-    "seconds": 0.3
+    "count": 49,
+    "new": 1,
+    "seconds": 0.6
    },
    {
     "id": "putnam-county",
@@ -69,7 +69,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 2.3
+    "seconds": 2.2
    },
    {
     "id": "jacksonville-oracle",
@@ -77,8 +77,8 @@
     "agency": "City of Jacksonville",
     "url": "https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179",
     "status": "error",
-    "error": "RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=2uzh5dmeve74eu_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'",
-    "seconds": 62.5
+    "error": "RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=f20x1t9m3ydqek_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'",
+    "seconds": 62.3
    },
    {
     "id": "jaxport",
@@ -87,8 +87,8 @@
     "url": "https://www.jaxport.com/procurement/active-solicitations/?sort[7]=asc",
     "status": "ok",
     "count": 3,
-    "new": 1,
-    "seconds": 10.7
+    "new": 0,
+    "seconds": 11.9
    },
    {
     "id": "duval-schools-demandstar",
@@ -98,7 +98,7 @@
     "status": "ok",
     "count": 2,
     "new": 0,
-    "seconds": 0.4
+    "seconds": 2.4
    },
    {
     "id": "martin-demandstar",
@@ -106,9 +106,9 @@
     "agency": "Martin County BOCC",
     "url": "https://www.demandstar.com/app/agencies/florida/martin-county-purchasing/procurement-opportunities/cb5da01b-483b-42ca-aeb0-f27e5cf6e6d6/",
     "status": "ok",
-    "count": 3,
-    "new": 0,
-    "seconds": 4.4
+    "count": 4,
+    "new": 1,
+    "seconds": 0.4
    },
    {
     "id": "wilton-manors-civicplus",
@@ -118,7 +118,7 @@
     "status": "ok",
     "count": 10,
     "new": 0,
-    "seconds": 1.0
+    "seconds": 0.8
    },
    {
     "id": "wellington-demandstar",
@@ -128,7 +128,7 @@
     "status": "ok",
     "count": 3,
     "new": 0,
-    "seconds": 6.1
+    "seconds": 4.0
    },
    {
     "id": "sunrise-demandstar",
@@ -136,9 +136,9 @@
     "agency": "City of Sunrise",
     "url": "https://www.demandstar.com/app/agencies/florida/city-of-sunrise/procurement-opportunities/628b628c-effc-47f5-8aed-f3057aa89b5c/",
     "status": "ok",
-    "count": 4,
-    "new": 0,
-    "seconds": 2.1
+    "count": 5,
+    "new": 1,
+    "seconds": 6.0
    },
    {
     "id": "tamarac-bidsandtenders",
@@ -146,9 +146,9 @@
     "agency": "City of Tamarac",
     "url": "https://tamarac.bidsandtenders.net/",
     "status": "ok",
-    "count": 3,
+    "count": 2,
     "new": 0,
-    "seconds": 2.3
+    "seconds": 2.4
    },
    {
     "id": "sebastian-civicplus",
@@ -158,7 +158,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.8
+    "seconds": 0.7
    },
    {
     "id": "fort-lauderdale-infor",
@@ -167,7 +167,7 @@
     "url": "https://sms-fortlauderdale-prd.inforcloudsuite.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=COFL",
     "status": "error",
     "error": "RuntimeError: expected JSON, got None: ''",
-    "seconds": 2.3
+    "seconds": 2.1
    },
    {
     "id": "fellsmere-govaccess",
@@ -176,7 +176,7 @@
     "url": "https://www.cityoffellsmere.org/rfps",
     "status": "blocked",
     "error": "HTTP 403 from https://www.cityoffellsmere.org/rfps",
-    "seconds": 0.3
+    "seconds": 0.2
    },
    {
     "id": "westlake-govaccess",
@@ -196,7 +196,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.9
+    "seconds": 0.7
    },
    {
     "id": "greenacres-demandstar",
@@ -206,7 +206,7 @@
     "status": "ok",
     "count": 3,
     "new": 0,
-    "seconds": 5.8
+    "seconds": 5.9
    },
    {
     "id": "hallandale-beach-page",
@@ -216,7 +216,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 1.6
+    "seconds": 1.7
    },
    {
     "id": "haverhill-watch",
@@ -226,7 +226,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 0.5
    },
    {
     "id": "highland-beach-demandstar",
@@ -236,7 +236,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 7.0
+    "seconds": 7.3
    },
    {
     "id": "hillsboro-beach-watch",
@@ -246,7 +246,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 1.2
    },
    {
     "id": "hypoluxo-govaccess",
@@ -256,7 +256,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 0.3
    },
    {
     "id": "indiantown-govaccess",
@@ -284,7 +284,7 @@
     "url": "https://www.townoflcs.gov/rfps",
     "status": "blocked",
     "error": "HTTP 403 from https://www.townoflcs.gov/rfps",
-    "seconds": 0.6
+    "seconds": 0.3
    },
    {
     "id": "lake-park-watch",
@@ -293,7 +293,7 @@
     "url": "https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651",
     "status": "blocked",
     "error": "HTTP 403 from https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651",
-    "seconds": 0.2
+    "seconds": 0.1
    },
    {
     "id": "lake-worth-beach-bidsandtenders",
@@ -313,7 +313,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.7
+    "seconds": 0.6
    },
    {
     "id": "oakland-park-civicplus",
@@ -323,7 +323,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.8
+    "seconds": 0.6
    },
    {
     "id": "pahokee-demandstar",
@@ -333,7 +333,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 7.3
+    "seconds": 7.5
    },
    {
     "id": "pembroke-park-page",
@@ -343,7 +343,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.8
+    "seconds": 0.7
    },
    {
     "id": "south-palm-beach-civicplus",
@@ -352,8 +352,8 @@
     "url": "https://www.southpalmbeach.com/bids.aspx",
     "status": "ok",
     "count": 1,
-    "new": 1,
-    "seconds": 0.5
+    "new": 0,
+    "seconds": 0.8
    },
    {
     "id": "st-johns-demandstar",
@@ -361,9 +361,9 @@
     "agency": "St. Johns County BOCC",
     "url": "https://www.demandstar.com/app/agencies/florida/st-johns-county-purchasing-department/procurement-opportunities/5a5c8611-ac18-4c9a-9614-284ee7adaf43/",
     "status": "ok",
-    "count": 12,
-    "new": 1,
-    "seconds": 8.3
+    "count": 11,
+    "new": 0,
+    "seconds": 8.4
    },
    {
     "id": "st-lucie-demandstar",
@@ -373,7 +373,7 @@
     "status": "ok",
     "count": 9,
     "new": 0,
-    "seconds": 10.2
+    "seconds": 10.4
    },
    {
     "id": "highlands-bidnet",
@@ -383,7 +383,7 @@
     "status": "ok",
     "count": 3,
     "new": 0,
-    "seconds": 1.0
+    "seconds": 0.7
    },
    {
     "id": "riviera-beach-bidnet",
@@ -391,9 +391,9 @@
     "agency": "City of Riviera Beach",
     "url": "https://www.bidnetdirect.com/florida/cityofrivierabeach/solicitations/open-bids?selectedContent=BUYER",
     "status": "ok",
-    "count": 2,
-    "new": 0,
-    "seconds": 2.4
+    "count": 3,
+    "new": 1,
+    "seconds": 2.1
    },
    {
     "id": "okeechobee-bidnet",
@@ -403,7 +403,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 3.8
+    "seconds": 4.0
    },
    {
     "id": "ace-theater-bidnet",
@@ -413,7 +413,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 4.9
+    "seconds": 4.5
    },
    {
     "id": "alachua-housing-bidnet",
@@ -423,7 +423,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 5.8
+    "seconds": 5.9
    },
    {
     "id": "bal-harbour-bidnet",
@@ -433,7 +433,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 6.9
+    "seconds": 6.7
    },
    {
     "id": "bay-county-bidnet",
@@ -443,7 +443,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 8.5
+    "seconds": 8.0
    },
    {
     "id": "careersource-tampa-bay-bidnet",
@@ -453,7 +453,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 10.0
+    "seconds": 9.1
    },
    {
     "id": "cfx-bidnet",
@@ -463,7 +463,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 10.8
+    "seconds": 10.6
    },
    {
     "id": "avon-park-bidnet",
@@ -473,17 +473,17 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 11.8
+    "seconds": 11.9
    },
    {
     "id": "brooksville-bidnet",
     "county": "Hernando",
     "agency": "City of Brooksville",
     "url": "https://www.bidnetdirect.com/florida/cityofbrooksville/solicitations/open-bids?selectedContent=BUYER",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 12.9
+    "status": "ok",
+    "count": 1,
+    "new": 1,
+    "seconds": 12.6
    },
    {
     "id": "callaway-bidnet",
@@ -493,7 +493,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 14.1
+    "seconds": 13.9
    },
    {
     "id": "delray-beach-bidnet",
@@ -503,7 +503,7 @@
     "status": "ok",
     "count": 8,
     "new": 0,
-    "seconds": 14.9
+    "seconds": 14.6
    },
    {
     "id": "fort-walton-beach-bidnet",
@@ -523,7 +523,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 15.9
    },
    {
     "id": "mary-esther-bidnet",
@@ -533,7 +533,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 15.9
    },
    {
     "id": "miami-bidnet",
@@ -541,7 +541,7 @@
     "agency": "City of Miami",
     "url": "https://www.bidnetdirect.com/florida/cityofmiami/solicitations/open-bids?selectedContent=BUYER",
     "status": "ok",
-    "count": 4,
+    "count": 3,
     "new": 0,
     "seconds": 16.0
    },
@@ -562,7 +562,7 @@
     "url": "https://www.bidnetdirect.com/florida/city-of-milton/solicitations/open-bids?selectedContent=BUYER",
     "status": "ok",
     "count": 2,
-    "new": 2,
+    "new": 0,
     "seconds": 15.9
    },
    {
@@ -573,7 +573,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.0
    },
    {
     "id": "pensacola-bidnet",
@@ -583,7 +583,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.7
+    "seconds": 15.8
    },
    {
     "id": "port-richey-bidnet",
@@ -593,7 +593,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 16.0
    },
    {
     "id": "sarasota-city-bidnet",
@@ -603,7 +603,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.0
    },
    {
     "id": "sebring-bidnet",
@@ -652,18 +652,18 @@
     "url": "https://www.bidnetdirect.com/florida/emeraldcoastutilitiesauthority/solicitations/open-bids?selectedContent=BUYER",
     "status": "ok",
     "count": 3,
-    "new": 1,
-    "seconds": 16.1
+    "new": 0,
+    "seconds": 16.0
    },
    {
     "id": "ecs4kids-bidnet",
     "county": "Bay",
     "agency": "Early Childhood Services (ECS4Kids)",
     "url": "https://www.bidnetdirect.com/florida/ecs4kids/solicitations/open-bids?selectedContent=BUYER",
-    "status": "ok",
-    "count": 1,
+    "status": "empty",
+    "count": 0,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 16.0
    },
    {
     "id": "escambia-schools-bidnet",
@@ -693,7 +693,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.0
    },
    {
     "id": "fsw-bidnet",
@@ -703,7 +703,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 16.1
    },
    {
     "id": "fort-myers-beach-bidnet",
@@ -733,17 +733,17 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 15.9
    },
    {
     "id": "gulf-coast-state-bidnet",
     "county": "Bay",
     "agency": "Gulf Coast State College",
     "url": "https://www.bidnetdirect.com/florida/gulfcoaststatecollege/solicitations/open-bids?selectedContent=BUYER",
-    "status": "ok",
-    "count": 1,
+    "status": "empty",
+    "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.0
    },
    {
     "id": "hernando-county-bidnet",
@@ -753,7 +753,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.8
+    "seconds": 15.9
    },
    {
     "id": "hernando-schools-bidnet",
@@ -840,10 +840,10 @@
     "county": "Miami-Dade",
     "agency": "Miami Dade College",
     "url": "https://www.bidnetdirect.com/florida/miamidadecollege/solicitations/open-bids?selectedContent=BUYER",
-    "status": "empty",
-    "count": 0,
-    "new": 0,
-    "seconds": 15.9
+    "status": "ok",
+    "count": 1,
+    "new": 1,
+    "seconds": 16.0
    },
    {
     "id": "miami-hcd-bidnet",
@@ -853,7 +853,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.0
    },
    {
     "id": "langd-bidnet",
@@ -872,7 +872,7 @@
     "url": "https://www.bakercountyfl.org/purchasing.php",
     "status": "blocked",
     "error": "HTTP 403 from https://www.bakercountyfl.org/purchasing.php",
-    "seconds": 0.1
+    "seconds": 0.3
    },
    {
     "id": "nassau-planetbids",
@@ -881,7 +881,7 @@
     "url": "https://vendors.planetbids.com/portal/49083/bo/bo-search",
     "status": "blocked",
     "error": "HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=49083&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3",
-    "seconds": 0.3
+    "seconds": 0.2
    },
    {
     "id": "parkland-planetbids",
@@ -900,7 +900,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 71.9
+    "seconds": 74.1
    },
    {
     "id": "miami-dade-informs",
@@ -909,8 +909,8 @@
     "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL",
     "status": "ok",
     "count": 16,
-    "new": 2,
-    "seconds": 4.1
+    "new": 0,
+    "seconds": 3.5
    },
    {
     "id": "miami-dade-construction",
@@ -918,8 +918,8 @@
     "agency": "Miami-Dade County",
     "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
     "status": "ok",
-    "count": 19,
-    "new": 0,
+    "count": 20,
+    "new": 4,
     "seconds": 0.2
    },
    {
@@ -929,15 +929,15 @@
     "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitations",
     "status": "ok",
     "count": 7,
-    "new": 1,
+    "new": 0,
     "seconds": 2.0
    }
   ],
   "email": {
    "status": "ok",
    "messages": 17,
-   "bids": 56,
-   "unparsed": 1
+   "bids": 55,
+   "unparsed": 3
   },
   "alert_portals": {
    "opengov": 62,
@@ -976,660 +976,9 @@
     "reason": "Portal address not found yet."
    }
   ],
-  "removed_today": 223
+  "removed_today": 245
  },
  "bids": [
-  {
-   "source_id": "backfill-alachua-county-bocc",
-   "county": "Alachua",
-   "agency": "Alachua County BOCC",
-   "title": "Annual Purchase of Electric Motors, Gear Boxes and Assorted Bearings",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Goods & Supplies",
-   "agency_category": "",
-   "posted": "2026-10-21",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/alachuacounty",
-   "source_url": "https://procurement.opengov.com/portal/alachuacounty",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-alachua-county-bocc::67ee86c21f22"
-  },
-  {
-   "source_id": "ecs4kids-bidnet",
-   "county": "Bay",
-   "agency": "Early Childhood Services (ECS4Kids)",
-   "title": "Independent Impact Evaluation and Strategic Implementation Support",
-   "number": "2627-3",
-   "type": "",
-   "status": "Open",
-   "category": "Other",
-   "agency_category": "",
-   "posted": "2026-10-22",
-   "due": "2026-11-06",
-   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Independent-Impact-Evaluation-and-Strategic-Implementation-Support/0000441091?purchasingGroupId=8408751&origin=2",
-   "source_url": "https://www.bidnetdirect.com/florida/ecs4kids/solicitations/open-bids?selectedContent=BUYER",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
-   "extra": {},
-   "key": "ecs4kids-bidnet::2627-3"
-  },
-  {
-   "source_id": "gulf-coast-state-bidnet",
-   "county": "Bay",
-   "agency": "Gulf Coast State College",
-   "title": "Line of Credit Request For Proposals",
-   "number": "RFP#2 Line of Credit",
-   "type": "RFP",
-   "status": "Open",
-   "category": "Other",
-   "agency_category": "",
-   "posted": "2026-10-26",
-   "due": "2026-11-06",
-   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Line-of-Credit-Request-For-Proposals/0000441519?purchasingGroupId=8408751&origin=2",
-   "source_url": "https://www.bidnetdirect.com/florida/gulfcoaststatecollege/solicitations/open-bids?selectedContent=BUYER",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
-   "extra": {},
-   "key": "gulf-coast-state-bidnet::rfp#2 line of credit"
-  },
-  {
-   "source_id": "backfill-collier-county-bocc",
-   "county": "Collier",
-   "agency": "Collier County BOCC",
-   "title": "County Signage",
-   "number": "26-8684",
-   "type": "",
-   "status": "Open",
-   "category": "Goods & Supplies",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/collier-county-fl",
-   "source_url": "https://procurement.opengov.com/portal/collier-county-fl",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-collier-county-bocc::26-8684"
-  },
-  {
-   "source_id": "backfill-collier-county-bocc",
-   "county": "Collier",
-   "agency": "Collier County BOCC",
-   "title": "Freedom Park Boardwalk Repairs - Boardwalks 1 & 2",
-   "number": "26-8700",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-06",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/collier-county-fl",
-   "source_url": "https://procurement.opengov.com/portal/collier-county-fl",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-collier-county-bocc::26-8700"
-  },
-  {
-   "source_id": "backfill-city-of-tampa",
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "4\" - 6\" Ductile Iron Pipe (Bid Discount)",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-09-24",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityoftampa",
-   "source_url": "https://procurement.opengov.com/portal/cityoftampa",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-tampa::b17ea85877d1"
-  },
-  {
-   "source_id": "backfill-city-of-tampa",
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Janitorial Services For Parks \"SOUTH\" Locations (Bid Discount)",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-09-09",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityoftampa",
-   "source_url": "https://procurement.opengov.com/portal/cityoftampa",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-tampa::2de983cc17cd"
-  },
-  {
-   "source_id": "backfill-city-of-tampa",
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Janitorial Services for Parks \"NORTH\" Locations (Bid Discount)",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-09-10",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityoftampa",
-   "source_url": "https://procurement.opengov.com/portal/cityoftampa",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-tampa::3c3bbc605f6f"
-  },
-  {
-   "source_id": "backfill-lee-county-port-authority",
-   "county": "Lee",
-   "agency": "Lee County Port Authority",
-   "title": "Fire Sprinkler System Inspections at Southwest Florida International Airport",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-10-16",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/flylcpa",
-   "source_url": "https://procurement.opengov.com/portal/flylcpa",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-lee-county-port-authority::ab97402dbfe4"
-  },
-  {
-   "source_id": "backfill-city-of-fort-myers",
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Land Development Code Update",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Consulting & Professional Services",
-   "agency_category": "",
-   "posted": "2026-10-01",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "source_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-fort-myers::9112c49b2863"
-  },
-  {
-   "source_id": "backfill-city-of-fort-myers",
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Sole Source - 1 250 HP Motor and Nord Reducer",
-   "number": "",
-   "type": "Sole source",
-   "status": "Open",
-   "category": "Goods & Supplies",
-   "agency_category": "",
-   "posted": "2026-10-16",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "source_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-fort-myers::8ec5dbe5e08a"
-  },
-  {
-   "source_id": "backfill-city-of-fort-myers",
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Sole Source - 1 Vertical Electric Motor Process v2",
-   "number": "",
-   "type": "Sole source",
-   "status": "Open",
-   "category": "Goods & Supplies",
-   "agency_category": "",
-   "posted": "2026-10-16",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "source_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-fort-myers::e3b2067b2c44"
-  },
-  {
-   "source_id": "backfill-city-of-fort-myers",
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Sole Source - CPUs needed for HMI to function",
-   "number": "",
-   "type": "Sole source",
-   "status": "Open",
-   "category": "IT & Technology",
-   "agency_category": "",
-   "posted": "2026-10-16",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "source_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-fort-myers::db81a17532e8"
-  },
-  {
-   "source_id": "backfill-city-of-fort-myers",
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Sole Source-3 Peerless Pumps for Process Control and Compliance",
-   "number": "",
-   "type": "Sole source",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-10-16",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "source_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-fort-myers::1378d6e12519"
-  },
-  {
-   "source_id": "backfill-city-of-fort-myers",
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Traffic Signal Painting",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "source_url": "https://procurement.opengov.com/portal/cityftmyers",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-fort-myers::bb5c425f7af8"
-  },
-  {
-   "source_id": "miami-beach-bidnet",
-   "county": "Miami-Dade",
-   "agency": "City of Miami Beach",
-   "title": "For Boat Maintenance and Repairs",
-   "number": "27-1780-001",
-   "type": "",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-10-26",
-   "due": "2026-11-06",
-   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/For-Boat-Maintenance-and-Repairs/0000441191?purchasingGroupId=8408751&origin=2",
-   "source_url": "https://www.bidnetdirect.com/florida/cityofmiamibeach/solicitations/open-bids?selectedContent=BUYER",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
-   "extra": {},
-   "key": "miami-beach-bidnet::27-1780-001"
-  },
-  {
-   "source_id": "miami-dade-construction",
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "International Gardens Park - Walkway Repairs Rebid",
-   "number": "RPQ No 2026IRWRR",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "Construction",
-   "posted": "2026-10-08",
-   "due": "2026-11-06",
-   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=RPQ%20No%202026IRWRR",
-   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
-   "extra": {},
-   "key": "miami-dade-construction::rpq no 2026irwrr"
-  },
-  {
-   "source_id": "miami-dade-construction",
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Moisture Restoration Services-Portwide",
-   "number": "MCC 7360 RPQ No M2026-021",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "Construction",
-   "posted": "2026-10-16",
-   "due": "2026-11-06",
-   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%20M2026-021",
-   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
-   "extra": {},
-   "key": "miami-dade-construction::mcc 7360 rpq no m2026-021"
-  },
-  {
-   "source_id": "miami-dade-construction",
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Olympic Park - Walkway Repairs Rebid",
-   "number": "RPQ No 2026OPWRR",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "Construction",
-   "posted": "2026-10-08",
-   "due": "2026-11-06",
-   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=RPQ%20No%202026OPWRR",
-   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
-   "extra": {},
-   "key": "miami-dade-construction::rpq no 2026opwrr"
-  },
-  {
-   "source_id": "miami-bidnet",
-   "county": "Miami-Dade",
-   "agency": "City of Miami",
-   "title": "Storm Drainage System Cleaning",
-   "number": "2030386",
-   "type": "",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-09-30",
-   "due": "2026-11-06",
-   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Storm-Drainage-System-Cleaning/0000407674?purchasingGroupId=8408751&origin=2",
-   "source_url": "https://www.bidnetdirect.com/florida/cityofmiami/solicitations/open-bids?selectedContent=BUYER",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
-   "extra": {},
-   "key": "miami-bidnet::2030386"
-  },
-  {
-   "source_id": "backfill-central-florida-expressway-authority",
-   "county": "Orange",
-   "agency": "Central Florida Expressway Authority",
-   "title": "Invitation to Bid SR 528 Resurfacing from McCoy to Semoran Blvd [Project No. 528-783]",
-   "number": "",
-   "type": "ITB",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cfxway",
-   "source_url": "https://procurement.opengov.com/portal/cfxway",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-central-florida-expressway-authority::22d4d47bb92c"
-  },
-  {
-   "source_id": "backfill-greater-orlando-aviation-authority",
-   "county": "Orange",
-   "agency": "Greater Orlando Aviation Authority",
-   "title": "Retail Merchandising Units",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Concessions & Programs",
-   "agency_category": "",
-   "posted": "2026-10-04",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/goaa",
-   "source_url": "https://procurement.opengov.com/portal/goaa",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-greater-orlando-aviation-authority::e57c0611f384"
-  },
-  {
-   "source_id": "backfill-greater-orlando-aviation-authority",
-   "county": "Orange",
-   "agency": "Greater Orlando Aviation Authority",
-   "title": "State Lobbyist",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Consulting & Professional Services",
-   "agency_category": "",
-   "posted": "2026-10-02",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/goaa",
-   "source_url": "https://procurement.opengov.com/portal/goaa",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-greater-orlando-aviation-authority::ccddef772506"
-  },
-  {
-   "source_id": "backfill-pinellas-county-schools",
-   "county": "Pinellas",
-   "agency": "Pinellas County Schools",
-   "title": "Indoor Air Quality Services",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "2026-10-09",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/pcsb",
-   "source_url": "https://procurement.opengov.com/portal/pcsb",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-pinellas-county-schools::5d77a1258b1e"
-  },
-  {
-   "source_id": "backfill-santa-rosa-county-bocc",
-   "county": "Santa Rosa",
-   "agency": "Santa Rosa County BOCC",
-   "title": "Madura Five Storm Water Lift Station Rehabilitation Equipment",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/santarosafl",
-   "source_url": "https://procurement.opengov.com/portal/santarosafl",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-santa-rosa-county-bocc::f5160fa08142"
-  },
-  {
-   "source_id": "backfill-sarasota-county-bocc",
-   "county": "Sarasota",
-   "agency": "Sarasota County BOCC",
-   "title": "Roof Replacement Services",
-   "number": "",
-   "type": "",
-   "status": "Open",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/scgov",
-   "source_url": "https://procurement.opengov.com/portal/scgov",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-sarasota-county-bocc::edafbce1bfc8"
-  },
-  {
-   "source_id": "st-johns-demandstar",
-   "county": "St. Johns",
-   "agency": "St. Johns County BOCC",
-   "title": "South Ponte Vedra Beach Nourishment – FEMA CAT-G Project",
-   "number": "SB-2971-0-2027/DF",
-   "type": "",
-   "status": "Active",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://www.demandstar.com/app/limited/bids/553124/details",
-   "source_url": "https://www.demandstar.com/app/agencies/florida/st-johns-county-purchasing-department/procurement-opportunities/5a5c8611-ac18-4c9a-9614-284ee7adaf43/",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
-   "extra": {},
-   "key": "st-johns-demandstar::sb-2971-0-2027/df"
-  },
-  {
-   "source_id": "backfill-city-of-new-smyrna-beach",
-   "county": "Volusia",
-   "agency": "City of New Smyrna Beach",
-   "title": "Insurance Consultant Services",
-   "number": "03-27-FIN",
-   "type": "",
-   "status": "Open",
-   "category": "Consulting & Professional Services",
-   "agency_category": "",
-   "posted": "2026-10-07",
-   "due": "2026-11-06",
-   "bid_url": "https://procurement.opengov.com/portal/cityofnsb",
-   "source_url": "https://procurement.opengov.com/portal/cityofnsb",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-city-of-new-smyrna-beach::03-27-fin"
-  },
-  {
-   "source_id": "backfill-hillsborough-county-bocc",
-   "county": "Hillsborough",
-   "agency": "Hillsborough County BOCC",
-   "title": "Lift Station Landscaping Maintenance Services (SBE Set-Aside)",
-   "number": "ITB-27-00005",
-   "type": "ITB",
-   "status": "Open",
-   "category": "Facilities & Maintenance",
-   "agency_category": "",
-   "posted": "",
-   "due": "2026-11-06T14:00-05:00",
-   "bid_url": "https://hillsboroughcounty.bonfirehub.com/portal/?tab=openOpportunities",
-   "source_url": "https://hillsboroughcounty.bonfirehub.com/portal/?tab=openOpportunities",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-hillsborough-county-bocc::itb-27-00005"
-  },
-  {
-   "source_id": "tamarac-bidsandtenders",
-   "county": "Broward",
-   "agency": "City of Tamarac",
-   "title": "Horizon3.ai NodeZero Autonomous Penetration Testing Annual Subscription Renewal",
-   "number": "IQ20261023",
-   "type": "",
-   "status": "Open",
-   "category": "IT & Technology",
-   "agency_category": "",
-   "posted": "2026-10-23",
-   "due": "2026-11-06T15:00-05:00",
-   "bid_url": "https://tamarac.bidsandtenders.net/Module/Tenders/en/Tender/Detail/39cea9a3-1ec6-4abc-8cf7-7359038059eb",
-   "source_url": "https://tamarac.bidsandtenders.net/",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
-   "extra": {},
-   "key": "tamarac-bidsandtenders::iq20261023"
-  },
-  {
-   "source_id": "backfill-hillsborough-county-bocc",
-   "county": "Hillsborough",
-   "agency": "Hillsborough County BOCC",
-   "title": "Computer Assisted Mass Appraisal (CAMA) System",
-   "number": "RFI-27-00004",
-   "type": "RFI",
-   "status": "Open",
-   "category": "IT & Technology",
-   "agency_category": "",
-   "posted": "",
-   "due": "2026-11-06T17:00-05:00",
-   "bid_url": "https://hillsboroughcounty.bonfirehub.com/portal/?tab=openOpportunities",
-   "source_url": "https://hillsboroughcounty.bonfirehub.com/portal/?tab=openOpportunities",
-   "notes": "Added by one-time backfill.",
-   "origin": "backfill",
-   "first_seen": "2026-10-24T21:35-04:00",
-   "last_seen": "2026-10-24T21:35-04:00",
-   "extra": {},
-   "key": "backfill-hillsborough-county-bocc::rfi-27-00004"
-  },
   {
    "source_id": "miami-dade-construction",
    "county": "Miami-Dade",
@@ -1647,7 +996,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no pp-016-mc"
   },
@@ -1899,7 +1248,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no pp-015-mc"
   },
@@ -1920,7 +1269,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2026-577-nd"
   },
@@ -2025,30 +1374,9 @@
    "notes": "Find event EVN0063733 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0063733"
-  },
-  {
-   "source_id": "miami-dade-informs",
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Distributed Antenna System",
-   "number": "EVN0042430",
-   "type": "",
-   "status": "Open",
-   "category": "IT & Technology",
-   "agency_category": "",
-   "posted": "2026-10-01",
-   "due": "2026-11-09T14:00-05:00",
-   "bid_url": "",
-   "source_url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL",
-   "notes": "Find event EVN0042430 on the INFORMS public bidding page.",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
-   "extra": {},
-   "key": "miami-dade-informs::evn0042430"
   },
   {
    "source_id": "putnam-county",
@@ -2067,7 +1395,7 @@
    "notes": "Open the viewer and click the bid to see its documents.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "putnam-county::27-01"
   },
@@ -2193,7 +1521,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "highlands-bidnet::27-002-rdv"
   },
@@ -2214,7 +1542,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "highlands-bidnet::27-003-rdv"
   },
@@ -2256,7 +1584,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "martin-demandstar::ss-02-0-2027/klb"
   },
@@ -2277,7 +1605,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-03T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-9615-01"
   },
@@ -2298,7 +1626,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no 349938"
   },
@@ -2319,7 +1647,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no 349939"
   },
@@ -2340,7 +1668,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no 349937"
   },
@@ -2445,7 +1773,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::dq 27-012"
   },
@@ -2466,7 +1794,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::dq 27-011"
   },
@@ -2487,7 +1815,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::sb-ifb 3027-0-2026/lb"
   },
@@ -2511,27 +1839,6 @@
    "last_seen": "2026-10-24T21:35-04:00",
    "extra": {},
    "key": "backfill-city-of-edgewater::b66f4796d78f"
-  },
-  {
-   "source_id": "brevard-vendorlink",
-   "county": "Brevard",
-   "agency": "Brevard County BOCC",
-   "title": "West Central Avenue Bridge Replacement",
-   "number": "B-6-27-08",
-   "type": "",
-   "status": "Active",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-10-08",
-   "due": "2026-11-10T11:00-05:00",
-   "bid_url": "",
-   "source_url": "https://www.myvendorlink.com/external/bids?a=70",
-   "notes": "Search for B-6-27-08 on the VendorLink page.",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
-   "extra": {},
-   "key": "brevard-vendorlink::b-6-27-08"
   },
   {
    "source_id": "backfill-hillsborough-county-bocc",
@@ -2613,7 +1920,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-0640-005-it"
   },
@@ -2634,7 +1941,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-28T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-0640-006-it"
   },
@@ -2676,7 +1983,7 @@
    "notes": "Find event EVN0064222 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-06T05:19-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0064222"
   },
@@ -2781,7 +2088,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "duval-schools-demandstar::rfp-07-0-2027/dmb"
   },
@@ -2802,7 +2109,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-28T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "ecua-bidnet::2027-04"
   },
@@ -2894,6 +2201,27 @@
    "source_id": "miami-dade-construction",
    "county": "Miami-Dade",
    "agency": "Miami-Dade County",
+   "title": "Concrete Cutting And Core Drilling At Virginia Key",
+   "number": "MCC 7360 RPQ No P0299",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "Construction",
+   "posted": "2026-11-06",
+   "due": "2026-11-12",
+   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%20P0299",
+   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
+   "extra": {},
+   "key": "miami-dade-construction::mcc 7360 rpq no p0299"
+  },
+  {
+   "source_id": "miami-dade-construction",
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
    "title": "MDFR Fire Station 35 New Four-Fold Xt Exterior Doors",
    "number": "RPQ No MDFRD-905-35-GC",
    "type": "",
@@ -2907,7 +2235,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::rpq no mdfrd-905-35-gc"
   },
@@ -2928,7 +2256,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::26-1720-039"
   },
@@ -2949,7 +2277,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::rpq no 18633-26-r"
   },
@@ -2970,7 +2298,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-bidnet::2184386"
   },
@@ -2991,7 +2319,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "riviera-beach-bidnet::27-003"
   },
@@ -3012,7 +2340,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "highland-beach-demandstar::itb-26-005-0-2026/sc"
   },
@@ -3033,7 +2361,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wellington-demandstar::itb-022-26/mm-0-2026/mm"
   },
@@ -3096,7 +2424,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "holley-navarre-water-bidnet::2026-10"
   },
@@ -3159,7 +2487,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-3123-0-2026/sa"
   },
@@ -3222,7 +2550,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "lake-worth-beach-bidsandtenders::436f03039c65"
   },
@@ -3348,7 +2676,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T13:53-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itbc 2026-043"
   },
@@ -3369,7 +2697,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T13:53-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itb 2027-12"
   },
@@ -3416,27 +2744,6 @@
    "key": "backfill-city-of-port-orange::rfp-26-24-cw"
   },
   {
-   "source_id": "brevard-vendorlink",
-   "county": "Brevard",
-   "agency": "Brevard County BOCC",
-   "title": "Pavement Condition Assessment",
-   "number": "RFQ-8-27-03",
-   "type": "Quote",
-   "status": "Active",
-   "category": "Engineering & Architecture",
-   "agency_category": "",
-   "posted": "2026-10-22",
-   "due": "2026-11-13T10:00-05:00",
-   "bid_url": "",
-   "source_url": "https://www.myvendorlink.com/external/bids?a=70",
-   "notes": "Search for RFQ-8-27-03 on the VendorLink page.",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
-   "extra": {},
-   "key": "brevard-vendorlink::rfq-8-27-03"
-  },
-  {
    "source_id": "backfill-baker-county-bocc",
    "county": "Baker",
    "agency": "Baker County BOCC",
@@ -3474,7 +2781,7 @@
    "notes": "Search for B-6-27-11 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-6-27-11"
   },
@@ -3537,7 +2844,7 @@
    "notes": "Find event EVN0063560 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-27T09:06-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0063560"
   },
@@ -3558,7 +2865,7 @@
    "notes": "Find event CL00000047 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::cl00000047"
   },
@@ -3579,7 +2886,7 @@
    "notes": "Find event EVN0060585 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-27T09:06-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0060585"
   },
@@ -3600,7 +2907,7 @@
    "notes": "Find event RFP0000014 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::rfp0000014"
   },
@@ -3621,9 +2928,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "tamarac-bidsandtenders::iq20261015"
+  },
+  {
+   "source_id": "miami-dade-construction",
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "Emergency - Request for Demolition for 3072 NW 46 ST",
+   "number": "MCC 7360 RPQ No 20261105",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "Construction",
+   "posted": "2026-11-06",
+   "due": "2026-11-14",
+   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%2020261105",
+   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
+   "extra": {},
+   "key": "miami-dade-construction::mcc 7360 rpq no 20261105"
   },
   {
    "source_id": "backfill-alachua-county-bocc",
@@ -3726,7 +3054,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "sebring-bidnet::26-014"
   },
@@ -3894,7 +3222,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-misc 3129-0-2026/lb"
   },
@@ -3915,7 +3243,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-misc 3132-0-2026/lb"
   },
@@ -3936,7 +3264,7 @@
    "notes": "Search for B-4-27-16 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-4-27-16"
   },
@@ -4062,7 +3390,7 @@
    "notes": "Search for B-1-27-10 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-1-27-10"
   },
@@ -4125,7 +3453,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "sunrise-demandstar::bid-bid 26-73-07-cm-0-2026/cm"
   },
@@ -4146,7 +3474,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-29T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "ecua-bidnet::2027-05"
   },
@@ -4167,7 +3495,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "highlands-bidnet::27-004-rdv"
   },
@@ -4188,7 +3516,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-1720-002"
   },
@@ -4419,7 +3747,7 @@
    "notes": "Find event CL00000052 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::cl00000052"
   },
@@ -4440,7 +3768,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "tamarac-bidsandtenders::27-04b"
   },
@@ -4503,30 +3831,9 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "martin-demandstar::rfb-3799-0-2027/klb"
-  },
-  {
-   "source_id": "martin-demandstar",
-   "county": "Martin",
-   "agency": "Martin County BOCC",
-   "title": "Port Salerno/New Monrovia Vacuum Sewer Collection System & Neighborhood Restoration",
-   "number": "RFB-3795-0-2026/KLB",
-   "type": "ITB",
-   "status": "Active",
-   "category": "Construction",
-   "agency_category": "",
-   "posted": "2026-09-28",
-   "due": "2026-11-18",
-   "bid_url": "https://www.demandstar.com/app/limited/bids/551448/details",
-   "source_url": "https://www.demandstar.com/app/agencies/florida/martin-county-purchasing/procurement-opportunities/cb5da01b-483b-42ca-aeb0-f27e5cf6e6d6/",
-   "notes": "",
-   "origin": "direct",
-   "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
-   "extra": {},
-   "key": "martin-demandstar::rfb-3795-0-2026/klb"
   },
   {
    "source_id": "miami-dade-construction",
@@ -4545,7 +3852,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no da051a"
   },
@@ -4566,7 +3873,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::tp-0000018179 (mcc 7360)"
   },
@@ -4629,7 +3936,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itb2027-013"
   },
@@ -4650,7 +3957,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-28T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itb 2027-006"
   },
@@ -4671,7 +3978,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wellington-demandstar::itb-01-27/er-0-2027/er"
   },
@@ -4713,7 +4020,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-389"
   },
@@ -4734,7 +4041,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cq 26-353"
   },
@@ -4755,7 +4062,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cq 26-374"
   },
@@ -4776,7 +4083,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-29T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 27-018"
   },
@@ -4797,7 +4104,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-227"
   },
@@ -4881,7 +4188,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-3139-0-2026/gl"
   },
@@ -4902,7 +4209,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::rfp-27-005-0-2027/dc"
   },
@@ -4923,7 +4230,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-002-0-2027/dc"
   },
@@ -4944,7 +4251,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-007-0-2027/dc"
   },
@@ -4965,7 +4272,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-006-0-2027/dc"
   },
@@ -4986,7 +4293,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T10:22-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-011-0-2027/dc"
   },
@@ -5012,6 +4319,27 @@
    "key": "backfill-volusia-county::27-b-08lb"
   },
   {
+   "source_id": "brevard-vendorlink",
+   "county": "Brevard",
+   "agency": "Brevard County BOCC",
+   "title": "West Central Avenue Bridge Replacement",
+   "number": "B-6-27-08",
+   "type": "",
+   "status": "Active",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "2026-10-08",
+   "due": "2026-11-18T13:00-05:00",
+   "bid_url": "",
+   "source_url": "https://www.myvendorlink.com/external/bids?a=70",
+   "notes": "Search for B-6-27-08 on the VendorLink page.",
+   "origin": "direct",
+   "first_seen": "2026-10-24T21:27-04:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "brevard-vendorlink::b-6-27-08"
+  },
+  {
    "source_id": "charlotte-county",
    "county": "Charlotte",
    "agency": "Charlotte County BOCC",
@@ -5028,7 +4356,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-24T21:38-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::26-640"
   },
@@ -5049,7 +4377,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::27-058"
   },
@@ -5070,7 +4398,7 @@
    "notes": "Contact: Krista.Vigne@CharlotteCountyFl.gov",
    "origin": "direct",
    "first_seen": "2026-10-24T21:38-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::27-023"
   },
@@ -5112,9 +4440,30 @@
    "notes": "Find event EVN0054248 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0054248"
+  },
+  {
+   "source_id": "miami-dade-informs",
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "Distributed Antenna System",
+   "number": "EVN0042430",
+   "type": "",
+   "status": "Open",
+   "category": "IT & Technology",
+   "agency_category": "",
+   "posted": "2026-10-01",
+   "due": "2026-11-18T14:00-05:00",
+   "bid_url": "",
+   "source_url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL",
+   "notes": "Find event EVN0042430 on the INFORMS public bidding page.",
+   "origin": "direct",
+   "first_seen": "2026-10-24T21:31-04:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {},
+   "key": "miami-dade-informs::evn0042430"
   },
   {
    "source_id": "miami-dade-informs",
@@ -5133,7 +4482,7 @@
    "notes": "Find event EVN0037412 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0037412"
   },
@@ -5175,7 +4524,7 @@
    "notes": "Contact: Kimberly.Chamberlain@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-24T21:38-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::26-690"
   },
@@ -5196,7 +4545,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "duval-schools-demandstar::rfp-08-0-2027/dmb"
   },
@@ -5217,7 +4566,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "hernando-schools-bidnet::27-073-17"
   },
@@ -5238,7 +4587,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "hernando-schools-bidnet::27-675-16"
   },
@@ -5364,7 +4713,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "greenacres-demandstar::bid-27-001-0-2026/rw"
   },
@@ -5385,7 +4734,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "greenacres-demandstar::bid-27-003-0-2026/rw"
   },
@@ -5406,7 +4755,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "greenacres-demandstar::bid-27-002-0-2026/rw"
   },
@@ -5427,7 +4776,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "port-richey-bidnet::26-003"
   },
@@ -5490,7 +4839,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-28T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-ss 2567-2027-0-2027/sa"
   },
@@ -5511,7 +4860,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::rfp-3062-0-2026/km"
   },
@@ -5574,7 +4923,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "margate-civicplus::2026-006"
   },
@@ -5637,9 +4986,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-029-jp"
+  },
+  {
+   "source_id": "mdc-bidnet",
+   "county": "Miami-Dade",
+   "agency": "Miami Dade College",
+   "title": "Sign Language Interpreting and Related Accessibility Services",
+   "number": "2026-CS-09",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "2026-11-06",
+   "due": "2026-11-20",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Sign-Language-Interpreting-and-Related-Accessibility-Services/0000442847?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/miamidadecollege/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
+   "extra": {},
+   "key": "mdc-bidnet::2026-cs-09"
   },
   {
    "source_id": "miami-dade-construction",
@@ -5658,7 +5028,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no 2026mhwpf"
   },
@@ -5679,7 +5049,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wellington-demandstar::rqt-9655-0-2026/as"
   },
@@ -5810,6 +5180,27 @@
    "key": "backfill-city-of-port-st-lucie::20260170"
   },
   {
+   "source_id": "brevard-vendorlink",
+   "county": "Brevard",
+   "agency": "Brevard County BOCC",
+   "title": "Pavement Condition Assessment",
+   "number": "RFQ-8-27-03",
+   "type": "Quote",
+   "status": "Active",
+   "category": "Engineering & Architecture",
+   "agency_category": "",
+   "posted": "2026-10-22",
+   "due": "2026-11-20T10:00-05:00",
+   "bid_url": "",
+   "source_url": "https://www.myvendorlink.com/external/bids?a=70",
+   "notes": "Search for RFQ-8-27-03 on the VendorLink page.",
+   "origin": "direct",
+   "first_seen": "2026-10-24T21:27-04:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "brevard-vendorlink::rfq-8-27-03"
+  },
+  {
    "source_id": "backfill-broward-county-bocc",
    "county": "Broward",
    "agency": "Broward County BOCC",
@@ -5847,7 +5238,7 @@
    "notes": "Find event ITB0000025 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::itb0000025"
   },
@@ -5889,7 +5280,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "sunrise-demandstar::rfp-rfp 26-03-03-hr-0-2026/hr"
   },
@@ -5952,9 +5343,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-bidnet::26-27-001"
+  },
+  {
+   "source_id": "miami-beach-bidnet",
+   "county": "Miami-Dade",
+   "agency": "City of Miami Beach",
+   "title": "Intent to Award Pursuant to Sole Source Exemption ITS 2026-255-NA",
+   "number": "ITS 2026-255-NA",
+   "type": "Sole source",
+   "status": "Open",
+   "category": "Goods & Supplies",
+   "agency_category": "",
+   "posted": "2026-11-06",
+   "due": "2026-11-23",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Intent-to-Award-Pursuant-to-Sole-Source-Exemption-ITS-2026-255-NA/0000442889?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofmiamibeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
+   "extra": {},
+   "key": "miami-beach-bidnet::its 2026-255-na"
   },
   {
    "source_id": "miami-beach-bidnet",
@@ -5973,7 +5385,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-03T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-1720-004"
   },
@@ -6057,7 +5469,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-3168-0-2026/sa"
   },
@@ -6120,7 +5532,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "columbia-county::t27-04"
   },
@@ -6162,7 +5574,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "sebring-bidnet::26-015"
   },
@@ -6183,7 +5595,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::26-0002-cw"
   },
@@ -6351,7 +5763,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:17-05:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "lwr-ida-bidnet::27-001"
   },
@@ -6372,9 +5784,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cq 26-442"
+  },
+  {
+   "source_id": "polk-county",
+   "county": "Polk",
+   "agency": "Polk County BOCC",
+   "title": "Crushed Concrete Material",
+   "number": "Bid 27-035",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "",
+   "due": "2026-11-25",
+   "bid_url": "https://www.polkfl.gov/bid-form/bid-27-035/",
+   "source_url": "https://www.polkfl.gov/business/procurement/",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "polk-county::bid 27-035"
   },
   {
    "source_id": "backfill-city-of-bartow",
@@ -6414,7 +5847,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::27-012"
   },
@@ -6435,7 +5868,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::27-010"
   },
@@ -6477,9 +5910,30 @@
    "notes": "Find event ITB0000028 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-27T09:06-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::itb0000028"
+  },
+  {
+   "source_id": "sunrise-demandstar",
+   "county": "Broward",
+   "agency": "City of Sunrise",
+   "title": "Springtree WTP Accelerators Re-Coating-REBID",
+   "number": "BID-BID 27-07-10-HR-0-2026/hr",
+   "type": "",
+   "status": "Active",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "2026-11-06",
+   "due": "2026-11-30",
+   "bid_url": "https://www.demandstar.com/app/limited/bids/556865/details",
+   "source_url": "https://www.demandstar.com/app/agencies/florida/city-of-sunrise/procurement-opportunities/628b628c-effc-47f5-8aed-f3057aa89b5c/",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "sunrise-demandstar::bid-bid 27-07-10-hr-0-2026/hr"
   },
   {
    "source_id": "sunrise-demandstar",
@@ -6498,7 +5952,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "sunrise-demandstar::rfp-rfp 26-04-03-hr-0-2026/hr"
   },
@@ -6561,7 +6015,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-033-nd"
   },
@@ -6582,7 +6036,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::q-coc-2027001-0-2027/dc"
   },
@@ -6603,7 +6057,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "hypoluxo-govaccess::65744bee70a0"
   },
@@ -6624,9 +6078,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "south-palm-beach-civicplus::itb#11-02-2026"
+  },
+  {
+   "source_id": "martin-demandstar",
+   "county": "Martin",
+   "agency": "Martin County BOCC",
+   "title": "Coastal Program Geographic Information Services (GIS)",
+   "number": "SS-01-0-2027/KLB",
+   "type": "",
+   "status": "Active",
+   "category": "IT & Technology",
+   "agency_category": "",
+   "posted": "2026-11-06",
+   "due": "2026-12-01",
+   "bid_url": "https://www.demandstar.com/app/limited/bids/556869/details",
+   "source_url": "https://www.demandstar.com/app/agencies/florida/martin-county-purchasing/procurement-opportunities/cb5da01b-483b-42ca-aeb0-f27e5cf6e6d6/",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "martin-demandstar::ss-01-0-2027/klb"
   },
   {
    "source_id": "miami-beach-bidnet",
@@ -6645,7 +6120,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-1028-01"
   },
@@ -6666,7 +6141,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no p16319"
   },
@@ -6708,7 +6183,7 @@
    "notes": "Search for B-2-26-42 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-2-26-42"
   },
@@ -6729,7 +6204,7 @@
    "notes": "Search for RFP-7-27-02 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-29T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "brevard-vendorlink::rfp-7-27-02"
   },
@@ -6776,6 +6251,27 @@
    "key": "backfill-city-of-pompano-beach::31d78a0a247f"
   },
   {
+   "source_id": "martin-demandstar",
+   "county": "Martin",
+   "agency": "Martin County BOCC",
+   "title": "Port Salerno/New Monrovia Vacuum Sewer Collection System & Neighborhood Restoration",
+   "number": "RFB-3795-0-2026/KLB",
+   "type": "ITB",
+   "status": "Active",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "2026-09-28",
+   "due": "2026-12-02",
+   "bid_url": "https://www.demandstar.com/app/limited/bids/551448/details",
+   "source_url": "https://www.demandstar.com/app/agencies/florida/martin-county-purchasing/procurement-opportunities/cb5da01b-483b-42ca-aeb0-f27e5cf6e6d6/",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-10-24T21:27-04:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "martin-demandstar::rfb-3795-0-2026/klb"
+  },
+  {
    "source_id": "miami-dade-construction",
    "county": "Miami-Dade",
    "agency": "Miami-Dade County",
@@ -6792,7 +6288,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::20260191 (mcc 7360)"
   },
@@ -6813,7 +6309,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::mcc 7360 rpq no aa017b-2"
   },
@@ -6855,7 +6351,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::20260169 (mcc 7360)"
   },
@@ -6876,7 +6372,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T13:53-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::cra no. 2026-05"
   },
@@ -6897,7 +6393,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-01T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::rfp-27-010-0-2027/dc"
   },
@@ -6918,7 +6414,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-01T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-012-0-2027/dc"
   },
@@ -6939,7 +6435,7 @@
    "notes": "Contact: Ariel.Johnson@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-24T21:38-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::26-684"
   },
@@ -6960,7 +6456,7 @@
    "notes": "Find event EVN0046649 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-06T05:19-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0046649"
   },
@@ -6981,7 +6477,7 @@
    "notes": "Contact: Kimberly.Chamberlain@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::27-074"
   },
@@ -7023,7 +6519,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "hernando-schools-bidnet::27-946-13"
   },
@@ -7086,7 +6582,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-3153-0-2026/sa"
   },
@@ -7128,7 +6624,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::rfi-3180-0-2026/gl"
   },
@@ -7170,7 +6666,7 @@
    "notes": "Find event EVN0044812 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0044812"
   },
@@ -7191,7 +6687,7 @@
    "notes": "Find event RFP0000016 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::rfp0000016"
   },
@@ -7212,9 +6708,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "sunrise-demandstar::bid-bid 27-05-10-mm-0-2026/mm"
+  },
+  {
+   "source_id": "brooksville-bidnet",
+   "county": "Hernando",
+   "agency": "City of Brooksville",
+   "title": "City of Brookville Downtown Revitalization Construction",
+   "number": "RFP-DPW-2026-0010",
+   "type": "RFP",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "2026-11-06",
+   "due": "2026-12-07",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/City-of-Brookville-Downtown-Revitalization-Construction/0000442867?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofbrooksville/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "brooksville-bidnet::rfp-dpw-2026-0010"
   },
   {
    "source_id": "backfill-city-of-orlando",
@@ -7254,7 +6771,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "hallandale-beach-page::rfp 26-27-01"
   },
@@ -7275,7 +6792,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "riviera-beach-bidnet::27-008"
   },
@@ -7296,9 +6813,30 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::20260197 (mcc 7360)"
+  },
+  {
+   "source_id": "miami-dade-construction",
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "Pavement Marking Installation",
+   "number": "20260193 (MCC 7360)",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "Construction",
+   "posted": "2026-11-06",
+   "due": "2026-12-09",
+   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260193%20%28MCC%207360%29",
+   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
+   "extra": {},
+   "key": "miami-dade-construction::20260193 (mcc 7360)"
   },
   {
    "source_id": "miami-dade-construction",
@@ -7317,7 +6855,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-construction::20260174 (mcc 7360)"
   },
@@ -7338,7 +6876,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::req 2027-009"
   },
@@ -7359,7 +6897,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 27-010"
   },
@@ -7380,7 +6918,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-johns-demandstar::sb-3096-0-2026/sa"
   },
@@ -7401,7 +6939,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T10:22-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::rfq-27-009-0-2027/dc"
   },
@@ -7443,7 +6981,7 @@
    "notes": "Contact: sheri.strong@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "charlotte-county::26-556"
   },
@@ -7464,7 +7002,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "ecua-bidnet::2027-03"
   },
@@ -7485,9 +7023,51 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-28T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "sebring-bidnet::27-001"
+  },
+  {
+   "source_id": "riviera-beach-bidnet",
+   "county": "Palm Beach",
+   "agency": "City of Riviera Beach",
+   "title": "Lift Station Generator (RE-BID)",
+   "number": "27-001",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "2026-11-06",
+   "due": "2026-12-10",
+   "bid_url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Lift-Station-Generator-RE-BID/0000442374?purchasingGroupId=8408751&origin=2",
+   "source_url": "https://www.bidnetdirect.com/florida/cityofrivierabeach/solicitations/open-bids?selectedContent=BUYER",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
+   "extra": {},
+   "key": "riviera-beach-bidnet::27-001"
+  },
+  {
+   "source_id": "miami-dade-construction",
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "Pavement Marking Installation",
+   "number": "20260194 (MCC 7360)",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "Construction",
+   "posted": "2026-11-06",
+   "due": "2026-12-16",
+   "bid_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260194%20%28MCC%207360%29",
+   "source_url": "https://www.miamidade.gov/apps/isd/StratProc/Home/CurrentSolicitations",
+   "notes": "",
+   "origin": "direct",
+   "first_seen": "2026-11-07T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
+   "extra": {},
+   "key": "miami-dade-construction::20260194 (mcc 7360)"
   },
   {
    "source_id": "delray-beach-bidnet",
@@ -7506,7 +7086,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itbc2027-005"
   },
@@ -7590,7 +7170,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-29T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "escambia-schools-bidnet::e-rate 470 270001217"
   },
@@ -7611,7 +7191,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "milton-bidnet::2026.15"
   },
@@ -7632,7 +7212,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "milton-bidnet::2026.16"
   },
@@ -7653,7 +7233,7 @@
    "notes": "Find event CL00000013 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {},
    "key": "miami-dade-informs::cl00000013"
   },
@@ -7674,7 +7254,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:16-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::nw 800 block west atlantic avenue"
   },
@@ -7695,7 +7275,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-bidnet::25-26-024"
   },
@@ -7800,7 +7380,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2022-421-nd"
   },
@@ -7821,7 +7401,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::itb 2022-045-wg_repost"
   },
@@ -7842,7 +7422,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2022-059-wg"
   },
@@ -7905,7 +7485,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2023-036-lb"
   },
@@ -7947,7 +7527,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2023-157-df"
   },
@@ -7968,7 +7548,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2023-508-jp"
   },
@@ -8073,7 +7653,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2024-004-df"
   },
@@ -8115,7 +7695,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::itb 2025-023-wg"
   },
@@ -8136,7 +7716,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2025-207-jp_repost"
   },
@@ -8157,7 +7737,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2025-141-mp_repost"
   },
@@ -8178,7 +7758,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2025-506-jp_repost"
   },
@@ -8199,7 +7779,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2026-112-jp_repost"
   },
@@ -8220,7 +7800,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-06T05:16-05:00",
+   "last_seen": "2026-11-07T05:16-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2026-113-mp_repost"
   },
@@ -8400,7 +7980,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-27T09:23-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "258632",
     "subject": "You have some new Euna bid matches!"
@@ -8424,7 +8004,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-27T09:23-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "255878",
     "subject": "You have some new Euna bid matches!"
@@ -8448,7 +8028,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-05"
   },
@@ -8469,7 +8049,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-10"
   },
@@ -8490,7 +8070,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-13"
   },
@@ -8511,7 +8091,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-14 - re-bid"
   },
@@ -8532,7 +8112,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-15"
   },
@@ -8553,7 +8133,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-16"
   },
@@ -8574,7 +8154,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-01"
   },
@@ -8595,7 +8175,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-02"
   },
@@ -8616,7 +8196,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-29T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-03"
   },
@@ -8637,7 +8217,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-04"
   },
@@ -8658,7 +8238,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "248449",
     "subject": "You have some new Euna bid matches!"
@@ -8682,7 +8262,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-31T06:19-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "251438",
     "subject": "You have some new Euna bid matches!"
@@ -8706,7 +8286,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-27T09:23-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "248355",
     "subject": "You have some new Euna bid matches!"
@@ -8754,7 +8334,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-29T06:20-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "244048",
     "subject": "You have some new Euna bid matches!"
@@ -8778,7 +8358,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "239116",
     "subject": "You have some new Euna bid matches!"
@@ -8885,6 +8465,30 @@
    "source_id": "bonfire-broward",
    "county": "Broward",
    "agency": "Broward County BOCC",
+   "title": "Paper and Envelopes",
+   "number": "#254815",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://broward.bonfirehub.com/opportunities/254815",
+   "source_url": "https://broward.bonfirehub.com/portal/?tab=openOpportunities",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "254815",
+    "subject": "You have some new Euna bid matches!"
+   },
+   "key": "bonfire-broward::#254815"
+  },
+  {
+   "source_id": "bonfire-broward",
+   "county": "Broward",
+   "agency": "Broward County BOCC",
    "title": "Pre-Solicitation Notice - Draft Computer Aided Dispatch/Automatic Vehicle Location System",
    "number": "#254086",
    "type": "Draft / Future",
@@ -8946,7 +8550,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-11-04T05:19-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "260757",
     "subject": "You have some new Euna bid matches!"
@@ -9090,7 +8694,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "258935",
     "subject": "You have some new Euna bid matches!"
@@ -9114,7 +8718,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "258937",
     "subject": "You have some new Euna bid matches!"
@@ -9138,7 +8742,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "258942",
     "subject": "You have some new Euna bid matches!"
@@ -9162,7 +8766,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "258939",
     "subject": "You have some new Euna bid matches!"
@@ -9282,7 +8886,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "254409",
     "subject": "You have some new Euna bid matches!"
@@ -9330,7 +8934,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "236937",
     "subject": "You have some new Euna bid matches!"
@@ -9354,7 +8958,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-29T06:20-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "259438",
     "subject": "You have some new Euna bid matches!"
@@ -9437,6 +9041,30 @@
    "source_id": "opengov-clayutility",
    "county": "Clay",
    "agency": "Clay County Utility Authority",
+   "title": "Bio-Solid Treatment Agreement (BCR)",
+   "number": "#324213",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/clayutility/projects/324213",
+   "source_url": "https://procurement.opengov.com/portal/clayutility",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "324213",
+    "subject": "New Opportunity Issued by Clay County Utility Authority: Bio-Solid Treatment Agreement (BCR)"
+   },
+   "key": "opengov-clayutility::#324213"
+  },
+  {
+   "source_id": "opengov-clayutility",
+   "county": "Clay",
+   "agency": "Clay County Utility Authority",
    "title": "Brass Fittings Annual Contract",
    "number": "#322774",
    "type": "",
@@ -9480,6 +9108,30 @@
     "subject": "New Opportunity Issued by City of Green Cove Springs: DEP SRF Harbor Road WRF Expansion, Phase 3 - Reclaimed Water Ground Storage Tank"
    },
    "key": "opengov-greencovesprings::#320490"
+  },
+  {
+   "source_id": "opengov-claycounty",
+   "county": "Clay",
+   "agency": "Clay County BOCC",
+   "title": "Lease Of County Property For Telecommunications Services",
+   "number": "#315313",
+   "type": "Property sale / lease",
+   "status": "Open",
+   "category": "Property & Real Estate",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/claycounty/projects/315313",
+   "source_url": "https://procurement.opengov.com/portal/claycounty",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "315313",
+    "subject": "New Opportunity Issued by Clay County: Lease Of County Property For Telecommunications Services"
+   },
+   "key": "opengov-claycounty::#315313"
   },
   {
    "source_id": "opengov-collier-county-fl",
@@ -9666,7 +9318,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "jaxport::itb_eq-2039a"
   },
@@ -9687,7 +9339,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:15-05:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "jaxport::rfq_ae-2108b"
   },
@@ -9708,7 +9360,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "jaxport::itb_mc-2132"
   },
@@ -10113,7 +9765,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-11-03T05:19-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "260943",
     "subject": "You have some new Euna bid matches!"
@@ -10137,7 +9789,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "253223",
     "subject": "You have some new Euna bid matches!"
@@ -10161,7 +9813,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-31T06:19-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "260038",
     "subject": "You have some new Euna bid matches!"
@@ -10185,7 +9837,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "259631",
     "subject": "You have some new Euna bid matches!"
@@ -10305,7 +9957,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-28T06:20-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "259805",
     "subject": "You have some new Euna bid matches!"
@@ -10473,7 +10125,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "251575",
     "subject": "You have some new Euna bid matches!"
@@ -10497,7 +10149,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "252053",
     "subject": "You have some new Euna bid matches!"
@@ -10569,12 +10221,36 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "244676",
     "subject": "You have some new Euna bid matches!"
    },
    "key": "bonfire-hillsboroughcounty::#244676"
+  },
+  {
+   "source_id": "bonfire-hillsboroughcounty",
+   "county": "Hillsborough",
+   "agency": "Hillsborough County BOCC",
+   "title": "Martingale Dog Collars and Leashes",
+   "number": "#260362",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://hillsboroughcounty.bonfirehub.com/opportunities/260362",
+   "source_url": "https://hillsboroughcounty.bonfirehub.com/portal/?tab=openOpportunities",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "260362",
+    "subject": "You have some new Euna bid matches!"
+   },
+   "key": "bonfire-hillsboroughcounty::#260362"
   },
   {
    "source_id": "bonfire-hillsboroughcounty",
@@ -10617,7 +10293,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "248264",
     "subject": "You have some new Euna bid matches!"
@@ -10641,7 +10317,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "251576",
     "subject": "You have some new Euna bid matches!"
@@ -10737,7 +10413,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "258647",
     "subject": "You have some new Euna bid matches!"
@@ -10761,7 +10437,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-31T06:19-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "254710",
     "subject": "You have some new Euna bid matches!"
@@ -10785,7 +10461,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "251655",
     "subject": "You have some new Euna bid matches!"
@@ -10905,7 +10581,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-28T06:20-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "254552",
     "subject": "You have some new Euna bid matches!"
@@ -11025,7 +10701,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-11-04T05:19-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "261271",
     "subject": "You have some new Euna bid matches!"
@@ -11097,7 +10773,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "252215",
     "subject": "You have some new Euna bid matches!"
@@ -11273,6 +10949,30 @@
    "key": "opengov-cityoftampa::#323850"
   },
   {
+   "source_id": "opengov-cityoftampa",
+   "county": "Hillsborough",
+   "agency": "City of Tampa",
+   "title": "WWC- Steel Wheel Kit CUES Compatible",
+   "number": "#324215",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/cityoftampa/projects/324215",
+   "source_url": "https://procurement.opengov.com/portal/cityoftampa",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "324215",
+    "subject": "New Opportunity Issued by City of Tampa: WWC- Steel Wheel Kit CUES Compatible"
+   },
+   "key": "opengov-cityoftampa::#324215"
+  },
+  {
    "source_id": "bonfire-hillsboroughcounty",
    "county": "Hillsborough",
    "agency": "Hillsborough County BOCC",
@@ -11289,7 +10989,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "254487",
     "subject": "You have some new Euna bid matches!"
@@ -11415,6 +11115,30 @@
     "subject": "City of Clermont has invited you to: Well House Generator Transfer Switch Improvements"
    },
    "key": "opengov-clermontfl::#311701"
+  },
+  {
+   "source_id": "opengov-flylcpa",
+   "county": "Lee",
+   "agency": "Lee County Port Authority",
+   "title": "Allen Bradley Products for Baggage Handling System",
+   "number": "#324342",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/flylcpa/projects/324342",
+   "source_url": "https://procurement.opengov.com/portal/flylcpa",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "324342",
+    "subject": "New Opportunity Issued by Lee County Port Authority: Allen Bradley Products for Baggage Handling System"
+   },
+   "key": "opengov-flylcpa::#324342"
   },
   {
    "source_id": "opengov-cityftmyers",
@@ -11577,7 +11301,7 @@
    "notes": "Draft for feedback. Send comments to Julie Whiteside (Julie.whiteside@miamidade.gov). Posted until 2026-11-10.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::a26pm01"
   },
@@ -11598,7 +11322,7 @@
    "notes": "Draft for feedback. Send comments to Julie Whiteside (julie.whiteside@miamidade.gov). Posted until 2026-11-16.",
    "origin": "direct",
    "first_seen": "2026-10-28T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::78880d8f7db7"
   },
@@ -11619,7 +11343,7 @@
    "notes": "Draft for feedback. Send comments to Ana M. DaSilva (ana.dasilva@miamidade.gov). Posted until 2026-11-09.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::926d8a7f8281"
   },
@@ -11640,7 +11364,7 @@
    "notes": "Draft for feedback. Send comments to Arlene Campbell (e327296@miamidade.gov). Posted until 2026-11-17.",
    "origin": "direct",
    "first_seen": "2026-10-29T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::2d741ca3b4a7"
   },
@@ -11685,9 +11409,33 @@
    "notes": "Draft for feedback. Send comments to SHERRY Y. CROCKETT (SHERRY.CROCKETT@MIAMIDADE.GOV). Posted until 2026-11-20.",
    "origin": "direct",
    "first_seen": "2026-11-06T05:17-05:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::4b47a6c20385"
+  },
+  {
+   "source_id": "opengov-cityofhomestead",
+   "county": "Miami-Dade",
+   "agency": "City of Homestead",
+   "title": "RFP# 202708-Operations & Maintenance Services for Homestead Circulator Transit System",
+   "number": "#250118",
+   "type": "RFP",
+   "status": "Open",
+   "category": "Facilities & Maintenance",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/cityofhomestead/projects/250118",
+   "source_url": "https://procurement.opengov.com/portal/cityofhomestead",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "250118",
+    "subject": "New Opportunity Issued by City of Homestead: RFP# 202708-Operations & Maintenance Services for Homestead Circulator Transit System"
+   },
+   "key": "opengov-cityofhomestead::#250118"
   },
   {
    "source_id": "opengov-cityofhialeahfl",
@@ -11754,7 +11502,7 @@
    "notes": "Draft for feedback. Send comments to Christian Chavez (Christian.Chavez@miamidade.gov). Posted until 2026-11-16.",
    "origin": "direct",
    "first_seen": "2026-10-28T06:17-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::01386c0e2194"
   },
@@ -11775,7 +11523,7 @@
    "notes": "Draft for feedback. Send comments to Julie Whiteside (Julie.whiteside@miamidade.gov). Posted until 2026-11-10.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-06T05:17-05:00",
+   "last_seen": "2026-11-07T05:17-05:00",
    "extra": {},
    "key": "miami-dade-future::e26pm01"
   },
@@ -11796,7 +11544,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "257290",
     "subject": "You have some new Euna bid matches!"
@@ -11820,7 +11568,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "259466",
     "subject": "You have some new Euna bid matches!"
@@ -11940,7 +11688,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "261367",
     "subject": "You have some new Euna bid matches!"
@@ -12236,6 +11984,30 @@
    "key": "opengov-cfxway::sr 516"
   },
   {
+   "source_id": "opengov-orlando",
+   "county": "Orange",
+   "agency": "City of Orlando",
+   "title": "SERVICING AND REPAIRS OF THE RIFLE RANGE TARGET AIR SYSTEMS",
+   "number": "#323321",
+   "type": "",
+   "status": "Open",
+   "category": "Facilities & Maintenance",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/orlando/projects/323321",
+   "source_url": "https://procurement.opengov.com/portal/orlando",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "323321",
+    "subject": "New Opportunity Issued by City of Orlando: SERVICING AND REPAIRS OF THE RIFLE RANGE TARGET AIR SYSTEMS"
+   },
+   "key": "opengov-orlando::#323321"
+  },
+  {
    "source_id": "opengov-orangecountyfl",
    "county": "Orange",
    "agency": "Orange County BOCC",
@@ -12284,6 +12056,30 @@
    "key": "opengov-orangecountyfl::#322586"
   },
   {
+   "source_id": "opengov-orangecountyfl",
+   "county": "Orange",
+   "agency": "Orange County BOCC",
+   "title": "Y26-755 Orange County Corrections Booking and Release Center - Pharmacy/Medical Records Relocation",
+   "number": "#323253",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/orangecountyfl/projects/323253",
+   "source_url": "https://procurement.opengov.com/portal/orangecountyfl",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "323253",
+    "subject": "New Opportunity Issued by Orange County, Florida: Y26-755 Orange County Corrections Booking and Release Center - Pharmacy/Medical Records Relocation"
+   },
+   "key": "opengov-orangecountyfl::#323253"
+  },
+  {
    "source_id": "bonfire-swa",
    "county": "Palm Beach",
    "agency": "Solid Waste Authority of Palm Beach County",
@@ -12300,7 +12096,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-31T06:19-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "252047",
     "subject": "You have some new Euna bid matches!"
@@ -12372,7 +12168,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-27T09:23-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "252493",
     "subject": "You have some new Euna bid matches!"
@@ -12396,7 +12192,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-25T10:26-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "259647",
     "subject": "You have some new Euna bid matches!"
@@ -12468,7 +12264,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-10-28T06:20-04:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "260251",
     "subject": "You have some new Euna bid matches!"
@@ -12492,7 +12288,7 @@
    "notes": "From the agency's email alert.",
    "origin": "email",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-06T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
    "extra": {
     "project_id": "261617",
     "subject": "You have some new Euna bid matches!"
@@ -12740,6 +12536,30 @@
    "key": "opengov-myclearwater::#310477"
   },
   {
+   "source_id": "opengov-pinellasfl",
+   "county": "Pinellas",
+   "agency": "Pinellas County BOCC",
+   "title": "Plotter Repair & Maintenance Contract for HP DesignJet Z6 44-in Postscript Printer",
+   "number": "#322126",
+   "type": "",
+   "status": "Open",
+   "category": "Facilities & Maintenance",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/pinellasfl/projects/322126",
+   "source_url": "https://procurement.opengov.com/portal/pinellasfl",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "322126",
+    "subject": "New Opportunity Issued by Pinellas County: Plotter Repair & Maintenance Contract for HP DesignJet Z6 44-in Postscript Printer"
+   },
+   "key": "opengov-pinellasfl::#322126"
+  },
+  {
    "source_id": "opengov-pcsb",
    "county": "Pinellas",
    "agency": "Pinellas County Schools",
@@ -12836,6 +12656,30 @@
    "key": "opengov-myclearwater::#320033"
   },
   {
+   "source_id": "opengov-bartowfl",
+   "county": "Polk",
+   "agency": "City of Bartow",
+   "title": "970 E Main Street Demolition Project - Reissued",
+   "number": "#318506",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/bartowfl/projects/318506",
+   "source_url": "https://procurement.opengov.com/portal/bartowfl",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "318506",
+    "subject": "New Opportunity Issued by City of Bartow, FL: 970 E Main Street Demolition Project - Reissued"
+   },
+   "key": "opengov-bartowfl::#318506"
+  },
+  {
    "source_id": "polk-county",
    "county": "Polk",
    "agency": "Polk County BOCC",
@@ -12852,7 +12696,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-345"
   },
@@ -12873,7 +12717,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 25-396"
   },
@@ -12894,7 +12738,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 25-230"
   },
@@ -12915,7 +12759,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 24-330"
   },
@@ -12936,7 +12780,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-068"
   },
@@ -12957,9 +12801,33 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 25-456"
+  },
+  {
+   "source_id": "opengov-bartowfl",
+   "county": "Polk",
+   "agency": "City of Bartow",
+   "title": "Clothing Apparel Products & Accessories",
+   "number": "#320412",
+   "type": "",
+   "status": "Open",
+   "category": "Goods & Supplies",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/bartowfl/projects/320412",
+   "source_url": "https://procurement.opengov.com/portal/bartowfl",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "320412",
+    "subject": "New Opportunity Issued by City of Bartow, FL: Clothing Apparel Products & Accessories"
+   },
+   "key": "opengov-bartowfl::#320412"
   },
   {
    "source_id": "polk-county",
@@ -12978,7 +12846,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 22-365"
   },
@@ -12999,7 +12867,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-395"
   },
@@ -13020,7 +12888,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 24-507"
   },
@@ -13041,7 +12909,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::iss 26-065"
   },
@@ -13062,7 +12930,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-320"
   },
@@ -13083,7 +12951,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 13-294"
   },
@@ -13104,7 +12972,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-370"
   },
@@ -13125,7 +12993,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 20-667"
   },
@@ -13170,7 +13038,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 20-1111"
   },
@@ -13191,7 +13059,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 20-633"
   },
@@ -13212,7 +13080,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cq 26-214"
   },
@@ -13233,7 +13101,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 26-296"
   },
@@ -13254,7 +13122,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-352"
   },
@@ -13275,7 +13143,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-367"
   },
@@ -13296,7 +13164,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-295"
   },
@@ -13317,7 +13185,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 24-194"
   },
@@ -13338,7 +13206,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 24-195"
   },
@@ -13359,7 +13227,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cq 26-343"
   },
@@ -13380,7 +13248,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 09-007"
   },
@@ -13401,7 +13269,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 18-824"
   },
@@ -13422,7 +13290,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 25-303"
   },
@@ -13443,7 +13311,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-349"
   },
@@ -13488,7 +13356,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-387"
   },
@@ -13509,7 +13377,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 26-059"
   },
@@ -13530,7 +13398,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 17-633"
   },
@@ -13551,7 +13419,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::bid 26-372"
   },
@@ -13572,7 +13440,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 25-463"
   },
@@ -13593,7 +13461,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 19-642"
   },
@@ -13614,7 +13482,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 25-475"
   },
@@ -13635,7 +13503,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 26-238"
   },
@@ -13656,7 +13524,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-384"
   },
@@ -13677,7 +13545,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 24-022"
   },
@@ -13698,7 +13566,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-06T05:15-05:00",
+   "last_seen": "2026-11-07T05:15-05:00",
    "extra": {},
    "key": "polk-county::cs 21-380"
   },
@@ -14210,6 +14078,30 @@
    "source_id": "opengov-districtgov",
    "county": "Sumter",
    "agency": "Villages Community Development Districts",
+   "title": "Sole Source Designation of Bound Tree Medical for Curaplex OneScope Pro Video Laryngoscope Cameras and accessories",
+   "number": "#322516",
+   "type": "Sole source",
+   "status": "Open",
+   "category": "IT & Technology",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/districtgov/projects/322516",
+   "source_url": "https://procurement.opengov.com/portal/districtgov",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "322516",
+    "subject": "New Opportunity Issued by Villages Community Development Districts, FL: Sole Source Designation of Bound Tree Medical for Curaplex OneScope Pro Video Laryngoscope Cameras and accessories"
+   },
+   "key": "opengov-districtgov::#322516"
+  },
+  {
+   "source_id": "opengov-districtgov",
+   "county": "Sumter",
+   "agency": "Villages Community Development Districts",
    "title": "Sole Source Designation of HSI Services inc. for Aqua-Barrier Water Inflated Dams with Anti-roll Internal Baffle System",
    "number": "#323298",
    "type": "Sole source",
@@ -14378,6 +14270,30 @@
    "source_id": "opengov-volusia",
    "county": "Volusia",
    "agency": "Volusia County",
+   "title": "Construction Manager/General Contractor Services for the Halifax Plantation Wastewater Treatment Facility Expansion",
+   "number": "#323672",
+   "type": "",
+   "status": "Open",
+   "category": "Construction",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/volusia/projects/323672",
+   "source_url": "https://procurement.opengov.com/portal/volusia",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "323672",
+    "subject": "New Opportunity Issued by County of Volusia: Construction Manager/General Contractor Services for the Halifax Plantation Wastewater Treatment Facility Expansion"
+   },
+   "key": "opengov-volusia::#323672"
+  },
+  {
+   "source_id": "opengov-volusia",
+   "county": "Volusia",
+   "agency": "Volusia County",
    "title": "Professional Solid Waste Management Engineering Services",
    "number": "#315986",
    "type": "",
@@ -14397,6 +14313,30 @@
     "subject": "New Opportunity Issued by County of Volusia: Professional Solid Waste Management Engineering Services"
    },
    "key": "opengov-volusia::#315986"
+  },
+  {
+   "source_id": "opengov-volusia",
+   "county": "Volusia",
+   "agency": "Volusia County",
+   "title": "Resident Project Representative (RPR) Professional Engineering Services- Corrections Security Upgrade",
+   "number": "#311002",
+   "type": "",
+   "status": "Open",
+   "category": "Engineering & Architecture",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/volusia/projects/311002",
+   "source_url": "https://procurement.opengov.com/portal/volusia",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-07T05:19-05:00",
+   "last_seen": "2026-11-07T05:19-05:00",
+   "extra": {
+    "project_id": "311002",
+    "subject": "New Opportunity Issued by County of Volusia: Resident Project Representative (RPR) Professional Engineering Services- Corrections Security Upgrade"
+   },
+   "key": "opengov-volusia::#311002"
   },
   {
    "source_id": "opengov-waltoncountyfl",
