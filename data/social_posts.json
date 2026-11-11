@@ -52,5 +52,14 @@
   "at": "2026-11-11T08:03-05:00",
   "status": "failed",
   "error": "POST 1471999489323697/photos: (#200) Unpublished posts must be posted to a page as the page itself."
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "am",
+  "platform": "facebook",
+  "theme": "new_today",
+  "at": "2026-11-11T10:11-05:00",
+  "id": "1471999489323697_122099842941546057",
+  "status": "posted"
  }
 ]
