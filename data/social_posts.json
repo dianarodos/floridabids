@@ -34,5 +34,14 @@
   "at": "2026-11-11T08:02-05:00",
   "status": "failed",
   "error": "POST 1471999489323697/photos: (#200) The permission(s) publish_actions are not available. It has been deprecated. If you want to provide a way for your app users to share content to Facebook, we encourage you to use our Sharing products instead."
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "am",
+  "platform": "instagram",
+  "theme": "new_today",
+  "at": "2026-11-11T08:03-05:00",
+  "id": "18068491370516983",
+  "status": "posted"
  }
 ]
