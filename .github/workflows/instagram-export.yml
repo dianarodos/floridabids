@@ -1,0 +1,31 @@
+name: Instagram export
+# Downloads every post from @floridabidsorg (photos, carousel images, videos) into one zip.
+# Run it from the Actions tab; download the zip from the run page under "Artifacts" (kept 3 days).
+run-name: Instagram export
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3
+      - name: Download all posts
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          IG_USER_ID: "17841410564419681"
+        run: python -m social.ig_export --out ig-export
+      - uses: actions/upload-artifact@v4
+        with:
+          name: floridabidsorg-instagram-export
+          path: ig-export/
+          retention-days: 3
