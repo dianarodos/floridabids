@@ -17,36 +17,36 @@
   "counties": 13,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Public-private Partnerships (P3) Consulting Services",
-    "category": "Construction",
-    "due": "2027-06-21",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PUBLIC-PRIVATE-PARTNERSHIPS-P3-CONSULTING-SERVICES/0000382084?purchasingGroupId=8408751&origin=2"
+    "county": "Escambia",
+    "agency": "Escambia County BOCC",
+    "title": "Hazardous Tree Removal (4 sites, CRA)",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/323545"
    },
    {
-    "county": "Palm Beach",
-    "agency": "City of Delray Beach",
-    "title": "Housing Rehabilitation Program - NCS Division-Case No. 23-039",
+    "county": "Walton",
+    "agency": "Walton County BOCC",
+    "title": "Choctaw Beach Fishing Pier Construction",
     "category": "Construction",
-    "due": "2026-11-25",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Housing-Rehabilitation-Program-NCS-Division-Case-No-23-039/0000443133?purchasingGroupId=8408751&origin=2"
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/waltoncountyfl/projects/321219"
+   },
+   {
+    "county": "Sarasota",
+    "agency": "Sarasota County BOCC",
+    "title": "Mosquito Aerial Adulticide Application Services",
+    "category": "IT & Technology",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/scgov/projects/321727"
    },
    {
     "county": "St. Johns",
     "agency": "St. Johns County BOCC",
-    "title": "Purchase of Dining room tables and Chairs for Fire Rescue Station #22",
+    "title": "Dining Tables & Chairs for Fire Station #22",
     "category": "Goods & Supplies",
     "due": "2026-11-19",
     "url": "https://www.demandstar.com/app/limited/bids/557244/details"
-   },
-   {
-    "county": "Duval",
-    "agency": "Duval County Public Schools",
-    "title": "Network Electronics",
-    "category": "IT & Technology",
-    "due": "2026-12-10",
-    "url": "https://www.demandstar.com/app/limited/bids/557254/details"
    }
   ],
   "caption_default": "🦎 32 new government bids posted in Florida today, across 13 counties.\n\n📍 Miami-Dade: Public-private Partnerships (P3) Consulting Services\n📍 Palm Beach: Housing Rehabilitation Program - NCS Division-Case No. 23-039\n📍 St. Johns: Purchase of Dining room tables and Chairs for Fire Rescue Station #22\n\nAll 611 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -61,47 +61,39 @@
   "new_this_week": 21,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Prequalification Application for Vessel Removal, Towing, Impoundment, Disposal",
+    "county": "Osceola",
+    "agency": "City of St. Cloud",
+    "title": "Custodial Services",
     "category": "Facilities & Maintenance",
-    "due": "2030-09-02",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Prequalification-Application-for-Vessel-Removal-Towing-Impoundment-Disposal/0000400736?purchasingGroupId=8408751&origin=2"
+    "due": "2026-11-19",
+    "url": "https://procurement.opengov.com/portal/stcloud"
    },
    {
-    "county": "Escambia",
-    "agency": "Escambia County School District",
-    "title": "Outside Plant Fiber Maintenance and Repair Services",
+    "county": "Orange",
+    "agency": "City of Orlando",
+    "title": "Grounds Maintenance for City Easements, Right-of-Ways and Brick Streets",
     "category": "Facilities & Maintenance",
-    "due": "2026-12-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Outside-Plant-Fiber-Maintenance-and-Repair-Services/0000441922?purchasingGroupId=8408751&origin=2"
+    "due": "2026-11-23",
+    "url": "https://procurement.opengov.com/portal/orlando"
    },
    {
-    "county": "Santa Rosa",
-    "agency": "City of Milton",
-    "title": "2026.15 Effluent Discharge System Downtown Plant Pump Station",
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Countywide Dumpster and Trash Pickup Services",
     "category": "Facilities & Maintenance",
-    "due": "2026-12-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/2026-15-Effluent-Discharge-System-Downtown-Plant-Pump-Station/0000442625?purchasingGroupId=8408751&origin=2"
+    "due": "2026-11-18",
+    "url": "https://www.polkfl.gov/bid-form/bid-26-389/"
    },
    {
-    "county": "Palm Beach",
-    "agency": "City of Greenacres",
-    "title": "Fence Installation, Maintenance and Repair Services",
-    "category": "Facilities & Maintenance",
-    "due": "2026-12-10",
-    "url": "https://www.demandstar.com/app/limited/bids/554467/details"
-   },
-   {
-    "county": "St. Johns",
-    "agency": "St. Johns County BOCC",
-    "title": "3096 Commercial Solid Waste Collection Services",
-    "category": "Facilities & Maintenance",
-    "due": "2026-12-09",
-    "url": "https://www.demandstar.com/app/limited/bids/556271/details"
+    "county": "Charlotte",
+    "agency": "Charlotte County BOCC",
+    "title": "Roofing and Roof Repairs - Annual Contract",
+    "category": "Construction",
+    "due": "2026-11-25",
+    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/270103?tp=D"
    }
   ],
-  "caption_default": "🔎 Facilities & Maintenance: 99 open Florida bids, 21 new this week.\n\n• Miami-Dade: Prequalification Application for Vessel Removal, Towing, Impoundment, Disposal\n• Escambia: Outside Plant Fiber Maintenance and Repair Services\n• Santa Rosa: 2026.15 Effluent Discharge System Downtown Plant Pump Station\n• Palm Beach: Fence Installation, Maintenance and Repair Services\n\nFilter by your business 👉 https://floridabids.org",
+  "caption_default": "🔧 Do you clean, mow, haul or fix things? Florida governments are hiring.\n\n99 Facilities & Maintenance bids are open right now, and 21 came out this week:\n🧹 Osceola: custodial services for the City of St. Cloud (due Nov 19)\n🌿 Orange: grounds maintenance for Orlando's easements & brick streets (due Nov 23)\n🚛 Polk: countywide dumpster & trash pickup (due Nov 18)\n🏠 Charlotte: roofing & roof repairs, annual contract (due Nov 25)\n\nFilter the list by your business type 👉 https://floridabids.org",
   "image": "social/2026-11-11-pm.jpg",
   "image_url": "https://floridabids.org/social/2026-11-11-pm.jpg"
  },
