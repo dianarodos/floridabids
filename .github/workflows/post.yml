@@ -1,0 +1,88 @@
+name: Social post
+# Posts one of today's prepared posts (site/social/today.json, made by the morning run) to Facebook and/or
+# Instagram. Started by Claude after Diana approves the draft in the morning chat, or by hand from the
+# Actions tab. The Meta token lives only in the META_PAGE_TOKEN secret.
+run-name: "Social post: ${{ github.event.inputs.slot }} -> ${{ github.event.inputs.platforms }}${{ github.event.inputs.at != '' && format(' at {0}', github.event.inputs.at) || '' }}${{ github.event.inputs.dry_run == 'yes' && ' (dry run)' || '' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Which prepared post: am (today's new bids) or pm (afternoon theme)"
+        type: choice
+        options: [am, pm]
+        default: am
+      platforms:
+        description: "Where to post"
+        type: choice
+        options: [facebook, instagram, both]
+        default: facebook
+      caption:
+        description: "Post text (blank = the prepared default caption)"
+        required: false
+        default: ""
+      at:
+        description: "Facebook only: schedule for this time, Eastern, HH:MM (blank = post now)"
+        required: false
+        default: ""
+      date:
+        description: "Date today.json must be for, YYYY-MM-DD (blank = today)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Only show what would be posted? (yes/no)"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install requests==2.32.3
+
+      - name: Post
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: "1471999489323697"
+          IG_USER_ID: "17841410564419681"
+          CAPTION: ${{ github.event.inputs.caption }}      # passed through env, never pasted into the shell
+          SLOT: ${{ github.event.inputs.slot }}
+          PLATFORMS: ${{ github.event.inputs.platforms }}
+          AT: ${{ github.event.inputs.at }}
+          DAY: ${{ github.event.inputs.date }}
+          DRY: ${{ github.event.inputs.dry_run }}
+        run: |
+          printf '%s' "$CAPTION" > "$RUNNER_TEMP/caption.txt"
+          args=(--slot "$SLOT" --platforms "$PLATFORMS" --caption-file "$RUNNER_TEMP/caption.txt")
+          [ -n "$AT" ] && args+=(--at "$AT")
+          [ -n "$DAY" ] && args+=(--date "$DAY")
+          [ "$DRY" = "yes" ] && args+=(--dry-run)
+          python -m social.post "${args[@]}"
+
+      - name: Save the post log
+        if: always() && github.event.inputs.dry_run != 'yes'
+        run: |
+          git config user.name "floridabids-bot"
+          git config user.email "floridabidsalerts@gmail.com"
+          git add -- data/social_posts.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Social post ${{ github.event.inputs.slot }} $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
+            for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
+          fi

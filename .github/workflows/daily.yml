@@ -57,6 +57,13 @@ jobs:
             python run.py 2>&1 | tee data/run_log.txt
           fi
 
+      - name: Prepare today's social posts (cards + today.json for the 7 AM drafts)
+        if: success() && github.event.inputs.only == ''
+        continue-on-error: true          # a problem here must never stop the data run
+        run: |
+          set -o pipefail
+          python -m social.prepare 2>&1 | tee -a data/run_log.txt
+
       - name: Daily check email to Diana (coverage by county; test runs only when something breaks)
         if: always()
         env:
@@ -79,7 +86,7 @@ jobs:
         run: |
           git config user.name "floridabids-bot"
           git config user.email "floridabidsalerts@gmail.com"
-          git add --all -- data site/data   # one missing file must not stop the others
+          git add --all -- data site/data site/social   # one missing file must not stop the others
           if git diff --cached --quiet; then echo "No changes"; else
             git commit -m "Daily update $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
             # code may have been pushed while this run was working: replay our data commit on top
