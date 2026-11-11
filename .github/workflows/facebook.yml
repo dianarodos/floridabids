@@ -1,0 +1,28 @@
+name: Facebook post (manual)
+# For trying the Facebook post by hand. The real daily post runs inside "Daily bid update".
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "preview = show the post in the log only; post = really publish it to the Page"
+        required: true
+        default: preview
+        type: choice
+        options: [preview, post]
+
+jobs:
+  facebook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3
+      - name: Build (and maybe publish) today's post
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          SITE_URL: https://floridabids.org
+        run: python -m scraper.facebook ${{ inputs.mode == 'post' && '--force' || '--dry-run' }}
