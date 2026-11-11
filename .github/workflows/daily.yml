@@ -57,6 +57,15 @@ jobs:
             python run.py 2>&1 | tee data/run_log.txt
           fi
 
+      - name: Post today's bids to the Facebook Page
+        if: github.event.inputs.send_email == 'yes'   # official daily run only, not test runs
+        continue-on-error: true   # a Facebook hiccup must never stop the data commit
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          SITE_URL: https://floridabids.org
+        run: python -m scraper.facebook 2>&1 | tee -a data/run_log.txt; exit ${PIPESTATUS[0]}
+
       - name: Daily check email to Diana (coverage by county; test runs only when something breaks)
         if: always()
         env:
