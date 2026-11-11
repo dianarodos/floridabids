@@ -216,10 +216,22 @@ body{width:1080px;height:1350px;background:#fbf6ec;color:#14211e;font-family:Ple
 """
 
 
+def _fit(items, room=650):
+    """Keep only as many rows as fit above the footer (a title over ~52 characters wraps to two lines)."""
+    out, used = [], 0
+    for i in items:
+        h = (172 if len(i["title"]) > 52 else 134) + (18 if out else 0)
+        if used + h > room:
+            break
+        out.append(i)
+        used += h
+    return out or items[:1]
+
+
 def _rows(items, show_due=True):
     e = html.escape
     out = []
-    for i in items:
+    for i in _fit(items):
         d = _day(i.get("due"))
         due = f'<span class="due">Due {d:%b} {d.day}</span>' if (d and show_due) else ""
         out.append(f'<div class="row"><div class="meta"><span class="pill">{e(i["county"])}</span>'
