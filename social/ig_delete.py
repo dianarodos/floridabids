@@ -72,10 +72,13 @@ def main(argv=None):
         except RuntimeError as e:
             failed += 1
             print(f"  could not delete {p['timestamp'][:10]} {p.get('permalink', '')}: {e}")
+            if "too many actions" in str(e).lower() or "rate limit" in str(e).lower():
+                print("Stopping: Instagram's rate limit. Wait an hour or two, then run it again; it picks up the rest.")
+                break
             if failed >= 3 and done == 0:
                 print("Stopping: the first deletes all failed.")
                 break
-        time.sleep(1)                                   # stay well under Meta's rate limits
+        time.sleep(8)                                   # Instagram blocks fast deleting ("too many actions")
     print(f"instagram: deleted {done}, failed {failed}")
     return 1 if failed else 0
 
