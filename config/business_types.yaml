@@ -150,7 +150,7 @@
 
 - id: fire
   label: Fire, rescue & public safety
-  terms: [fire, rescue, safety, emergency, police, sheriff, law enforcement, 911, dispatch, firearm*, ammunition,
+  terms: [fire, rescue, safety, emergency, police, sheriff, law enforcement, "911", dispatch, firearm*, ammunition,
           bulletproof, body camera*]
 
 - id: marine

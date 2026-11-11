@@ -3,8 +3,9 @@ name: Daily bid update
 run-name: ${{ github.event_name != 'workflow_dispatch' && 'Daily bid update' || github.event.inputs.only != '' && format('Test run - {0}', github.event.inputs.only) || github.event.inputs.send_email == 'yes' && 'Daily bid update' || 'Full run (no email)' }}
 
 on:
-  # Started every morning by the Cloudflare Worker's cron (worker/index.js), not GitHub's own schedule,
-  # which ran hours late or skipped days. The cron passes send_email=yes.
+  # Started every morning (~5:15 AM Eastern) by the Cloudflare Worker's cron (worker/index.js), not GitHub's
+  # own schedule, which ran hours late or skipped days. The cron passes send_email=yes, which marks the
+  # official daily run. The subscriber email itself is sent later, at 7 AM, by email.yml.
   workflow_dispatch:
     inputs:
       only:
@@ -12,7 +13,7 @@ on:
         required: false
         default: ""
       send_email:
-        description: "Also email subscribers? (yes/no)"
+        description: "Official daily run? (yes = full coverage report to Diana; subscribers are emailed at 7 AM by email.yml)"
         required: false
         default: "no"
 
@@ -55,16 +56,6 @@ jobs:
           else
             python run.py 2>&1 | tee data/run_log.txt
           fi
-
-      - name: Email the list to subscribers
-        if: github.event_name == 'schedule' || github.event.inputs.send_email == 'yes'
-        env:
-          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
-          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
-          SITE_URL: https://floridabids.org
-          API_URL: https://floridabids.weddingboca.workers.dev
-          FROM_EMAIL: list@floridabids.org
-        run: python -m scraper.digest 2>&1 | tee -a data/run_log.txt
 
       - name: Daily check email to Diana (coverage by county; test runs only when something breaks)
         if: always()

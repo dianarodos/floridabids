@@ -9,9 +9,10 @@
 //   GET  /api/admin/export.csv                       (Bearer ADMIN_TOKEN; full list for Diana)
 //   POST /api/admin/run-daily                        (Bearer ADMIN_TOKEN; same as the cron, for testing)
 //
-// Cron (wrangler.jsonc "triggers"): starts the daily GitHub run, because GitHub's own schedule runs hours
-// late or not at all. A second, later cron is the backup: each one starts the run only if no full run
-// has already started or succeeded today. Needs the GH_TOKEN secret (fine-grained token, Actions: write).
+// Crons (wrangler.jsonc "triggers"), on Florida time all year, because GitHub's own schedule runs hours late:
+//   5:15 AM ET  start the data run (daily.yml); 6:15 AM ET is the backup, only if no run started/succeeded today
+//   7:00 AM ET  start the subscriber email (email.yml)
+// Needs the GH_TOKEN secret (fine-grained token, Actions: write).
 //
 // Bindings (wrangler.jsonc): ASSETS (site/), DB (D1). Secrets: BREVO_API_KEY, ADMIN_TOKEN, GH_TOKEN.
 // Vars: SITE_URL, FROM_EMAIL, FROM_NAME.
@@ -45,7 +46,13 @@ const RUN_NAME = "Daily bid update";          // run-name of full runs in .githu
 
 export default {
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(startDailyRun(env, event.cron).catch(e => console.error("daily run trigger failed: " + (e && e.message))));
+    // Crons are in UTC; each fires at two UTC hours so the work below lands on the same Florida clock time
+    // in winter (UTC-5) and summer (UTC-4). Only the firing that matches the Eastern hour does anything.
+    const { hour } = easternNow(event.scheduledTime);
+    const job = event.cron.startsWith("15 ")
+      ? (hour === 5 || hour === 6 ? startDailyRun(env, `${event.cron} (${hour}:15 ET)`) : null)   // data run + 6:15 backup
+      : (hour === 7 ? startEmailRun(env, event.cron) : null);                                     // subscriber email
+    if (job) ctx.waitUntil(job.catch(e => console.error("cron failed: " + (e && e.message))));
   },
 
   async fetch(request, env) {
@@ -97,6 +104,36 @@ async function startDailyRun(env, cron, only = "") {
   });
   if (!d.ok) throw new Error(`dispatch ${d.status}: ${await d.text()}`);
   console.log(`cron ${cron}: started ${only ? "a test run of " + only : "today's daily run"}`);
+}
+
+function easternNow(ms = Date.now()) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", hourCycle: "h23",
+  }).formatToParts(new Date(ms)).map(x => [x.type, x.value]));
+  return { hour: Number(p.hour), date: `${p.year}-${p.month}-${p.day}` };
+}
+
+// 7 AM Eastern: start email.yml (the subscriber email), once a day. It queues behind the data run if that
+// is still going (same concurrency group), so it always mails the freshest list.
+async function startEmailRun(env, cron) {
+  if (!env.GH_TOKEN) { console.error("GH_TOKEN secret not set; cannot start the email run"); return; }
+  const gh = (path, init = {}) => fetch(`https://api.github.com/repos/${REPO}${path}`, {
+    ...init,
+    headers: { Authorization: `Bearer ${env.GH_TOKEN}`, Accept: "application/vnd.github+json",
+               "X-GitHub-Api-Version": "2022-11-28", "User-Agent": "floridabids-cron", ...(init.headers || {}) },
+  });
+  const today = new Date().toISOString().slice(0, 10);
+  const r = await gh(`/actions/workflows/email.yml/runs?per_page=10&created=>=${today}`);
+  if (!r.ok) throw new Error(`list email runs ${r.status}: ${await r.text()}`);
+  const { workflow_runs = [] } = await r.json();
+  const done = workflow_runs.find(w => w.event === "workflow_dispatch" && (w.status !== "completed" || w.conclusion === "success"));
+  if (done) { console.log(`cron ${cron}: today's email run already ${done.status}; nothing to do`); return; }
+  const d = await gh("/actions/workflows/email.yml/dispatches", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ref: "main", inputs: { dry_run: "no" } }),
+  });
+  if (!d.ok) throw new Error(`dispatch email ${d.status}: ${await d.text()}`);
+  console.log(`cron ${cron}: started today's subscriber email`);
 }
 
 async function ensureSchema(env) {

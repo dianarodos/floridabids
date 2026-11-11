@@ -1,0 +1,59 @@
+name: Subscriber email
+# Started at 7:00 AM Eastern by the Cloudflare Worker's cron (worker/index.js), after the ~5:15 AM data run.
+# Shares the daily-update concurrency group, so if that run is still going this waits for it to finish.
+run-name: Subscriber email
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build the emails but send nothing? (yes/no)"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main            # the data commit made by the morning run
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-scraper.txt
+
+      - name: Install
+        run: pip install -r requirements-scraper.txt
+
+      - name: Email the list to subscribers
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          SITE_URL: https://floridabids.org
+          API_URL: https://floridabids.weddingboca.workers.dev
+          FROM_EMAIL: list@floridabids.org
+        run: |
+          set -o pipefail      # a crash must fail the run (it used to be hidden behind tee for days)
+          python -m scraper.digest ${{ github.event.inputs.dry_run == 'yes' && '--dry-run' || '' }} 2>&1 | tee -a data/run_log.txt
+
+      - name: Save who was emailed up to when
+        if: always()
+        run: |
+          git config user.name "floridabids-bot"
+          git config user.email "floridabidsalerts@gmail.com"
+          git add -- data/digest_state.json data/run_log.txt
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Subscriber email $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
+            for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
+          fi
