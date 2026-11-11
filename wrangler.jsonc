@@ -23,8 +23,9 @@
     { "pattern": "www.floridabids.org", "custom_domain": true }
   ],
   "workers_dev": true,
-  // Daily GitHub run: 6:15 AM Eastern (5:15 in winter), backup at 8:15 if the first didn't start or failed.
-  "triggers": { "crons": ["15 10 * * *", "15 12 * * *"] },
+  // Florida time all year (worker/index.js checks the Eastern hour, so each cron covers winter and summer):
+  // data run 5:15 AM ET with a 6:15 backup; subscriber email at 7:00 AM ET.
+  "triggers": { "crons": ["15 9-11 * * *", "0 11,12 * * *"] },
   "observability": { "enabled": true },
   "keep_vars": true
 }

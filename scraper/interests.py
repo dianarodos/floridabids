@@ -22,8 +22,8 @@ def types() -> list[dict]:
     return yaml.safe_load(CONFIG.read_text())
 
 
-def _term_rx(term: str, prefix: bool = False) -> str:
-    term = term.strip().lower()
+def _term_rx(term, prefix: bool = False) -> str:
+    term = str(term).strip().lower()             # YAML reads a bare 911 as a number
     if term.endswith("*"):
         term, prefix = term[:-1], True
     body = r"\s+".join(re.escape(w) for w in term.split())

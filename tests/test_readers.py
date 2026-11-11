@@ -344,3 +344,12 @@ def test_business_matching():
     assert matcher(["construction"], "")({"title": "Anything", "category": "Construction"})
     assert matcher([], "") is None
     assert parse_keywords("Window Tint; catering,, x") == ("window tint", "catering")
+
+
+def test_business_type_terms_are_text():
+    """A bare number in business_types.yaml (911) once crashed the subscriber email for days."""
+    from scraper.interests import types, matcher
+    bad = [(t["id"], x) for t in types() for x in t["terms"] if not isinstance(x, str)]
+    assert not bad, f"quote these terms in config/business_types.yaml: {bad}"
+    m = matcher([t["id"] for t in types()], "window tint")
+    assert m({"title": "911 dispatch consoles", "category": "Other"})
