@@ -259,3 +259,19 @@ Traceback (most recent call last):
            ^^^^^^^^^^
 AttributeError: 'int' object has no attribute 'strip'
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
+INFO digest: [dry run] daily -> d***@yahoo.com: Florida bids this morning: 109 open for your business (15 new), 79 new in Florida
+INFO digest: [dry run] daily -> p***@gmail.com: Florida bids this morning: 79 new, 598 open
+INFO digest: [dry run] daily -> c***@yahoo.com: Florida bids this morning: 79 new, 598 open
+INFO digest: [dry run] daily -> r***@glhstaffing.com: Florida bids this morning: 79 new, 598 open
+INFO digest: [dry run] daily -> w***@gmail.com: Florida bids this morning: 35 open for your business (3 new), 79 new in Florida
+INFO digest: [dry run] daily -> s***@gmail.com: Florida bids this morning: 33 open for your business (4 new), 79 new in Florida
+INFO digest: [dry run] daily -> n***@yahoo.com: Florida bids this morning: 33 open for your business (4 new), 79 new in Florida
+INFO digest: [dry run] daily -> c***@southernmajestichomes.org: Florida bids this morning: 6 open for your business (2 new), 79 new in Florida
+INFO digest: [dry run] daily -> w***@gliearth.com: Florida bids this morning: 81 open for your business (5 new), 79 new in Florida
+INFO digest: [dry run] daily -> k***@nv5.com: Florida bids this morning: 79 new, 598 open
+INFO digest: [dry run] daily -> c***@monmouthsolutions.com: Florida bids this morning: 87 open for your business (11 new), 79 new in Florida
+INFO digest: [dry run] daily -> h***@gmail.com: Florida bids this morning: 0 open for your business (0 new), 79 new in Florida
+INFO digest: [dry run] daily -> m***@mdsprojects.com: Florida bids this morning: 265 open for your business (35 new), 79 new in Florida
+INFO digest: [dry run] daily -> a***@songandassociates.com: Florida bids this morning: 322 open for your business (40 new), 79 new in Florida
+INFO digest: [dry run] daily -> m***@viqconsultant.com: Florida bids this morning: 0 open for your business (0 new), 79 new in Florida
+INFO digest: digest: 15 sent, 0 failed (daily)
