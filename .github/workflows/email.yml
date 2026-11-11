@@ -1,7 +1,7 @@
 name: Subscriber email
 # Started at 7:00 AM Eastern by the Cloudflare Worker's cron (worker/index.js), after the ~5:15 AM data run.
 # Shares the daily-update concurrency group, so if that run is still going this waits for it to finish.
-run-name: Subscriber email
+run-name: "Subscriber email${{ github.event.inputs.dry_run == 'yes' && ' (dry run)' || '' }}"
 
 on:
   workflow_dispatch:

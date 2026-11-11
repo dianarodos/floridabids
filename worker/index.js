@@ -126,7 +126,9 @@ async function startEmailRun(env, cron) {
   const r = await gh(`/actions/workflows/email.yml/runs?per_page=10&created=>=${today}`);
   if (!r.ok) throw new Error(`list email runs ${r.status}: ${await r.text()}`);
   const { workflow_runs = [] } = await r.json();
-  const done = workflow_runs.find(w => w.event === "workflow_dispatch" && (w.status !== "completed" || w.conclusion === "success"));
+  // a dry run (test) doesn't count: its title is "Subscriber email (dry run)"
+  const done = workflow_runs.find(w => w.event === "workflow_dispatch" && w.display_title === "Subscriber email"
+    && Date.parse(w.created_at) > Date.now() - 18 * 3600 * 1000 && (w.status !== "completed" || w.conclusion === "success"));
   if (done) { console.log(`cron ${cron}: today's email run already ${done.status}; nothing to do`); return; }
   const d = await gh("/actions/workflows/email.yml/dispatches", {
     method: "POST", headers: { "Content-Type": "application/json" },

@@ -41,7 +41,7 @@ def call(method, url, params=None):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", choices=list(KINDS), default="all")
-    ap.add_argument("--before", default="", help="YYYY-MM-DD: only posts published before this date")
+    ap.add_argument("--before", default="", help="YYYY-MM-DD or YYYY-MM-DDTHH:MM (UTC): only posts published before this")
     ap.add_argument("--confirm", default="", help="type DELETE to really delete")
     a = ap.parse_args(argv)
     ig = os.environ["IG_USER_ID"]
@@ -53,7 +53,7 @@ def main(argv=None):
         if not nxt:
             break
         page = call("GET", nxt)
-    pick = [p for p in posts if p["media_type"] in KINDS[a.only] and (not a.before or p["timestamp"][:10] < a.before)]
+    pick = [p for p in posts if p["media_type"] in KINDS[a.only] and (not a.before or p["timestamp"] < a.before)]
     print(f"instagram: {len(posts)} posts on the account; {len(pick)} match (--only {a.only}"
           + (f", before {a.before}" if a.before else "") + ")")
     for p in pick[:10]:
