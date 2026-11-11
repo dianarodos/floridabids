@@ -1,0 +1,43 @@
+name: Instagram delete
+# PERMANENT. Lists the matching @floridabidsorg posts; deletes them only when confirm = DELETE.
+# Run "Instagram export" first if you want a copy.
+run-name: "Instagram delete: ${{ github.event.inputs.only }}${{ github.event.inputs.before != '' && format(' before {0}', github.event.inputs.before) || '' }}${{ github.event.inputs.confirm == 'DELETE' && ' (DELETING)' || ' (preview)' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Which posts"
+        type: choice
+        options: [all, photos, videos]
+        default: all
+      before:
+        description: "Only posts published before this date, YYYY-MM-DD (blank = any date)"
+        required: false
+        default: ""
+      confirm:
+        description: "Type DELETE to really delete (anything else = preview only)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3
+      - name: Delete
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          IG_USER_ID: "17841410564419681"
+          ONLY: ${{ github.event.inputs.only }}
+          BEFORE: ${{ github.event.inputs.before }}
+          CONFIRM: ${{ github.event.inputs.confirm }}
+        run: python -m social.ig_delete --only "$ONLY" --before "$BEFORE" --confirm "$CONFIRM"
