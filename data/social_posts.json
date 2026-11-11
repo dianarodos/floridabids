@@ -7,5 +7,14 @@
   "at": "2026-11-10T21:20-05:00",
   "status": "failed",
   "error": "POST 1471999489323697/photos: Error validating access token: Session has expired on Monday, 09-Nov-26 12:00:00 PST. The current time is Tuesday, 10-Nov-26 18:20:57 PST. -> the Page token expired or was revoked: make a new one (Graph API Explorer > Extend) and update META_PAGE_TOKEN"
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "pm",
+  "platform": "facebook",
+  "theme": "county_spotlight",
+  "at": "2026-11-10T21:34-05:00",
+  "id": "1471999489323697_122099288541546057",
+  "status": "posted"
  }
 ]
