@@ -29,6 +29,10 @@ on:
         description: "Date today.json must be for, YYYY-MM-DD (blank = today)"
         required: false
         default: ""
+      link_comment:
+        description: "Facebook: first comment to add right after posting, e.g. the link (blank = none)"
+        required: false
+        default: ""
       dry_run:
         description: "Only show what would be posted? (yes/no)"
         required: false
@@ -68,11 +72,13 @@ jobs:
           AT: ${{ github.event.inputs.at }}
           DAY: ${{ github.event.inputs.date }}
           DRY: ${{ github.event.inputs.dry_run }}
+          LINK_COMMENT: ${{ github.event.inputs.link_comment }}
         run: |
           printf '%s' "$CAPTION" > "$RUNNER_TEMP/caption.txt"
           args=(--slot "$SLOT" --platforms "$PLATFORMS" --caption-file "$RUNNER_TEMP/caption.txt")
           [ -n "$AT" ] && args+=(--at "$AT")
           [ -n "$DAY" ] && args+=(--date "$DAY")
+          [ -n "$LINK_COMMENT" ] && args+=(--link-comment "$LINK_COMMENT")
           [ "$DRY" = "yes" ] && args+=(--dry-run)
           python -m social.post "${args[@]}"
 

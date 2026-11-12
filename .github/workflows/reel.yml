@@ -17,6 +17,10 @@ on:
       caption:
         description: "Reel caption"
         required: true
+      link_comment:
+        description: "Facebook: first comment to add, e.g. the link (blank = none)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -45,9 +49,10 @@ jobs:
           CAPTION: ${{ github.event.inputs.caption }}
           VIDEO: ${{ github.event.inputs.video }}
           PLATFORMS: ${{ github.event.inputs.platforms }}
+          LINK_COMMENT: ${{ github.event.inputs.link_comment }}
         run: |
           printf '%s' "$CAPTION" > "$RUNNER_TEMP/caption.txt"
-          python -m social.post_reel --video "$VIDEO" --platforms "$PLATFORMS" --caption-file "$RUNNER_TEMP/caption.txt"
+          python -m social.post_reel --video "$VIDEO" --platforms "$PLATFORMS" --caption-file "$RUNNER_TEMP/caption.txt" --link-comment "$LINK_COMMENT"
       - name: Save the post log
         if: always()
         run: |

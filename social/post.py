@@ -111,6 +111,12 @@ def post_facebook(page_id, image_url, caption, ts):
     return r.get("post_id") or r.get("id")
 
 
+def comment(object_id, text):
+    """First comment on our own post, e.g. the link. Facebook limits Pages to ~2 posts a month with a link
+    in the post text, but links in comments are not limited."""
+    return _call("POST", f"{object_id}/comments", message=text).get("id")
+
+
 def post_instagram(ig_id, image_url, caption):
     c = _call("POST", f"{ig_id}/media", image_url=image_url, caption=caption)["id"]
     for _ in range(30):                                          # Instagram fetches and processes the image
@@ -132,6 +138,7 @@ def main(argv=None):
     ap.add_argument("--at", default="", help="HH:MM Eastern; Facebook schedules the post (blank = now)")
     ap.add_argument("--date", help="YYYY-MM-DD that today.json must be for (default: today, Eastern)")
     ap.add_argument("--force", action="store_true", help="post even if this slot was already posted today")
+    ap.add_argument("--link-comment", default="", help="text for a first comment on the Facebook post (not for scheduled posts)")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
 
@@ -167,6 +174,11 @@ def main(argv=None):
                 entry["status"] = "scheduled" if ts else "posted"
                 if ts:
                     entry["scheduled_for"] = a.at
+                elif a.link_comment:
+                    try:
+                        entry["comment_id"] = comment(entry["id"], a.link_comment)
+                    except PostError as e:                   # the post itself worked; just report it
+                        print(f"  facebook: posted, but the link comment failed: {e}")
             elif p == "instagram":
                 entry["id"] = post_instagram(os.environ.get("IG_USER_ID", ""), slot["image_url"], caption)
                 entry["status"] = "posted"

@@ -64,6 +64,7 @@ def main(argv=None):
     ap.add_argument("--platforms", default="facebook")
     ap.add_argument("--caption-file", required=True)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--link-comment", default="", help="Facebook: first comment to add, e.g. the link")
     a = ap.parse_args(argv)
     path = ROOT / a.video
     if not path.exists():
@@ -79,6 +80,12 @@ def main(argv=None):
         try:
             if p == "facebook":
                 entry["id"] = fb_reel(os.environ["FB_PAGE_ID"], path, caption)
+                if a.link_comment:
+                    from social.post import comment
+                    try:
+                        entry["comment_id"] = comment(entry["id"], a.link_comment)
+                    except PostError as e:
+                        print(f"  facebook: Reel posted, but the link comment failed: {e}")
             elif p == "instagram":
                 entry["id"] = ig_reel(os.environ["IG_USER_ID"], f"{SITE}/{a.video.removeprefix('site/')}", caption)
             else:
