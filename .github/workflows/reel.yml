@@ -1,0 +1,60 @@
+name: Social reel
+# Posts a finished Reel (an MP4 committed under site/social/reels/) to Facebook Reels and/or Instagram Reels.
+# Started by Claude after Diana approves the video in chat, or by hand from the Actions tab.
+run-name: "Social reel: ${{ github.event.inputs.video }} -> ${{ github.event.inputs.platforms }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: "MP4 path in the repo, e.g. site/social/reels/2026-11-11-intro.mp4"
+        required: true
+      platforms:
+        description: "Where to post"
+        type: choice
+        options: [facebook, instagram, both]
+        default: both
+      caption:
+        description: "Reel caption"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3
+      - name: Post Reel
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: "1471999489323697"
+          IG_USER_ID: "17841410564419681"
+          CAPTION: ${{ github.event.inputs.caption }}
+          VIDEO: ${{ github.event.inputs.video }}
+          PLATFORMS: ${{ github.event.inputs.platforms }}
+        run: |
+          printf '%s' "$CAPTION" > "$RUNNER_TEMP/caption.txt"
+          python -m social.post_reel --video "$VIDEO" --platforms "$PLATFORMS" --caption-file "$RUNNER_TEMP/caption.txt"
+      - name: Save the post log
+        if: always()
+        run: |
+          git config user.name "floridabids-bot"
+          git config user.email "floridabidsalerts@gmail.com"
+          git add -- data/social_posts.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "Social reel $(TZ=America/New_York date +'%Y-%m-%d %H:%M')"
+            for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
+          fi
