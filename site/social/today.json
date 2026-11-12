@@ -18,35 +18,35 @@
   "items": [
    {
     "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Pre-Qualification Pool for Automotive Transmission Repair and Replacement Servic",
-    "category": "Facilities & Maintenance",
-    "due": "2027-06-21",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Pre-Qualification-Pool-for-Automotive-Transmission-Repair-and-Replacement-Servic/0000381785?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Charlotte",
-    "agency": "Charlotte County BOCC",
-    "title": "Gasparilla Road Sidewalk Construction",
+    "agency": "City of Hialeah",
+    "title": "Fire Station #3 Exterior Painting",
     "category": "Construction",
-    "due": "2026-12-16",
-    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/271103?tp=D"
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityofhialeahfl/projects/323805"
    },
    {
     "county": "Alachua",
     "agency": "Alachua County BOCC",
-    "title": "Interior Renovation and Remodeling for Alachua County Fire Station No.23",
-    "category": "Construction",
+    "title": "Yard Waste & Mulch Removal and Disposal",
+    "category": "Facilities & Maintenance",
     "due": "",
-    "url": "https://procurement.opengov.com/portal/alachuacounty/projects/310484"
+    "url": "https://procurement.opengov.com/portal/alachuacounty/projects/322015"
    },
    {
     "county": "Hillsborough",
     "agency": "Hillsborough County BOCC",
-    "title": "Caterpillar Generator Maintenance, Parts and Repair Services",
+    "title": "Caterpillar Generator Maintenance & Repair",
     "category": "Facilities & Maintenance",
     "due": "",
     "url": "https://hillsboroughcounty.bonfirehub.com/opportunities/262326"
+   },
+   {
+    "county": "Pasco",
+    "agency": "City of Zephyrhills",
+    "title": "General Information Technology Services",
+    "category": "IT & Technology",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/zephyrhillsfl/projects/323705"
    }
   ],
   "caption_default": "🦎 12 new government bids posted in Florida today, across 7 counties.\n\n📍 Miami-Dade: Pre-Qualification Pool for Automotive Transmission Repair and Replacement Servic\n📍 Charlotte: Gasparilla Road Sidewalk Construction\n📍 Alachua: Interior Renovation and Remodeling for Alachua County Fire Station No.23\n\nAll 618 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -59,41 +59,33 @@
   "count": 142,
   "items": [
    {
-    "county": "Duval",
-    "agency": "Duval County Public Schools",
-    "title": "Student Transportation Services GSA 4",
-    "category": "Concessions & Programs",
-    "due": "2026-11-19",
-    "url": "https://www.demandstar.com/app/limited/bids/554369/details"
-   },
-   {
-    "county": "Hernando",
-    "agency": "Hernando County School District",
-    "title": "Goundskeeping & Athletic Turf Materials (Herbicides, Pesticides, Fertilizers,",
+    "county": "Osceola",
+    "agency": "City of St. Cloud",
+    "title": "Custodial Services",
     "category": "Facilities & Maintenance",
     "due": "2026-11-19",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Goundskeeping-Athletic-Turf-Materials-Herbicides-Pesticides-Fertilizers/0000441153?purchasingGroupId=8408751&origin=2"
+    "url": "https://procurement.opengov.com/portal/stcloud"
    },
    {
-    "county": "Hillsborough",
-    "agency": "City of Plant City",
-    "title": "Lift Station Communication Improvement (FEMA)",
-    "category": "Construction",
-    "due": "2026-11-19",
-    "url": "https://procurement.opengov.com/portal/plantcitygov"
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Countywide Dumpster & Trash Pickup",
+    "category": "Facilities & Maintenance",
+    "due": "2026-11-18",
+    "url": "https://www.polkfl.gov/bid-form/bid-26-389/"
    },
    {
-    "county": "Lake",
-    "agency": "City of Clermont",
-    "title": "Purchase of Sixteen (16) Handheld Lidar Speed Detection Devices",
-    "category": "Goods & Supplies",
-    "due": "2026-11-19",
-    "url": "https://procurement.opengov.com/portal/clermontfl"
+    "county": "Palm Beach",
+    "agency": "City of Delray Beach",
+    "title": "Landscape Maintenance, SW 12th Avenue",
+    "category": "Facilities & Maintenance",
+    "due": "2026-11-18",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/LANDSCAPE-MAINTENANCE-SW-12-AVENUE-30-SW-12TH-AVE-TO-SW-3RD-ST/0000441669?purchasingGroupId=8408751&origin=2"
    },
    {
     "county": "Monroe",
     "agency": "Monroe County School District",
-    "title": "ITB 2026023 - AC Repairs and Replacements",
+    "title": "AC Repairs and Replacements",
     "category": "Facilities & Maintenance",
     "due": "2026-11-19",
     "url": "https://procurement.opengov.com/portal/keyschools-mcsd"
