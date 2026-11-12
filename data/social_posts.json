@@ -108,5 +108,23 @@
   "at": "2026-11-12T07:24-05:00",
   "id": "18104048069560300",
   "status": "posted"
+ },
+ {
+  "date": "2026-11-12",
+  "slot": "reel",
+  "platform": "facebook",
+  "video": "site/social/reels/2026-11-12-painting.mp4",
+  "at": "2026-11-12T09:29-05:00",
+  "id": "1693836889055842",
+  "status": "posted"
+ },
+ {
+  "date": "2026-11-12",
+  "slot": "reel",
+  "platform": "instagram",
+  "video": "site/social/reels/2026-11-12-painting.mp4",
+  "at": "2026-11-12T09:29-05:00",
+  "id": "18659864494030218",
+  "status": "posted"
  }
 ]
