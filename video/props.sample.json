@@ -1,0 +1,25 @@
+{
+  "screen": "test_screen.mp4",
+  "voice": "test_voice.m4a",
+  "url": "floridabids.org",
+  "outro": 3,
+  "lines": [
+    {"text": "Florida's government needs a janitor… a roofer… and someone to spray mosquitoes from an airplane.", "kicker": "They're hiring 🦟✈️",
+     "from": 0.0, "to": 5.2, "screen": {"start": 0, "end": 6}},
+    {"text": "And they're paying.", "kicker": "And they're PAYING 💰", "from": 5.2, "to": 6.8, "screen": {"start": 6, "end": 8}},
+    {"text": "Right now there are over 600 open government contracts in Florida. Most small businesses never see them.", "kicker": "600+ open contracts",
+     "from": 6.8, "to": 13.0, "screen": {"start": 8, "end": 14}},
+    {"text": "Because they're scattered across city, county and school district websites.", "kicker": "Scattered everywhere",
+     "from": 13.0, "to": 17.5, "screen": {"start": 14, "end": 22}},
+    {"text": "So Iggy checks them all every morning, and puts every open bid in one free list.", "kicker": "🦎 One free list",
+     "from": 17.5, "to": 22.8, "screen": {"start": 22, "end": 24}},
+    {"text": "Pick your county. Pick your trade. Or just search: roofing, landscaping, IT.", "kicker": "Your trade. Your county.",
+     "from": 22.8, "to": 28.0, "screen": {"start": 24, "end": 28}},
+    {"text": "Tap a bid, and you're on the official page to apply.", "kicker": "Straight to the source",
+     "from": 28.0, "to": 31.5, "screen": {"start": 0, "end": 2}},
+    {"text": "Or get only your kind of bids by email, every morning or once a week.", "kicker": "📬 Only YOUR bids",
+     "from": 31.5, "to": 36.5, "screen": {"start": 28, "end": 30}},
+    {"text": "Don't let your competitor find it first. floridabids.org. It's free.", "kicker": "Don't get beat to it",
+     "from": 36.5, "to": 41.0, "screen": {"start": 6, "end": 8}}
+  ]
+}
