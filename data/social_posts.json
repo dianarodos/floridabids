@@ -71,5 +71,14 @@
   "id": "122099843511546057",
   "status": "scheduled",
   "scheduled_for": "15:00"
+ },
+ {
+  "date": "2026-11-11",
+  "slot": "reel",
+  "platform": "facebook",
+  "video": "site/social/reels/2026-11-11-intro.mp4",
+  "at": "2026-11-11T21:44-05:00",
+  "id": "1118975314071361",
+  "status": "posted"
  }
 ]
