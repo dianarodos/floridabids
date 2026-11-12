@@ -1,11 +1,16 @@
 INFO run: duval-schools-demandstar         ok         0.3s 3
-INFO run: putnam-county                    empty      0.5s 0
-INFO run: columbia-county                  ok         0.6s 1
-INFO run: wilton-manors-civicplus          ok         1.2s 10
-INFO run: polk-county                      ok         1.3s 49
-INFO run: wellington-demandstar            ok         2.0s 3
-INFO run: fellsmere-govaccess              blocked    0.6s HTTP 403 from https://www.cityoffellsmere.org/rfps
-INFO run: tamarac-bidsandtenders           ok         2.4s 2
+INFO run: putnam-county                    empty      0.4s 0
+INFO run: polk-county                      ok         0.5s 49
+INFO run: wilton-manors-civicplus          ok         0.7s 10
+INFO run: sebastian-civicplus              empty      0.8s 0
+INFO run: martin-demandstar                ok         2.3s 3
+INFO run: fellsmere-govaccess              blocked    0.2s HTTP 403 from https://www.cityoffellsmere.org/rfps
+INFO run: charlotte-county                 ok         2.6s 10
+INFO run: westlake-govaccess               empty      0.2s 0
+INFO run: tamarac-bidsandtenders           ok         2.3s 2
+INFO run: columbia-county                  ok         2.8s 1
+INFO run: fort-pierce-civicplus            empty      0.7s 0
+INFO run: haverhill-watch                  empty      0.5s 0
 ERROR run: fort-lauderdale-infor failed:
 Traceback (most recent call last):
   File "/home/runner/work/floridabids/floridabids/run.py", line 82, in read_one
@@ -15,51 +20,45 @@ Traceback (most recent call last):
     raise RuntimeError(f"expected JSON, got {r.headers.get('content-type')}: {r.text[:200]!r}") from None
 RuntimeError: expected JSON, got None: ''
 
-INFO run: fort-lauderdale-infor            error      2.4s RuntimeError: expected JSON, got None: ''
-INFO run: westlake-govaccess               empty      0.9s 0
-INFO run: fort-pierce-civicplus            empty      0.8s 0
-INFO run: martin-demandstar                ok         4.3s 3
-INFO run: sebastian-civicplus              empty      3.5s 0
-INFO run: haverhill-watch                  empty      1.3s 0
-INFO run: hallandale-beach-page            ok         1.6s 1
-INFO run: indiantown-govaccess             blocked    0.4s HTTP 403 from https://www.indiantownfl.gov/rfps
+INFO run: fort-lauderdale-infor            error      2.1s RuntimeError: expected JSON, got None: ''
+INFO run: hypoluxo-govaccess               ok         0.6s 1
+INFO run: wellington-demandstar            ok         4.0s 3
 INFO run: hillsboro-beach-watch            empty      1.0s 0
-INFO run: hypoluxo-govaccess               ok         0.7s 1
+INFO run: indiantown-govaccess             blocked    0.1s HTTP 403 from https://www.indiantownfl.gov/rfps
+INFO run: lake-clarke-shores-govaccess     blocked    0.2s HTTP 403 from https://www.townoflcs.gov/rfps
 INFO run: lake-park-watch                  blocked    0.3s HTTP 403 from https://www.lakeparkflorida.gov/government/departments/town-clerk/bids-rfps/-folder-651
-INFO run: lake-clarke-shores-govaccess     blocked    0.4s HTTP 403 from https://www.townoflcs.gov/rfps
-INFO run: sunrise-demandstar               ok         5.8s 5
-INFO run: jupiter-inlet-colony-watch       empty      0.9s 0
-INFO run: oakland-park-civicplus           empty      1.0s 0
-INFO run: margate-civicplus                ok         1.3s 1
-INFO run: brevard-vendorlink               ok         8.2s 35
-INFO run: pembroke-park-page               empty      0.9s 0
-INFO run: greenacres-demandstar            ok         4.6s 3
-INFO run: south-palm-beach-civicplus       ok         1.2s 1
-INFO run: lake-worth-beach-bidsandtenders  ok         2.6s 1
-INFO run: highlands-bidnet                 ok         0.9s 1
-INFO run: highland-beach-demandstar        ok         6.0s 1
-INFO run: riviera-beach-bidnet             ok         2.8s 3
-INFO run: pahokee-demandstar               empty      5.7s 0
-INFO run: okeechobee-bidnet                empty      3.9s 0
-INFO run: st-johns-demandstar              ok         6.0s 15
-INFO run: ace-theater-bidnet               empty      5.3s 0
-INFO run: st-lucie-demandstar              ok         8.0s 11
-INFO run: alachua-housing-bidnet           empty      6.0s 0
-INFO run: bal-harbour-bidnet               empty      7.2s 0
+INFO run: hallandale-beach-page            ok         2.0s 1
+INFO run: jupiter-inlet-colony-watch       empty      0.6s 0
+INFO run: margate-civicplus                ok         0.7s 1
+INFO run: oakland-park-civicplus           empty      0.7s 0
+INFO run: brevard-vendorlink               ok         5.9s 35
+INFO run: pembroke-park-page               empty      0.7s 0
+INFO run: sunrise-demandstar               ok         5.9s 5
+INFO run: south-palm-beach-civicplus       ok         0.9s 1
+INFO run: lake-worth-beach-bidsandtenders  ok         2.3s 1
+INFO run: highlands-bidnet                 ok         0.5s 1
+INFO run: greenacres-demandstar            ok         5.5s 3
+INFO run: riviera-beach-bidnet             ok         2.2s 3
+INFO run: highland-beach-demandstar        ok         7.0s 1
+INFO run: okeechobee-bidnet                empty      4.0s 0
+INFO run: jaxport                          ok        11.2s 3
+INFO run: pahokee-demandstar               empty      7.4s 0
+INFO run: ace-theater-bidnet               empty      4.8s 0
+INFO run: st-johns-demandstar              ok         8.3s 15
+INFO run: alachua-housing-bidnet           empty      5.8s 0
+INFO run: st-lucie-demandstar              ok        10.0s 11
+INFO run: bal-harbour-bidnet               empty      6.6s 0
 INFO run: bay-county-bidnet                empty      8.0s 0
-INFO run: careersource-tampa-bay-bidnet    empty      9.3s 0
-INFO run: cfx-bidnet                       empty      9.8s 0
-INFO run: avon-park-bidnet                 empty     11.3s 0
-INFO run: brooksville-bidnet               ok        12.0s 1
-INFO run: callaway-bidnet                  empty     11.8s 0
-INFO run: delray-beach-bidnet              ok        12.2s 10
-INFO run: fort-walton-beach-bidnet         empty     11.8s 0
-INFO run: hialeah-bidnet                   empty     11.9s 0
-INFO run: mary-esther-bidnet               empty     11.7s 0
-INFO run: miami-bidnet                     ok        12.1s 3
-INFO run: miami-beach-bidnet               ok        12.7s 25
-INFO run: milton-bidnet                    ok        11.9s 2
-INFO run: north-miami-beach-bidnet         empty     12.0s 0
+INFO run: careersource-tampa-bay-bidnet    empty      9.7s 0
+INFO run: cfx-bidnet                       empty     10.8s 0
+INFO run: avon-park-bidnet                 empty     11.9s 0
+INFO run: brooksville-bidnet               ok        12.6s 1
+INFO run: callaway-bidnet                  empty     14.0s 0
+INFO run: delray-beach-bidnet              ok        15.2s 10
+INFO run: fort-walton-beach-bidnet         empty     15.9s 0
+INFO run: hialeah-bidnet                   empty     16.1s 0
+INFO run: mary-esther-bidnet               empty     15.9s 0
+INFO run: miami-bidnet                     ok        16.0s 3
 ERROR run: osceola-vendorlink failed:
 Traceback (most recent call last):
   File "/home/runner/work/floridabids/floridabids/run.py", line 82, in read_one
@@ -80,190 +79,46 @@ playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
 waiting for navigation until 'load'
 ============================================================
 
-INFO run: osceola-vendorlink               error     39.6s TimeoutError: Timeout 30000ms exceeded.
+INFO run: osceola-vendorlink               error     35.4s TimeoutError: Timeout 30000ms exceeded.
 =========================== logs ===========================
 waiting for navigation until 'load'
 ============================================================
-INFO run: pensacola-bidnet                 empty     12.1s 0
-INFO run: port-richey-bidnet               ok        12.0s 1
-INFO run: sarasota-city-bidnet             empty     11.9s 0
-INFO run: sebring-bidnet                   ok        11.5s 3
-INFO run: zephyrhills-bidnet               empty     12.0s 0
-INFO run: daytona-state-bidnet             empty     12.2s 0
-INFO run: elc-orange-bidnet                empty     12.0s 0
-INFO run: ecua-bidnet                      ok        12.1s 3
-ERROR run: charlotte-county failed:
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 540, in _make_request
-    response = conn.getresponse()
-               ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 638, in getresponse
-    httplib_response = super().getresponse()
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py", line 1478, in getresponse
-    response.begin()
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py", line 343, in begin
-    version, status, reason = self._read_status()
-                              ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/http/client.py", line 304, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/socket.py", line 720, in readinto
-    return self._sock.recv_into(b)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py", line 1264, in recv_into
-    return self.read(nbytes, buffer)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ssl.py", line 1116, in read
-    return self._sslobj.read(len, buffer)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TimeoutError: The read operation timed out
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
-    retries = retries.increment(
-              ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 510, in increment
-    raise reraise(type(error), error, _stacktrace)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
-    raise value
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 542, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 373, in _raise_timeout
-    raise ReadTimeoutError(
-urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='purchasingbids.charlottecountyfl.gov', port=443): Read timed out. (read timeout=45)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/floridabids/floridabids/run.py", line 82, in read_one
-    fresh = get_reader(src["reader"])(src)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/floridabids/floridabids/scraper/readers/charlotte.py", line 35, in read
-    rows = net.get(api, params=params, headers={"X-Requested-With": "XMLHttpRequest"}).json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/floridabids/floridabids/scraper/net.py", line 83, in get
-    r = session.get(url, timeout=kw.pop("timeout", 45), **kw)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
-    return self.request("GET", url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 713, in send
-    raise ReadTimeout(e, request=request)
-requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='purchasingbids.charlottecountyfl.gov', port=443): Read timed out. (read timeout=45)
-
-INFO run: charlotte-county                 error     65.3s ReadTimeout: HTTPSConnectionPool(host='purchasingbids.charlottecountyfl.gov', port=443): Read timed out. (read timeout=45)
-INFO run: ecs4kids-bidnet                  empty     12.0s 0
-ERROR run: jaxport failed:
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
-    sock = connection.create_connection(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
-    raise err
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
-    sock.connect(sa)
-TimeoutError: timed out
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 494, in _make_request
-    raise new_e
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 470, in _make_request
-    self._validate_conn(conn)
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
-    conn.connect()
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 827, in connect
-    self.sock = sock = self._new_conn()
-                       ^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connection.py", line 248, in _new_conn
-    raise ConnectTimeoutError(
-urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='www.jaxport.com', port=443) at 0x72f1e8683e00>, 'Connection to www.jaxport.com timed out. (connect timeout=45)')
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
-    retries = retries.increment(
-              ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
-    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.jaxport.com', port=443): Max retries exceeded with url: /procurement/active-solicitations/?sort%5B7%5D=asc (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.jaxport.com', port=443) at 0x72f1e8683e00>, 'Connection to www.jaxport.com timed out. (connect timeout=45)'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/runner/work/floridabids/floridabids/run.py", line 82, in read_one
-    fresh = get_reader(src["reader"])(src)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/floridabids/floridabids/scraper/readers/jaxport.py", line 34, in read
-    soup = BeautifulSoup(net.get(url).text, "lxml")
-                         ^^^^^^^^^^^^
-  File "/home/runner/work/floridabids/floridabids/scraper/net.py", line 83, in get
-    r = session.get(url, timeout=kw.pop("timeout", 45), **kw)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
-    return self.request("GET", url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/requests/adapters.py", line 688, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='www.jaxport.com', port=443): Max retries exceeded with url: /procurement/active-solicitations/?sort%5B7%5D=asc (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.jaxport.com', port=443) at 0x72f1e8683e00>, 'Connection to www.jaxport.com timed out. (connect timeout=45)'))
-
-INFO run: jaxport                          error     65.6s ConnectTimeout: HTTPSConnectionPool(host='www.jaxport.com', port=443): Max retries exceeded with url: /procurement/active-solicitations/?sort%5B7%5D=asc (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.jaxport.com', port=443) at 0x72f1e8683e00>, 'Connection to www.jaxport.com timed out. (connect timeout=45)'))
-INFO run: escambia-schools-bidnet          ok        11.9s 1
-INFO run: escambia-schools-facilities-bidnet empty     12.0s 0
-INFO run: fairchild-bidnet                 empty     11.8s 0
-INFO run: fsw-bidnet                       empty     12.0s 0
-INFO run: fort-myers-beach-bidnet          empty     11.9s 0
-INFO run: gainesville-housing-bidnet       empty     12.3s 0
-INFO run: gmx-bidnet                       empty     14.0s 0
-INFO run: gulf-coast-state-bidnet          empty     16.1s 0
+INFO run: miami-beach-bidnet               ok        16.4s 25
+INFO run: milton-bidnet                    ok        16.0s 2
+INFO run: north-miami-beach-bidnet         empty     16.1s 0
+INFO run: pensacola-bidnet                 empty     15.5s 0
+INFO run: port-richey-bidnet               ok        16.1s 1
+INFO run: sarasota-city-bidnet             empty     15.9s 0
+INFO run: sebring-bidnet                   ok        16.1s 3
+INFO run: zephyrhills-bidnet               empty     16.0s 0
+INFO run: daytona-state-bidnet             empty     15.5s 0
+INFO run: elc-orange-bidnet                empty     16.5s 0
+INFO run: ecua-bidnet                      ok        16.0s 3
+INFO run: ecs4kids-bidnet                  empty     16.0s 0
+INFO run: escambia-schools-bidnet          ok        15.9s 1
+INFO run: escambia-schools-facilities-bidnet empty     16.1s 0
+INFO run: fairchild-bidnet                 empty     15.9s 0
+INFO run: fsw-bidnet                       empty     15.9s 0
+INFO run: fort-myers-beach-bidnet          empty     16.0s 0
+INFO run: gainesville-housing-bidnet       empty     15.5s 0
+INFO run: gmx-bidnet                       empty     15.9s 0
+INFO run: gulf-coast-state-bidnet          empty     16.0s 0
 INFO run: hernando-county-bidnet           empty     16.0s 0
-INFO run: hernando-schools-bidnet          ok        16.0s 3
+INFO run: hernando-schools-bidnet          ok        15.9s 3
 INFO run: holley-navarre-water-bidnet      ok        16.1s 1
 INFO run: ir-mosquito-bidnet               empty     16.0s 0
-INFO run: irsc-bidnet                      empty     16.0s 0
-INFO run: baker-county                     blocked    0.3s HTTP 403 from https://www.bakercountyfl.org/purchasing.php
-INFO run: nassau-planetbids                blocked    0.5s HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=49083&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3
-INFO run: jackson-county-bidnet            empty     15.8s 0
-INFO run: miami-dade-construction          ok         0.3s 15
+INFO run: irsc-bidnet                      empty     16.1s 0
+INFO run: baker-county                     blocked    0.2s HTTP 403 from https://www.bakercountyfl.org/purchasing.php
+INFO run: nassau-planetbids                blocked    0.2s HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=49083&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3
+INFO run: jackson-county-bidnet            empty     16.0s 0
+INFO run: miami-dade-construction          ok         0.1s 15
 INFO run: parkland-planetbids              blocked    2.0s HTTP 403 from https://api-external.prod.planetbids.com/papi/bids?bid_type_id=0&cid=80328&dept_id=0&due_date_from=&due_date_to=&keyword=&page=1&per_page=30&sort_by=&sort_order=-1&stage_id=3
-INFO run: lwr-ida-bidnet                   ok        16.2s 1
-INFO run: miami-dade-future                ok         2.3s 7
-INFO run: lutheran-services-bidnet         empty     15.7s 0
-INFO run: mbvca-bidnet                     empty     16.2s 0
-INFO run: mdc-bidnet                       ok        16.1s 1
-INFO run: miami-hcd-bidnet                 empty     16.5s 0
-INFO run: langd-bidnet                     empty     16.0s 0
+INFO run: lwr-ida-bidnet                   ok        16.1s 1
+INFO run: miami-dade-future                ok         2.0s 7
+INFO run: lutheran-services-bidnet         empty     16.0s 0
+INFO run: mbvca-bidnet                     empty     16.0s 0
+INFO run: mdc-bidnet                       ok        16.0s 1
+INFO run: miami-hcd-bidnet                 empty     16.0s 0
 ERROR run: lake-county failed:
 Traceback (most recent call last):
   File "/home/runner/work/floridabids/floridabids/run.py", line 82, in read_one
@@ -289,7 +144,8 @@ Traceback (most recent call last):
     raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
 playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.
 
-INFO run: lake-county                      error     61.5s TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.
+INFO run: lake-county                      error     61.0s TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.
+INFO run: langd-bidnet                     empty     16.0s 0
 ERROR run: jacksonville-oracle failed:
 Traceback (most recent call last):
   File "/home/runner/work/floridabids/floridabids/run.py", line 82, in read_one
@@ -303,14 +159,14 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^
   File "/home/runner/work/floridabids/floridabids/scraper/browser.py", line 37, in page
     raise RuntimeError(f"{type(e).__name__} on {pg.url} - page title {_safe(pg.title)!r}, "
-RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=84k7bn9qh2lvz1_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'
+RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=6z805v8m6hfrdh_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'
 
-INFO run: jacksonville-oracle              error     62.9s RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=84k7bn9qh2lvz1_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'
-INFO run: palm-beach-vss                   empty     75.9s 0
-INFO run: miami-dade-informs               ok         4.4s 18
-INFO run: sources done in 252s
+INFO run: jacksonville-oracle              error     62.4s RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=6z805v8m6hfrdh_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'
+INFO run: palm-beach-vss                   empty     73.5s 0
+INFO run: miami-dade-informs               ok         6.5s 17
+INFO run: sources done in 245s
+INFO scraper.emails: unparsed alert from GoBonfire.com: 'Hillsborough County has invited you to Caterpillar Generator Maintenance, Parts and Repair Services' links to ['bonfirehub-us-org-logos.s3.amazonaws.com', 'ea.pstmrk.it', 'hillsboroughcounty.bonfirehub.com', 'www.w3.org']
 WARNING scraper.emails: alert for unknown bonfire portal 'flvs' (add it to sources.yaml)
-INFO run: open bids: 611 across 40 counties (removed 273 closed)
-social: 32 new today; am=new_today pm=category_spotlight
+INFO run: open bids: 618 across 40 counties (removed 275 closed)
+social: 12 new today; am=new_today pm=closing_soon
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
-INFO digest: digest: 15 sent, 0 failed (daily)
