@@ -25,9 +25,8 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: social-post
-  cancel-in-progress: false
+# No concurrency group: GitHub keeps only ONE waiting run per group and cancels the rest, which dropped
+# the Instagram post when three posts were approved at once. Each run commits the post log with retries.
 
 jobs:
   reel:
