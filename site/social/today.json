@@ -17,12 +17,28 @@
   "counties": 13,
   "items": [
    {
+    "county": "Orange",
+    "agency": "Greater Orlando Aviation Authority",
+    "title": "Orlando Airport Grounds Maintenance & Irrigation",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/goaa/projects/285517"
+   },
+   {
     "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Prequalification Pool of Contractors for Flooring Materials, Installation, Supp",
-    "category": "Goods & Supplies",
-    "due": "2027-06-21",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PREQUALIFICATION-POOL-OF-CONTRACTORS-FOR-FLOORING-MATERIALS-INSTALLATION-SUPP/0000381776?purchasingGroupId=8408751&origin=2"
+    "agency": "City of Hialeah",
+    "title": "Fire Station #2 - Exterior Painting",
+    "category": "Construction",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityofhialeahfl/projects/323812"
+   },
+   {
+    "county": "Volusia",
+    "agency": "City of Daytona Beach",
+    "title": "Vending Machine Services",
+    "category": "Property & Real Estate",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/codb/projects/290041"
    },
    {
     "county": "Charlotte",
@@ -31,22 +47,6 @@
     "category": "Construction",
     "due": "2026-12-16",
     "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/270883?tp=D"
-   },
-   {
-    "county": "Palm Beach",
-    "agency": "City of Pahokee",
-    "title": "Forensic Audit Services",
-    "category": "Consulting & Professional Services",
-    "due": "2026-11-30",
-    "url": "https://www.demandstar.com/app/limited/bids/557507/details"
-   },
-   {
-    "county": "Alachua",
-    "agency": "Alachua County BOCC",
-    "title": "Alachua County Sunrise Inn Apartments Phased Renovation and Modernization",
-    "category": "Construction",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/alachuacounty/projects/298814"
    }
   ],
   "caption_default": "🦎 28 new government bids posted in Florida today, across 13 counties.\n\n📍 Miami-Dade: Prequalification Pool of Contractors for Flooring Materials, Installation, Supp\n📍 Charlotte: Port Charlotte Beach Park Boat Ramp Replacement\n📍 Palm Beach: Forensic Audit Services\n\nAll 620 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
