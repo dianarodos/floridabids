@@ -254,3 +254,4 @@ WARNING scraper.emails: alert for unknown bonfire portal 'flvs' (add it to sourc
 INFO run: open bids: 628 across 39 counties (removed 302 closed)
 social: 20 new today; am=new_today pm=category_spotlight
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
+INFO digest: digest: 15 sent, 0 failed (daily)
