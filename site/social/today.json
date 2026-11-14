@@ -17,25 +17,17 @@
   "counties": 12,
   "items": [
    {
-    "county": "Brevard",
-    "agency": "Brevard County BOCC",
-    "title": "South Beaches Wastewater Treatment Facility, Biological Nutrient Removal and Sludge Holding Tank Improvements",
-    "category": "Construction",
-    "due": "2026-12-17",
-    "url": "https://www.myvendorlink.com/external/bids?a=70"
-   },
-   {
     "county": "Miami-Dade",
     "agency": "Miami-Dade County",
-    "title": "Bridge Rehabilitation NW 7th Street over CSX R/R - Bridge No. 874229",
+    "title": "Fence Improvements - Portwide",
     "category": "Construction",
-    "due": "2026-12-16",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20240212%20%28MCC%207360%29"
+    "due": "2026-12-04",
+    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%20M2026-009R"
    },
    {
     "county": "Palm Beach",
     "agency": "City of Riviera Beach",
-    "title": "Riviera Beach Marina Event Center & Cart Barn Restroom Metal Roof Project",
+    "title": "Marina Event Center & Restroom Metal Roof",
     "category": "Construction",
     "due": "2026-12-11",
     "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Riviera-Beach-Marina-Event-Center-Cart-Barn-Restroom-Metal-Roof-Project/0000443339?purchasingGroupId=8408751&origin=2"
@@ -61,44 +53,28 @@
   "new_this_week": 12,
   "items": [
    {
-    "county": "Polk",
-    "agency": "City of Bartow",
-    "title": "Hardware, Tools, and General Maintenance Supplies and Equipment",
-    "category": "Goods & Supplies",
-    "due": "2031-10-20",
-    "url": "https://procurement.opengov.com/portal/bartowfl"
-   },
-   {
-    "county": "Pinellas",
-    "agency": "Pinellas County BOCC",
-    "title": "General Solicitation for Emergency/Disaster Response Goods & Services",
-    "category": "Goods & Supplies",
-    "due": "2029-07-31",
-    "url": "https://procurement.opengov.com/portal/pinellasfl"
-   },
-   {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Prequalification Pool of Contractors for Flooring Materials, Installation, Supp",
-    "category": "Goods & Supplies",
-    "due": "2027-06-21",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PREQUALIFICATION-POOL-OF-CONTRACTORS-FOR-FLOORING-MATERIALS-INSTALLATION-SUPP/0000381776?purchasingGroupId=8408751&origin=2"
-   },
-   {
     "county": "Lake",
     "agency": "City of Clermont",
-    "title": "Public Safety Vehicle Equipment and Upfitting Services",
+    "title": "Zero Turn Mowers, Purchase & Delivery",
     "category": "Goods & Supplies",
-    "due": "2026-12-03",
-    "url": "https://procurement.opengov.com/portal/clermontfl"
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/clermontfl/projects/319736"
    },
    {
-    "county": "Palm Beach",
-    "agency": "City of Greenacres",
-    "title": "Printing Services for City Publications",
+    "county": "Hillsborough",
+    "agency": "Hillsborough County BOCC",
+    "title": "Uniforms and Protective Clothing",
     "category": "Goods & Supplies",
-    "due": "2026-11-19",
-    "url": "https://www.demandstar.com/app/limited/bids/554468/details"
+    "due": "",
+    "url": "https://hillsboroughcounty.bonfirehub.com/opportunities/258220"
+   },
+   {
+    "county": "Broward",
+    "agency": "City of Pompano Beach",
+    "title": "Emergency Tent & Canopy Rentals",
+    "category": "Goods & Supplies",
+    "due": "2026-12-03",
+    "url": "https://procurement.opengov.com/portal/copbfl"
    }
   ],
   "caption_default": "🔎 Goods & Supplies: 73 open Florida bids, 12 new this week.\n\n• Polk: Hardware, Tools, and General Maintenance Supplies and Equipment\n• Pinellas: General Solicitation for Emergency/Disaster Response Goods & Services\n• Miami-Dade: Prequalification Pool of Contractors for Flooring Materials, Installation, Supp\n• Lake: Public Safety Vehicle Equipment and Upfitting Services\n\nFilter by your business 👉 https://floridabids.org",
