@@ -183,3 +183,4 @@ INFO run: sources done in 297s
 INFO run: open bids: 628 across 39 counties (removed 299 closed)
 social: 1 new today; am=new_today pm=week_recap
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
+INFO digest: digest: 15 sent, 0 failed (daily)
