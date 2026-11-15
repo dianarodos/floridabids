@@ -1,310 +1,93 @@
 {
- "date": "2026-11-14",
- "weekday": "Saturday",
- "nice_date": "Saturday, November 14",
+ "date": "2026-11-15",
+ "weekday": "Sunday",
+ "nice_date": "Sunday, November 15",
  "post_days": "Mon-Sat",
- "posts_today": true,
+ "posts_today": false,
  "stats": {
   "open": 628,
-  "new_today": 20,
+  "new_today": 1,
   "new_this_week": 125,
-  "closing_7_days": 110
+  "closing_7_days": 109
  },
  "am": {
   "theme": "new_today",
-  "headline": "20 new Florida bids today",
-  "count": 20,
-  "counties": 12,
+  "headline": "1 new Florida bid today",
+  "count": 1,
+  "counties": 1,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "title": "Fence Improvements - Portwide",
-    "category": "Construction",
-    "due": "2026-12-04",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%20M2026-009R"
-   },
-   {
-    "county": "Palm Beach",
-    "agency": "City of Riviera Beach",
-    "title": "Marina Event Center & Restroom Metal Roof",
-    "category": "Construction",
-    "due": "2026-12-11",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Riviera-Beach-Marina-Event-Center-Cart-Barn-Restroom-Metal-Roof-Project/0000443339?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Broward",
-    "agency": "Town of Pembroke Park",
-    "title": "Auditing Services",
-    "category": "Consulting & Professional Services",
+    "county": "St. Lucie",
+    "agency": "St. Lucie County BOCC",
+    "title": "Fire Alarm System Testing, Monitoring & Inspections",
+    "category": "Facilities & Maintenance",
     "due": "2026-12-16",
-    "url": "https://www.tppfl.gov/DocumentCenter/View/1381"
+    "url": "https://www.demandstar.com/app/limited/bids/557469/details"
    }
   ],
-  "caption_default": "🦎 20 new government bids posted in Florida today, across 12 counties.\n\n📍 Brevard: South Beaches Wastewater Treatment Facility, Biological Nutrient Removal and Sludge Holding Tank Improvements\n📍 Miami-Dade: Bridge Rehabilitation NW 7th Street over CSX R/R - Bridge No. 874229\n📍 Palm Beach: Riviera Beach Marina Event Center & Cart Barn Restroom Metal Roof Project\n\nAll 628 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
-  "image": "social/2026-11-14-am.jpg",
-  "image_url": "https://floridabids.org/social/2026-11-14-am.jpg"
+  "caption_default": "🦎 1 new government bids posted in Florida today, across 1 county.\n\n📍 St. Lucie: Fire Alarm System Testing, Monitoring & Inspections\n\nAll 628 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
+  "image": "social/2026-11-15-am.jpg",
+  "image_url": "https://floridabids.org/social/2026-11-15-am.jpg"
  },
  "pm": {
-  "theme": "category_spotlight",
-  "headline": "Goods & Supplies",
-  "subject": "Goods & Supplies",
-  "count": 73,
-  "new_this_week": 12,
-  "items": [
-   {
-    "county": "Lake",
-    "agency": "City of Clermont",
-    "title": "Zero Turn Mowers, Purchase & Delivery",
-    "category": "Goods & Supplies",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/clermontfl/projects/319736"
-   },
+  "theme": "week_recap",
+  "headline": "This week in Florida bids",
+  "count": 125,
+  "counties": [
    {
     "county": "Hillsborough",
-    "agency": "Hillsborough County BOCC",
-    "title": "Uniforms and Protective Clothing",
-    "category": "Goods & Supplies",
-    "due": "",
-    "url": "https://hillsboroughcounty.bonfirehub.com/opportunities/258220"
+    "new": 24
+   },
+   {
+    "county": "Miami-Dade",
+    "new": 18
+   },
+   {
+    "county": "Escambia",
+    "new": 10
    },
    {
     "county": "Broward",
-    "agency": "City of Pompano Beach",
-    "title": "Emergency Tent & Canopy Rentals",
-    "category": "Goods & Supplies",
-    "due": "2026-12-03",
-    "url": "https://procurement.opengov.com/portal/copbfl"
+    "new": 8
+   },
+   {
+    "county": "Alachua",
+    "new": 6
+   },
+   {
+    "county": "Sarasota",
+    "new": 6
    }
   ],
-  "caption_default": "🔎 Goods & Supplies: 73 open Florida bids, 12 new this week.\n\n• Polk: Hardware, Tools, and General Maintenance Supplies and Equipment\n• Pinellas: General Solicitation for Emergency/Disaster Response Goods & Services\n• Miami-Dade: Prequalification Pool of Contractors for Flooring Materials, Installation, Supp\n• Lake: Public Safety Vehicle Equipment and Upfitting Services\n\nFilter by your business 👉 https://floridabids.org",
-  "image": "social/2026-11-14-pm.jpg",
-  "image_url": "https://floridabids.org/social/2026-11-14-pm.jpg"
+  "open": 628,
+  "caption_default": "📊 This week: 125 new Florida government bids.\n\n• Hillsborough: 24 new\n• Miami-Dade: 18 new\n• Escambia: 10 new\n• Broward: 8 new\n• Alachua: 6 new\n\nGet them in your inbox every morning, free 👉 https://floridabids.org",
+  "image": "social/2026-11-15-pm.jpg",
+  "image_url": "https://floridabids.org/social/2026-11-15-pm.jpg"
  },
  "video": {
   "note": "Pick 2-3 of these for the script: interesting to a small business, still time to respond.",
   "highlights": [
    {
-    "county": "Brevard",
-    "agency": "Brevard County BOCC",
-    "title": "South Beaches Wastewater Treatment Facility, Biological Nutrient Removal and Sludge Holding Tank Improvements",
-    "category": "Construction",
-    "due": "2026-12-17",
-    "url": "https://www.myvendorlink.com/external/bids?a=70"
-   },
-   {
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "title": "Bridge Rehabilitation NW 7th Street over CSX R/R - Bridge No. 874229",
-    "category": "Construction",
-    "due": "2026-12-16",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20240212%20%28MCC%207360%29"
-   },
-   {
-    "county": "Palm Beach",
-    "agency": "City of Riviera Beach",
-    "title": "Riviera Beach Marina Event Center & Cart Barn Restroom Metal Roof Project",
-    "category": "Construction",
-    "due": "2026-12-11",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Riviera-Beach-Marina-Event-Center-Cart-Barn-Restroom-Metal-Roof-Project/0000443339?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Broward",
-    "agency": "Town of Pembroke Park",
-    "title": "Auditing Services",
-    "category": "Consulting & Professional Services",
-    "due": "2026-12-16",
-    "url": "https://www.tppfl.gov/DocumentCenter/View/1381"
-   },
-   {
-    "county": "Bay",
-    "agency": "Bay County BOCC",
-    "title": "27-06 Pump and Motor Vibration Monitoring",
+    "county": "St. Lucie",
+    "agency": "St. Lucie County BOCC",
+    "title": "Fire Alarm System Testing, Monitoring & Inspections",
     "category": "Facilities & Maintenance",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/baycountyfl/projects/325813"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Paradise Beach Fire Station 20 - Construction - Re-Solicit",
-    "category": "Construction",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/324364"
+    "due": "2026-12-16",
+    "url": "https://www.demandstar.com/app/limited/bids/557469/details"
    }
   ]
  },
  "new_today": [
   {
-   "county": "Bay",
-   "agency": "Bay County BOCC",
-   "title": "27-06 Pump and Motor Vibration Monitoring",
+   "county": "St. Lucie",
+   "agency": "St. Lucie County BOCC",
+   "title": "Fire Alarm System Testing, Monitoring & Inspections",
    "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/baycountyfl/projects/325813"
-  },
-  {
-   "county": "Brevard",
-   "agency": "Brevard County BOCC",
-   "title": "Professional Services Contract Architecture/Engineering and/or Civil Engineering for Space Coast Area Transit",
-   "category": "Engineering & Architecture",
-   "due": "2026-12-14",
-   "url": "https://www.myvendorlink.com/external/bids?a=70"
-  },
-  {
-   "county": "Brevard",
-   "agency": "Brevard County BOCC",
-   "title": "South Beaches Wastewater Treatment Facility, Biological Nutrient Removal and Sludge Holding Tank Improvements",
-   "category": "Construction",
-   "due": "2026-12-17",
-   "url": "https://www.myvendorlink.com/external/bids?a=70"
-  },
-  {
-   "county": "Broward",
-   "agency": "Broward County BOCC",
-   "title": "Purchase, Installation, Training and Service of a Total Organic Carbon (TOC) Analyzer",
-   "category": "Consulting & Professional Services",
-   "due": "",
-   "url": "https://broward.bonfirehub.com/opportunities/262648"
-  },
-  {
-   "county": "Broward",
-   "agency": "Town of Pembroke Park",
-   "title": "Auditing Services",
-   "category": "Consulting & Professional Services",
    "due": "2026-12-16",
-   "url": "https://www.tppfl.gov/DocumentCenter/View/1381"
-  },
-  {
-   "county": "Collier",
-   "agency": "Collier County BOCC",
-   "title": "Tamiami Wells 6, 23 & 25 MCC Replacement",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/collier-county-fl/projects/316718"
-  },
-  {
-   "county": "Escambia",
-   "agency": "Escambia County BOCC",
-   "title": "Paradise Beach Fire Station 20 - Construction - Re-Solicit",
-   "category": "Construction",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/324364"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "Hillsborough County BOCC",
-   "title": "Big Bend Road from US 41 to Covington Garden Dr.",
-   "category": "Other",
-   "due": "",
-   "url": "https://hillsboroughcounty.bonfirehub.com/opportunities/249522"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Bridge Lights and Fixtures (Bid Discount)",
-   "category": "Construction",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/322584"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Intent to Single Source Flowserve Branded Durco Pumps",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/325662"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Intent to Single Source – Fire Equipment Testing and Repair Services",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/325640"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "WWC- Steel Wheel Kit CUES Compatible (Corrected)",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/325798"
-  },
-  {
-   "county": "Lee",
-   "agency": "City of Cape Coral",
-   "title": "Irrigation Filter Installation",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/capecoralfl/projects/318681"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Fence Improvements - Portwide",
-   "category": "Construction",
-   "due": "2026-12-04",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%20M2026-009R"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Bridge Rehabilitation NW 7th Street over CSX R/R - Bridge No. 874229",
-   "category": "Construction",
-   "due": "2026-12-16",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20240212%20%28MCC%207360%29"
-  },
-  {
-   "county": "Orange",
-   "agency": "Orange County BOCC",
-   "title": "Countywide Sale of Scrap Metal",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/orangecountyfl/projects/314323"
-  },
-  {
-   "county": "Palm Beach",
-   "agency": "Solid Waste Authority of Palm Beach County",
-   "title": "Rehabilitation of Tipping Floors and Concrete Replacement Repairs",
-   "category": "Construction",
-   "due": "",
-   "url": "https://swa.bonfirehub.com/opportunities/262634"
-  },
-  {
-   "county": "Palm Beach",
-   "agency": "City of Riviera Beach",
-   "title": "Riviera Beach Marina Event Center & Cart Barn Restroom Metal Roof Project",
-   "category": "Construction",
-   "due": "2026-12-11",
-   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Riviera-Beach-Marina-Event-Center-Cart-Barn-Restroom-Metal-Roof-Project/0000443339?purchasingGroupId=8408751&origin=2"
-  },
-  {
-   "county": "Pasco",
-   "agency": "Pasco County BOCC",
-   "title": "Chapel Pines Boulevard & Curley Road Traffic Signal",
-   "category": "Construction",
-   "due": "",
-   "url": "https://pascocountyfl.bonfirehub.com/opportunities/262881"
-  },
-  {
-   "county": "Pinellas",
-   "agency": "Pinellas County BOCC",
-   "title": "Professional Consultant Services - EMS System Evaluation Facilitator",
-   "category": "Consulting & Professional Services",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/pinellasfl/projects/289326"
+   "url": "https://www.demandstar.com/app/limited/bids/557469/details"
   }
  ],
  "closing_soon": [
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Emergency - Request for Demolition for 3072 NW 46 ST",
-   "category": "Construction",
-   "due": "2026-11-14",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%2020261105"
-  },
   {
    "county": "Alachua",
    "agency": "Alachua County BOCC",
@@ -496,6 +279,14 @@
    "category": "Engineering & Architecture",
    "due": "2026-11-16",
    "url": "https://stlucieschools.bonfirehub.com/portal/?tab=openOpportunities"
+  },
+  {
+   "county": "Broward",
+   "agency": "City of Hollywood",
+   "title": "Professional Services Related to Water and Wastewater Distribution, Transmission & Wastewater Collection Program Management (project No. 26-1352)",
+   "category": "Consulting & Professional Services",
+   "due": "2026-11-17",
+   "url": "https://procurement.opengov.com/portal/hollywoodfl"
   }
  ]
 }
