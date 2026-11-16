@@ -45,14 +45,13 @@ The scheduled task follows this file every morning. Edit it to change how drafts
 - Remind her: screen recording with Microphone off, Do Not Disturb on, voice separately in Voice Memos
   with 1 s pauses. Only claim what the data shows.
 
-### Editing the Reel (when she sends the screen recording + voice)
-- **Edit and render in DaVinci Resolve through the DaVinci MCP** (Diana's standing preference). DaVinci
-  runs on her computer, so this needs a session linked to her computer with the DaVinci MCP connected.
-- **Sound effects:** use her sound-effects folder; she especially likes the **tension builder** (use it under
-  the hook / build-up). Add the other cues from the script table (pops, whoosh, typing, ding).
-- If DaVinci isn't reachable in this run, tell her, and only fall back to the Remotion template
-  (`video/` on the video branch: `video/README.md`, `prep.sh`) if she says so.
-- Send the finished Reel for approval before posting.
+### Editing the Reel
+- This routine stays in the cloud. **Diana edits the Reel herself in DaVinci Resolve on her computer**
+  (with her sound-effects folder; she likes the **tension builder** under the hook / build-up) and sends
+  back the finished MP4. So the script table's sound column is her edit guide.
+- When she sends the finished MP4: check it (length, vertical 9:16, audio present), then post it on her
+  OK as in section 5 (commit to `site/social/reels/`, `reel.yml`).
+- Don't edit the video in the cloud (Remotion template on the video branch) unless she asks.
 
 ## 5. Send, wait, post
 - Send everything in one message (both card images + 3 captions + the script), plus a push notification.
