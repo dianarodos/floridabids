@@ -28,14 +28,31 @@ The scheduled task follows this file every morning. Edit it to change how drafts
    The card shows floridabids.org.
 
 ## 4. Video script (faceless screen recording + Diana's voice)
+**Always load and apply all six viral skills** before writing the script: `viral-reel-hooks`,
+`viral-hook-templates`, `viral-video-script-formula`, `increasing-video-retention`,
+`increasing-viewer-engagement`, `viral-idea-generation`.
+
 30–60 s, about 110–130 words:
-- **Hook (first 2 s):** surprising and specific, from today's bids.
-- Then one or two real bids from today, what Florida Bids does, one screen action, and the CTA
-  ("Don't let your competitor find it first").
-- Give it as a table: line · what to record on screen (search terms that really return today's bids) ·
-  big on-screen text. Remind her: screen recording with Microphone off, Do Not Disturb on, voice
-  separately in Voice Memos with 1 s pauses.
-- When she sends the two files: `video/` has the Remotion template (`video/README.md`, `prep.sh`).
+- **Hook (first 2 s):** offer 3 hook options (e.g. shock, guess-the-bid question, competitor FOMO),
+  each with spoken line + on-screen text + why it works. Recommend one; she picks.
+- **Structure ("hold the gold"):** hook → reveal + stakes → problem (bids scattered across 100+ agencies
+  and 30+ websites — re-check the numbers in `site/data/bids.json`) → micro-hook mid-video → second bid
+  → the gold (Florida Bids, one free list, type your trade) → CTA "Don't let your competitor find it first".
+  Cut right at the last word so it loops; open and close on the same sound.
+- Give it as a table: # · time · voiceover · what to screen-record (search terms that really return today's
+  bids; say which result to tap if a search returns several) · big on-screen text · sound effect.
+- Reel caption (no URL): a comment question, "Details in caption 👇" with the bids, "Tag a business owner".
+- Remind her: screen recording with Microphone off, Do Not Disturb on, voice separately in Voice Memos
+  with 1 s pauses. Only claim what the data shows.
+
+### Editing the Reel (when she sends the screen recording + voice)
+- **Edit and render in DaVinci Resolve through the DaVinci MCP** (Diana's standing preference). DaVinci
+  runs on her computer, so this needs a session linked to her computer with the DaVinci MCP connected.
+- **Sound effects:** use her sound-effects folder; she especially likes the **tension builder** (use it under
+  the hook / build-up). Add the other cues from the script table (pops, whoosh, typing, ding).
+- If DaVinci isn't reachable in this run, tell her, and only fall back to the Remotion template
+  (`video/` on the video branch: `video/README.md`, `prep.sh`) if she says so.
+- Send the finished Reel for approval before posting.
 
 ## 5. Send, wait, post
 - Send everything in one message (both card images + 3 captions + the script), plus a push notification.
