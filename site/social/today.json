@@ -17,22 +17,6 @@
   "counties": 17,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "title": "Support Services for BIM and Digital Twin Integrat",
-    "category": "IT & Technology",
-    "due": "2027-01-08",
-    "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL"
-   },
-   {
-    "county": "Hillsborough",
-    "agency": "Lutheran Services Florida",
-    "title": "RFP-2026-011 Relocation of Playground Equipment",
-    "category": "Construction",
-    "due": "2026-12-22",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/RFP-2026-011-Relocation-of-Playground-Equipment/0000443559?purchasingGroupId=8408751&origin=2"
-   },
-   {
     "county": "Palm Beach",
     "agency": "City of Greenacres",
     "title": "City Hall Grounds Annual Landscape Maintenance",
@@ -43,10 +27,26 @@
    {
     "county": "St. Johns",
     "agency": "St. Johns County BOCC",
-    "title": "Restroom Cleaning Services for Parks and Recreation & Beaches",
+    "title": "Restroom Cleaning for Parks & Beaches",
     "category": "Facilities & Maintenance",
     "due": "2026-12-16",
     "url": "https://www.demandstar.com/app/limited/bids/557509/details"
+   },
+   {
+    "county": "Volusia",
+    "agency": "City of New Smyrna Beach",
+    "title": "Roof Repairs and Rehabilitation",
+    "category": "Construction",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityofnsb/projects/319234"
+   },
+   {
+    "county": "Miami-Dade",
+    "agency": "City of Hialeah",
+    "title": "Fire Station #5 Exterior Painting",
+    "category": "Construction",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityofhialeahfl/projects/323783"
    }
   ],
   "caption_default": "🦎 34 new government bids posted in Florida today, across 17 counties.\n\n📍 Miami-Dade: Support Services for BIM and Digital Twin Integrat\n📍 Hillsborough: RFP-2026-011 Relocation of Playground Equipment\n📍 Palm Beach: City Hall Grounds Annual Landscape Maintenance\n\nAll 648 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -63,42 +63,34 @@
    {
     "county": "Escambia",
     "agency": "Escambia County BOCC",
-    "title": "Professional Architectural Services - 2nd Posting",
-    "category": "Engineering & Architecture",
-    "due": "2028-12-10",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement",
-    "category": "Consulting & Professional Services",
-    "due": "2028-08-06",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Engineering Professional Services Continuing Contract - (2nd Advertisement)",
-    "category": "Engineering & Architecture",
-    "due": "2027-02-22",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County School District",
-    "title": "Outside Plant Fiber Maintenance and Repair Services",
+    "title": "Hazardous Tree Removal (1 of 9 sites posted)",
     "category": "Facilities & Maintenance",
-    "due": "2026-12-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Outside-Plant-Fiber-Maintenance-and-Repair-Services/0000441922?purchasingGroupId=8408751&origin=2"
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/323545"
    },
    {
     "county": "Escambia",
-    "agency": "Emerald Coast Utilities Authority",
-    "title": "Cantonment Water Well Treatment Facility Replacement",
-    "category": "Construction",
-    "due": "2026-12-10",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Cantonment-Water-Well-Treatment-Facility-Replacement/0000442629?purchasingGroupId=8408751&origin=2"
+    "agency": "Escambia County BOCC",
+    "title": "Derelict Vessel Removal & Disposal (33' boat)",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/319123"
+   },
+   {
+    "county": "Escambia",
+    "agency": "Escambia County BOCC",
+    "title": "Parks Backflow Testing",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/325036"
+   },
+   {
+    "county": "Escambia",
+    "agency": "Escambia County BOCC",
+    "title": "Generator Maintenance",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/323444"
    }
   ],
   "caption_default": "📍 County spotlight: Escambia. 34 open bids right now, 12 posted this week.\n\n• Professional Architectural Services - 2nd Posting\n• Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement\n• Engineering Professional Services Continuing Contract - (2nd Advertisement)\n• Outside Plant Fiber Maintenance and Repair Services\n\nEvery Escambia bid 👉 https://floridabids.org",
