@@ -237,5 +237,25 @@
   "at": "2026-11-18T13:52-05:00",
   "id": "17931377403183301",
   "status": "posted"
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "am",
+  "platform": "facebook",
+  "theme": "new_today",
+  "at": "2026-11-18T13:52-05:00",
+  "id": "1471999489323697_122106486411546057",
+  "status": "posted",
+  "note": "link comment failed: (#200) insufficient permissions"
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "pm",
+  "platform": "facebook",
+  "theme": "category_spotlight",
+  "at": "2026-11-18T13:52-05:00",
+  "id": "122106486447546057",
+  "status": "scheduled",
+  "scheduled_for": "15:00"
  }
 ]
