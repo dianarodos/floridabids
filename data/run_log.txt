@@ -169,3 +169,4 @@ INFO scraper.emails: unparsed alert from GoBonfire.com: 'City of Palm Bay Florid
 INFO run: open bids: 663 across 38 counties (removed 328 closed)
 social: 34 new today; am=new_today pm=category_spotlight
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
+INFO digest: digest: 14 sent, 0 failed (daily)
