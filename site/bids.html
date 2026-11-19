@@ -111,8 +111,8 @@ input[type=radio]{accent-color:var(--accent)}
 
 /* table */
 .tablebox{overflow-x:auto;margin-top:6px}
-table{border-collapse:collapse;width:100%;min-width:980px;font-size:14px}
-th,td{text-align:left;padding:13px 14px 13px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+table{border-collapse:collapse;width:100%;min-width:0;font-size:14px}
+th,td{text-align:left;padding:13px 12px 13px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
 th{font-size:12px;letter-spacing:.03em;color:var(--muted);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;padding-block:12px;border-bottom:1px solid var(--line);transition:color .2s}
 th:hover{color:var(--fg)}
 th[aria-sort]::after{content:" ↕";opacity:.4}
@@ -126,8 +126,8 @@ td.due .d{font:500 13.5px var(--mono)}
 td.due .rel{display:block;font:12px var(--body);color:var(--muted);margin-top:1px}
 td.due.soon .d,td.due.soon .rel{color:var(--soon)}
 td.due.soon .rel{font-weight:600}
-td.c-cat{min-width:150px}
-td.num{font:12.5px var(--mono);color:var(--muted);overflow-wrap:anywhere;min-width:118px;max-width:150px}
+td.c-cat{min-width:120px}
+td.num{font:12.5px var(--mono);color:var(--muted);overflow-wrap:anywhere;min-width:90px;max-width:130px}
 .title{font-weight:600;line-height:1.35;text-wrap:pretty}
 .agency{font-size:13px;color:var(--muted);margin-top:2px}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap;background:var(--accent-soft);color:var(--accent)}
@@ -301,17 +301,16 @@ dialog.subdlg[open]{animation:pop .25s var(--ease)}
         <th data-k="title">Solicitation</th>
         <th data-k="county">County</th>
         <th data-k="category">Category</th>
-        <th data-k="type">Type</th>
         <th data-k="status">Status</th>
         <th data-k="number">Bid #</th>
         <th>Links</th>
       </tr></thead>
       <tbody id="rows">
-        <tr class="skel"><td colspan="9"><i style="width:70%"></i></td></tr>
-        <tr class="skel"><td colspan="9"><i style="width:55%"></i></td></tr>
-        <tr class="skel"><td colspan="9"><i style="width:64%"></i></td></tr>
-        <tr class="skel"><td colspan="9"><i style="width:48%"></i></td></tr>
-        <tr class="skel"><td colspan="9"><i style="width:60%"></i></td></tr>
+        <tr class="skel"><td colspan="8"><i style="width:70%"></i></td></tr>
+        <tr class="skel"><td colspan="8"><i style="width:55%"></i></td></tr>
+        <tr class="skel"><td colspan="8"><i style="width:64%"></i></td></tr>
+        <tr class="skel"><td colspan="8"><i style="width:48%"></i></td></tr>
+        <tr class="skel"><td colspan="8"><i style="width:60%"></i></td></tr>
       </tbody>
     </table>
     <div class="empty" id="empty" hidden><b>No open bids match.</b>Clear the search or pick another category.</div>
@@ -407,6 +406,7 @@ function statusPill(b){
   const s = b.status || "Open", low = s.toLowerCase();
   if(low.includes("upcoming")) return `<span class="pill up">Upcoming draft</span>`;
   if(low.includes("reject")) return `<span class="pill rej">${esc(s)}</span>`;
+  if(daysLeft(b) < 0) return `<span class="pill rej">Closed</span>`;
   if(daysLeft(b) <= 7) return `<span class="pill soon">Closes soon</span>`;
   return `<span class="pill">${esc(s)}</span>`;
 }
@@ -426,8 +426,7 @@ function render(){
     <td class="posted c-posted">${esc(fmtPosted(b))}${isNew(b) ? ' <span class="pill new">New</span>' : ""}</td>
     <td class="c-title"><div class="title">${esc(b.title)}</div><div class="agency">${esc(b.agency)}${b.notes && b.notes.startsWith("Draft") ? " · " + esc(b.notes) : ""}</div></td>
     <td class="c-county">${esc(b.county)}</td>
-    <td class="c-cat">${esc(b.category)}</td>
-    <td class="c-type">${esc(b.type)}</td>
+    <td class="c-cat">${esc(b.category)}${b.type ? `<div class="agency">${esc(b.type)}</div>` : ""}</td>
     <td class="c-status">${statusPill(b)}</td>
     <td class="num c-num">${esc(b.number)}</td>
     <td class="c-links"><div class="links">
