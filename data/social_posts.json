@@ -260,12 +260,11 @@
  },
  {
   "date": "2026-11-19",
-  "slot": "pm",
-  "platform": "facebook",
-  "theme": "closing_soon",
+  "slot": "am",
+  "platform": "instagram",
+  "theme": "new_today",
   "at": "2026-11-19T08:18-05:00",
-  "id": "122107157397546057",
-  "status": "scheduled",
-  "scheduled_for": "15:00"
+  "id": "18119814794110069",
+  "status": "posted"
  }
 ]
