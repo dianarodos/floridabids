@@ -3,357 +3,424 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Florida Bids · Open public solicitations</title>
-<meta name="description" content="Every open bid, RFP and RFQ we can find from Florida counties, cities, schools and authorities, updated every morning.">
+<title>Florida Bids | Florida government bids, found for you</title>
+<meta name="description" content="Florida Bids reads county, city and school bid pages every morning and emails you the open bids that fit your business. Free, with no ads.">
+<meta name="theme-color" content="#fbf6ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1716" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Florida Bids | Florida government bids, found for you">
+<meta property="og:description" content="Open bids and RFPs from Florida counties, cities, schools and authorities, emailed to you every morning. Free, no ads.">
+<meta property="og:url" content="https://floridabids.org/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/iggy-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: masthead with live counts, one filter bar, one dense table (cards on phones), coverage + subscribe below. */
+/* Landing page. Same brand as the bid list and the daily social cards: deep green, cream, one amber used only for deadlines.
+   Shape rule: controls 8-10px, containers 16px. One accent (green). Cards only where a panel holds a form. */
 :root{
-  --bg:#f5f7f6; --surface:#ffffff; --fg:#14211e; --muted:#5a6a66; --line:#d9e1de;
-  --accent:#0d5c50; --accent-ink:#ffffff; --accent-soft:#e1efeb;
-  --soon:#9a5b00; --soon-soft:#fbefd8; --info:#4b3f8f; --info-soft:#ece9f8; --bad:#a3322a; --bad-soft:#f8e3e1;
+  --bg:#fbf6ec; --surface:#fffdf8; --fg:#14211e; --muted:#5a655f; --line:#e6dfcf; --line-soft:#efe9da;
+  --accent:#0d5c50; --accent-ink:#ffffff; --accent-hover:#0a4a41; --accent-soft:#e3efe6; --tint:#eef3e6;
+  --soon:#9a5b00; --soon-soft:#fbecd0; --bad:#a3322a;
+  --shadow:0 1px 2px rgba(60,48,20,.06), 0 18px 40px -18px rgba(60,48,20,.28);
+  --band:#0d5c50; --band-ink:#ffffff; --band-muted:#cfe6dd;
   --display:"Source Serif 4", Georgia, serif; --body:"IBM Plex Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, monospace;
+  --ease:cubic-bezier(.2,.7,.2,1);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936;
-  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-soft:#183531;
-  --soon:#f0b85a; --soon-soft:#3a2c13; --info:#b7a9f2; --info-soft:#29243f; --bad:#f08a80; --bad-soft:#3b1d1a; color-scheme:dark}}
+  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936; --line-soft:#223130;
+  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-hover:#7ad6c4; --accent-soft:#183531; --tint:#13201e;
+  --soon:#f0b85a; --soon-soft:#3a2c13; --bad:#f08a80;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.6);
+  --band:#12403a; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936;
-  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-soft:#183531;
-  --soon:#f0b85a; --soon-soft:#3a2c13; --info:#b7a9f2; --info-soft:#29243f; --bad:#f08a80; --bad-soft:#3b1d1a; color-scheme:dark}
+  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936; --line-soft:#223130;
+  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-hover:#7ad6c4; --accent-soft:#183531; --tint:#13201e;
+  --soon:#f0b85a; --soon-soft:#3a2c13; --bad:#f08a80;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.6);
+  --band:#12403a; color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
-a{color:var(--accent)}
-.wrap{max-width:1240px;margin:0 auto}
-header.mast{padding-block:28px 18px;display:grid;gap:14px;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.brand h1{font:700 clamp(28px,4vw,40px)/1.05 var(--display);margin:0;letter-spacing:-.01em}
-.brand .tag{color:var(--muted)}
-.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px 20px;flex-wrap:wrap}
-.top .btn{cursor:pointer}
-dialog.subdlg{border:1px solid var(--line);border-radius:12px;padding:0;background:var(--surface);color:var(--fg);
-  width:min(440px,calc(100vw - 32px));box-shadow:0 20px 50px rgba(0,0,0,.25)}
-dialog.subdlg::backdrop{background:rgba(10,20,18,.45)}
-.subdlg .inner{padding:22px;display:grid;gap:14px}
-.subdlg h2{font:700 22px var(--display);margin:0}
-.subdlg p{margin:0;color:var(--muted)}
-.subdlg .x{position:absolute;top:10px;right:10px;width:36px;height:36px;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
-.subdlg .x:hover{background:var(--bg);color:var(--fg)}
-.subdlg input[type=email]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%;box-sizing:border-box}
-input[type=radio]{accent-color:var(--accent)}
-.subdlg fieldset{border:0;padding:0;margin:0;display:flex;gap:18px;font-size:14px}
-.subdlg .btn{width:100%;cursor:pointer;padding:11px 14px}
-.subdlg{max-height:calc(100dvh - 32px);overflow:auto}
-.biz{display:grid;gap:8px}
-.biz .chips{display:flex;flex-wrap:wrap;gap:6px;max-height:168px;overflow:auto;padding:2px}
-.biz .chips label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:13px;cursor:pointer;background:var(--bg)}
-.biz .chips input{accent-color:var(--accent);margin:0}
-.biz .chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
-.subdlg input[type=text].kw{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%;box-sizing:border-box}
-.counts{display:flex;flex-wrap:wrap;gap:8px 28px;font-variant-numeric:tabular-nums}
-.counts div{display:grid}
-.counts b{font:600 26px/1.1 var(--display)}
-.counts span{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.updated{font-size:13px;color:var(--muted)}
-.banner{background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:10px 14px;font-weight:600}
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;display:grid;gap:10px;border-bottom:1px solid var(--line)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-input[type=search],select{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
-input[type=search]{flex:1 1 260px;min-width:0}
-.chip{font:500 13px var(--body);padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.chip .n{opacity:.7;font-variant-numeric:tabular-nums;margin-left:4px}
-.btn{font:600 14px var(--body);padding:9px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);text-decoration:none;white-space:nowrap}
-.btn-cta{background:#d9621c;border-color:#d9621c;color:#fff;font-size:16px;padding:12px 20px;border-radius:8px}
-.btn-cta:hover{background:#c0541a;border-color:#c0541a}
-.btn.ghost{background:transparent;color:var(--accent)}
-:is(.chip,.btn,input,select,a):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.shown{font-size:13px;color:var(--muted)}
-.tablebox{overflow-x:auto;margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
-table{border-collapse:collapse;width:100%;min-width:980px;font-size:14px}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap}
-th[aria-sort]::after{content:" ↕";opacity:.4}
-th[aria-sort="ascending"]::after{content:" ↑";opacity:1}
-th[aria-sort="descending"]::after{content:" ↓";opacity:1}
-tr:last-child td{border-bottom:0}
-td.due{font:500 13px var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
-td.num{font:12.5px var(--mono);color:var(--muted);word-break:break-word;max-width:150px}
-.title{font-weight:600}
-.agency{font-size:13px;color:var(--muted)}
-.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap;background:var(--accent-soft);color:var(--accent)}
-td.posted{font:12.5px var(--mono);color:var(--muted);white-space:nowrap}
-.pill.new{background:#fde7d9;color:#9a3d0b;margin-left:4px}
-.pill.soon{background:var(--soon-soft);color:var(--soon)}
-.pill.up{background:var(--info-soft);color:var(--info)}
-.pill.rej{background:var(--bad-soft);color:var(--bad)}
-.links{display:flex;flex-direction:column;gap:2px;font-size:13px;white-space:nowrap}
-.empty{padding:28px;color:var(--muted);text-align:center}
-section{margin-top:40px}
-section h2{font:700 22px var(--display);margin:0 0 6px}
-section p.lede{color:var(--muted);max-width:70ch;margin:0 0 14px}
-.cov{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
-.cov div{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:9px 12px;font-size:13px;display:flex;justify-content:space-between;gap:8px}
-.cov .ok{color:var(--accent)} .cov .warn{color:var(--soon)} .cov .err{color:var(--bad)}
-.sub{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:12px;max-width:640px}
-.sub form{display:flex;flex-wrap:wrap;gap:8px}
-.sub input[type=email]{flex:1 1 240px;min-width:0;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
-.sub fieldset{border:0;padding:0;margin:0;display:flex;gap:16px;font-size:14px}
-.note{font-size:13px;color:var(--muted)}
-footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:grid;gap:6px}
-@media (max-width:760px){
-  .tablebox{background:transparent;border:0;overflow:visible}
-  table{min-width:0} thead{display:none}
-  tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px;margin-bottom:10px}
-  td{border:0;padding:0} td.c-title{grid-column:1/-1} td.c-due{grid-column:2;grid-row:2;text-align:right}
-  td.c-county{grid-column:1;grid-row:2} td.c-posted{grid-column:1/-1;grid-row:3;font-size:12px} td.c-title{grid-row:1} td.c-num{grid-column:1/-1} td.c-links{grid-column:1/-1}
-  td.c-county::before{content:"";}
-  .links{flex-direction:row;gap:14px}
-  /* keep the sticky bar short on phones: categories scroll sideways in one line */
-  #cats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}
-  #cats::-webkit-scrollbar{display:none}
-  .chip{flex:none}
-  .bar .row:first-child{display:grid;grid-template-columns:1fr auto}
-  .bar .row:first-child input{grid-column:1/-1}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased;
+  padding-inline:max(20px,env(safe-area-inset-left,0px)) max(20px,env(safe-area-inset-right,0px))}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-hover)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:1180px;margin:0 auto}
+.skip{position:absolute;left:12px;top:-60px;z-index:30;background:var(--accent);color:var(--accent-ink);padding:10px 14px;border-radius:8px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+:is(.btn,a,input,button,select,summary):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;font:600 15px/1 var(--body);padding:14px 22px;border-radius:10px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);text-decoration:none;white-space:nowrap;cursor:pointer;
+  transition:background .2s var(--ease),border-color .2s var(--ease),transform .15s var(--ease),box-shadow .2s var(--ease)}
+.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-ink);box-shadow:0 10px 22px -12px rgba(13,92,80,.7)}
+.btn:active{transform:translateY(1px) scale(.985)}
+.btn.sm{padding:10px 16px;font-size:14px;border-radius:8px}
+.textlink{font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);padding-bottom:2px;transition:border-color .2s}
+.textlink:hover{border-bottom-color:currentColor}
+
+/* nav */
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wordmark{display:flex;align-items:center;gap:10px;font:700 20px var(--display);letter-spacing:-.005em;color:var(--fg);text-decoration:none}
+.wordmark img{width:36px;height:36px;display:block}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:14.5px}
+.navlinks a:not(.btn){color:var(--muted);text-decoration:none}
+.navlinks a:not(.btn):hover{color:var(--fg)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px 56px;align-items:center;padding-block:36px 56px;min-height:min(620px,calc(100dvh - 68px))}
+.hero h1{font-weight:700;font-size:clamp(38px,5.6vw,68px);line-height:1.02;letter-spacing:-.025em;color:var(--accent);margin-bottom:18px}
+.hero p.sub{font-size:clamp(17px,1.7vw,20px);max-width:34em;margin-bottom:28px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.mascot{position:relative;justify-self:center;width:100%;max-width:420px;aspect-ratio:1}
+.mascot img{width:100%;height:100%;display:block;filter:drop-shadow(0 28px 36px rgba(13,92,80,.2))}
+
+/* live numbers */
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.figures div{padding:22px 20px 20px 0;display:grid;gap:4px}
+.figures div + div{padding-left:24px;border-left:1px solid var(--line)}
+.figures b{font:600 clamp(32px,4.4vw,52px)/1 var(--display);letter-spacing:-.02em}
+.figures span{font-size:14px;color:var(--muted)}
+
+/* sections */
+section{margin-top:clamp(72px,10vw,128px)}
+h2{font-weight:700;font-size:clamp(28px,3.8vw,44px);line-height:1.08;letter-spacing:-.018em}
+.measure{max-width:62ch}
+
+/* problem: offset statement */
+.problem{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px 24px}
+.problem h2{grid-column:1 / span 9;font-size:clamp(30px,4.6vw,56px);line-height:1.05}
+.problem p{grid-column:5 / span 7;font-size:18px;color:var(--fg)}
+.problem p + p{color:var(--muted);font-size:16px}
+
+/* how it works: big verbs on the left, plain text on the right */
+.how h2{margin-bottom:34px}
+.how ol{list-style:none;margin:0;padding:0;display:grid}
+.how li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:10px 40px;padding-block:30px;border-top:1px solid var(--line)}
+.how li:last-child{border-bottom:1px solid var(--line)}
+.how h3{font-size:clamp(24px,3vw,34px);font-weight:600;line-height:1.1;letter-spacing:-.012em}
+.how li p{color:var(--muted);max-width:50ch;padding-top:4px}
+
+/* live recent bids: sticky intro + real rows */
+.fresh{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:40px 64px;align-items:start}
+.fresh .intro{position:sticky;top:96px;display:grid;gap:16px}
+.fresh .intro p{color:var(--muted)}
+.fresh .intro .textlink{justify-self:start}
+.bids{list-style:none;margin:0;padding:0}
+.bids li{padding:18px 0;border-bottom:1px solid var(--line-soft);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px}
+.bids li:first-child{padding-top:0}
+.bids .t{font-weight:600;line-height:1.35;color:var(--fg);text-decoration:none;text-wrap:pretty}
+.bids .t:hover{color:var(--accent);text-decoration:underline}
+.bids .m{grid-column:1;font-size:14px;color:var(--muted)}
+.bids .d{grid-column:2;grid-row:1 / span 2;text-align:right;font:500 13.5px var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bids .d small{display:block;font:12px var(--body);color:var(--muted);margin-top:2px}
+.bids .d.soon,.bids .d.soon small{color:var(--soon)}
+.bids .d.soon small{font-weight:600}
+.bids li.skel i{display:block;height:13px;border-radius:4px;background:linear-gradient(90deg,var(--line-soft),var(--line),var(--line-soft));background-size:200% 100%;animation:sk 1.3s linear infinite}
+.bids li.skel i + i{margin-top:10px;width:45%}
+@keyframes sk{to{background-position:-200% 0}}
+.banner{background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:14px 18px;font-weight:600;margin-bottom:8px}
+
+/* kinds of work: type wall */
+.kinds h2{margin-bottom:26px}
+.wall{display:flex;flex-wrap:wrap;gap:6px 30px;align-items:baseline;font-family:var(--display);line-height:1.15}
+.wall a{color:var(--fg);text-decoration:none;font-weight:600;letter-spacing:-.015em;transition:color .2s}
+.wall a:hover{color:var(--accent)}
+.wall a sup{font:500 12px var(--mono);color:var(--muted);margin-left:5px;vertical-align:top;position:relative;top:.3em}
+.wall .l1{font-size:clamp(40px,6.4vw,84px)}
+.wall .l2{font-size:clamp(30px,4.2vw,54px)}
+.wall .l3{font-size:clamp(22px,2.8vw,32px);font-weight:500}
+
+/* free and no ads */
+.promise{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 56px;align-items:center;background:var(--tint);border-radius:16px;padding:clamp(24px,4vw,52px)}
+.promise img{width:100%;max-width:300px;justify-self:center;display:block}
+.promise h2{margin-bottom:22px}
+.promise dl{margin:0;display:grid;gap:18px}
+.promise dt{font-weight:600}
+.promise dd{margin:2px 0 0;color:var(--muted);max-width:52ch}
+
+/* FAQ: two columns, always open */
+.faq h2{margin-bottom:30px}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 56px}
+.qa h3{font-size:21px;font-weight:600;line-height:1.2;margin-bottom:8px;letter-spacing:-.008em}
+.qa p{color:var(--muted)}
+
+/* sign-up band */
+.band{background:var(--band);color:var(--band-ink);border-radius:16px;padding:clamp(26px,4.4vw,56px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:32px 56px;align-items:start;box-shadow:var(--shadow)}
+.band h2{color:#fff;margin-bottom:14px}
+.band .lede{color:var(--band-muted);max-width:40ch}
+.panel{background:var(--surface);color:var(--fg);border-radius:12px;padding:24px;display:grid;gap:16px}
+.panel label.f,.panel legend{display:block;font-weight:600;font-size:14px;margin-bottom:6px;padding:0}
+.panel .hint{font-weight:400;color:var(--muted)}
+.panel input[type=email],.panel input[type=text]{width:100%;font:inherit;padding:12px 13px;border:1px solid #bfc8c2;border-radius:8px;background:var(--bg);color:var(--fg);transition:border-color .2s,box-shadow .2s}
+.panel input::placeholder{color:#6b7570}
+.panel input[type=email]:focus,.panel input[type=text]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);outline:none}
+.panel fieldset{border:0;margin:0;padding:0}
+.panel .freq{display:flex;gap:20px;font-size:15px}
+.panel input[type=radio]{accent-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;max-height:156px;overflow:auto;padding:2px}
+.chips label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px;padding:6px 11px;font-size:13.5px;cursor:pointer;background:var(--bg);transition:border-color .2s,background .2s}
+.chips label:hover{border-color:var(--accent)}
+.chips input{accent-color:var(--accent);margin:0}
+.chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
+.panel .btn{width:100%}
+#submsg{font-size:13.5px;color:var(--muted);min-height:1.4em}
+#submsg.ok{color:var(--accent);font-weight:600}
+#submsg.err{color:var(--bad);font-weight:500}
+
+footer{margin-top:clamp(64px,8vw,104px);padding-block:26px 44px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:grid;gap:10px}
+footer .fm{display:flex;align-items:center;gap:10px;color:var(--fg);font:600 16px var(--display)}
+footer .fm img{width:28px;height:28px}
+footer p{max-width:80ch}
+footer .fl{display:flex;gap:22px;flex-wrap:wrap}
+
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{animation:rise .7s var(--ease) both}
+  .hero > :nth-child(2){animation-delay:.1s}
+  .js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-block:20px 44px;min-height:0}
+  .mascot{order:-1;justify-self:start;max-width:150px}
+  .figures{grid-template-columns:1fr 1fr}
+  .figures div,.figures div + div{padding:18px 12px 16px 0;border-left:0;border-top:1px solid var(--line)}
+  .figures div:nth-child(-n+2){border-top:0}
+  .figures div:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
+  .problem h2,.problem p{grid-column:1 / -1}
+  .how li{grid-template-columns:1fr}
+  .fresh{grid-template-columns:1fr}
+  .fresh .intro{position:static}
+  .promise{grid-template-columns:1fr}
+  .promise img{max-width:170px;justify-self:start}
+  .qa{grid-template-columns:1fr}
+  .band{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .navlinks a:not(.btn){display:none}
+  .btn{padding:14px 18px}
+  .bids li{grid-template-columns:1fr}
+  .bids .d{grid-column:1;grid-row:auto;text-align:left;display:flex;gap:10px;align-items:baseline}
+  .bids .d small{margin:0}
+  .wall{gap:4px 22px}
+}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to the content</a>
+<script>document.documentElement.classList.add("js")</script>
 <div class="wrap">
-  <header class="mast">
-    <div class="top">
-      <div class="brand"><h1>Florida Bids</h1><span class="tag">Open public solicitations from Florida governments, in one list.</span></div>
-      <button class="btn btn-cta" type="button" data-open-sub>Get bids by email</button>
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="/"><img src="/iggy-mark.png" alt="" width="36" height="36">Florida Bids</a>
+    <div class="navlinks">
+      <a href="/bids.html">Browse all bids</a>
+      <a href="#faq">Questions</a>
+      <a class="btn sm" href="#signup">Get bids by email</a>
     </div>
-    <div class="counts" id="counts" aria-live="polite">
-      <div><b id="c-total">–</b><span>open bids</span></div>
-      <div><b id="c-soon">–</b><span>closing in 7 days</span></div>
-      <div><b id="c-new">–</b><span>new in 7 days</span></div>
-      <div><b id="c-counties">–</b><span>counties</span></div>
-      <div><b id="c-subs">–</b><span>subscribers</span></div>
-    </div>
-    <div class="updated" id="updated">Loading…</div>
-    <div class="banner" id="banner" role="status" hidden></div>
-  </header>
+  </nav>
 
-  <div class="bar">
-    <div class="row">
-      <input type="search" id="q" placeholder="Search title, agency, county or bid number" aria-label="Search bids">
-      <select id="county" aria-label="County"><option value="">All counties</option></select>
-      <select id="sort" aria-label="Sort"><option value="due:1">Closing soonest</option><option value="posted:-1">Newest first</option></select>
-      <a class="btn" id="xlsx" href="data/florida-open-bids.xlsx">Download Excel</a>
-    </div>
-    <div class="row" id="cats" role="group" aria-label="Category"></div>
-    <div class="shown" id="shown"></div>
-  </div>
-
-  <div class="tablebox">
-    <table id="tbl">
-      <thead><tr>
-        <th data-k="due" aria-sort="ascending">Due</th>
-        <th data-k="posted">Posted</th>
-        <th data-k="title">Solicitation</th>
-        <th data-k="county">County</th>
-        <th data-k="category">Category</th>
-        <th data-k="type">Type</th>
-        <th data-k="status">Status</th>
-        <th data-k="number">Bid #</th>
-        <th>Links</th>
-      </tr></thead>
-      <tbody id="rows"></tbody>
-    </table>
-    <div class="empty" id="empty" hidden>No open bids match. Clear the search or pick another category.</div>
-  </div>
-
-  <section id="subscribe">
-    <h2>Get the list by email</h2>
-    <p class="lede">A daily or weekly email with every open bid and the Excel file attached. Free. Unsubscribe with one click.</p>
-    <button class="btn" type="button" data-open-sub>Subscribe</button>
-  </section>
-
-  <dialog class="subdlg" id="subdlg" aria-labelledby="subttl">
-    <button class="x" type="button" id="subclose" aria-label="Close">×</button>
-    <form class="inner" id="subform" novalidate>
-      <h2 id="subttl">Get Florida bids by email</h2>
-      <p>Bids for your business on top, then everything new in Florida, with the Excel file attached. Free. Unsubscribe anytime with one click.</p>
-      <input type="email" id="email" required placeholder="you@company.com" aria-label="Email address" autocomplete="email">
-      <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-      <fieldset><legend class="note" style="margin-bottom:6px">How often</legend>
-        <label><input type="radio" name="freq" value="daily" checked> Daily</label>
-        <label><input type="radio" name="freq" value="weekly"> Weekly (Monday)</label>
-      </fieldset>
-      <div class="biz">
-        <div class="note"><b>What does your business do?</b> Optional. Pick any that fit, and we'll put every matching open bid at the top of your email.</div>
-        <div class="chips" id="bizchips"></div>
-        <input type="text" class="kw" id="keywords" maxlength="300" placeholder="Your own keywords, e.g. window tint, catering, roof" aria-label="Your own keywords, separated by commas">
+  <div class="banner" id="banner" role="status" hidden></div>
+  <main id="top">
+    <header class="hero">
+      <div>
+        <h1>Florida government bids, found for you.</h1>
+        <p class="sub">We check county, city and school bid pages every morning and email you the ones that fit your business. Free.</p>
+        <div class="cta-row">
+          <a class="btn" href="#signup">Get bids by email</a>
+          <a class="textlink" href="/bids.html">Browse all bids</a>
+        </div>
       </div>
-      <button class="btn" type="submit">Subscribe</button>
-      <div class="note" id="submsg">We'll send one email to confirm your address. We only use it to send this list, and we will never send you ads.</div>
-    </form>
-  </dialog>
+      <div class="mascot"><img src="/iggy-mark.png" alt="Iggy the iguana holding a clipboard of bids" width="420" height="420"></div>
+    </header>
 
-  <section id="coverage">
-    <h2>Where the bids come from</h2>
-    <p class="lede">We read these public pages every morning, and we also include bids announced through agency email alerts. Always confirm details and deadlines on the agency's page before you respond.</p>
-    <div class="cov" id="cov"></div>
-  </section>
+    <div class="figures rv" id="figures" aria-live="polite">
+      <div><b id="f-total">0</b><span>open bids today</span></div>
+      <div><b id="f-new">0</b><span>posted in the last 7 days</span></div>
+      <div><b id="f-counties">0</b><span>Florida counties covered</span></div>
+      <div><b id="f-agencies">0</b><span>agencies with a bid open</span></div>
+    </div>
+
+    <section class="problem rv" aria-labelledby="problem-h">
+      <h2 id="problem-h">The bids are public. Finding them is the hard part.</h2>
+      <p>Counties, cities, school boards and authorities each post solicitations on their own website or on a procurement portal. If you want to bid, you have to know where to look, and look again tomorrow.</p>
+      <p id="problem-n">We read those pages every morning and put every open bid in one list, sorted by due date.</p>
+    </section>
+
+    <section class="how rv" aria-labelledby="how-h">
+      <h2 id="how-h">How it works</h2>
+      <ol>
+        <li><h3>Tell us what you do</h3><p>Pick the kinds of work you do, like roofing, catering or IT, or type your own keywords. Skip it and you get everything.</p></li>
+        <li><h3>We read the pages</h3><p>Every morning we check agency websites and email alerts, remove duplicates and sort the open bids by due date.</p></li>
+        <li><h3>Open your inbox</h3><p>A daily or weekly email puts your matching bids first and attaches the full list as an Excel file. Unsubscribe with one click.</p></li>
+      </ol>
+    </section>
+
+    <section class="fresh rv" aria-labelledby="fresh-h">
+      <div class="intro">
+        <h2 id="fresh-h">Posted recently</h2>
+        <p>A sample from today's list. These are real bids with real deadlines, each linked to the agency page it came from.</p>
+        <a class="textlink" href="/bids.html" id="browse-all">Browse all bids</a>
+      </div>
+      <ul class="bids" id="fresh" aria-live="polite">
+        <li class="skel"><i></i><i></i></li><li class="skel"><i></i><i></i></li><li class="skel"><i></i><i></i></li>
+        <li class="skel"><i></i><i></i></li><li class="skel"><i></i><i></i></li>
+      </ul>
+    </section>
+
+    <section class="kinds rv" aria-labelledby="kinds-h">
+      <h2 id="kinds-h">Open now, by kind of work</h2>
+      <div class="wall" id="wall"><a class="l1" href="/bids.html">Construction</a><a class="l2" href="/bids.html">Facilities &amp; Maintenance</a><a class="l2" href="/bids.html">Goods &amp; Supplies</a></div>
+    </section>
+
+    <section class="promise rv" aria-labelledby="promise-h">
+      <img src="/iggy-mark.png" alt="" width="300" height="300" loading="lazy">
+      <div>
+        <h2 id="promise-h">Free to use, with no ads.</h2>
+        <dl>
+          <div><dt>No account to browse</dt><dd>The list, the search and the Excel download are open to everyone.</dd></div>
+          <div><dt>No ads in your inbox</dt><dd>Our emails carry bids and nothing else. We only use your address to send the list.</dd></div>
+          <div><dt>Independent</dt><dd>Florida Bids is not affiliated with any agency. Always confirm details and deadlines on the agency's own page before you respond.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="faq rv" id="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Questions people ask</h2>
+      <div class="qa">
+        <div><h3>Is it really free?</h3><p>Yes. Browsing, the Excel download and the daily or weekly email are all free, and the emails have no ads.</p></div>
+        <div><h3>Which agencies do you cover?</h3><p id="qa-cov">We cover a growing list of Florida counties, cities, schools and authorities. The bottom of the bid list shows every page we read and whether it worked today.</p></div>
+        <div><h3>How current is the list?</h3><p>It refreshes every morning, about 5:20 AM Eastern. Deadlines can change after a bid is posted, so confirm on the agency's page.</p></div>
+        <div><h3>A bid is missing or wrong. What now?</h3><p>Every bid links to the page it came from, and that page always has the final word. To report a mistake, reply to any of our emails.</p></div>
+      </div>
+    </section>
+
+    <section class="rv" id="signup" aria-labelledby="signup-h">
+      <div class="band">
+        <div>
+          <h2 id="signup-h">Get the list every morning.</h2>
+          <p class="lede">Bids for your business on top, then everything new in Florida, with the Excel file attached.</p>
+        </div>
+        <form class="panel" id="subform" novalidate>
+          <div>
+            <label class="f" for="email">Email</label>
+            <input type="email" id="email" required placeholder="you@company.com" autocomplete="email">
+          </div>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+          <fieldset>
+            <legend>How often</legend>
+            <div class="freq">
+              <label><input type="radio" name="freq" value="daily" checked> Daily</label>
+              <label><input type="radio" name="freq" value="weekly"> Weekly, on Monday</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>What does your business do? <span class="hint">Optional</span></legend>
+            <div class="chips" id="bizchips"></div>
+          </fieldset>
+          <div>
+            <label class="f" for="keywords">Your own keywords <span class="hint">Optional</span></label>
+            <input type="text" id="keywords" maxlength="300" placeholder="For example: window tint, catering, roof">
+          </div>
+          <button class="btn" type="submit">Get bids by email</button>
+          <div id="submsg" role="status">We'll send one email to confirm your address. Unsubscribe anytime with one click.</div>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div>Florida Bids collects publicly posted solicitations. It is not affiliated with any agency. Information can be incomplete or out of date.</div>
-    <div><a href="/privacy">Privacy policy</a></div>
-    <div id="postal" hidden></div><!-- add PO box here before email sending starts -->
+    <div class="fm"><img src="/iggy-mark.png" alt="" width="28" height="28">Florida Bids</div>
+    <p>Florida Bids collects publicly posted solicitations. It is not affiliated with any agency. Information can be incomplete or out of date.</p>
+    <div class="fl"><a href="/bids.html">Browse all bids</a><a href="/privacy">Privacy policy</a></div>
   </footer>
 </div>
 
 <script>
-const SUBSCRIBE_API = "/api/subscribe";    // Cloudflare Worker (phase 2)
-const STATS_API = "/api/stats";
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-let ALL = [], META = {}, sortKey = "due", sortDir = 1, cat = "";
-
 const now = () => new Date();
-function dueDate(b){ if(!b.due) return null; return b.due.length === 10 ? new Date(b.due + "T23:59:00") : new Date(b.due); }
-function fmtDue(b){
-  if(!b.due) return b.status === "Upcoming" ? "Not set yet" : "See listing";
-  const d = dueDate(b), opts = {month:"short", day:"numeric", year:"numeric"};
-  let s = d.toLocaleDateString("en-US", opts);
-  if(b.due.length > 10) s += " " + d.toLocaleTimeString("en-US", {hour:"numeric", minute:"2-digit", timeZone:"America/New_York"});
-  return s;
-}
-function postedKey(b){ return b.posted || (b.first_seen || "").slice(0, 10); }
-function fmtPosted(b){
-  const k = postedKey(b); if(!k) return "";
-  const d = new Date(k + "T12:00:00");
-  return d.toLocaleDateString("en-US", {month:"short", day:"numeric"}) + (b.posted ? "" : " (added)");
-}
-function isNew(b){ const k = postedKey(b); return k && (now() - new Date(k + "T00:00:00")) / 864e5 < 3; }
-function daysLeft(b){ const d = dueDate(b); return d ? (d - now()) / 864e5 : Infinity; }
-function statusPill(b){
-  const s = b.status || "Open", low = s.toLowerCase();
-  if(low.includes("upcoming")) return `<span class="pill up">Upcoming draft</span>`;
-  if(low.includes("reject")) return `<span class="pill rej">${esc(s)}</span>`;
-  if(daysLeft(b) <= 7) return `<span class="pill soon">Closes soon</span>`;
-  return `<span class="pill">${esc(s)}</span>`;
-}
-
-function render(){
-  const q = $("#q").value.trim().toLowerCase(), county = $("#county").value;
-  let rows = ALL.filter(b => (!cat || b.category === cat) && (!county || b.county === county) &&
-    (!q || [b.title,b.agency,b.county,b.number,b.type].join(" ").toLowerCase().includes(q)));
-  rows.sort((a, b) => {
-    let x = a[sortKey] || "", y = b[sortKey] || "";
-    if(sortKey === "due"){ x = a.due || "9999"; y = b.due || "9999"; }
-    if(sortKey === "posted"){ x = postedKey(a) || "0000"; y = postedKey(b) || "0000"; }
-    return x < y ? -sortDir : x > y ? sortDir : 0;
-  });
-  $("#rows").innerHTML = rows.map(b => `<tr>
-    <td class="due c-due">${esc(fmtDue(b))}</td>
-    <td class="posted c-posted">${esc(fmtPosted(b))}${isNew(b) ? ' <span class="pill new">New</span>' : ""}</td>
-    <td class="c-title"><div class="title">${esc(b.title)}</div><div class="agency">${esc(b.agency)}${b.notes && b.notes.startsWith("Draft") ? " · " + esc(b.notes) : ""}</div></td>
-    <td class="c-county">${esc(b.county)}</td>
-    <td>${esc(b.category)}</td>
-    <td>${esc(b.type)}</td>
-    <td>${statusPill(b)}</td>
-    <td class="num c-num">${esc(b.number)}</td>
-    <td class="c-links"><div class="links">
-      ${b.bid_url ? `<a href="${esc(b.bid_url)}" target="_blank" rel="noopener">Bid page</a>` : ""}
-      ${b.source_url && b.source_url !== b.bid_url ? `<a href="${esc(b.source_url)}" target="_blank" rel="noopener">Source list</a>` : ""}
-    </div></td></tr>`).join("");
-  $("#empty").hidden = rows.length > 0;
-  $("#shown").textContent = rows.length === ALL.length ? `Showing all ${ALL.length} open bids` : `Showing ${rows.length} of ${ALL.length} open bids`;
-}
-
-function buildChips(){
-  const counts = {};
-  ALL.forEach(b => counts[b.category] = (counts[b.category] || 0) + 1);
-  const cats = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
-  $("#cats").innerHTML = `<button class="chip" data-c="" aria-pressed="true">All<span class="n">${ALL.length}</span></button>` +
-    cats.map(c => `<button class="chip" data-c="${esc(c)}" aria-pressed="false">${esc(c)}<span class="n">${counts[c]}</span></button>`).join("");
-  $("#cats").onclick = e => { const b = e.target.closest(".chip"); if(!b) return; cat = b.dataset.c;
-    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); };
-  const counties = [...new Set(ALL.map(b => b.county))].sort();
-  $("#county").innerHTML = `<option value="">All counties</option>` + counties.map(c => `<option>${esc(c)}</option>`).join("");
-}
-
-function buildCoverage(){
-  const label = {ok:["Read today","ok"], empty:["Nothing open","warn"], error:["Couldn't read today","err"], blocked:["Blocked","err"]};
-  $("#cov").innerHTML = (META.sources || []).map(s => { const [t, c] = label[s.status] || [s.status, ""];
-    return `<div><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.agency)}</a><span class="${c}">${s.count ?? ""} ${t}</span></div>`; }).join("");
-}
-
-document.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click", () => {
-  const k = th.dataset.k; sortDir = (sortKey === k) ? -sortDir : 1; sortKey = k;
-  document.querySelectorAll("th[data-k]").forEach(x => x.removeAttribute("aria-sort"));
-  th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending"); render();
-}));
-$("#q").addEventListener("input", render);
-$("#county").addEventListener("change", render);
-$("#sort").addEventListener("change", e => {
-  const [k, d] = e.target.value.split(":"); sortKey = k; sortDir = +d;
-  document.querySelectorAll("th[data-k]").forEach(x => x.removeAttribute("aria-sort"));
-  const th = document.querySelector(`th[data-k="${k}"]`); if(th) th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
-  render();
-});
+const dueDate = b => b.due ? (b.due.length === 10 ? new Date(b.due + "T23:59:00") : new Date(b.due)) : null;
+const daysLeft = b => { const d = dueDate(b); return d ? (d - now()) / 864e5 : Infinity; };
+const postedKey = b => b.posted || (b.first_seen || "").slice(0, 10);
+function fmtDue(b){ const d = dueDate(b); return d ? d.toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric"}) : "See listing"; }
+function relDue(b){ const d = daysLeft(b); if(!isFinite(d)) return ""; if(d < 0) return "closed"; if(d < 1) return "closes today"; if(d < 2) return "tomorrow"; return "in " + Math.floor(d) + " days"; }
+const JUNK = /view the opportunity|draft attachment|notice of intent|notice of award|intent to (award|single)|sole source|^\s*$/i;
+const fmt = n => n.toLocaleString("en-US");
 
 (() => {   // messages after clicking the links in our emails
   const q = new URLSearchParams(location.search), b = $("#banner");
   const msg = q.get("confirmed") === "1" ? "You're subscribed. The list will arrive in your inbox, starting with the next morning's update."
-    : q.get("confirmed") === "0" ? "That confirmation link didn't work. Please sign up again."
+    : q.get("confirmed") === "0" ? "That confirmation link didn't work. Please sign up again below."
     : q.get("unsubscribed") === "1" ? "You're unsubscribed. You won't get any more emails from us."
     : q.get("unsubscribed") === "0" ? "That unsubscribe link didn't work. If you keep getting emails, reply to one and we'll remove you." : "";
   if (msg) { b.textContent = msg; b.hidden = false; history.replaceState(null, "", location.pathname); }
 })();
-const dlg = $("#subdlg");
-document.querySelectorAll("[data-open-sub]").forEach(b => b.addEventListener("click", () => {
-  dlg.showModal(); setTimeout(() => $("#email").focus(), 30);
-}));
-$("#subclose").addEventListener("click", () => dlg.close());
-dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });   // click outside the box closes it
-if (location.hash === "#subscribe-now") dlg.showModal();
 
+// reveal on scroll (content stays visible without JS or with reduced motion)
+const io = "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches
+  ? new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {rootMargin:"0px 0px -8% 0px"}) : null;
+document.querySelectorAll(".rv").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+
+fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
+  const bids = d.bids, meta = d.meta, week = 7 * 864e5;
+  const agencies = new Set(bids.map(b => b.agency)).size;
+  const hosts = new Set((meta.sources || []).map(s => { try{ return new URL(s.url).host; }catch{ return ""; } }).filter(Boolean)).size;
+  const counties = meta.counties ?? new Set(bids.map(b => b.county)).size;
+  const fresh = bids.filter(b => { const k = postedKey(b); return k && (now() - new Date(k + "T00:00:00")) < week; }).length;
+  $("#f-total").textContent = fmt(bids.length); $("#f-new").textContent = fmt(fresh);
+  $("#f-counties").textContent = fmt(counties); $("#f-agencies").textContent = fmt(agencies);
+  if(hosts > 1) $("#problem-n").textContent = `Today we read pages from ${hosts} different websites covering ${agencies} agencies, and put every open bid in one list, sorted by due date.`;
+  $("#qa-cov").textContent = `Today the list covers ${counties} Florida counties, plus cities, schools and authorities in them. The bottom of the bid list shows every page we read and whether it worked today.`;
+
+  // recent real bids: newest first, skip junk titles, due at least 5 days out, one per county for variety
+  const pool = bids.filter(b => b.title && b.title.length > 8 && !JUNK.test(b.title) && !/upcoming|reject/i.test(b.status || "") && b.due && daysLeft(b) >= 5)
+    .sort((a, b) => (postedKey(b) || "").localeCompare(postedKey(a) || "") || (a.due || "").localeCompare(b.due || ""));
+  const seen = new Set(), pick = [];
+  for(const b of pool){ if(seen.has(b.county)) continue; seen.add(b.county); pick.push(b); if(pick.length === 6) break; }
+  if(pick.length){
+    $("#fresh").innerHTML = pick.map(b => { const soon = daysLeft(b) <= 7;
+      return `<li><a class="t" href="${esc(b.bid_url || b.source_url || "/bids.html")}" target="_blank" rel="noopener">${esc(b.title)}</a>
+        <div class="m">${esc(b.agency)}${b.agency.toLowerCase().includes(b.county.toLowerCase()) ? "" : ", " + esc(b.county) + " County"}</div>
+        <div class="d${soon ? " soon" : ""}">${esc(fmtDue(b))}<small>${esc(relDue(b))}</small></div></li>`; }).join("");
+  } else { $("#fresh").closest("section").hidden = true; }
+  $("#browse-all").textContent = `Browse all ${fmt(bids.length)} bids`;
+
+  // kinds of work: tiered type wall from real counts
+  const counts = {}; bids.forEach(b => counts[b.category] = (counts[b.category] || 0) + 1);
+  const cats = Object.entries(counts).filter(([c]) => c && c !== "Other").sort((a, b) => b[1] - a[1]);
+  $("#wall").innerHTML = cats.map(([c, n], i) => `<a class="l${i === 0 ? 1 : i < 4 ? 2 : 3}" href="/bids.html?cat=${encodeURIComponent(c)}#list">${esc(c)}<sup>${n}</sup></a>`).join("");
+}).catch(() => { $("#fresh").closest("section").hidden = true; });
+
+// sign-up: same API and checks as the bid list page
 fetch("data/business_types.json").then(r => r.json()).then(types => {
-  $("#bizchips").innerHTML = types.map(t => `<label><input type="checkbox" value="${t.id}"> ${t.label.replace(/&/g,"&amp;")}</label>`).join("");
+  $("#bizchips").innerHTML = types.map(t => `<label><input type="checkbox" value="${esc(t.id)}"> ${esc(t.label)}</label>`).join("");
 }).catch(() => {});
-
 $("#subform").addEventListener("submit", async e => {
   e.preventDefault();
   const email = $("#email").value.trim(), freq = document.querySelector("input[name=freq]:checked").value, msg = $("#submsg");
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent = "Enter a valid email address."; return; }
-  msg.textContent = "Sending…";
+  const say = (t, c = "") => { msg.textContent = t; msg.className = c; };
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ say("Enter a valid email address.", "err"); $("#email").focus(); return; }
+  say("Sending...");
   try{
     const interests = [...document.querySelectorAll("#bizchips input:checked")].map(i => i.value);
-    const r = await fetch(SUBSCRIBE_API, {method:"POST", headers:{"Content-Type":"application/json"},
+    const r = await fetch("/api/subscribe", {method:"POST", headers:{"Content-Type":"application/json"},
       body: JSON.stringify({email, freq, interests, keywords: $("#keywords").value, website: $("#website").value})});
-    if (r.status === 429) { msg.textContent = "Too many sign-ups from here. Please try again in an hour."; return; }
-    if (r.status === 400) { msg.textContent = "That email address doesn't look right."; return; }
+    if(r.status === 429){ say("Too many sign-ups from here. Please try again in an hour.", "err"); return; }
+    if(r.status === 400){ say("That email address doesn't look right.", "err"); return; }
     if(!r.ok) throw new Error();
     const d = await r.json();
-    msg.textContent = d.already ? "You're already on the list. To change your business keywords, use the link at the bottom of any of our emails."
-                                : "Almost done: check your inbox and click the link to confirm.";
-  }catch{ msg.textContent = "Something went wrong. Please try again in a few minutes."; }
+    say(d.already ? "You're already on the list. To change your business keywords, use the link at the bottom of any of our emails."
+                  : "Almost done: check your inbox and click the link to confirm.", "ok");
+  }catch{ say("Something went wrong. Please try again in a few minutes.", "err"); }
 });
-
-fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
-  ALL = d.bids; META = d.meta;
-  const week = 7 * 864e5;
-  $("#c-total").textContent = ALL.length.toLocaleString();
-  $("#c-soon").textContent = ALL.filter(b => daysLeft(b) <= 7).length;
-  // "new" = posted in the last 7 days; fall back to when we first saw it only if the agency gives no posted date
-  const seenSince = b => b.posted ? new Date(b.posted + "T00:00:00") : (b.first_seen ? new Date(b.first_seen) : null);
-  $("#c-new").textContent = ALL.filter(b => { const d = seenSince(b); return d && (now() - d) < week; }).length;
-  $("#c-counties").textContent = META.counties ?? new Set(ALL.map(b => b.county)).size;
-  $("#updated").textContent = `Updated ${META.updated} Eastern.`;
-  buildChips(); buildCoverage(); render();
-}).catch(() => { $("#updated").textContent = "Couldn't load today's list. Please try again in a minute."; });
-
-fetch(STATS_API).then(r => r.ok ? r.json() : null).then(s => { $("#c-subs").textContent = s && s.subscribers != null ? s.subscribers.toLocaleString() : "–"; }).catch(() => {});
 </script>
 </body>
 </html>

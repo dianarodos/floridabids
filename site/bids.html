@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Florida Bids · Open public solicitations</title>
+<meta name="description" content="Every open bid, RFP and RFQ we can find from Florida counties, cities, schools and authorities, updated every morning.">
+<meta name="theme-color" content="#fbf6ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1716" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Florida Bids · Every open Florida bid, free">
+<meta property="og:description" content="Open bids and RFPs from Florida counties, cities, schools and authorities in one searchable list, updated every morning.">
+<meta property="og:url" content="https://floridabids.org/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/iggy-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: slim wordmark bar, hero with Iggy + live counts, one sticky filter bar, one dense table (cards on phones),
+   coverage + subscribe band below. Palette matches the daily social cards: cream, deep green, one amber for deadlines. */
+:root{
+  --bg:#fbf6ec; --surface:#fffdf8; --fg:#14211e; --muted:#5f6a63; --line:#e6dfcf; --line-soft:#efe9da;
+  --accent:#0d5c50; --accent-ink:#ffffff; --accent-soft:#e3efe6; --accent-hover:#0a4a41;
+  --soon:#9a5b00; --soon-soft:#fbecd0; --info:#4b3f8f; --info-soft:#ece9f8; --bad:#a3322a; --bad-soft:#f8e3e1;
+  --new:#9a3d0b; --new-soft:#fde7d9; --row-hover:#f6f0e1;
+  --shadow:0 1px 2px rgba(60,48,20,.06), 0 10px 30px -12px rgba(60,48,20,.18);
+  --display:"Source Serif 4", Georgia, serif; --body:"IBM Plex Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, monospace;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936; --line-soft:#223130;
+  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-soft:#183531; --accent-hover:#7ad6c4;
+  --soon:#f0b85a; --soon-soft:#3a2c13; --info:#b7a9f2; --info-soft:#29243f; --bad:#f08a80; --bad-soft:#3b1d1a;
+  --new:#f4b58a; --new-soft:#3a2216; --row-hover:#1a2826;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -12px rgba(0,0,0,.5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1716; --surface:#16211f; --fg:#e3ece9; --muted:#97a9a4; --line:#2a3936; --line-soft:#223130;
+  --accent:#5cc4b0; --accent-ink:#0b1513; --accent-soft:#183531; --accent-hover:#7ad6c4;
+  --soon:#f0b85a; --soon-soft:#3a2c13; --info:#b7a9f2; --info-soft:#29243f; --bad:#f08a80; --bad-soft:#3b1d1a;
+  --new:#f4b58a; --new-soft:#3a2216; --row-hover:#1a2826;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -12px rgba(0,0,0,.5); color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:0 0}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-hover)}
+.wrap{max-width:1240px;margin:0 auto}
+.skip{position:absolute;left:12px;top:-60px;z-index:30;background:var(--accent);color:var(--accent-ink);padding:10px 14px;border-radius:6px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* wordmark bar */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:16px}
+.wordmark{display:flex;align-items:center;gap:10px;font:700 19px var(--display);letter-spacing:-.005em;color:var(--fg);text-decoration:none}
+.wordmark img{width:34px;height:34px;display:block}
+.navlinks{display:flex;align-items:center;gap:18px;font-size:14px}
+.navlinks a.plain{color:var(--muted);text-decoration:none}
+.navlinks a.plain:hover{color:var(--fg)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:24px 48px;align-items:center;padding-block:28px 8px}
+.hero h1{font:700 clamp(34px,5.2vw,58px)/1.02 var(--display);letter-spacing:-.022em;margin:0 0 14px;color:var(--accent);text-wrap:balance;max-width:16ch}
+.hero p.lede{margin:0 0 22px;font-size:clamp(16px,1.6vw,18px);color:var(--fg);max-width:52ch;text-wrap:pretty}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.hero .mascot{justify-self:end;width:100%;max-width:230px;aspect-ratio:1;display:block;filter:drop-shadow(0 18px 24px rgba(13,92,80,.16))}
+.hero .mascot img{width:100%;height:100%;display:block}
+
+/* live counts: big serif numerals, hairline dividers, no cards */
+.counts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.counts div{display:grid;gap:2px;padding:16px 18px 14px 0}
+.counts div + div{padding-left:20px;border-left:1px solid var(--line)}
+.counts b{font:600 clamp(26px,3.4vw,38px)/1.05 var(--display);letter-spacing:-.01em;color:var(--fg)}
+.counts div:nth-child(2) b{color:var(--soon)}
+.counts span{font-size:12px;letter-spacing:.02em;color:var(--muted)}
+.updated{font-size:13px;color:var(--muted);margin-top:10px;display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+.updated::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.banner{background:var(--accent-soft);color:var(--accent);border-radius:8px;padding:12px 16px;font-weight:600;margin-top:16px}
+
+/* buttons */
+.btn{font:600 14px var(--body);padding:10px 16px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);text-decoration:none;white-space:nowrap;cursor:pointer;
+  transition:background .2s var(--ease),border-color .2s var(--ease),transform .15s var(--ease),box-shadow .2s var(--ease)}
+.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-ink);box-shadow:0 6px 16px -8px rgba(13,92,80,.6)}
+.btn:active{transform:translateY(1px) scale(.985)}
+.btn-cta{font-size:16px;padding:13px 22px;border-radius:10px}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.ghost:hover{background:var(--accent-soft);color:var(--accent);box-shadow:none}
+.textlink{font-weight:600;font-size:14px;color:var(--accent);text-decoration:none;display:inline-flex;gap:6px;align-items:center;padding-block:6px;border-bottom:1px solid transparent;transition:border-color .2s}
+.textlink:hover{border-bottom-color:currentColor}
+:is(.chip,.btn,.textlink,input,select,a,th,button):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* sticky filter bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);padding-block:14px 12px;margin-top:30px;display:grid;gap:10px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.search{position:relative;flex:1 1 280px;min-width:0}
+.search svg{position:absolute;left:12px;top:50%;translate:0 -50%;width:17px;height:17px;color:var(--muted);pointer-events:none}
+input[type=search],select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);transition:border-color .2s,box-shadow .2s}
+input[type=search]{width:100%;padding-left:38px}
+input[type=search]:hover,select:hover{border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+input[type=search]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);outline:none}
+input[type=radio]{accent-color:var(--accent)}
+.chip{font:500 13px var(--body);padding:6px 12px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;
+  transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),transform .15s var(--ease)}
+.chip:hover{border-color:var(--accent)}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip .n{opacity:.65;font-variant-numeric:tabular-nums;margin-left:5px}
+.shown{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* table */
+.tablebox{overflow-x:auto;margin-top:6px}
+table{border-collapse:collapse;width:100%;min-width:980px;font-size:14px}
+th,td{text-align:left;padding:13px 14px 13px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-size:12px;letter-spacing:.03em;color:var(--muted);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;padding-block:12px;border-bottom:1px solid var(--line);transition:color .2s}
+th:hover{color:var(--fg)}
+th[aria-sort]::after{content:" ↕";opacity:.4}
+th[aria-sort="ascending"]::after{content:" ↑";opacity:1;color:var(--accent)}
+th[aria-sort="descending"]::after{content:" ↓";opacity:1;color:var(--accent)}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:var(--row-hover)}
+tr:last-child td{border-bottom:0}
+td.due{white-space:nowrap;font-variant-numeric:tabular-nums}
+td.due .d{font:500 13.5px var(--mono)}
+td.due .rel{display:block;font:12px var(--body);color:var(--muted);margin-top:1px}
+td.due.soon .d,td.due.soon .rel{color:var(--soon)}
+td.due.soon .rel{font-weight:600}
+td.c-cat{min-width:150px}
+td.num{font:12.5px var(--mono);color:var(--muted);overflow-wrap:anywhere;min-width:118px;max-width:150px}
+.title{font-weight:600;line-height:1.35;text-wrap:pretty}
+.agency{font-size:13px;color:var(--muted);margin-top:2px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap;background:var(--accent-soft);color:var(--accent)}
+td.posted{font:12.5px var(--mono);color:var(--muted);white-space:nowrap}
+.pill.new{background:var(--new-soft);color:var(--new);margin-left:6px;border-radius:3px;font-size:11px;letter-spacing:.03em}
+.pill.soon{background:var(--soon-soft);color:var(--soon)}
+.pill.up{background:var(--info-soft);color:var(--info)}
+.pill.rej{background:var(--bad-soft);color:var(--bad)}
+.links{display:flex;flex-direction:column;gap:3px;font-size:13px;white-space:nowrap}
+.links a{text-decoration:none;font-weight:500}
+.links a:hover{text-decoration:underline}
+.empty{padding:48px 20px;color:var(--muted);text-align:center;font-size:15px}
+.empty b{display:block;font:600 20px var(--display);color:var(--fg);margin-bottom:4px}
+tr.skel td{padding-block:17px}
+tr.skel i{display:block;height:12px;border-radius:4px;background:linear-gradient(90deg,var(--line-soft),var(--line),var(--line-soft));background-size:200% 100%;animation:sk 1.3s linear infinite}
+@keyframes sk{to{background-position:-200% 0}}
+
+/* sections */
+section{margin-top:64px}
+section h2{font:700 clamp(24px,3vw,30px)/1.15 var(--display);letter-spacing:-.012em;margin:0 0 8px}
+section p.lede{color:var(--muted);max-width:66ch;margin:0 0 18px;text-wrap:pretty}
+.band{background:var(--accent);color:#fff;border-radius:16px;padding:clamp(24px,4vw,40px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 40px;align-items:center;margin-top:64px;box-shadow:var(--shadow)}
+.band h2{color:#fff;margin:0 0 6px}
+.band p{margin:0;color:#d7ebe4;max-width:56ch;text-wrap:pretty}
+.band .btn{background:#fffdf8;color:#0d5c50;border-color:#fffdf8;font-size:16px;padding:13px 22px;border-radius:10px}
+.band .btn:hover{background:#fff;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+:root[data-theme="dark"] .band{background:#12403a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .band{background:#12403a}}
+.cov{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0 28px;border-top:1px solid var(--line)}
+.cov div{padding:9px 0;border-bottom:1px solid var(--line-soft);font-size:13px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.cov div > a{text-decoration:none}
+.cov div > a:hover{text-decoration:underline}
+.cov span{white-space:nowrap;font-variant-numeric:tabular-nums}
+.cov .ok{color:var(--accent)} .cov .warn{color:var(--soon)} .cov .err{color:var(--bad)}
+.note{font-size:13px;color:var(--muted)}
+footer{margin-top:64px;padding-block:22px 40px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:grid;gap:8px}
+footer .fm{display:flex;align-items:center;gap:10px;color:var(--fg);font:600 15px var(--display)}
+footer .fm img{width:26px;height:26px}
+footer p{margin:0;max-width:80ch}
+
+/* subscribe dialog */
+dialog.subdlg{border:1px solid var(--line);border-radius:16px;padding:0;background:var(--surface);color:var(--fg);
+  width:min(460px,calc(100vw - 32px));box-shadow:0 24px 60px rgba(30,24,10,.3)}
+dialog.subdlg::backdrop{background:rgba(15,28,24,.5);backdrop-filter:blur(3px)}
+dialog.subdlg[open]{animation:pop .25s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}}
+.subdlg .inner{padding:26px;display:grid;gap:14px}
+.subdlg h2{font:700 24px/1.15 var(--display);margin:0;letter-spacing:-.01em}
+.subdlg p{margin:0;color:var(--muted)}
+.subdlg .x{position:absolute;top:12px;right:12px;width:36px;height:36px;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer;transition:background .2s}
+.subdlg .x:hover{background:var(--bg);color:var(--fg)}
+.subdlg input[type=email],.subdlg input[type=text].kw{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);width:100%;box-sizing:border-box;transition:border-color .2s,box-shadow .2s}
+.subdlg input[type=email]:focus,.subdlg input[type=text].kw:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);outline:none}
+.subdlg fieldset{border:0;padding:0;margin:0;display:flex;gap:18px;font-size:14px}
+.subdlg .btn{width:100%;padding:12px 14px}
+.subdlg{max-height:calc(100dvh - 32px);overflow:auto}
+.biz{display:grid;gap:8px}
+.biz .chips{display:flex;flex-wrap:wrap;gap:6px;max-height:168px;overflow:auto;padding:2px}
+.biz .chips label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:13px;cursor:pointer;background:var(--bg);transition:border-color .2s,background .2s}
+.biz .chips label:hover{border-color:var(--accent)}
+.biz .chips input{accent-color:var(--accent);margin:0}
+.biz .chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
+
+/* entrance */
+@media (prefers-reduced-motion:no-preference){
+  .hero > *,.counts{animation:rise .6s var(--ease) both}
+  .hero > :nth-child(2){animation-delay:.08s}
+  .counts{animation-delay:.16s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr) 150px;gap:16px 24px}
+  .counts{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .counts div:nth-child(4){padding-left:0;border-left:0}
+  .counts div:nth-child(n+4){border-top:1px solid var(--line)}
+}
+@media (max-width:560px){
+  .counts{grid-template-columns:1fr 1fr}
+  .counts div,.counts div+div{padding:14px 12px 12px 0;border-left:0;border-top:1px solid var(--line)}
+  .counts div:nth-child(-n+2){border-top:0}
+  .counts div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+  .counts div:nth-child(5){grid-column:1/-1}
+}
+@media (max-width:760px){
+  .navlinks a.plain{display:none}
+  .hero{grid-template-columns:1fr;padding-top:10px}
+  .hero .mascot{display:none}
+  .hero h1{max-width:none}
+  .band{grid-template-columns:1fr}
+  .band .btn{justify-self:start}
+  .tablebox{overflow:visible}
+  table{min-width:0} thead{display:none}
+  tbody tr{display:grid;grid-template-columns:1fr auto;gap:5px 12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:var(--shadow)}
+  td{border:0;padding:0}
+  td.c-title{grid-column:1/-1;grid-row:1}
+  td.c-due{grid-column:2;grid-row:2;text-align:right}
+  td.c-county{grid-column:1;grid-row:2;font-weight:500}
+  td.c-posted{grid-column:1/-1;grid-row:3;font-size:12px}
+  td.c-num{grid-column:1/-1}
+  td.c-links{grid-column:1/-1;margin-top:4px}
+  td.c-cat,td.c-type,td.c-status{display:none}
+  .links{flex-direction:row;gap:18px}
+  #cats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-20px;padding-inline:20px}
+  #cats::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .bar .row:first-child{display:grid;grid-template-columns:1fr auto}
+  .bar .row:first-child .search{grid-column:1/-1}
+  tr.skel{display:block;padding:18px 14px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#list">Skip to the bid list</a>
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="/"><img src="/iggy-mark.png" alt="" width="34" height="34">Florida Bids</a>
+    <div class="navlinks">
+      <a class="plain" href="#coverage">Where bids come from</a>
+      <button class="btn ghost" type="button" data-open-sub>Get bids by email</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Every open Florida bid, in one free list.</h1>
+      <p class="lede">Counties, cities, schools and authorities post their solicitations on dozens of different websites. We read them every morning, so you can search them in one place.</p>
+      <div class="cta-row">
+        <button class="btn btn-cta" type="button" data-open-sub>Get bids by email</button>
+        <a class="textlink" id="xlsx" href="data/florida-open-bids.xlsx">Download Excel ↓</a>
+      </div>
+    </div>
+    <div class="mascot"><img src="/iggy-mark.png" alt="Iggy the iguana holding a clipboard of bids" width="230" height="230"></div>
+  </header>
+
+  <div class="counts" id="counts" aria-live="polite">
+    <div><b id="c-total">–</b><span>open bids</span></div>
+    <div><b id="c-soon">–</b><span>closing in 7 days</span></div>
+    <div><b id="c-new">–</b><span>new in 7 days</span></div>
+    <div><b id="c-counties">–</b><span>counties</span></div>
+    <div><b id="c-subs">–</b><span>subscribers</span></div>
+  </div>
+  <div class="updated" id="updated">Loading…</div>
+  <div class="banner" id="banner" role="status" hidden></div>
+
+  <main id="list">
+  <div class="bar">
+    <div class="row">
+      <div class="search">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.5 13.5 3.5 3.5"/></svg>
+        <input type="search" id="q" placeholder="Search bids, agencies, counties" aria-label="Search bids">
+      </div>
+      <select id="county" aria-label="County"><option value="">All counties</option></select>
+      <select id="sort" aria-label="Sort"><option value="due:1">Closing soonest</option><option value="posted:-1">Newest first</option></select>
+    </div>
+    <div class="row" id="cats" role="group" aria-label="Category"></div>
+    <div class="shown" id="shown"></div>
+  </div>
+
+  <div class="tablebox">
+    <table id="tbl">
+      <thead><tr>
+        <th data-k="due" aria-sort="ascending">Due</th>
+        <th data-k="posted">Posted</th>
+        <th data-k="title">Solicitation</th>
+        <th data-k="county">County</th>
+        <th data-k="category">Category</th>
+        <th data-k="type">Type</th>
+        <th data-k="status">Status</th>
+        <th data-k="number">Bid #</th>
+        <th>Links</th>
+      </tr></thead>
+      <tbody id="rows">
+        <tr class="skel"><td colspan="9"><i style="width:70%"></i></td></tr>
+        <tr class="skel"><td colspan="9"><i style="width:55%"></i></td></tr>
+        <tr class="skel"><td colspan="9"><i style="width:64%"></i></td></tr>
+        <tr class="skel"><td colspan="9"><i style="width:48%"></i></td></tr>
+        <tr class="skel"><td colspan="9"><i style="width:60%"></i></td></tr>
+      </tbody>
+    </table>
+    <div class="empty" id="empty" hidden><b>No open bids match.</b>Clear the search or pick another category.</div>
+  </div>
+  </main>
+
+  <div class="band" id="subscribe">
+    <div>
+      <h2>Get the list by email</h2>
+      <p>A daily or weekly email with every open bid and the Excel file attached, with bids for your kind of business at the top. Free. Unsubscribe with one click.</p>
+    </div>
+    <button class="btn" type="button" data-open-sub>Subscribe</button>
+  </div>
+
+  <dialog class="subdlg" id="subdlg" aria-labelledby="subttl">
+    <button class="x" type="button" id="subclose" aria-label="Close">×</button>
+    <form class="inner" id="subform" novalidate>
+      <h2 id="subttl">Get Florida bids by email</h2>
+      <p>Bids for your business on top, then everything new in Florida, with the Excel file attached. Free. Unsubscribe anytime with one click.</p>
+      <input type="email" id="email" required placeholder="you@company.com" aria-label="Email address" autocomplete="email">
+      <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <fieldset><legend class="note" style="margin-bottom:6px">How often</legend>
+        <label><input type="radio" name="freq" value="daily" checked> Daily</label>
+        <label><input type="radio" name="freq" value="weekly"> Weekly (Monday)</label>
+      </fieldset>
+      <div class="biz">
+        <div class="note"><b>What does your business do?</b> Optional. Pick any that fit, and we'll put every matching open bid at the top of your email.</div>
+        <div class="chips" id="bizchips"></div>
+        <input type="text" class="kw" id="keywords" maxlength="300" placeholder="Your own keywords, e.g. window tint, catering, roof" aria-label="Your own keywords, separated by commas">
+      </div>
+      <button class="btn" type="submit">Subscribe</button>
+      <div class="note" id="submsg" role="status">We'll send one email to confirm your address. We only use it to send this list, and we will never send you ads.</div>
+    </form>
+  </dialog>
+
+  <section id="coverage">
+    <h2>Where the bids come from</h2>
+    <p class="lede">We read these public pages every morning, and we also include bids announced through agency email alerts. Always confirm details and deadlines on the agency's page before you respond.</p>
+    <div class="cov" id="cov"></div>
+  </section>
+
+  <footer>
+    <div class="fm"><img src="/iggy-mark.png" alt="" width="26" height="26">Florida Bids</div>
+    <p>Florida Bids collects publicly posted solicitations. It is not affiliated with any agency. Information can be incomplete or out of date.</p>
+    <div><a href="/privacy">Privacy policy</a></div>
+    <div id="postal" hidden></div><!-- add PO box here before email sending starts -->
+  </footer>
+</div>
+
+<script>
+const SUBSCRIBE_API = "/api/subscribe";    // Cloudflare Worker (phase 2)
+const STATS_API = "/api/stats";
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let ALL = [], META = {}, sortKey = "due", sortDir = 1, cat = "";
+
+const now = () => new Date();
+function dueDate(b){ if(!b.due) return null; return b.due.length === 10 ? new Date(b.due + "T23:59:00") : new Date(b.due); }
+function fmtDue(b){
+  if(!b.due) return b.status === "Upcoming" ? "Not set yet" : "See listing";
+  const d = dueDate(b), opts = {month:"short", day:"numeric", year:"numeric"};
+  let s = d.toLocaleDateString("en-US", opts);
+  if(b.due.length > 10) s += " " + d.toLocaleTimeString("en-US", {hour:"numeric", minute:"2-digit", timeZone:"America/New_York"});
+  return s;
+}
+function relDue(b){
+  const d = daysLeft(b); if(!isFinite(d)) return "";
+  if(d < 0) return "closed"; if(d < 1) return "closes today"; if(d < 2) return "tomorrow";
+  return "in " + Math.floor(d) + " days";
+}
+function postedKey(b){ return b.posted || (b.first_seen || "").slice(0, 10); }
+function fmtPosted(b){
+  const k = postedKey(b); if(!k) return "";
+  const d = new Date(k + "T12:00:00");
+  return d.toLocaleDateString("en-US", {month:"short", day:"numeric"}) + (b.posted ? "" : " (added)");
+}
+function isNew(b){ const k = postedKey(b); return k && (now() - new Date(k + "T00:00:00")) / 864e5 < 3; }
+function daysLeft(b){ const d = dueDate(b); return d ? (d - now()) / 864e5 : Infinity; }
+function statusPill(b){
+  const s = b.status || "Open", low = s.toLowerCase();
+  if(low.includes("upcoming")) return `<span class="pill up">Upcoming draft</span>`;
+  if(low.includes("reject")) return `<span class="pill rej">${esc(s)}</span>`;
+  if(daysLeft(b) <= 7) return `<span class="pill soon">Closes soon</span>`;
+  return `<span class="pill">${esc(s)}</span>`;
+}
+
+function render(){
+  const q = $("#q").value.trim().toLowerCase(), county = $("#county").value;
+  let rows = ALL.filter(b => (!cat || b.category === cat) && (!county || b.county === county) &&
+    (!q || [b.title,b.agency,b.county,b.number,b.type].join(" ").toLowerCase().includes(q)));
+  rows.sort((a, b) => {
+    let x = a[sortKey] || "", y = b[sortKey] || "";
+    if(sortKey === "due"){ x = a.due || "9999"; y = b.due || "9999"; }
+    if(sortKey === "posted"){ x = postedKey(a) || "0000"; y = postedKey(b) || "0000"; }
+    return x < y ? -sortDir : x > y ? sortDir : 0;
+  });
+  $("#rows").innerHTML = rows.map(b => `<tr>
+    <td class="due c-due${daysLeft(b) <= 7 ? " soon" : ""}"><span class="d">${esc(fmtDue(b))}</span><span class="rel">${esc(relDue(b))}</span></td>
+    <td class="posted c-posted">${esc(fmtPosted(b))}${isNew(b) ? ' <span class="pill new">New</span>' : ""}</td>
+    <td class="c-title"><div class="title">${esc(b.title)}</div><div class="agency">${esc(b.agency)}${b.notes && b.notes.startsWith("Draft") ? " · " + esc(b.notes) : ""}</div></td>
+    <td class="c-county">${esc(b.county)}</td>
+    <td class="c-cat">${esc(b.category)}</td>
+    <td class="c-type">${esc(b.type)}</td>
+    <td class="c-status">${statusPill(b)}</td>
+    <td class="num c-num">${esc(b.number)}</td>
+    <td class="c-links"><div class="links">
+      ${b.bid_url ? `<a href="${esc(b.bid_url)}" target="_blank" rel="noopener">Bid page</a>` : ""}
+      ${b.source_url && b.source_url !== b.bid_url ? `<a href="${esc(b.source_url)}" target="_blank" rel="noopener">Source list</a>` : ""}
+    </div></td></tr>`).join("");
+  $("#empty").hidden = rows.length > 0;
+  $("#shown").textContent = rows.length === ALL.length ? `Showing all ${ALL.length} open bids` : `Showing ${rows.length} of ${ALL.length} open bids`;
+}
+
+function buildChips(){
+  const counts = {};
+  ALL.forEach(b => counts[b.category] = (counts[b.category] || 0) + 1);
+  const cats = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  $("#cats").innerHTML = `<button class="chip" data-c="" aria-pressed="true">All<span class="n">${ALL.length}</span></button>` +
+    cats.map(c => `<button class="chip" data-c="${esc(c)}" aria-pressed="false">${esc(c)}<span class="n">${counts[c]}</span></button>`).join("");
+  $("#cats").onclick = e => { const b = e.target.closest(".chip"); if(!b) return; cat = b.dataset.c;
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); };
+  const counties = [...new Set(ALL.map(b => b.county))].sort();
+  $("#county").innerHTML = `<option value="">All counties</option>` + counties.map(c => `<option>${esc(c)}</option>`).join("");
+}
+
+function buildCoverage(){
+  const label = {ok:["Read today","ok"], empty:["Nothing open","warn"], error:["Couldn't read today","err"], blocked:["Blocked","err"]};
+  $("#cov").innerHTML = (META.sources || []).map(s => { const [t, c] = label[s.status] || [s.status, ""];
+    return `<div><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.agency)}</a><span class="${c}">${s.count ?? ""} ${t}</span></div>`; }).join("");
+}
+
+document.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click", () => {
+  const k = th.dataset.k; sortDir = (sortKey === k) ? -sortDir : 1; sortKey = k;
+  document.querySelectorAll("th[data-k]").forEach(x => x.removeAttribute("aria-sort"));
+  th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending"); render();
+}));
+$("#q").addEventListener("input", render);
+$("#county").addEventListener("change", render);
+$("#sort").addEventListener("change", e => {
+  const [k, d] = e.target.value.split(":"); sortKey = k; sortDir = +d;
+  document.querySelectorAll("th[data-k]").forEach(x => x.removeAttribute("aria-sort"));
+  const th = document.querySelector(`th[data-k="${k}"]`); if(th) th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+  render();
+});
+
+(() => {   // messages after clicking the links in our emails
+  const q = new URLSearchParams(location.search), b = $("#banner");
+  const msg = q.get("confirmed") === "1" ? "You're subscribed. The list will arrive in your inbox, starting with the next morning's update."
+    : q.get("confirmed") === "0" ? "That confirmation link didn't work. Please sign up again."
+    : q.get("unsubscribed") === "1" ? "You're unsubscribed. You won't get any more emails from us."
+    : q.get("unsubscribed") === "0" ? "That unsubscribe link didn't work. If you keep getting emails, reply to one and we'll remove you." : "";
+  if (msg) { b.textContent = msg; b.hidden = false; history.replaceState(null, "", location.pathname); }
+})();
+const dlg = $("#subdlg");
+document.querySelectorAll("[data-open-sub]").forEach(b => b.addEventListener("click", () => {
+  dlg.showModal(); setTimeout(() => $("#email").focus(), 30);
+}));
+$("#subclose").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });   // click outside the box closes it
+if (location.hash === "#subscribe-now") dlg.showModal();
+
+fetch("data/business_types.json").then(r => r.json()).then(types => {
+  $("#bizchips").innerHTML = types.map(t => `<label><input type="checkbox" value="${t.id}"> ${t.label.replace(/&/g,"&amp;")}</label>`).join("");
+}).catch(() => {});
+
+$("#subform").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("#email").value.trim(), freq = document.querySelector("input[name=freq]:checked").value, msg = $("#submsg");
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent = "Enter a valid email address."; return; }
+  msg.textContent = "Sending…";
+  try{
+    const interests = [...document.querySelectorAll("#bizchips input:checked")].map(i => i.value);
+    const r = await fetch(SUBSCRIBE_API, {method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({email, freq, interests, keywords: $("#keywords").value, website: $("#website").value})});
+    if (r.status === 429) { msg.textContent = "Too many sign-ups from here. Please try again in an hour."; return; }
+    if (r.status === 400) { msg.textContent = "That email address doesn't look right."; return; }
+    if(!r.ok) throw new Error();
+    const d = await r.json();
+    msg.textContent = d.already ? "You're already on the list. To change your business keywords, use the link at the bottom of any of our emails."
+                                : "Almost done: check your inbox and click the link to confirm.";
+  }catch{ msg.textContent = "Something went wrong. Please try again in a few minutes."; }
+});
+
+fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
+  ALL = d.bids; META = d.meta;
+  const week = 7 * 864e5;
+  $("#c-total").textContent = ALL.length.toLocaleString();
+  $("#c-soon").textContent = ALL.filter(b => daysLeft(b) <= 7).length;
+  // "new" = posted in the last 7 days; fall back to when we first saw it only if the agency gives no posted date
+  const seenSince = b => b.posted ? new Date(b.posted + "T00:00:00") : (b.first_seen ? new Date(b.first_seen) : null);
+  $("#c-new").textContent = ALL.filter(b => { const d = seenSince(b); return d && (now() - d) < week; }).length;
+  $("#c-counties").textContent = META.counties ?? new Set(ALL.map(b => b.county)).size;
+  let when = META.updated;
+  try{ when = new Date(META.updated_iso).toLocaleString("en-US", {month:"short", day:"numeric", hour:"numeric", minute:"2-digit", timeZone:"America/New_York"}); if(when === "Invalid Date") when = META.updated; }catch{}
+  $("#updated").textContent = `Updated ${when} Eastern`;
+  buildChips(); buildCoverage(); render();
+  const wantCat = new URLSearchParams(location.search).get("cat");   // links from the landing page, e.g. /bids.html?cat=Construction
+  if(wantCat){ const chip = [...document.querySelectorAll("#cats .chip")].find(x => x.dataset.c === wantCat); if(chip) chip.click(); }
+}).catch(() => { $("#updated").textContent = "Couldn't load today's list. Please try again in a minute."; });
+
+fetch(STATS_API).then(r => r.ok ? r.json() : null).then(s => { $("#c-subs").textContent = s && s.subscribers != null ? s.subscribers.toLocaleString() : "–"; }).catch(() => {});
+</script>
+</body>
+</html>
