@@ -22,7 +22,7 @@ The scheduled task follows this file every morning. Edit it to change how drafts
 1. **Morning: Facebook** (posted on approval): hook line with today's count, 3–4 bids with emoji + county,
    one line on why it matters. **No URL in the text** (Facebook limits Pages to about 2 link posts a month).
    End with `🔗 Link in the first comment`, plus 3–4 hashtags.
-   The link goes in as the first comment: `👉 Every open Florida bid, free: https://floridabids.org`
+   The link goes in as the first comment: `👉 Every open Florida bid, free: https://floridabids.org/bids`
 2. **Morning: Instagram** (posted on approval): the same, shorter. End with `Link in bio 🔗` + 6–8 hashtags.
 3. **Afternoon: Facebook** (scheduled 3:00 PM): the theme post. **No URL, no link comment** (it's scheduled).
    The card shows floridabids.org.

@@ -85,11 +85,37 @@ def _row(b, site, is_new=False):
             f'font-family:monospace">{due_s}</td></tr>')
 
 
+def in_counties(bids, counties):
+    """Keep only bids in the subscriber's chosen counties. No counties chosen means all of Florida."""
+    wanted = {c.strip().lower() for c in (counties or []) if isinstance(c, str) and c.strip()}
+    return [b for b in bids if (b.get("county") or "").strip().lower() in wanted] if wanted else bids
+
+
+def county_attachment(bids, counties, updated, day, cache):
+    """Excel file limited to the subscriber's counties (built once per distinct set of counties)."""
+    key = tuple(sorted({c.strip().lower() for c in counties}))
+    if key not in cache:
+        import tempfile
+        from types import SimpleNamespace
+        from .export import COLUMNS, write_xlsx
+        rows = [SimpleNamespace(**{f: b.get(f) or "" for _, f, _ in COLUMNS}) for b in in_counties(bids, counties)]
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "list.xlsx"
+            write_xlsx(rows, path, updated)
+            cache[key] = {"name": f"florida-open-bids-{day}-your-counties.xlsx",
+                          "content": base64.b64encode(path.read_bytes()).decode()}
+    return cache[key]
+
+
 def build(bids, meta, freq, site, unsub_url, now, since=None, sub=None):
+    sub = sub or {}
+    counties = [c for c in (sub.get("counties") or []) if isinstance(c, str) and c.strip()]
+    if counties:
+        bids = in_counties(bids, counties)
+        meta = {**meta, "total": len(bids)}        # "open in Florida" becomes "open in your counties"
     new, soon = pick(bids, freq, now, since)
     label = "this morning" if freq == "daily" else "this week"
     e = html.escape
-    sub = sub or {}
     prefs_url = f"{site}/preferences.html?t={sub['token']}" if sub.get("token") else site
     match = matcher(sub.get("interests"), sub.get("keywords"))
     new_keys = {id(b) for b in new}         # same dict objects as in bids
@@ -143,9 +169,9 @@ def build(bids, meta, freq, site, unsub_url, now, since=None, sub=None):
     by_county = Counter(f'{b.get("county") or "Other"}' for b in new)
     by_cat = Counter(b.get("category") or "Other" for b in new)
     stats = (f'<table role="presentation" cellpadding="0" cellspacing="6" style="width:100%;margin:4px 0 14px"><tr>'
-             + (f'{tile(len(mine), "open for your business")}{tile(len(new), "new " + label)}{tile(total, "open in Florida")}'
+             + (f'{tile(len(mine), "open for your business")}{tile(len(new), "new " + label)}{tile(total, "open in your counties" if counties else "open in Florida")}'
                 if match else
-                f'{tile(len(new), "new " + label)}{tile(len(soon), "closing in 7 days")}{tile(total, "open in Florida")}')
+                f'{tile(len(new), "new " + label)}{tile(len(soon), "closing in 7 days")}{tile(total, "open in your counties" if counties else "open in Florida")}')
              + '</tr></table>')
     charts = (f'<h2 style="font-size:17px;margin:18px 0 8px">Where the new bids are</h2>'
               f'<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%"><tr>'
@@ -162,22 +188,25 @@ def build(bids, meta, freq, site, unsub_url, now, since=None, sub=None):
                  f'<b>Get the bids for your business on top.</b> Tell us what you do (food, automotive, roofing, IT…) or type '
                  f'your own keywords, and every matching open bid will lead this email.<div style="margin-top:8px">'
                  f'{pbtn % "Pick my business keywords"}</div></div>')
+    county_note = (f'<p style="font-size:13px;color:#5b6b67;margin:0 0 6px">Showing bids in: {e(", ".join(counties))}. '
+                   f'{pbtn % "Change my counties"}</p>') if counties else ""
     html_body = f"""<div style="font-family:Arial,Helvetica,sans-serif;color:#1b2b28;max-width:680px;line-height:1.45">
 <table role="presentation" style="width:100%"><tr>
 <td><h1 style="font-family:Georgia,serif;font-size:26px;margin:0">Florida Bids</h1>
 <div style="color:#5b6b67;font-size:14px">{e(now.strftime('%A, %B %-d, %Y'))}</div></td>
 <td style="text-align:right;vertical-align:middle">{button}</td></tr></table>
+{county_note}
 {stats}
 {yours}
 {charts}
 <h2 style="font-size:17px;margin:20px 0 6px">All new bids {label} ({len(new)})</h2>
 {table(new, 60 if match else 80) if new else '<p style="color:#5b6b67">No new bids since the last email. Every open bid is on the site and in the attached Excel file.</p>'}
 <p style="margin:20px 0 0">{button}</p>
-<p style="font-size:13px;color:#5b6b67;margin:8px 0 0">The full list of {total} open bids is attached as an Excel file.</p>
+<p style="font-size:13px;color:#5b6b67;margin:8px 0 0">{f"The {total} open bids in your counties are" if counties else f"The full list of {total} open bids is"} attached as an Excel file.</p>
 <p style="font-size:12px;color:#5b6b67;margin-top:24px">Always confirm details and deadlines on the agency's page before
  you respond. You get this {'every morning' if freq == 'daily' else 'every Monday'} because you signed up at floridabids.org.
  No ads, ever.</p>
-<p style="margin:10px 0 0">{pbtn % "Change my business keywords"} <a href="{e(unsub_url)}" style="display:inline-block;border:1px solid #9aa8a4;color:#5b6b67;
+<p style="margin:10px 0 0">{pbtn % "Change my settings"} <a href="{e(unsub_url)}" style="display:inline-block;border:1px solid #9aa8a4;color:#5b6b67;
 padding:7px 14px;border-radius:6px;text-decoration:none;font-size:13px">Unsubscribe</a></p></div>"""
     text = ((f"Open bids for your business ({len(mine)}):\n" + "\n".join(
                 f"- {'NEW ' if id(b) in new_keys else ''}{b['title']} ({b.get('agency','')}, due {(b.get('due') or '')[:10]}) "
@@ -185,7 +214,8 @@ padding:7px 14px;border-radius:6px;text-decoration:none;font-size:13px">Unsubscr
             + f"Florida Bids - {meta.get('total', len(bids))} open bids. All new {label}: {len(new)}.\n\n"
             + "\n".join(f"- {b['title']} ({b.get('agency','')}, due {(b.get('due') or '')[:10]}) "
                         f"{b.get('bid_url') or b.get('source_url') or ''}" for b in new[:60])
-            + f"\n\nAll open bids: {site}\nChange your business keywords: {prefs_url}\nUnsubscribe: {unsub_url}\n")
+            + (f"\n\nShowing bids in: {', '.join(counties)}" if counties else "")
+            + f"\n\nAll open bids: {site}\nChange your settings: {prefs_url}\nUnsubscribe: {unsub_url}\n")
     return subject, html_body, text
 
 
@@ -212,6 +242,7 @@ def main(argv=None):
     ap.add_argument("--freq", choices=["daily", "weekly"])
     ap.add_argument("--interests", help="test email: business type ids, comma-separated (e.g. food,automotive)")
     ap.add_argument("--keywords", help="test email: free keywords (e.g. 'window tint, catering')")
+    ap.add_argument("--counties", help="test email: counties, comma-separated (e.g. 'Miami-Dade,Broward')")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
@@ -228,6 +259,7 @@ def main(argv=None):
     attachment = ({"name": f"florida-open-bids-{now_et():%Y-%m-%d}.xlsx",
                    "content": base64.b64encode(xlsx.read_bytes()).decode()} if xlsx.exists() else None)
     now = now_et()
+    county_files = {}
 
     freqs = [args.freq] if args.freq else (["daily", "weekly"] if now.weekday() == 0 else ["daily"])
     if args.to_sha256:
@@ -248,7 +280,8 @@ def main(argv=None):
     elif args.to:
         freqs = freqs[:1]
         recipients = {freqs[0]: [{"email": args.to, "token": "test", "interests": args.interests.split(",") if args.interests else [],
-                                  "keywords": args.keywords or ""}]}
+                                  "keywords": args.keywords or "",
+                                  "counties": [c.strip() for c in args.counties.split(",")] if args.counties else []}]}
     else:
         recipients = {}
         for f in freqs:
@@ -273,6 +306,9 @@ def main(argv=None):
                 log.warning("daily sending limit reached; %s subscribers not emailed today",
                             sum(len(v) for v in recipients.values()) - sent - failed)
                 return 0
+            if f == "daily" and not args.to and sub.get("counties") and not pick(in_counties(bids, sub["counties"]), f, now, since)[0]:
+                log.info("no new bids in %s's counties; daily email skipped", _mask(sub["email"]))
+                continue
             unsub = f"{site}/api/unsubscribe?t={sub['token']}"
             subject, html_body, text = build(bids, meta, f, site, unsub, now, since, sub)
             if args.dry_run:
@@ -280,7 +316,9 @@ def main(argv=None):
                 sent += 1
                 continue
             try:
-                send(api_key, sender, sub["email"], subject, html_body, text, unsub, attachment)
+                att = (county_attachment(bids, sub["counties"], meta.get("updated", ""), f"{now:%Y-%m-%d}", county_files)
+                       if sub.get("counties") else attachment)
+                send(api_key, sender, sub["email"], subject, html_body, text, unsub, att)
                 sent += 1
             except Exception as e:      # one bad address must not stop the rest
                 failed += 1
