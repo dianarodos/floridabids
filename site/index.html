@@ -123,6 +123,7 @@ h2{font-weight:700;font-size:clamp(28px,3.8vw,44px);line-height:1.08;letter-spac
 .bids li.skel i{display:block;height:13px;border-radius:4px;background:linear-gradient(90deg,var(--line-soft),var(--line),var(--line-soft));background-size:200% 100%;animation:sk 1.3s linear infinite}
 .bids li.skel i + i{margin-top:10px;width:45%}
 @keyframes sk{to{background-position:-200% 0}}
+.note{font-size:14px;color:var(--muted)}
 .banner{background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:14px 18px;font-weight:600;margin-bottom:8px}
 
 /* kinds of work: type wall */
@@ -168,6 +169,11 @@ h2{font-weight:700;font-size:clamp(28px,3.8vw,44px);line-height:1.08;letter-spac
 .chips input{accent-color:var(--accent);margin:0}
 .chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
 .panel .btn{width:100%}
+.counties summary{cursor:pointer;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:12px;padding:2px 0}
+.counties summary::-webkit-details-marker{display:none}
+.counties summary::after{content:"+";font-weight:500;color:var(--muted)}
+.counties[open] summary::after{content:"-"}
+.counties .note{margin:8px 0 10px}
 #submsg{font-size:13.5px;color:var(--muted);min-height:1.4em}
 #submsg.ok{color:var(--accent);font-weight:600}
 #submsg.err{color:var(--bad);font-weight:500}
@@ -325,6 +331,11 @@ footer .fl{display:flex;gap:22px;flex-wrap:wrap}
             <legend>What does your business do? <span class="hint">Optional</span></legend>
             <div class="chips" id="bizchips"></div>
           </fieldset>
+          <details class="counties">
+            <summary>Only certain counties? <span class="hint" id="countycount">All of Florida</span></summary>
+            <p class="note">Pick as many as you like. Leave all unchecked to get every county.</p>
+            <div class="chips" id="countychips"></div>
+          </details>
           <div>
             <label class="f" for="keywords">Your own keywords <span class="hint">Optional</span></label>
             <input type="text" id="keywords" maxlength="300" placeholder="For example: window tint, catering, roof">
@@ -354,6 +365,13 @@ function fmtDue(b){ const d = dueDate(b); return d ? d.toLocaleDateString("en-US
 function relDue(b){ const d = daysLeft(b); if(!isFinite(d)) return ""; if(d < 0) return "closed"; if(d < 1) return "closes today"; if(d < 2) return "tomorrow"; return "in " + Math.floor(d) + " days"; }
 const JUNK = /view the opportunity|draft attachment|notice of intent|notice of award|intent to (award|single)|sole source|^\s*$/i;
 const fmt = n => n.toLocaleString("en-US");
+const countyNames = d => [...new Set([...(d.meta.sources || []).map(s => s.county), ...d.bids.map(b => b.county)].filter(Boolean))].sort((a, b) => a.localeCompare(b));
+function buildCounties(d){
+  const box = $("#countychips"); if(!box) return;
+  box.innerHTML = countyNames(d).map(c => `<label><input type="checkbox" value="${esc(c)}"> ${esc(c)}</label>`).join("");
+  const upd = () => { const n = box.querySelectorAll("input:checked").length; $("#countycount").textContent = n ? n + " selected" : "All of Florida"; };
+  box.addEventListener("change", upd); upd();
+}
 
 (() => {   // messages after clicking the links in our emails
   const q = new URLSearchParams(location.search), b = $("#banner");
@@ -370,6 +388,7 @@ const io = "IntersectionObserver" in window && !matchMedia("(prefers-reduced-mot
 document.querySelectorAll(".rv").forEach(el => io ? io.observe(el) : el.classList.add("in"));
 
 fetch("data/bids.json", {cache:"no-cache"}).then(r => r.json()).then(d => {
+  buildCounties(d);
   const bids = d.bids, meta = d.meta, week = 7 * 864e5;
   const agencies = new Set(bids.map(b => b.agency)).size;
   const hosts = new Set((meta.sources || []).map(s => { try{ return new URL(s.url).host; }catch{ return ""; } }).filter(Boolean)).size;
@@ -412,7 +431,7 @@ $("#subform").addEventListener("submit", async e => {
   try{
     const interests = [...document.querySelectorAll("#bizchips input:checked")].map(i => i.value);
     const r = await fetch("/api/subscribe", {method:"POST", headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({email, freq, interests, keywords: $("#keywords").value, website: $("#website").value})});
+      body: JSON.stringify({email, freq, interests, counties: [...document.querySelectorAll("#countychips input:checked")].map(i => i.value), keywords: $("#keywords").value, website: $("#website").value})});
     if(r.status === 429){ say("Too many sign-ups from here. Please try again in an hour.", "err"); return; }
     if(r.status === 400){ say("That email address doesn't look right.", "err"); return; }
     if(!r.ok) throw new Error();

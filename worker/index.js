@@ -4,7 +4,7 @@
 //   GET  /api/confirm?t=…   -> activates the subscription, redirects to /?confirmed=1
 //   GET  /api/unsubscribe?t=…  (link in every email) and POST (one-click unsubscribe from mail apps)
 //   GET  /api/stats         -> {subscribers, daily, weekly}  (shown on the page)
-//   GET/POST /api/prefs?t=… -> read / change how often + business types + keywords (preferences.html)
+//   GET/POST /api/prefs?t=… -> read / change how often + business types + keywords + counties (preferences.html)
 //   GET  /api/admin/subscribers?freq=daily|weekly   (Bearer ADMIN_TOKEN; used by the daily GitHub job)
 //   GET  /api/admin/export.csv                       (Bearer ADMIN_TOKEN; full list for Diana)
 //   POST /api/admin/run-daily                        (Bearer ADMIN_TOKEN; same as the cron, for testing)
@@ -36,6 +36,7 @@ const SCHEMA = [
 const MIGRATIONS = [
   `ALTER TABLE subscribers ADD COLUMN interests TEXT NOT NULL DEFAULT ''`,   // business type ids, comma-separated
   `ALTER TABLE subscribers ADD COLUMN keywords TEXT NOT NULL DEFAULT ''`,    // free keywords as typed
+  `ALTER TABLE subscribers ADD COLUMN counties TEXT NOT NULL DEFAULT ''`,    // county names, comma-separated; empty = all of Florida
 ];
 let schemaReady = false;
 
@@ -151,7 +152,7 @@ async function subscribe(request, env) {
   if (body.website) return json({ ok: true });                       // honeypot field: bots fill it, people don't
   const email = String(body.email || "").trim().toLowerCase();
   const freq = body.freq === "weekly" ? "weekly" : "daily";
-  const { interests, keywords } = cleanPrefs(body);
+  const { interests, keywords, counties } = cleanPrefs(body);
   if (!EMAIL_RE.test(email)) return json({ error: "invalid email" }, 400);
 
   const ipHash = await sha256((request.headers.get("cf-connecting-ip") || "") + (env.ADMIN_TOKEN || ""));
@@ -171,12 +172,12 @@ async function subscribe(request, env) {
   }
   const token = existing?.token || randomToken();
   if (existing) {
-    await env.DB.prepare("UPDATE subscribers SET freq = ?, interests = ?, keywords = ?, status = 'pending', confirm_sent_at = ? WHERE email = ?")
-      .bind(freq, interests, keywords, now, email).run();
+    await env.DB.prepare("UPDATE subscribers SET freq = ?, interests = ?, keywords = ?, counties = ?, status = 'pending', confirm_sent_at = ? WHERE email = ?")
+      .bind(freq, interests, keywords, counties, now, email).run();
   } else {
     await env.DB.prepare(
-      "INSERT INTO subscribers (email, freq, status, token, created_at, ip_hash, confirm_sent_at, interests, keywords) VALUES (?, ?, 'pending', ?, ?, ?, ?, ?, ?)")
-      .bind(email, freq, token, now, ipHash, now, interests, keywords).run();
+      "INSERT INTO subscribers (email, freq, status, token, created_at, ip_hash, confirm_sent_at, interests, keywords, counties) VALUES (?, ?, 'pending', ?, ?, ?, ?, ?, ?, ?)")
+      .bind(email, freq, token, now, ipHash, now, interests, keywords, counties).run();
   }
   await sendConfirmation(env, email, freq, token);
   return json({ ok: true });
@@ -208,7 +209,10 @@ function cleanPrefs(body) {
   const ids = Array.isArray(body.interests) ? body.interests : [];
   const interests = [...new Set(ids.filter(i => typeof i === "string" && /^[a-z]{2,20}$/.test(i)))].slice(0, 30).join(",");
   const keywords = String(body.keywords || "").replace(/[<>"]/g, " ").replace(/\s+/g, " ").trim().slice(0, 300);
-  return { interests, keywords };
+  // county names as shown on the site (e.g. "Miami-Dade", "St. Johns"); empty means every county
+  const names = Array.isArray(body.counties) ? body.counties : [];
+  const counties = [...new Set(names.filter(c => typeof c === "string" && /^[A-Za-z][A-Za-z .'-]{1,28}$/.test(c.trim())).map(c => c.trim()))].slice(0, 70).join(",");
+  return { interests, keywords, counties };
 }
 
 function maskEmail(email) {
@@ -218,10 +222,11 @@ function maskEmail(email) {
 
 async function getPrefs(url, env) {
   const t = url.searchParams.get("t") || "";
-  const row = t && await env.DB.prepare("SELECT email, freq, status, interests, keywords FROM subscribers WHERE token = ?").bind(t).first();
+  const row = t && await env.DB.prepare("SELECT email, freq, status, interests, keywords, counties FROM subscribers WHERE token = ?").bind(t).first();
   if (!row) return json({ error: "not found" }, 404);
   return json({ email: maskEmail(row.email), freq: row.freq, status: row.status,
-                interests: row.interests ? row.interests.split(",") : [], keywords: row.keywords || "" },
+                interests: row.interests ? row.interests.split(",") : [], keywords: row.keywords || "",
+                counties: row.counties ? row.counties.split(",") : [] },
               200, { "Cache-Control": "no-store" });
 }
 
@@ -231,11 +236,11 @@ async function setPrefs(request, url, env) {
   try { body = await request.json(); } catch { return json({ error: "bad request" }, 400); }
   const row = t && await env.DB.prepare("SELECT email, status FROM subscribers WHERE token = ?").bind(t).first();
   if (!row) return json({ error: "not found" }, 404);
-  const { interests, keywords } = cleanPrefs(body);
+  const { interests, keywords, counties } = cleanPrefs(body);
   const freq = body.freq === "weekly" ? "weekly" : "daily";
   // saving from the link in an email also re-activates someone who had unsubscribed
-  await env.DB.prepare("UPDATE subscribers SET freq = ?, interests = ?, keywords = ?, status = CASE WHEN status = 'unsubscribed' AND ? THEN 'active' ELSE status END WHERE token = ?")
-    .bind(freq, interests, keywords, body.resubscribe ? 1 : 0, t).run();
+  await env.DB.prepare("UPDATE subscribers SET freq = ?, interests = ?, keywords = ?, counties = ?, status = CASE WHEN status = 'unsubscribed' AND ? THEN 'active' ELSE status END WHERE token = ?")
+    .bind(freq, interests, keywords, counties, body.resubscribe ? 1 : 0, t).run();
   return json({ ok: true });
 }
 
@@ -258,17 +263,17 @@ async function adminList(request, url, env) {
   if (!authorized(request, env)) return json({ error: "unauthorized" }, 401);
   const freq = url.searchParams.get("freq");
   const q = freq
-    ? env.DB.prepare("SELECT email, freq, token, interests, keywords FROM subscribers WHERE status = 'active' AND freq = ?").bind(freq)
-    : env.DB.prepare("SELECT email, freq, token, interests, keywords FROM subscribers WHERE status = 'active'");
+    ? env.DB.prepare("SELECT email, freq, token, interests, keywords, counties FROM subscribers WHERE status = 'active' AND freq = ?").bind(freq)
+    : env.DB.prepare("SELECT email, freq, token, interests, keywords, counties FROM subscribers WHERE status = 'active'");
   const { results } = await q.all();
-  return json({ subscribers: results.map(r => ({ ...r, interests: r.interests ? r.interests.split(",") : [] })) });
+  return json({ subscribers: results.map(r => ({ ...r, interests: r.interests ? r.interests.split(",") : [], counties: r.counties ? r.counties.split(",") : [] })) });
 }
 
 async function adminCsv(request, env) {
   if (!authorized(request, env)) return json({ error: "unauthorized" }, 401);
   const { results } = await env.DB.prepare(
-    "SELECT email, freq, status, interests, keywords, created_at, confirmed_at, unsubscribed_at FROM subscribers ORDER BY created_at").all();
-  const cols = ["email", "freq", "status", "interests", "keywords", "created_at", "confirmed_at", "unsubscribed_at"];
+    "SELECT email, freq, status, interests, keywords, counties, created_at, confirmed_at, unsubscribed_at FROM subscribers ORDER BY created_at").all();
+  const cols = ["email", "freq", "status", "interests", "keywords", "counties", "created_at", "confirmed_at", "unsubscribed_at"];
   const csv = [cols.join(",")].concat(results.map(r => cols.map(c => `"${String(r[c] ?? "").replace(/"/g, '""')}"`).join(","))).join("\n");
   return new Response(csv, { headers: { "Content-Type": "text/csv; charset=utf-8", "Cache-Control": "no-store",
     "Content-Disposition": 'attachment; filename="floridabids-subscribers.csv"' } });

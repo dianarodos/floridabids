@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700&family=IBM+Plex+Sans:wght@400;600&display=swap">
 <style>
-/* Opened from the link in every email (?t=<subscriber token>): how often + business types + keywords. */
+/* Opened from the link in every email (?t=<subscriber token>): how often + business types + keywords + counties. */
 :root{
   --bg:#f5f7f6; --surface:#ffffff; --fg:#14211e; --muted:#5a6a66; --line:#d9e1de;
   --accent:#0d5c50; --accent-ink:#ffffff; --accent-soft:#e1efeb; --bad:#a3322a;
@@ -55,7 +55,7 @@ input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);bor
 <main>
   <h1><a href="/">Florida Bids</a></h1>
   <div id="loading" class="muted">Loading your settings…</div>
-  <div id="bad" class="card hidden"><p>This link doesn't work anymore. Use the link in your latest Florida Bids email, or <a href="/#subscribe-now">sign up again</a>.</p></div>
+  <div id="bad" class="card hidden"><p>This link doesn't work anymore. Use the link in your latest Florida Bids email, or <a href="/#signup">sign up again</a>.</p></div>
 
   <form id="form" class="hidden" style="display:grid;gap:18px">
     <p class="muted">Settings for <b id="who"></b></p>
@@ -71,6 +71,12 @@ input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);bor
       <div><h2>Your own keywords</h2>
       <p class="muted">Separate with commas. We match the start of words, so "tint" also finds "tinting".</p></div>
       <input type="text" id="keywords" maxlength="300" placeholder="e.g. window tint, catering, roof">
+    </section>
+
+    <section class="card">
+      <div><h2>Counties</h2>
+      <p class="muted">Pick the counties you want. Your email will only show bids in those counties. Leave all unchecked to get every county in Florida.</p></div>
+      <div class="chips" id="countychips"></div>
     </section>
 
     <section class="card">
@@ -91,12 +97,15 @@ const t = new URLSearchParams(location.search).get("t") || "";
 let wasUnsub = false;
 Promise.all([
   fetch("data/business_types.json").then(r => r.json()),
+  fetch("data/bids.json").then(r => r.json()),
   fetch("/api/prefs?t=" + encodeURIComponent(t)).then(r => r.ok ? r.json() : null),
-]).then(([types, p]) => {
+]).then(([types, bidData, p]) => {
   $("#loading").classList.add("hidden");
   if (!p) { $("#bad").classList.remove("hidden"); return; }
   const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
   $("#chips").innerHTML = types.map(x => `<label><input type="checkbox" value="${x.id}" ${p.interests.includes(x.id) ? "checked" : ""}> ${esc(x.label)}</label>`).join("");
+  const counties = [...new Set([...(bidData.meta.sources || []).map(s => s.county), ...bidData.bids.map(b => b.county), ...(p.counties || [])].filter(Boolean))].sort((a, b) => a.localeCompare(b));
+  $("#countychips").innerHTML = counties.map(c => `<label><input type="checkbox" value="${esc(c)}" ${(p.counties || []).includes(c) ? "checked" : ""}> ${esc(c)}</label>`).join("");
   $("#keywords").value = p.keywords || "";
   (document.querySelector(`input[name=freq][value=${p.freq}]`) || {}).checked = true;
   $("#who").textContent = p.email;
@@ -110,6 +119,7 @@ $("#form").addEventListener("submit", async e => {
   const msg = $("#msg"); msg.className = ""; msg.textContent = "Saving…";
   const body = {
     interests: [...document.querySelectorAll("#chips input:checked")].map(i => i.value),
+    counties: [...document.querySelectorAll("#countychips input:checked")].map(i => i.value),
     keywords: $("#keywords").value,
     freq: (document.querySelector("input[name=freq]:checked") || {}).value || "daily",
     resubscribe: wasUnsub,
@@ -118,9 +128,9 @@ $("#form").addEventListener("submit", async e => {
     const r = await fetch("/api/prefs?t=" + encodeURIComponent(t), {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
     if (!r.ok) throw new Error();
     msg.className = "ok";
-    msg.textContent = "✓ Your keywords were saved. Your next email will use them.";
+    msg.textContent = "✓ Saved. Your next email will use these settings.";
     const toast = $("#toast");
-    toast.textContent = "✓ Your keywords were saved";
+    toast.textContent = "✓ Settings saved";
     toast.classList.add("show");
     clearTimeout(window.__t); window.__t = setTimeout(() => toast.classList.remove("show"), 3500);
     if (wasUnsub) { wasUnsub = false; $("#unsub").classList.add("hidden"); }
