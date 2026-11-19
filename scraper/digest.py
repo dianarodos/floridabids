@@ -91,6 +91,22 @@ def in_counties(bids, counties):
     return [b for b in bids if (b.get("county") or "").strip().lower() in wanted] if wanted else bids
 
 
+def county_attachment(bids, counties, updated, day, cache):
+    """Excel file limited to the subscriber's counties (built once per distinct set of counties)."""
+    key = tuple(sorted({c.strip().lower() for c in counties}))
+    if key not in cache:
+        import tempfile
+        from types import SimpleNamespace
+        from .export import COLUMNS, write_xlsx
+        rows = [SimpleNamespace(**{f: b.get(f) or "" for _, f, _ in COLUMNS}) for b in in_counties(bids, counties)]
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "list.xlsx"
+            write_xlsx(rows, path, updated)
+            cache[key] = {"name": f"florida-open-bids-{day}-your-counties.xlsx",
+                          "content": base64.b64encode(path.read_bytes()).decode()}
+    return cache[key]
+
+
 def build(bids, meta, freq, site, unsub_url, now, since=None, sub=None):
     sub = sub or {}
     counties = [c for c in (sub.get("counties") or []) if isinstance(c, str) and c.strip()]
@@ -186,7 +202,7 @@ def build(bids, meta, freq, site, unsub_url, now, since=None, sub=None):
 <h2 style="font-size:17px;margin:20px 0 6px">All new bids {label} ({len(new)})</h2>
 {table(new, 60 if match else 80) if new else '<p style="color:#5b6b67">No new bids since the last email. Every open bid is on the site and in the attached Excel file.</p>'}
 <p style="margin:20px 0 0">{button}</p>
-<p style="font-size:13px;color:#5b6b67;margin:8px 0 0">The full list of {total} open bids is attached as an Excel file.</p>
+<p style="font-size:13px;color:#5b6b67;margin:8px 0 0">{f"The {total} open bids in your counties are" if counties else f"The full list of {total} open bids is"} attached as an Excel file.</p>
 <p style="font-size:12px;color:#5b6b67;margin-top:24px">Always confirm details and deadlines on the agency's page before
  you respond. You get this {'every morning' if freq == 'daily' else 'every Monday'} because you signed up at floridabids.org.
  No ads, ever.</p>
@@ -243,6 +259,7 @@ def main(argv=None):
     attachment = ({"name": f"florida-open-bids-{now_et():%Y-%m-%d}.xlsx",
                    "content": base64.b64encode(xlsx.read_bytes()).decode()} if xlsx.exists() else None)
     now = now_et()
+    county_files = {}
 
     freqs = [args.freq] if args.freq else (["daily", "weekly"] if now.weekday() == 0 else ["daily"])
     if args.to_sha256:
@@ -299,7 +316,9 @@ def main(argv=None):
                 sent += 1
                 continue
             try:
-                send(api_key, sender, sub["email"], subject, html_body, text, unsub, attachment)
+                att = (county_attachment(bids, sub["counties"], meta.get("updated", ""), f"{now:%Y-%m-%d}", county_files)
+                       if sub.get("counties") else attachment)
+                send(api_key, sender, sub["email"], subject, html_body, text, unsub, att)
                 sent += 1
             except Exception as e:      # one bad address must not stop the rest
                 failed += 1
