@@ -17,25 +17,9 @@
   "counties": 10,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "title": "Transit Facilities Improvements Per Recertification Requirements",
-    "category": "Construction",
-    "due": "2027-01-06",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=IRP346A3-DTPW-R%20%28MCC%207360%29"
-   },
-   {
-    "county": "St. Johns",
-    "agency": "St. Johns County BOCC",
-    "title": "Misc. No. 3184 Deferred Compensation Plan Investment Consulting Services",
-    "category": "Consulting & Professional Services",
-    "due": "2026-12-07",
-    "url": "https://www.demandstar.com/app/limited/bids/558331/details"
-   },
-   {
     "county": "Broward",
     "agency": "City of Wilton Manors",
-    "title": "2027-05 Citywide Vehicle Towing Services",
+    "title": "Citywide Vehicle Towing Services",
     "category": "Facilities & Maintenance",
     "due": "",
     "url": "https://www.wiltonmanors.gov/bids.aspx?bidID=169"
@@ -43,10 +27,26 @@
    {
     "county": "Escambia",
     "agency": "Escambia County BOCC",
-    "title": "CRA Hazardous Tree Removal at 1406 N Kirk St",
+    "title": "Hazardous Tree Removal (4 new jobs)",
     "category": "Facilities & Maintenance",
     "due": "",
     "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327408"
+   },
+   {
+    "county": "Escambia",
+    "agency": "Escambia County BOCC",
+    "title": "Residential Exterior Painting",
+    "category": "Construction",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327651"
+   },
+   {
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Circle B Floating Dock",
+    "category": "Construction",
+    "due": "",
+    "url": "https://www.polkfl.gov/bid-form/cq-26-253/"
    }
   ],
   "caption_default": "🦎 27 new government bids posted in Florida today, across 10 counties.\n\n📍 Miami-Dade: Transit Facilities Improvements Per Recertification Requirements\n📍 St. Johns: Misc. No. 3184 Deferred Compensation Plan Investment Consulting Services\n📍 Broward: 2027-05 Citywide Vehicle Towing Services\n\nAll 676 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
