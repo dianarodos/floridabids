@@ -171,3 +171,4 @@ INFO scraper.emails: unparsed alert from GoBonfire.com: 'Chatham County, GA has 
 INFO run: open bids: 676 across 40 counties (removed 349 closed)
 social: 27 new today; am=new_today pm=week_recap
 INFO report: REPORT_EMAIL / BREVO_API_KEY not set; no report sent
+INFO digest: digest: 15 sent, 0 failed (daily)
