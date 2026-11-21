@@ -1,92 +1,109 @@
 {
- "date": "2026-11-20",
- "weekday": "Friday",
- "nice_date": "Friday, November 20",
+ "date": "2026-11-21",
+ "weekday": "Saturday",
+ "nice_date": "Saturday, November 21",
  "post_days": "Mon-Sat",
  "posts_today": true,
  "stats": {
-  "open": 676,
-  "new_today": 27,
-  "new_this_week": 159,
-  "closing_7_days": 56
+  "open": 698,
+  "new_today": 35,
+  "new_this_week": 171,
+  "closing_7_days": 43
  },
  "am": {
   "theme": "new_today",
-  "headline": "27 new Florida bids today",
-  "count": 27,
-  "counties": 10,
+  "headline": "35 new Florida bids today",
+  "count": 35,
+  "counties": 13,
   "items": [
    {
-    "county": "Broward",
-    "agency": "City of Wilton Manors",
-    "title": "Citywide Vehicle Towing Services",
-    "category": "Facilities & Maintenance",
-    "due": "",
-    "url": "https://www.wiltonmanors.gov/bids.aspx?bidID=169"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Hazardous Tree Removal (4 new jobs)",
-    "category": "Facilities & Maintenance",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327408"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Residential Exterior Painting",
+    "county": "Miami-Dade",
+    "agency": "Miami-Dade County",
+    "title": "7360: Sidewalk Improvements-Multiple Sites - 2",
     "category": "Construction",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327651"
+    "due": "2027-01-16",
+    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260220%20%28MCC%207360%29"
    },
    {
     "county": "Polk",
     "agency": "Polk County BOCC",
-    "title": "Circle B Floating Dock",
-    "category": "Construction",
-    "due": "",
-    "url": "https://www.polkfl.gov/bid-form/cq-26-253/"
-   }
-  ],
-  "caption_default": "🦎 27 new government bids posted in Florida today, across 10 counties.\n\n📍 Miami-Dade: Transit Facilities Improvements Per Recertification Requirements\n📍 St. Johns: Misc. No. 3184 Deferred Compensation Plan Investment Consulting Services\n📍 Broward: 2027-05 Citywide Vehicle Towing Services\n\nAll 676 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
-  "image": "social/2026-11-20-am.jpg",
-  "image_url": "https://floridabids.org/social/2026-11-20-am.jpg"
- },
- "pm": {
-  "theme": "week_recap",
-  "headline": "This week in Florida bids",
-  "count": 159,
-  "counties": [
-   {
-    "county": "Miami-Dade",
-    "new": 33
+    "title": "PRWC SELFA WPF Injection Well IW-2",
+    "category": "Other",
+    "due": "2027-01-06",
+    "url": "https://www.polkfl.gov/bid-form/bid-26-433/"
    },
    {
-    "county": "Hillsborough",
-    "new": 27
+    "county": "Indian River",
+    "agency": "Indian River Mosquito Control District",
+    "title": "IRMCD ITB 2026-04 - Invitation to Bid Aerial Adulticiding Services",
+    "category": "Other",
+    "due": "2026-12-04",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/IRMCD-ITB-2026-04-Invitation-to-Bid-Aerial-Adulticiding-Services/0000444298?purchasingGroupId=8408751&origin=2"
+   },
+   {
+    "county": "Alachua",
+    "agency": "Gainesville Regional Utilities",
+    "title": "GRU FY2027 Compensation Study",
+    "category": "Consulting & Professional Services",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/gru/projects/327004"
+   }
+  ],
+  "caption_default": "🦎 35 new government bids posted in Florida today, across 13 counties.\n\n📍 Miami-Dade: 7360: Sidewalk Improvements-Multiple Sites - 2\n📍 Polk: PRWC SELFA WPF Injection Well IW-2\n📍 Indian River: IRMCD ITB 2026-04 - Invitation to Bid Aerial Adulticiding Services\n\nAll 698 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
+  "image": "social/2026-11-21-am.jpg",
+  "image_url": "https://floridabids.org/social/2026-11-21-am.jpg"
+ },
+ "pm": {
+  "theme": "category_spotlight",
+  "headline": "Consulting & Professional Services",
+  "subject": "Consulting & Professional Services",
+  "count": 49,
+  "new_this_week": 13,
+  "items": [
+   {
+    "county": "Pinellas",
+    "agency": "Pinellas County BOCC",
+    "title": "Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)",
+    "category": "Consulting & Professional Services",
+    "due": "2031-09-11",
+    "url": "https://procurement.opengov.com/portal/pinellasfl"
+   },
+   {
+    "county": "Miami-Dade",
+    "agency": "City of Miami Beach",
+    "title": "Real Estate Appraisal Services",
+    "category": "Consulting & Professional Services",
+    "due": "2028-10-17",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/REAL-ESTATE-APPRAISAL-SERVICES/0000382936?purchasingGroupId=8408751&origin=2"
    },
    {
     "county": "Escambia",
-    "new": 13
+    "agency": "Escambia County BOCC",
+    "title": "Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement",
+    "category": "Consulting & Professional Services",
+    "due": "2028-08-06",
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl"
    },
    {
-    "county": "Broward",
-    "new": 13
+    "county": "Palm Beach",
+    "agency": "City of Delray Beach",
+    "title": "RFP2027-014 - Public Service Grant Opportunities",
+    "category": "Consulting & Professional Services",
+    "due": "2026-12-17",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/RFP2027-014-Public-Service-Grant-Opportunities/0000443814?purchasingGroupId=8408751&origin=2"
    },
    {
-    "county": "Pinellas",
-    "new": 8
-   },
-   {
-    "county": "St. Johns",
-    "new": 7
+    "county": "Volusia",
+    "agency": "Volusia County",
+    "title": "Ocean Center Event Staffing and Event Security Services",
+    "category": "Consulting & Professional Services",
+    "due": "2026-12-09",
+    "url": "https://procurement.opengov.com/portal/volusia"
    }
   ],
-  "open": 676,
-  "caption_default": "📊 This week: 159 new Florida government bids.\n\n• Miami-Dade: 33 new\n• Hillsborough: 27 new\n• Escambia: 13 new\n• Broward: 13 new\n• Pinellas: 8 new\n\nGet them in your inbox every morning, free 👉 https://floridabids.org",
-  "image": "social/2026-11-20-pm.jpg",
-  "image_url": "https://floridabids.org/social/2026-11-20-pm.jpg"
+  "caption_default": "🔎 Consulting & Professional Services: 49 open Florida bids, 13 new this week.\n\n• Pinellas: Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)\n• Miami-Dade: Real Estate Appraisal Services\n• Escambia: Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement\n• Palm Beach: RFP2027-014 - Public Service Grant Opportunities\n\nFilter by your business 👉 https://floridabids.org",
+  "image": "social/2026-11-21-pm.jpg",
+  "image_url": "https://floridabids.org/social/2026-11-21-pm.jpg"
  },
  "video": {
   "note": "Pick 2-3 of these for the script: interesting to a small business, still time to respond.",
@@ -94,368 +111,336 @@
    {
     "county": "Miami-Dade",
     "agency": "Miami-Dade County",
-    "title": "Transit Facilities Improvements Per Recertification Requirements",
+    "title": "7360: Sidewalk Improvements-Multiple Sites - 2",
     "category": "Construction",
+    "due": "2027-01-16",
+    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260220%20%28MCC%207360%29"
+   },
+   {
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "PRWC SELFA WPF Injection Well IW-2",
+    "category": "Other",
     "due": "2027-01-06",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=IRP346A3-DTPW-R%20%28MCC%207360%29"
+    "url": "https://www.polkfl.gov/bid-form/bid-26-433/"
    },
    {
-    "county": "St. Johns",
-    "agency": "St. Johns County BOCC",
-    "title": "Misc. No. 3184 Deferred Compensation Plan Investment Consulting Services",
+    "county": "Indian River",
+    "agency": "Indian River Mosquito Control District",
+    "title": "IRMCD ITB 2026-04 - Invitation to Bid Aerial Adulticiding Services",
+    "category": "Other",
+    "due": "2026-12-04",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/IRMCD-ITB-2026-04-Invitation-to-Bid-Aerial-Adulticiding-Services/0000444298?purchasingGroupId=8408751&origin=2"
+   },
+   {
+    "county": "Alachua",
+    "agency": "Gainesville Regional Utilities",
+    "title": "GRU FY2027 Compensation Study",
     "category": "Consulting & Professional Services",
-    "due": "2026-12-07",
-    "url": "https://www.demandstar.com/app/limited/bids/558331/details"
-   },
-   {
-    "county": "Broward",
-    "agency": "City of Wilton Manors",
-    "title": "2027-05 Citywide Vehicle Towing Services",
-    "category": "Facilities & Maintenance",
     "due": "",
-    "url": "https://www.wiltonmanors.gov/bids.aspx?bidID=169"
+    "url": "https://procurement.opengov.com/portal/gru/projects/327004"
    },
    {
     "county": "Escambia",
     "agency": "Escambia County BOCC",
-    "title": "CRA Hazardous Tree Removal at 1406 N Kirk St",
+    "title": "Derelict Vessel Removal, Transport, and Disposal - 41' Gibson",
     "category": "Facilities & Maintenance",
     "due": "",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327408"
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327616"
    },
    {
     "county": "Hillsborough",
     "agency": "City of Tampa",
-    "title": "Intent Single Source for Stan Weaver ABB Variable Frequency Product Line and Services",
+    "title": "Intent to Single Source - Emerson Discrete Automation",
     "category": "Goods & Supplies",
     "due": "",
-    "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327588"
-   },
-   {
-    "county": "Orange",
-    "agency": "City of Orlando",
-    "title": "Ventilation System Diagnostic and Maintenance Services",
-    "category": "Facilities & Maintenance",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/orlando/projects/327309"
+    "url": "https://procurement.opengov.com/portal/cityoftampa/projects/328140"
    }
   ]
  },
  "new_today": [
   {
-   "county": "Broward",
-   "agency": "City of Wilton Manors",
-   "title": "2027-05 Citywide Vehicle Towing Services",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://www.wiltonmanors.gov/bids.aspx?bidID=169"
-  },
-  {
-   "county": "Broward",
-   "agency": "City of Hollywood",
-   "title": "Consulting Services for Vision Zero Action Plan",
+   "county": "Alachua",
+   "agency": "Gainesville Regional Utilities",
+   "title": "GRU FY2027 Compensation Study",
    "category": "Consulting & Professional Services",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/hollywoodfl/projects/321588"
+   "url": "https://procurement.opengov.com/portal/gru/projects/327004"
   },
   {
    "county": "Escambia",
    "agency": "Escambia County BOCC",
-   "title": "CRA Hazardous Tree Removal at 1406 N Kirk St",
+   "title": "Derelict Vessel Removal, Transport, and Disposal - 41' Gibson",
    "category": "Facilities & Maintenance",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327408"
-  },
-  {
-   "county": "Escambia",
-   "agency": "Escambia County BOCC",
-   "title": "CRA Hazardous Tree Removal at 2500 W. Godfrey St",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327402"
-  },
-  {
-   "county": "Escambia",
-   "agency": "Escambia County BOCC",
-   "title": "CRA Hazardous Tree Removal at 3436 W. Brainerd St",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327406"
-  },
-  {
-   "county": "Escambia",
-   "agency": "Escambia County BOCC",
-   "title": "CRA Hazardous Tree Removal at 4609 W Gregory St",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327412"
-  },
-  {
-   "county": "Escambia",
-   "agency": "Escambia County BOCC",
-   "title": "CRA Residential Exterior Paint at 812 Mills Ave",
-   "category": "Construction",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327651"
+   "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327616"
   },
   {
    "county": "Hillsborough",
    "agency": "City of Tampa",
-   "title": "Annual SCBA Posicheck for the Tampa Police Department",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327703"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Galvanized Steel and Aluminum Round Sign Posts (Bid-Discount)",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/324876"
-  },
-  {
-   "county": "Hillsborough",
-   "agency": "City of Tampa",
-   "title": "Intent Single Source for Stan Weaver ABB Variable Frequency Product Line and Services",
+   "title": "Intent to Single Source - Emerson Discrete Automation",
    "category": "Goods & Supplies",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327588"
+   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/328140"
   },
   {
    "county": "Hillsborough",
    "agency": "City of Tampa",
-   "title": "Magnetic Coupler XA-C-3000165",
+   "title": "Mini Split for Office Room",
    "category": "Other",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327720"
+   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/328007"
   },
   {
    "county": "Hillsborough",
    "agency": "City of Tampa",
-   "title": "Siemens Fan for Low Lift VFD K2E250-AA01-10",
+   "title": "Terry Cloth Dish Towels (NEW)",
    "category": "Other",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327653"
+   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/324478"
   },
   {
-   "county": "Lee",
-   "agency": "City of Fort Myers",
-   "title": "Public Information and Outreach Services",
-   "category": "Other",
+   "county": "Hillsborough",
+   "agency": "City of Tampa",
+   "title": "Weg motor purchase",
+   "category": "Goods & Supplies",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/cityftmyers/projects/314699"
+   "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327535"
+  },
+  {
+   "county": "Indian River",
+   "agency": "Indian River Mosquito Control District",
+   "title": "IRMCD ITB 2026-04 - Invitation to Bid Aerial Adulticiding Services",
+   "category": "Other",
+   "due": "2026-12-04",
+   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/IRMCD-ITB-2026-04-Invitation-to-Bid-Aerial-Adulticiding-Services/0000444298?purchasingGroupId=8408751&origin=2"
+  },
+  {
+   "county": "Lake",
+   "agency": "City of Clermont",
+   "title": "Justification of Sole Source Acquisition from PVP Penn Valley Pump",
+   "category": "Facilities & Maintenance",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/clermontfl/projects/328183"
+  },
+  {
+   "county": "Lake",
+   "agency": "City of Clermont",
+   "title": "Justification of Sole Source Acquisition from Ward Diesel",
+   "category": "Goods & Supplies",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/clermontfl/projects/328153"
   },
   {
    "county": "Miami-Dade",
    "agency": "Miami-Dade County",
-   "title": "E25TP05 Planning Svcs and Feasibility Study for Hialeah Gardens Boulevard",
+   "title": "Public Housing Answering Service",
    "category": "Consulting & Professional Services",
    "due": "",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitationDetails?webPostingCounter=9003"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "Proposals (rfppp) for Youth Baseball and Softball Program at Tamiami Park",
-   "category": "Other",
-   "due": "",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitationDetails?webPostingCounter=9002"
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitationDetails?webPostingCounter=9004"
   },
   {
    "county": "Miami-Dade",
    "agency": "City of North Miami Beach",
-   "title": "Sole Source Notice: Purchase of Speer & Federal Bonded Duty Ammunition from Florida Bullet, Inc",
+   "title": "Sole Source Notice: Purchase of Laboratory Supplies from Idexx Distribution, Inc.",
    "category": "Goods & Supplies",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/citynmb/projects/327717"
+   "url": "https://procurement.opengov.com/portal/citynmb/projects/327951"
   },
   {
    "county": "Miami-Dade",
-   "agency": "City of Miami Beach",
-   "title": "Energy Drinks Pouring Rights",
-   "category": "Other",
-   "due": "2026-12-30",
-   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/ENERGY-DRINKS-POURING-RIGHTS/0000444090?purchasingGroupId=8408751&origin=2"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "City of Miami Beach",
-   "title": "Architectural Design Services for the Miami Beach Golf Course Renovation",
+   "agency": "City of Homestead",
+   "title": "Stormwater Master Plan",
    "category": "Engineering & Architecture",
-   "due": "2027-01-04",
-   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/ARCHITECTURAL-DESIGN-SERVICES-FOR-THE-MIAMI-BEACH-GOLF-COURSE-RENOVATION/0000444062?purchasingGroupId=8408751&origin=2"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "City of Miami Beach",
-   "title": "Federal Governmental Consulting",
-   "category": "Consulting & Professional Services",
-   "due": "2027-01-04",
-   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Federal-Governmental-Consulting/0000444139?purchasingGroupId=8408751&origin=2"
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/cityofhomestead/projects/318313"
   },
   {
    "county": "Miami-Dade",
    "agency": "Miami-Dade County",
-   "title": "Transit Facilities Improvements Per Recertification Requirements",
+   "title": "SAP BusinessObjects License and Maintenance",
+   "category": "IT & Technology",
+   "due": "2026-12-09",
+   "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Roadway Resurfacing - Multiple Sites - 1",
+   "category": "Construction",
+   "due": "2026-12-30",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260227%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Roadway Resurfacing-Multiple Sites - 2",
+   "category": "Construction",
+   "due": "2026-12-30",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260228%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Sidewalk Improvements-Multiple Sites - 1",
+   "category": "Construction",
+   "due": "2026-12-30",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260219%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "City of Miami Beach",
+   "title": "Construction Engineering and Inspection (CEI) Services",
+   "category": "Engineering & Architecture",
+   "due": "2027-01-04",
+   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Construction-Engineering-and-Inspection-CEI-Services/0000444286?purchasingGroupId=8408751&origin=2"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Roadway Resurfacing-Multiple Sites - 3",
    "category": "Construction",
    "due": "2027-01-06",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=IRP346A3-DTPW-R%20%28MCC%207360%29"
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260229%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Roadway Resurfacing-Multiple Sites - 4",
+   "category": "Construction",
+   "due": "2027-01-06",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260230%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Intersection Improvements - Multiple Sites 1",
+   "category": "Construction",
+   "due": "2027-01-13",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260223%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Intersection Improvements - Multiple Sites 2",
+   "category": "Construction",
+   "due": "2027-01-13",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260224%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Sidewalk Improvements-Multiple Sites - 3",
+   "category": "Construction",
+   "due": "2027-01-13",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260221%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Sidewalk Improvements-Multiple Sites - 4",
+   "category": "Construction",
+   "due": "2027-01-13",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260222%20%28MCC%207360%29"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County",
+   "title": "7360: Sidewalk Improvements-Multiple Sites - 2",
+   "category": "Construction",
+   "due": "2027-01-16",
+   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260220%20%28MCC%207360%29"
   },
   {
    "county": "Orange",
-   "agency": "City of Orlando",
-   "title": "Ventilation System Diagnostic and Maintenance Services",
-   "category": "Facilities & Maintenance",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/orlando/projects/327309"
-  },
-  {
-   "county": "Polk",
-   "agency": "Polk County BOCC",
-   "title": "Circle B Floating Dock",
+   "agency": "Orange County BOCC",
+   "title": "Orange County Maintenance of County Owned Stormwater Ponds",
    "category": "Construction",
    "due": "",
-   "url": "https://www.polkfl.gov/bid-form/cq-26-253/"
+   "url": "https://procurement.opengov.com/portal/orangecountyfl/projects/326840"
+  },
+  {
+   "county": "Pasco",
+   "agency": "Pasco County BOCC",
+   "title": "Orange Belt Trail Phase 1 (little Road to Cool Springs Parkway)",
+   "category": "Construction",
+   "due": "",
+   "url": "https://pascocountyfl.bonfirehub.com/opportunities/263986"
+  },
+  {
+   "county": "Polk",
+   "agency": "City of Bartow",
+   "title": "Environmental Sampling And Analytical Laboratory Services",
+   "category": "Facilities & Maintenance",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/bartowfl/projects/319240"
   },
   {
    "county": "Polk",
    "agency": "Polk County BOCC",
-   "title": "Leachate Hauling Between Landfills",
-   "category": "Facilities & Maintenance",
+   "title": "Willow Oak Fire Rescue Station",
+   "category": "Other",
    "due": "",
-   "url": "https://www.polkfl.gov/bid-form/bid-27-018/"
+   "url": "https://www.polkfl.gov/bid-form/bid-27-052/"
+  },
+  {
+   "county": "Polk",
+   "agency": "Polk County BOCC",
+   "title": "PRWC SELFA WPF Injection Well IW-2",
+   "category": "Other",
+   "due": "2027-01-06",
+   "url": "https://www.polkfl.gov/bid-form/bid-26-433/"
   },
   {
    "county": "Putnam",
    "agency": "Putnam County School District",
-   "title": "Single Source Notice – Data Triangle Stakeholder Surveys and Analysis for School Improvement",
-   "category": "IT & Technology",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/myputnamschools/projects/327699"
-  },
-  {
-   "county": "St. Johns",
-   "agency": "St. Johns County BOCC",
-   "title": "Purchase of Modular Aluminum Panel System (MAPS) Sheet Guides for a Speed Shore Trench Box",
-   "category": "Construction",
-   "due": "2026-12-03",
-   "url": "https://www.demandstar.com/app/limited/bids/558329/details"
-  },
-  {
-   "county": "St. Johns",
-   "agency": "St. Johns County BOCC",
-   "title": "Misc. No. 3184 Deferred Compensation Plan Investment Consulting Services",
+   "title": "Notice of Intended Single Source Procurement – Hotel Accommodations and Meeting Space for NEFEC’s South Civics Regional Training (March 2027)",
    "category": "Consulting & Professional Services",
-   "due": "2026-12-07",
-   "url": "https://www.demandstar.com/app/limited/bids/558331/details"
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/myputnamschools/projects/328063"
+  },
+  {
+   "county": "St. Lucie",
+   "agency": "City of Port St. Lucie",
+   "title": "Sole Source Notice - Sunshine 811",
+   "category": "Goods & Supplies",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/cityofpsl/projects/326645"
   },
   {
    "county": "Volusia",
    "agency": "Volusia County",
-   "title": "Professional Construction, Engineering and Inspection Services for the Ponce Inlet Mobility for the County of Volusia, Florida",
-   "category": "Engineering & Architecture",
+   "title": "Lift Repair and Inspection",
+   "category": "Facilities & Maintenance",
    "due": "",
-   "url": "https://procurement.opengov.com/portal/volusia/projects/326834"
+   "url": "https://procurement.opengov.com/portal/volusia/projects/324607"
+  },
+  {
+   "county": "Volusia",
+   "agency": "Volusia County",
+   "title": "Main Street Bridge No. 794004 Repairs - Cleaning and Painting",
+   "category": "Facilities & Maintenance",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/volusia/projects/328017"
+  },
+  {
+   "county": "Walton",
+   "agency": "Walton County BOCC",
+   "title": "Operational Audit of Fixed Assets, Fleet Operations, and Tyler Munis/Enterprise ERP Asset Systems",
+   "category": "IT & Technology",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/waltoncountyfl/projects/307275"
+  },
+  {
+   "county": "Walton",
+   "agency": "Walton County BOCC",
+   "title": "Operational Audit of State Road Enhanced Maintenance Conducted via County Contracts",
+   "category": "Consulting & Professional Services",
+   "due": "",
+   "url": "https://procurement.opengov.com/portal/waltoncountyfl/projects/307382"
   }
  ],
  "closing_soon": [
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County",
-   "title": "West Matheson Hammock Park - Wood Rail and Picket Fence",
-   "category": "Construction",
-   "due": "2026-11-20",
-   "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=MCC%207360%20RPQ%20No%202026MHWPF"
-  },
-  {
-   "county": "Palm Beach",
-   "agency": "Village of Wellington",
-   "title": "State Housing Initiatives Partnership Program: 9655 Phipps Lane",
-   "category": "Other",
-   "due": "2026-11-20",
-   "url": "https://www.demandstar.com/app/limited/bids/556098/details"
-  },
-  {
-   "county": "Pinellas",
-   "agency": "City of Clearwater",
-   "title": "Athletic Field Sod Material & Installation",
-   "category": "Goods & Supplies",
-   "due": "2026-11-20",
-   "url": "https://procurement.opengov.com/portal/myclearwater"
-  },
-  {
-   "county": "Polk",
-   "agency": "City of Winter Haven",
-   "title": "RFQ-27-02 Design Build Services for Sertoma Park Football Renovations",
-   "category": "Engineering & Architecture",
-   "due": "2026-11-20",
-   "url": "https://procurement.opengov.com/portal/winterhavenfl"
-  },
-  {
-   "county": "Polk",
-   "agency": "City of Lakeland",
-   "title": "Rose St Streetscape Improvements",
-   "category": "Construction",
-   "due": "2026-11-20",
-   "url": "https://procurement.opengov.com/portal/lakelandgov"
-  },
-  {
-   "county": "Santa Rosa",
-   "agency": "Santa Rosa County BOCC",
-   "title": "Sale and Master Planning of County-Owned Property on Berryhill Road",
-   "category": "Engineering & Architecture",
-   "due": "2026-11-20",
-   "url": "https://procurement.opengov.com/portal/santarosafl"
-  },
-  {
-   "county": "St. Lucie",
-   "agency": "City of Port St. Lucie",
-   "title": "Federal Legislative Advocacy Services",
-   "category": "Consulting & Professional Services",
-   "due": "2026-11-20",
-   "url": "https://procurement.opengov.com/portal/cityofpsl"
-  },
-  {
-   "county": "St. Lucie",
-   "agency": "City of Port St. Lucie",
-   "title": "Pressure Cleaning Services",
-   "category": "Facilities & Maintenance",
-   "due": "2026-11-20",
-   "url": "https://procurement.opengov.com/portal/cityofpsl"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County – Parks & Recreation",
-   "title": "BG27-011-Fruit & Spice Program supplies",
-   "category": "Goods & Supplies",
-   "due": "2026-11-20",
-   "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL"
-  },
-  {
-   "county": "Broward",
-   "agency": "Broward County BOCC",
-   "title": "Broward County Judicial Court West Tower Repairs",
-   "category": "Facilities & Maintenance",
-   "due": "2026-11-20",
-   "url": "https://broward.bonfirehub.com/opportunities/248449"
-  },
-  {
-   "county": "Miami-Dade",
-   "agency": "Miami-Dade County – Medical Examiner",
-   "title": "Service Agreement for Peak Generator",
-   "category": "Facilities & Maintenance",
-   "due": "2026-11-20",
-   "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL"
-  },
-  {
-   "county": "Brevard",
-   "agency": "Brevard County BOCC",
-   "title": "Sole Source - Aqua Phase",
-   "category": "Construction",
-   "due": "2026-11-20",
-   "url": "https://www.myvendorlink.com/external/bids?a=70"
-  },
   {
    "county": "Alachua",
    "agency": "Gainesville Regional Utilities",
@@ -463,14 +448,6 @@
    "category": "Facilities & Maintenance",
    "due": "2026-11-23",
    "url": "https://procurement.opengov.com/portal/gru"
-  },
-  {
-   "county": "Broward",
-   "agency": "City of Sunrise",
-   "title": "Data, Voice & Network Cabling",
-   "category": "IT & Technology",
-   "due": "2026-11-23",
-   "url": "https://www.demandstar.com/app/limited/bids/555823/details"
   },
   {
    "county": "Clay",
@@ -559,6 +536,110 @@
    "category": "Construction",
    "due": "2026-11-23",
    "url": "https://www.demandstar.com/app/limited/bids/554954/details"
+  },
+  {
+   "county": "Brevard",
+   "agency": "Brevard County BOCC",
+   "title": "Pavement Condition Assessment",
+   "category": "Engineering & Architecture",
+   "due": "2026-11-23",
+   "url": "https://www.myvendorlink.com/external/bids?a=70"
+  },
+  {
+   "county": "Palm Beach",
+   "agency": "City of Boca Raton",
+   "title": "Installation and/or Replacement of Potable and/or Reclaimed Water Meters with AMI Transponders (Addendum 1)",
+   "category": "Construction",
+   "due": "2026-11-23",
+   "url": "https://brpurch.ionwave.net/SourcingEvents.aspx?SourceType=1"
+  },
+  {
+   "county": "Broward",
+   "agency": "City of Sunrise",
+   "title": "Data, Voice & Network Cabling",
+   "category": "IT & Technology",
+   "due": "2026-11-24",
+   "url": "https://www.demandstar.com/app/limited/bids/555823/details"
+  },
+  {
+   "county": "Citrus",
+   "agency": "Citrus County BOCC",
+   "title": "ITB 26-196 Southwest Regional Water Reclamation Facility (SWRWRF) - Reclaimed Water System",
+   "category": "Construction",
+   "due": "2026-11-24",
+   "url": "https://procurement.opengov.com/portal/citrusfl"
+  },
+  {
+   "county": "Columbia",
+   "agency": "Columbia County BOCC",
+   "title": "2026-2027 Annual Resurfacing - SE Hillcrest Lane, SW Fedora Way, SW Young Place",
+   "category": "Construction",
+   "due": "2026-11-24",
+   "url": "https://www.columbiacountyfla.com/PurchasingBid.aspx?Id=1767"
+  },
+  {
+   "county": "Gadsden",
+   "agency": "Gadsden County BOCC",
+   "title": "CR12 5th Avenue – Pedestrian Improvements",
+   "category": "Construction",
+   "due": "2026-11-24",
+   "url": "https://procurement.opengov.com/portal/gadsdencountyfl"
+  },
+  {
+   "county": "Levy",
+   "agency": "Levy County BOCC",
+   "title": "Levy County Road Sign Material",
+   "category": "Goods & Supplies",
+   "due": "2026-11-24",
+   "url": "https://procurement.opengov.com/portal/levycounty"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "City of Miami Beach",
+   "title": "Fire Suppression Systems – Annual Inspections, Testing, Certification, & Repairs",
+   "category": "Facilities & Maintenance",
+   "due": "2026-11-24",
+   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Fire-Suppression-Systems-Annual-Inspections-Testing-Certification-Repairs/0000438822?purchasingGroupId=8408751&origin=2"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "City of North Miami Beach",
+   "title": "INVITATION TO BID: Highland Village Stormwater Improvements Project (Phase 1)",
+   "category": "Construction",
+   "due": "2026-11-24",
+   "url": "https://procurement.opengov.com/portal/citynmb"
+  },
+  {
+   "county": "Brevard",
+   "agency": "Brevard County BOCC",
+   "title": "West Central Avenue Bridge Replacement",
+   "category": "Construction",
+   "due": "2026-11-24",
+   "url": "https://www.myvendorlink.com/external/bids?a=70"
+  },
+  {
+   "county": "Pasco",
+   "agency": "Pasco County BOCC",
+   "title": "Bexley Elementary Sidewalk Project (ballantrae Blvd from Straton Pl to Bud Bexley Pkwy)",
+   "category": "Construction",
+   "due": "2026-11-24",
+   "url": "https://pascocountyfl.bonfirehub.com/opportunities/259647"
+  },
+  {
+   "county": "Miami-Dade",
+   "agency": "Miami-Dade County – Medical Examiner",
+   "title": "Various Items 09",
+   "category": "Other",
+   "due": "2026-11-24",
+   "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL"
+  },
+  {
+   "county": "Alachua",
+   "agency": "Alachua County BOCC",
+   "title": "Annual Crack Filling and Pavement Distress Repair with Asphalt Repair Mastic",
+   "category": "Facilities & Maintenance",
+   "due": "2026-11-25",
+   "url": "https://procurement.opengov.com/portal/alachuacounty"
   }
  ]
 }
