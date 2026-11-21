@@ -17,36 +17,36 @@
   "counties": 13,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "title": "7360: Sidewalk Improvements-Multiple Sites - 2",
-    "category": "Construction",
-    "due": "2027-01-16",
-    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solNumber=20260220%20%28MCC%207360%29"
-   },
-   {
-    "county": "Polk",
-    "agency": "Polk County BOCC",
-    "title": "PRWC SELFA WPF Injection Well IW-2",
-    "category": "Other",
-    "due": "2027-01-06",
-    "url": "https://www.polkfl.gov/bid-form/bid-26-433/"
-   },
-   {
     "county": "Indian River",
     "agency": "Indian River Mosquito Control District",
-    "title": "IRMCD ITB 2026-04 - Invitation to Bid Aerial Adulticiding Services",
+    "title": "Aerial Mosquito Spraying (by airplane)",
     "category": "Other",
     "due": "2026-12-04",
     "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/IRMCD-ITB-2026-04-Invitation-to-Bid-Aerial-Adulticiding-Services/0000444298?purchasingGroupId=8408751&origin=2"
    },
    {
-    "county": "Alachua",
-    "agency": "Gainesville Regional Utilities",
-    "title": "GRU FY2027 Compensation Study",
-    "category": "Consulting & Professional Services",
+    "county": "Escambia",
+    "agency": "Escambia County BOCC",
+    "title": "Derelict Vessel Removal - 41' Gibson boat",
+    "category": "Facilities & Maintenance",
     "due": "",
-    "url": "https://procurement.opengov.com/portal/gru/projects/327004"
+    "url": "https://procurement.opengov.com/portal/escambiacountyfl/projects/327616"
+   },
+   {
+    "county": "Volusia",
+    "agency": "Volusia County",
+    "title": "Main Street Bridge Cleaning and Painting",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/volusia/projects/328017"
+   },
+   {
+    "county": "Hillsborough",
+    "agency": "City of Tampa",
+    "title": "Mini Split for Office Room",
+    "category": "Other",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityoftampa/projects/328007"
    }
   ],
   "caption_default": "🦎 35 new government bids posted in Florida today, across 13 counties.\n\n📍 Miami-Dade: 7360: Sidewalk Improvements-Multiple Sites - 2\n📍 Polk: PRWC SELFA WPF Injection Well IW-2\n📍 Indian River: IRMCD ITB 2026-04 - Invitation to Bid Aerial Adulticiding Services\n\nAll 698 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -61,44 +61,36 @@
   "new_this_week": 13,
   "items": [
    {
-    "county": "Pinellas",
-    "agency": "Pinellas County BOCC",
-    "title": "Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)",
-    "category": "Consulting & Professional Services",
-    "due": "2031-09-11",
-    "url": "https://procurement.opengov.com/portal/pinellasfl"
-   },
-   {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Real Estate Appraisal Services",
-    "category": "Consulting & Professional Services",
-    "due": "2028-10-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/REAL-ESTATE-APPRAISAL-SERVICES/0000382936?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement",
-    "category": "Consulting & Professional Services",
-    "due": "2028-08-06",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl"
-   },
-   {
-    "county": "Palm Beach",
-    "agency": "City of Delray Beach",
-    "title": "RFP2027-014 - Public Service Grant Opportunities",
-    "category": "Consulting & Professional Services",
-    "due": "2026-12-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/RFP2027-014-Public-Service-Grant-Opportunities/0000443814?purchasingGroupId=8408751&origin=2"
-   },
-   {
     "county": "Volusia",
     "agency": "Volusia County",
     "title": "Ocean Center Event Staffing and Event Security Services",
     "category": "Consulting & Professional Services",
     "due": "2026-12-09",
     "url": "https://procurement.opengov.com/portal/volusia"
+   },
+   {
+    "county": "Miami-Dade",
+    "agency": "Miami-Dade County",
+    "title": "Public Housing Answering Service",
+    "category": "Consulting & Professional Services",
+    "due": "",
+    "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/FutureSolicitationDetails?webPostingCounter=9004"
+   },
+   {
+    "county": "Alachua",
+    "agency": "Gainesville Regional Utilities",
+    "title": "GRU Employee Compensation Study",
+    "category": "Consulting & Professional Services",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/gru/projects/327004"
+   },
+   {
+    "county": "Walton",
+    "agency": "Walton County BOCC",
+    "title": "Operational Audit of Road Maintenance Contracts",
+    "category": "Consulting & Professional Services",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/waltoncountyfl/projects/307382"
    }
   ],
   "caption_default": "🔎 Consulting & Professional Services: 49 open Florida bids, 13 new this week.\n\n• Pinellas: Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)\n• Miami-Dade: Real Estate Appraisal Services\n• Escambia: Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement\n• Palm Beach: RFP2027-014 - Public Service Grant Opportunities\n\nFilter by your business 👉 https://floridabids.org",
