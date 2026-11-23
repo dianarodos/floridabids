@@ -19,31 +19,23 @@
    {
     "county": "St. Lucie",
     "agency": "City of Fort Pierce",
-    "title": "Operational Management of the Fort Pierce Animal Adoption Center (animal Shelter)",
+    "title": "Operational Management of the Fort Pierce Animal Adoption Center",
     "category": "Construction",
     "due": "2027-12-29",
     "url": "https://www.cityoffortpierce.com/bids.aspx?bidID=369"
    },
    {
-    "county": "Palm Beach",
-    "agency": "City of Lake Worth Beach",
-    "title": "IFB#26-117R - Water Treatment Plant Renovations - Re-Bid",
+    "county": "Santa Rosa",
+    "agency": "Santa Rosa County BOCC",
+    "title": "Navarre Pier Restrooms",
     "category": "Construction",
-    "due": "2026-12-29",
-    "url": "https://lakeworthbeachfl.bidsandtenders.net/Module/Tenders/en/Tender/Detail/c9cd96c5-905c-4a2f-928c-8b3bdfea6de6"
-   },
-   {
-    "county": "Martin",
-    "agency": "Martin County BOCC",
-    "title": "Baker Act Transportation Services",
-    "category": "Other",
-    "due": "2026-12-16",
-    "url": "https://www.demandstar.com/app/limited/bids/558595/details"
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/santarosafl/projects/326765"
    },
    {
     "county": "Miami-Dade",
     "agency": "City of Hialeah",
-    "title": "Goodlet Theater - Entrance Doors & Glass Panel Windows",
+    "title": "Goodlet Theater – Entrance Doors & Glass Panel Windows",
     "category": "Other",
     "due": "",
     "url": "https://procurement.opengov.com/portal/cityofhialeahfl/projects/323892"
@@ -59,44 +51,36 @@
   "count": 52,
   "items": [
    {
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Countywide Dumpster & Trash Pickup Services",
+    "category": "Facilities & Maintenance",
+    "due": "2026-11-25",
+    "url": "https://www.polkfl.gov/bid-form/bid-26-389/"
+   },
+   {
+    "county": "Charlotte",
+    "agency": "Charlotte County BOCC",
+    "title": "Roofing and Roof Repairs - Annual Contract",
+    "category": "Construction",
+    "due": "2026-11-25",
+    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/270103?tp=D"
+   },
+   {
+    "county": "Miami-Dade",
+    "agency": "City of Miami Beach",
+    "title": "Street Lighting Maintenance, Miami Beach",
+    "category": "Facilities & Maintenance",
+    "due": "2026-11-30",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Maintenance-of-Street-Lighting-on-all-Roads-Within-the-Miami-Beach-City-Limits/0000440023?purchasingGroupId=8408751&origin=2"
+   },
+   {
     "county": "Broward",
     "agency": "City of Sunrise",
     "title": "Temporary Employment Services",
     "category": "Consulting & Professional Services",
     "due": "2026-11-30",
     "url": "https://www.demandstar.com/app/limited/bids/555818/details"
-   },
-   {
-    "county": "Clay",
-    "agency": "Clay County BOCC",
-    "title": "County Road 220 Phase 2 – Milling and Resurfacing",
-    "category": "Construction",
-    "due": "2026-11-30",
-    "url": "https://procurement.opengov.com/portal/claycounty"
-   },
-   {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Maintenance of Street Lighting on all Roads Within the Miami Beach City Limits",
-    "category": "Facilities & Maintenance",
-    "due": "2026-11-30",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Maintenance-of-Street-Lighting-on-all-Roads-Within-the-Miami-Beach-City-Limits/0000440023?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "St. Lucie",
-    "agency": "St. Lucie County BOCC",
-    "title": "Clerk of Court Website Redesign, Hosting, Security & Digital Customer Experience",
-    "category": "IT & Technology",
-    "due": "2026-11-30",
-    "url": "https://www.demandstar.com/app/limited/bids/555741/details"
-   },
-   {
-    "county": "Palm Beach",
-    "agency": "Town of South Palm Beach",
-    "title": "Town Hall Roof Replacement",
-    "category": "Construction",
-    "due": "2026-11-30",
-    "url": "https://www.southpalmbeach.com/bids.aspx?bidID=1"
    }
   ],
   "caption_default": "⏰ Last call: 52 Florida bids close in the next 7 days. Don't miss a deadline.\n\n• Broward: Temporary Employment Services (due Nov 30)\n• Clay: County Road 220 Phase 2 – Milling and Resurfacing (due Nov 30)\n• Miami-Dade: Maintenance of Street Lighting on all Roads Within the Miami Beach City Limits (due Nov 30)\n• St. Lucie: Clerk of Court Website Redesign, Hosting, Security & Digital Customer Experience (due Nov 30)\n\nFull list 👉 https://floridabids.org",
