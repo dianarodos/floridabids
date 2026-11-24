@@ -17,36 +17,36 @@
   "counties": 15,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "VMware Licenses and Support",
-    "category": "IT & Technology",
-    "due": "2028-04-27",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/VMware-Licenses-and-Support/0000382920?purchasingGroupId=8408751&origin=2"
+    "county": "Hillsborough",
+    "agency": "City of Tampa",
+    "title": "Insect & Reptile Removal (Water Dept.)",
+    "category": "Other",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityoftampa/projects/328452"
    },
    {
-    "county": "Clay",
-    "agency": "Clay County Utility Authority",
-    "title": "Notice of Upcoming CCUA Solicitation - Miller Street Water Reclamation Facility (WRF) Upgrades Project",
-    "category": "Construction",
-    "due": "2027-01-22",
-    "url": "https://procurement.opengov.com/portal/clayutility/projects/328673"
+    "county": "Hillsborough",
+    "agency": "City of Tampa",
+    "title": "Gym Wood Floor Refinishing",
+    "category": "Other",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/cityoftampa/projects/327985"
    },
    {
-    "county": "Putnam",
-    "agency": "Putnam County BOCC",
-    "title": "Bardin Bridge 764005 Rehabilitation",
-    "category": "Construction",
-    "due": "2027-01-07",
-    "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Mowing & Maintenance, Natural Resources Sites",
+    "category": "Facilities & Maintenance",
+    "due": "2026-12-16",
+    "url": "https://www.polkfl.gov/bid-form/bid-27-025/"
    },
    {
-    "county": "Martin",
-    "agency": "Martin County BOCC",
-    "title": "Security & Access Control Service, Equipment & Installation (Re-bid)",
-    "category": "IT & Technology",
-    "due": "2027-01-06",
-    "url": "https://www.demandstar.com/app/limited/bids/558478/details"
+    "county": "Brevard",
+    "agency": "Brevard County BOCC",
+    "title": "Unarmed Security Guards, Solid Waste",
+    "category": "Facilities & Maintenance",
+    "due": "2026-12-17",
+    "url": "https://www.myvendorlink.com/external/bids?a=70"
    }
   ],
   "caption_default": "🦎 33 new government bids posted in Florida today, across 15 counties.\n\n📍 Miami-Dade: VMware Licenses and Support\n📍 Clay: Notice of Upcoming CCUA Solicitation - Miller Street Water Reclamation Facility (WRF) Upgrades Project\n📍 Putnam: Bardin Bridge 764005 Rehabilitation\n\nAll 722 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -62,30 +62,6 @@
   "items": [
    {
     "county": "Pinellas",
-    "agency": "Pinellas County BOCC",
-    "title": "Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)",
-    "category": "Consulting & Professional Services",
-    "due": "2031-09-11",
-    "url": "https://procurement.opengov.com/portal/pinellasfl"
-   },
-   {
-    "county": "Pinellas",
-    "agency": "Pinellas County BOCC",
-    "title": "General Solicitation for Emergency/Disaster Response Goods & Services",
-    "category": "Goods & Supplies",
-    "due": "2029-07-31",
-    "url": "https://procurement.opengov.com/portal/pinellasfl"
-   },
-   {
-    "county": "Pinellas",
-    "agency": "City of St. Petersburg",
-    "title": "Rehabilitation of Residential Single-Family Properties: Plumbers, Roofing, Building, Residential, and General Contractors",
-    "category": "Construction",
-    "due": "2029-03-15",
-    "url": "https://procurement.opengov.com/portal/stpete"
-   },
-   {
-    "county": "Pinellas",
     "agency": "City of St. Petersburg",
     "title": "Fireworks Displays",
     "category": "Concessions & Programs",
@@ -99,6 +75,22 @@
     "category": "Construction",
     "due": "",
     "url": "https://stpetebeach.bonfirehub.com/opportunities/256236"
+   },
+   {
+    "county": "Pinellas",
+    "agency": "City of St. Petersburg",
+    "title": "Yard Waste Recycling",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/stpete/projects/317924"
+   },
+   {
+    "county": "Pinellas",
+    "agency": "City of St. Petersburg",
+    "title": "Home Rehab: Plumbers, Roofers, Contractors",
+    "category": "Construction",
+    "due": "2029-03-15",
+    "url": "https://procurement.opengov.com/portal/stpete"
    }
   ],
   "caption_default": "📍 County spotlight: Pinellas. 32 open bids right now, 8 posted this week.\n\n• Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)\n• General Solicitation for Emergency/Disaster Response Goods & Services\n• Rehabilitation of Residential Single-Family Properties: Plumbers, Roofing, Building, Residential, and General Contractors\n• Fireworks Displays\n\nEvery Pinellas bid 👉 https://floridabids.org",
