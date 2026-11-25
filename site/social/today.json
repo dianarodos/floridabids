@@ -18,35 +18,35 @@
   "items": [
    {
     "county": "Okaloosa",
+    "agency": "Okaloosa County BOCC",
+    "title": "Landscape Management Services",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/myokaloosa/projects/319815"
+   },
+   {
+    "county": "Orange",
+    "agency": "City of Orlando",
+    "title": "Fire Extinguisher & Kitchen Hood Inspection",
+    "category": "Facilities & Maintenance",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/orlando/projects/298917"
+   },
+   {
+    "county": "Okaloosa",
     "agency": "City of Fort Walton Beach",
-    "title": "27-001 ITB - Golf Course Range Tee Renovation",
+    "title": "Golf Course Range Tee Renovation",
     "category": "Construction",
     "due": "2027-01-07",
     "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/27-001-ITB-Golf-Course-Range-Tee-Renovation/0000444479?purchasingGroupId=8408751&origin=2"
    },
    {
-    "county": "Charlotte",
-    "agency": "Charlotte County BOCC",
-    "title": "Ackerman Vacuum Sewer Zone 4 - Plumbing Contract 2",
-    "category": "Construction",
-    "due": "2027-01-06",
-    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/271303?tp=D"
-   },
-   {
-    "county": "Broward",
-    "agency": "City of Tamarac",
-    "title": "Autodesk AutoCAD Subscription Renewal",
-    "category": "IT & Technology",
-    "due": "2026-12-14",
-    "url": "https://tamarac.bidsandtenders.net/Module/Tenders/en/Tender/Detail/3570fecc-567c-4722-984f-96f13be805d8"
-   },
-   {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Efficiency Assessment of Parks, Facilities, Fleet and Beaches Operations",
-    "category": "Goods & Supplies",
-    "due": "2026-12-11",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Efficiency-Assessment-of-Parks-Facilities-Fleet-and-Beaches-Operations/0000444008?purchasingGroupId=8408751&origin=2"
+    "county": "Pinellas",
+    "agency": "Pinellas County BOCC",
+    "title": "Sutherland Bayou Boat Ramp Concession",
+    "category": "Property & Real Estate",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/pinellasfl/projects/323463"
    }
   ],
   "caption_default": "🦎 20 new government bids posted in Florida today, across 11 counties.\n\n📍 Okaloosa: 27-001 ITB - Golf Course Range Tee Renovation\n📍 Charlotte: Ackerman Vacuum Sewer Zone 4 - Plumbing Contract 2\n📍 Broward: Autodesk AutoCAD Subscription Renewal\n\nAll 733 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -61,44 +61,36 @@
   "new_this_week": 12,
   "items": [
    {
-    "county": "Pinellas",
-    "agency": "Pinellas County BOCC",
-    "title": "Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)",
-    "category": "Consulting & Professional Services",
-    "due": "2031-09-11",
-    "url": "https://procurement.opengov.com/portal/pinellasfl"
-   },
-   {
-    "county": "Miami-Dade",
-    "agency": "City of Miami Beach",
-    "title": "Real Estate Appraisal Services",
-    "category": "Consulting & Professional Services",
-    "due": "2028-10-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/REAL-ESTATE-APPRAISAL-SERVICES/0000382936?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Escambia",
-    "agency": "Escambia County BOCC",
-    "title": "Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement",
-    "category": "Consulting & Professional Services",
-    "due": "2028-08-06",
-    "url": "https://procurement.opengov.com/portal/escambiacountyfl"
-   },
-   {
     "county": "Charlotte",
     "agency": "Charlotte County BOCC",
-    "title": "Charlotte County Sheriff Firing Range Study",
+    "title": "Economic Impact Study for Spring Training",
     "category": "Consulting & Professional Services",
-    "due": "2026-12-21",
-    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/270983?tp=D"
+    "due": "2026-12-02",
+    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/271203?tp=D"
    },
    {
-    "county": "Palm Beach",
-    "agency": "City of Delray Beach",
-    "title": "RFP2027-014 - Public Service Grant Opportunities",
+    "county": "Orange",
+    "agency": "City of Orlando",
+    "title": "Annual External Financial Audit",
     "category": "Consulting & Professional Services",
-    "due": "2026-12-17",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/RFP2027-014-Public-Service-Grant-Opportunities/0000443814?purchasingGroupId=8408751&origin=2"
+    "due": "2026-12-07",
+    "url": "https://procurement.opengov.com/portal/orlando"
+   },
+   {
+    "county": "Volusia",
+    "agency": "Volusia County",
+    "title": "Ocean Center Event Staffing & Security",
+    "category": "Consulting & Professional Services",
+    "due": "2026-12-09",
+    "url": "https://procurement.opengov.com/portal/volusia"
+   },
+   {
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Advertising & Marketing for Visit Central Florida",
+    "category": "Consulting & Professional Services",
+    "due": "",
+    "url": "https://www.polkfl.gov/bid-form/rfp-26-345/"
    }
   ],
   "caption_default": "🔎 Consulting & Professional Services: 51 open Florida bids, 12 new this week.\n\n• Pinellas: Pinellas County SBE Consultants per the Consultant Competitive Negotiations Act (CCNA)\n• Miami-Dade: Real Estate Appraisal Services\n• Escambia: Task Order Solicitation for Code Enforcement- Re-solicit - 2nd Advertisement\n• Charlotte: Charlotte County Sheriff Firing Range Study\n\nFilter by your business 👉 https://floridabids.org",
