@@ -17,36 +17,28 @@
   "counties": 7,
   "items": [
    {
-    "county": "Miami-Dade",
-    "agency": "Miami-Dade County",
-    "title": "E26WS03 - Geotechnical Services, Structural Assess",
-    "category": "Engineering & Architecture",
-    "due": "2027-01-12",
-    "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL"
-   },
-   {
     "county": "Putnam",
     "agency": "Putnam County BOCC",
-    "title": "Veteran’s Services and Information Technology Departments Office Renovation Project",
+    "title": "Veterans Services & IT Office Renovation",
     "category": "IT & Technology",
     "due": "2027-01-11",
     "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
    },
    {
+    "county": "Polk",
+    "agency": "City of Winter Haven",
+    "title": "Transcription Services – Annual Contract",
+    "category": "Other",
+    "due": "",
+    "url": "https://procurement.opengov.com/portal/winterhavenfl/projects/321474"
+   },
+   {
     "county": "Palm Beach",
     "agency": "City of Delray Beach",
-    "title": "Vertical Platform Lift Replacement for Sandoway Discovery Center",
+    "title": "Vertical Platform Lift Replacement",
     "category": "IT & Technology",
     "due": "2026-12-23",
     "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/VERTICAL-PLATFORM-LIFT-REPLACEMENT-FOR-SANDOWAY-DISCOVERY-CENTER/0000444613?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Clay",
-    "agency": "Clay County BOCC",
-    "title": "Notice of Intended Single Source Purchase - Extrication Equipment",
-    "category": "Goods & Supplies",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/claycounty/projects/327202"
    }
   ],
   "caption_default": "🦎 12 new government bids posted in Florida today, across 7 counties.\n\n📍 Miami-Dade: E26WS03 - Geotechnical Services, Structural Assess\n📍 Putnam: Veteran’s Services and Information Technology Departments Office Renovation Project\n📍 Palm Beach: Vertical Platform Lift Replacement for Sandoway Discovery Center\n\nAll 731 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
@@ -59,44 +51,28 @@
   "count": 45,
   "items": [
    {
-    "county": "Alachua",
-    "agency": "Alachua County BOCC",
-    "title": "Alachua County Civil Sheriff New Office Buildout at the New Court Complex Parking Garage",
-    "category": "Construction",
+    "county": "Polk",
+    "agency": "Polk County BOCC",
+    "title": "Countywide Dumpster & Trash Pickup",
+    "category": "Facilities & Maintenance",
     "due": "2026-12-02",
-    "url": "https://procurement.opengov.com/portal/alachuacounty"
-   },
-   {
-    "county": "Hernando",
-    "agency": "Hernando County School District",
-    "title": "Goundskeeping & Athletic Turf Materials (Herbicides, Pesticides, Fertilizers,",
-    "category": "Facilities & Maintenance",
-    "due": "2026-12-03",
-    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Goundskeeping-Athletic-Turf-Materials-Herbicides-Pesticides-Fertilizers/0000441153?purchasingGroupId=8408751&origin=2"
-   },
-   {
-    "county": "Hillsborough",
-    "agency": "City of Plant City",
-    "title": "Plant City Utilities Communication Tower Generator Replacement (FEMA)",
-    "category": "Facilities & Maintenance",
-    "due": "2026-12-03",
-    "url": "https://procurement.opengov.com/portal/plantcitygov"
-   },
-   {
-    "county": "Lake",
-    "agency": "City of Clermont",
-    "title": "Public Safety Vehicle Equipment and Upfitting Services",
-    "category": "Goods & Supplies",
-    "due": "2026-12-03",
-    "url": "https://procurement.opengov.com/portal/clermontfl"
+    "url": "https://www.polkfl.gov/bid-form/bid-26-389/"
    },
    {
     "county": "St. Johns",
     "agency": "St. Johns County BOCC",
-    "title": "3153 Janitorial Services for Sjc Fire Rescue Administration",
+    "title": "Janitorial Services – Fire Rescue HQ",
     "category": "Facilities & Maintenance",
     "due": "2026-12-03",
     "url": "https://www.demandstar.com/app/limited/bids/556502/details"
+   },
+   {
+    "county": "Charlotte",
+    "agency": "Charlotte County BOCC",
+    "title": "Boca Grande Fishing Pier Repairs",
+    "category": "Construction",
+    "due": "2026-12-02",
+    "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/ShowDoc/266403?tp=D"
    }
   ],
   "caption_default": "⏰ Last call: 45 Florida bids close in the next 7 days. Don't miss a deadline.\n\n• Alachua: Alachua County Civil Sheriff New Office Buildout at the New Court Complex Parking Garage (due Dec 2)\n• Hernando: Goundskeeping & Athletic Turf Materials (Herbicides, Pesticides, Fertilizers, (due Dec 3)\n• Hillsborough: Plant City Utilities Communication Tower Generator Replacement (FEMA) (due Dec 3)\n• Lake: Public Safety Vehicle Equipment and Upfitting Services (due Dec 3)\n\nFull list 👉 https://floridabids.org",
