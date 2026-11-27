@@ -391,12 +391,11 @@
  },
  {
   "date": "2026-11-27",
-  "slot": "pm",
+  "slot": "am",
   "platform": "facebook",
-  "theme": "week_recap",
+  "theme": "new_today",
   "at": "2026-11-27T06:36-05:00",
-  "id": "122112110619546057",
-  "status": "scheduled",
-  "scheduled_for": "15:00"
+  "id": "1471999489323697_122112110601546057",
+  "status": "posted"
  }
 ]
