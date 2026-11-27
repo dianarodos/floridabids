@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated": "2026-11-26 05:20 AM",
-  "updated_iso": "2026-11-26T05:20-05:00",
+  "updated": "2026-11-27 05:20 AM",
+  "updated_iso": "2026-11-27T05:20-05:00",
   "sources": [
    {
     "id": "brevard-vendorlink",
@@ -11,7 +11,7 @@
     "status": "ok",
     "count": 34,
     "new": 28,
-    "seconds": 6.5
+    "seconds": 5.4
    },
    {
     "id": "osceola-vendorlink",
@@ -20,7 +20,7 @@
     "url": "https://vendorlink.osceola.org/external/bids",
     "status": "error",
     "error": "TimeoutError: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until 'load'\n============================================================",
-    "seconds": 36.5
+    "seconds": 36.1
    },
    {
     "id": "charlotte-county",
@@ -30,7 +30,7 @@
     "status": "ok",
     "count": 13,
     "new": 0,
-    "seconds": 1.1
+    "seconds": 0.7
    },
    {
     "id": "columbia-county",
@@ -40,7 +40,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.5
+    "seconds": 0.4
    },
    {
     "id": "lake-county",
@@ -49,7 +49,7 @@
     "url": "https://c.lakecountyfl.gov/offices/procurement_services/view_all_bids.aspx",
     "status": "error",
     "error": "TimeoutError: Page.wait_for_function: Timeout 60000ms exceeded.",
-    "seconds": 61.5
+    "seconds": 61.1
    },
    {
     "id": "polk-county",
@@ -59,7 +59,7 @@
     "status": "ok",
     "count": 49,
     "new": 0,
-    "seconds": 0.3
+    "seconds": 0.5
    },
    {
     "id": "putnam-county",
@@ -68,8 +68,8 @@
     "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/",
     "status": "ok",
     "count": 3,
-    "new": 1,
-    "seconds": 2.4
+    "new": 0,
+    "seconds": 2.2
    },
    {
     "id": "jacksonville-oracle",
@@ -77,8 +77,8 @@
     "agency": "City of Jacksonville",
     "url": "https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179",
     "status": "error",
-    "error": "RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=lwvvkjx1yxtrtb_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'",
-    "seconds": 61.8
+    "error": "RuntimeError: TimeoutError on https://eims.fa.us2.oraclecloud.com/fscmUI/faces/NegotiationAbstracts?prcBuId=300000008806179&_adf.ctrl-state=le42c2en2rw9m3_4 - page title 'Solicitation Abstracts', text 'Skip to main content Sign In Solicitation Abstracts Time Zone US Eastern Time'",
+    "seconds": 62.4
    },
    {
     "id": "jaxport",
@@ -88,7 +88,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 2.4
+    "seconds": 1.9
    },
    {
     "id": "duval-schools-demandstar",
@@ -118,7 +118,7 @@
     "status": "ok",
     "count": 11,
     "new": 0,
-    "seconds": 0.7
+    "seconds": 0.9
    },
    {
     "id": "wellington-demandstar",
@@ -128,7 +128,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 4.0
+    "seconds": 3.9
    },
    {
     "id": "sunrise-demandstar",
@@ -167,7 +167,7 @@
     "url": "https://sms-fortlauderdale-prd.inforcloudsuite.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=COFL",
     "status": "error",
     "error": "RuntimeError: expected JSON, got None: ''",
-    "seconds": 2.3
+    "seconds": 2.1
    },
    {
     "id": "fellsmere-govaccess",
@@ -176,7 +176,7 @@
     "url": "https://www.cityoffellsmere.org/rfps",
     "status": "blocked",
     "error": "HTTP 403 from https://www.cityoffellsmere.org/rfps",
-    "seconds": 0.4
+    "seconds": 0.3
    },
    {
     "id": "westlake-govaccess",
@@ -186,7 +186,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 0.3
    },
    {
     "id": "fort-pierce-civicplus",
@@ -196,7 +196,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.7
+    "seconds": 0.6
    },
    {
     "id": "greenacres-demandstar",
@@ -206,7 +206,7 @@
     "status": "ok",
     "count": 2,
     "new": 0,
-    "seconds": 6.0
+    "seconds": 6.3
    },
    {
     "id": "hallandale-beach-page",
@@ -216,7 +216,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 2.1
+    "seconds": 2.4
    },
    {
     "id": "haverhill-watch",
@@ -226,7 +226,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 0.4
    },
    {
     "id": "highland-beach-demandstar",
@@ -236,7 +236,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 7.5
+    "seconds": 7.8
    },
    {
     "id": "hillsboro-beach-watch",
@@ -246,7 +246,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 0.5
    },
    {
     "id": "hypoluxo-govaccess",
@@ -256,7 +256,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.5
+    "seconds": 0.3
    },
    {
     "id": "indiantown-govaccess",
@@ -265,7 +265,7 @@
     "url": "https://www.indiantownfl.gov/rfps",
     "status": "blocked",
     "error": "HTTP 403 from https://www.indiantownfl.gov/rfps",
-    "seconds": 0.4
+    "seconds": 0.1
    },
    {
     "id": "jupiter-inlet-colony-watch",
@@ -275,7 +275,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.8
+    "seconds": 0.6
    },
    {
     "id": "lake-clarke-shores-govaccess",
@@ -284,7 +284,7 @@
     "url": "https://www.townoflcs.gov/rfps",
     "status": "blocked",
     "error": "HTTP 403 from https://www.townoflcs.gov/rfps",
-    "seconds": 0.3
+    "seconds": 0.2
    },
    {
     "id": "lake-park-watch",
@@ -303,7 +303,7 @@
     "status": "ok",
     "count": 3,
     "new": 0,
-    "seconds": 2.4
+    "seconds": 2.3
    },
    {
     "id": "margate-civicplus",
@@ -333,7 +333,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 7.9
+    "seconds": 8.2
    },
    {
     "id": "pembroke-park-page",
@@ -343,7 +343,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.6
+    "seconds": 0.5
    },
    {
     "id": "south-palm-beach-civicplus",
@@ -353,7 +353,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 0.8
+    "seconds": 0.4
    },
    {
     "id": "st-johns-demandstar",
@@ -363,7 +363,7 @@
     "status": "ok",
     "count": 14,
     "new": 0,
-    "seconds": 9.4
+    "seconds": 9.7
    },
    {
     "id": "st-lucie-demandstar",
@@ -373,7 +373,7 @@
     "status": "ok",
     "count": 9,
     "new": 0,
-    "seconds": 11.2
+    "seconds": 11.5
    },
    {
     "id": "highlands-bidnet",
@@ -383,7 +383,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 0.8
+    "seconds": 0.7
    },
    {
     "id": "riviera-beach-bidnet",
@@ -403,7 +403,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 4.1
+    "seconds": 3.8
    },
    {
     "id": "ace-theater-bidnet",
@@ -413,7 +413,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 5.9
+    "seconds": 5.1
    },
    {
     "id": "alachua-housing-bidnet",
@@ -433,7 +433,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 7.9
+    "seconds": 7.1
    },
    {
     "id": "bay-county-bidnet",
@@ -453,7 +453,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 9.7
+    "seconds": 9.1
    },
    {
     "id": "cfx-bidnet",
@@ -463,7 +463,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 9.9
+    "seconds": 10.1
    },
    {
     "id": "avon-park-bidnet",
@@ -473,7 +473,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 12.0
+    "seconds": 11.0
    },
    {
     "id": "brooksville-bidnet",
@@ -493,7 +493,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 14.1
+    "seconds": 13.1
    },
    {
     "id": "delray-beach-bidnet",
@@ -502,8 +502,8 @@
     "url": "https://www.bidnetdirect.com/florida/cityofdelraybeach/solicitations/open-bids?selectedContent=BUYER",
     "status": "ok",
     "count": 8,
-    "new": 2,
-    "seconds": 13.9
+    "new": 0,
+    "seconds": 14.1
    },
    {
     "id": "fort-walton-beach-bidnet",
@@ -513,7 +513,7 @@
     "status": "ok",
     "count": 1,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 15.1
    },
    {
     "id": "hialeah-bidnet",
@@ -523,7 +523,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.8
+    "seconds": 16.1
    },
    {
     "id": "mary-esther-bidnet",
@@ -533,7 +533,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 16.0
    },
    {
     "id": "miami-bidnet",
@@ -543,7 +543,7 @@
     "status": "ok",
     "count": 5,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 16.0
    },
    {
     "id": "miami-beach-bidnet",
@@ -553,7 +553,7 @@
     "status": "ok",
     "count": 25,
     "new": 0,
-    "seconds": 16.4
+    "seconds": 16.6
    },
    {
     "id": "milton-bidnet",
@@ -573,7 +573,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.8
+    "seconds": 15.9
    },
    {
     "id": "pensacola-bidnet",
@@ -583,7 +583,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 15.8
    },
    {
     "id": "port-richey-bidnet",
@@ -593,7 +593,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.8
+    "seconds": 15.9
    },
    {
     "id": "sarasota-city-bidnet",
@@ -603,7 +603,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 15.9
    },
    {
     "id": "sebring-bidnet",
@@ -643,7 +643,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 15.9
    },
    {
     "id": "ecua-bidnet",
@@ -663,7 +663,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.5
+    "seconds": 16.1
    },
    {
     "id": "escambia-schools-bidnet",
@@ -693,7 +693,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.1
    },
    {
     "id": "fsw-bidnet",
@@ -703,7 +703,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 15.9
    },
    {
     "id": "fort-myers-beach-bidnet",
@@ -723,7 +723,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 16.1
    },
    {
     "id": "gmx-bidnet",
@@ -743,7 +743,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.6
+    "seconds": 15.9
    },
    {
     "id": "hernando-county-bidnet",
@@ -753,7 +753,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 16.1
    },
    {
     "id": "hernando-schools-bidnet",
@@ -773,7 +773,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.2
+    "seconds": 16.0
    },
    {
     "id": "ir-mosquito-bidnet",
@@ -783,7 +783,7 @@
     "status": "ok",
     "count": 2,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 16.1
    },
    {
     "id": "irsc-bidnet",
@@ -793,7 +793,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.0
+    "seconds": 16.1
    },
    {
     "id": "jackson-county-bidnet",
@@ -803,7 +803,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 16.0
    },
    {
     "id": "lwr-ida-bidnet",
@@ -833,7 +833,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 16.1
+    "seconds": 15.8
    },
    {
     "id": "mdc-bidnet",
@@ -853,7 +853,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 15.9
+    "seconds": 16.0
    },
    {
     "id": "langd-bidnet",
@@ -900,7 +900,7 @@
     "status": "empty",
     "count": 0,
     "new": 0,
-    "seconds": 76.0
+    "seconds": 73.8
    },
    {
     "id": "miami-dade-informs",
@@ -909,8 +909,8 @@
     "url": "https://supplier.miamidade.gov/psc/EXTSUPP/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL",
     "status": "ok",
     "count": 17,
-    "new": 3,
-    "seconds": 10.4
+    "new": 0,
+    "seconds": 2.7
    },
    {
     "id": "miami-dade-construction",
@@ -933,9 +933,9 @@
   ],
   "email": {
    "status": "ok",
-   "messages": 10,
-   "bids": 42,
-   "unparsed": 1
+   "messages": 1,
+   "bids": 1,
+   "unparsed": 0
   },
   "alert_portals": {
    "opengov": 64,
@@ -994,7 +994,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-006-pw"
   },
@@ -1078,7 +1078,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-13T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "pahokee-demandstar::rfp-2026-02-0-2026/kd"
   },
@@ -1099,7 +1099,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::q-coc-2027001-0-2027/dc"
   },
@@ -1120,7 +1120,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "hypoluxo-govaccess::65744bee70a0"
   },
@@ -1141,7 +1141,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "south-palm-beach-civicplus::itb#11-02-2026"
   },
@@ -1162,7 +1162,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "sebring-bidnet::26-015"
   },
@@ -1183,7 +1183,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-07T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "martin-demandstar::ss-01-0-2027/klb"
   },
@@ -1204,7 +1204,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:16-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-1028-01"
   },
@@ -1267,7 +1267,7 @@
    "notes": "Search for B-6-27-11 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-6-27-11"
   },
@@ -1288,7 +1288,7 @@
    "notes": "Search for RFP-7-27-02 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-29T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brevard-vendorlink::rfp-7-27-02"
   },
@@ -1309,7 +1309,7 @@
    "notes": "Find event EVN0064374 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-09T05:19-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0064374"
   },
@@ -1435,7 +1435,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "highland-beach-demandstar::itb-26-005-0-2026/sc"
   },
@@ -1456,7 +1456,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-389"
   },
@@ -1477,7 +1477,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cq 26-374"
   },
@@ -1498,7 +1498,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-227"
   },
@@ -1519,7 +1519,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-007-0-2027/dc"
   },
@@ -1540,7 +1540,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-01T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::rfp-27-010-0-2027/dc"
   },
@@ -1561,7 +1561,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-01T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-012-0-2027/dc"
   },
@@ -1582,7 +1582,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-24T21:38-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::26-640"
   },
@@ -1603,7 +1603,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-03T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-012"
   },
@@ -1624,7 +1624,7 @@
    "notes": "Contact: Chastity.Williams@CharlotteCountyFL.gov",
    "origin": "direct",
    "first_seen": "2026-11-18T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-113"
   },
@@ -1645,7 +1645,7 @@
    "notes": "Contact: Michael.Gallagher@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-058"
   },
@@ -1666,7 +1666,7 @@
    "notes": "Find event EVN0054248 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0054248"
   },
@@ -1687,7 +1687,7 @@
    "notes": "Contact: Kimberly.Chamberlain@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-074"
   },
@@ -1708,7 +1708,7 @@
    "notes": "Contact: sheri.strong@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-120"
   },
@@ -1750,7 +1750,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "hernando-schools-bidnet::27-675-16"
   },
@@ -1771,7 +1771,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:06-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "hernando-schools-bidnet::27-946-13"
   },
@@ -1834,7 +1834,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-3153-0-2026/sa"
   },
@@ -1855,7 +1855,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-misc 3191-0-2027/jc"
   },
@@ -1876,7 +1876,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-misc 3136-0-2026/lb"
   },
@@ -1897,7 +1897,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-misc 3164-0-2027/jc"
   },
@@ -1939,7 +1939,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-07T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "sunrise-demandstar::bid-bid 27-07-10-hr-0-2026/hr"
   },
@@ -1960,7 +1960,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "duval-schools-demandstar::rfq-11-27-0-2026/lg"
   },
@@ -1981,7 +1981,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-21T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "ir-mosquito-bidnet::itb 2026-04"
   },
@@ -2023,7 +2023,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-029-jp"
   },
@@ -2044,7 +2044,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-bidnet::2184386"
   },
@@ -2065,7 +2065,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-10T05:17-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-2351 re-post-0-2026/gl"
   },
@@ -2086,7 +2086,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-10T05:17-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-2350 re-post-0-2026/gl"
   },
@@ -2107,7 +2107,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-10T05:17-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-2349 re-post-0-2026/gl"
   },
@@ -2128,7 +2128,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::rfi-3180-0-2026/gl"
   },
@@ -2149,7 +2149,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-10T05:17-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-ss 2784r-0-2027/cv"
   },
@@ -2170,7 +2170,7 @@
    "notes": "Find event EVN0065359 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-26T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0065359"
   },
@@ -2212,7 +2212,7 @@
    "notes": "Find event EVN0046649 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-06T05:19-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0046649"
   },
@@ -2233,7 +2233,7 @@
    "notes": "Find event EVN0044812 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-05T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0044812"
   },
@@ -2254,7 +2254,7 @@
    "notes": "Find event ITB0000028 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-27T09:06-04:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::itb0000028"
   },
@@ -2275,7 +2275,7 @@
    "notes": "Find event RFP0000016 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::rfp0000016"
   },
@@ -2296,7 +2296,7 @@
    "notes": "Find event ITB0000050 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-17T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::itb0000050"
   },
@@ -2317,7 +2317,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "sunrise-demandstar::bid-bid 27-05-10-mm-0-2026/mm"
   },
@@ -2338,7 +2338,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "sunrise-demandstar::rfp-rfp 26-04-03-hr-0-2026/hr"
   },
@@ -2359,7 +2359,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-07T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brooksville-bidnet::rfp-dpw-2026-0010"
   },
@@ -2401,7 +2401,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::qr-3184-0-2026/sa"
   },
@@ -2422,7 +2422,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "hallandale-beach-page::rfp 26-27-01"
   },
@@ -2443,7 +2443,7 @@
    "notes": "Contact: marla.balla@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-17T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-103"
   },
@@ -2464,7 +2464,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-bidnet::2302387"
   },
@@ -2485,7 +2485,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "margate-civicplus::2026-006"
   },
@@ -2506,7 +2506,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "martin-demandstar::rfb-3799-0-2027/klb"
   },
@@ -2527,7 +2527,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "martin-demandstar::ss-03-0-2027/klb"
   },
@@ -2548,7 +2548,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "martin-demandstar::rfb-3795-0-2026/klb"
   },
@@ -2590,7 +2590,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-033-nd"
   },
@@ -2632,7 +2632,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-bidnet::2302388"
   },
@@ -2674,7 +2674,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-31T06:16-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::req 2027-009"
   },
@@ -2695,7 +2695,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 27-010"
   },
@@ -2716,7 +2716,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::sb-3096-0-2026/sa"
   },
@@ -2737,7 +2737,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:28-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-002-0-2027/dc"
   },
@@ -2758,7 +2758,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-09T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-016-0-2027/dc"
   },
@@ -2779,7 +2779,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-09T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::rfq-27-013-0-2027/dc"
   },
@@ -2800,7 +2800,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T10:22-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::rfq-27-009-0-2027/dc"
   },
@@ -2842,7 +2842,7 @@
    "notes": "Contact: sheri.strong@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::26-556"
   },
@@ -2863,7 +2863,7 @@
    "notes": "Contact: Ariel.Johnson@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-10-24T21:38-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::26-684"
   },
@@ -2884,7 +2884,7 @@
    "notes": "Find event ITB0000035 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-17T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::itb0000035"
   },
@@ -2905,7 +2905,7 @@
    "notes": "Find event EVN0065233 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-21T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0065233"
   },
@@ -2926,7 +2926,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "ecua-bidnet::2027-07"
   },
@@ -2947,7 +2947,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "ecua-bidnet::2027-03"
   },
@@ -2968,7 +2968,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-28T06:16-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "sebring-bidnet::27-001"
   },
@@ -2989,7 +2989,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "greenacres-demandstar::bid-27-001-0-2026/rw"
   },
@@ -3010,7 +3010,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-ss 3137-0-2026/lb"
   },
@@ -3031,7 +3031,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::ss-ss 3140-0-2026/lb"
   },
@@ -3052,7 +3052,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-25T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2026-0950-02"
   },
@@ -3073,7 +3073,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-14T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "riviera-beach-bidnet::27-005"
   },
@@ -3094,7 +3094,7 @@
    "notes": "Find event RFP0000014 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-16T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::rfp0000014"
   },
@@ -3115,7 +3115,7 @@
    "notes": "Search for RFQ-5-27-06 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-11-14T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brevard-vendorlink::rfq-5-27-06"
   },
@@ -3136,7 +3136,7 @@
    "notes": "Find event EVN0049474 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-10T05:21-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0049474"
   },
@@ -3157,7 +3157,7 @@
    "notes": "Find event EVN0042430 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0042430"
   },
@@ -3178,7 +3178,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-25T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "tamarac-bidsandtenders::iq20261124"
   },
@@ -3199,7 +3199,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-19T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-1720-006"
   },
@@ -3220,7 +3220,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-19T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-1720-007"
   },
@@ -3241,7 +3241,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-19T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::27-1720-005"
   },
@@ -3262,7 +3262,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-04T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "riviera-beach-bidnet::27-008"
   },
@@ -3283,7 +3283,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-16T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "lake-worth-beach-bidsandtenders::b9f53dccaaae"
   },
@@ -3304,7 +3304,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-23T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "martin-demandstar::rfp-3801-0-2027/klb"
   },
@@ -3388,7 +3388,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-05T05:16-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itbc2027-005"
   },
@@ -3409,7 +3409,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 27-025"
   },
@@ -3430,7 +3430,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-johns-demandstar::sb-3187-0-2027/ng"
   },
@@ -3451,7 +3451,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-15T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "st-lucie-demandstar::bid-27-008-0-2027/dc"
   },
@@ -3493,7 +3493,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-14T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "pembroke-park-page::rfp 26-02"
   },
@@ -3535,7 +3535,7 @@
    "notes": "Contact: Krista.Vigne@CharlotteCountyFl.gov",
    "origin": "direct",
    "first_seen": "2026-11-12T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-110"
   },
@@ -3556,7 +3556,7 @@
    "notes": "Contact: Chastity.Williams@CharlotteCountyFL.gov",
    "origin": "direct",
    "first_seen": "2026-11-13T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-088"
   },
@@ -3598,7 +3598,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-16T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "lake-worth-beach-bidsandtenders::183c2b211e7f"
   },
@@ -3619,7 +3619,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-19T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "columbia-county::2026-p"
   },
@@ -3640,7 +3640,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-29T06:16-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "escambia-schools-bidnet::e-rate 470 270001217"
   },
@@ -3661,7 +3661,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-027-jp"
   },
@@ -3682,7 +3682,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-032-nd"
   },
@@ -3703,7 +3703,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "greenacres-demandstar::bid-27-004-0-2027/sb"
   },
@@ -3724,7 +3724,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-07T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "riviera-beach-bidnet::27-001"
   },
@@ -3745,7 +3745,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::rfp2027-014"
   },
@@ -3766,7 +3766,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "milton-bidnet::2026.15"
   },
@@ -3787,7 +3787,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-06T05:16-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "milton-bidnet::2026.16"
   },
@@ -3808,7 +3808,7 @@
    "notes": "Search for B-7-27-12 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-11-14T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-7-27-12"
   },
@@ -3829,7 +3829,7 @@
    "notes": "Search for B-6-27-17 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-6-27-17"
   },
@@ -3850,7 +3850,7 @@
    "notes": "Find event CL00000013 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:31-04:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::cl00000013"
   },
@@ -3871,7 +3871,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-19T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "ir-mosquito-bidnet::itb 2026-03"
   },
@@ -3892,7 +3892,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-bidnet::26-27-001"
   },
@@ -3913,7 +3913,7 @@
    "notes": "Search for B-2-26-42 on the VendorLink page.",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "brevard-vendorlink::b-2-26-42"
   },
@@ -3934,7 +3934,7 @@
    "notes": "Contact: rhiannon.mills@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-098"
   },
@@ -3955,7 +3955,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:18-05:00",
-   "last_seen": "2026-11-26T05:18-05:00",
+   "last_seen": "2026-11-27T05:18-05:00",
    "extra": {},
    "key": "lutheran-services-bidnet::rfp-2026-011"
   },
@@ -3976,7 +3976,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-11T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "duval-schools-demandstar::rfp-09-0-2027/lm"
   },
@@ -3997,7 +3997,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "riviera-beach-bidnet::27-007"
   },
@@ -4018,7 +4018,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-26T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itb no.: 2027-020"
   },
@@ -4039,7 +4039,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-21T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 27-052"
   },
@@ -4060,7 +4060,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-30T06:16-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::nw 800 block west atlantic avenue"
   },
@@ -4081,7 +4081,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-23T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "lake-worth-beach-bidsandtenders::c1995e4a2052"
   },
@@ -4165,7 +4165,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-26T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::rfp 2027-015 bunker gear"
   },
@@ -4186,7 +4186,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-bidnet::25-26-024"
   },
@@ -4249,7 +4249,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-005-wg"
   },
@@ -4270,7 +4270,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-21T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-068-jp"
   },
@@ -4291,7 +4291,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-001-nd"
   },
@@ -4312,7 +4312,7 @@
    "notes": "Find event E26WS02 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-26T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::e26ws02"
   },
@@ -4333,7 +4333,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "martin-demandstar::rfp-3800-0-2027/klb"
   },
@@ -4459,7 +4459,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-21T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-433"
   },
@@ -4480,7 +4480,7 @@
    "notes": "Contact: Ariel.Johnson@charlottecountyfl.gov",
    "origin": "direct",
    "first_seen": "2026-11-25T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "charlotte-county::27-130"
   },
@@ -4501,7 +4501,7 @@
    "notes": "Open the viewer and click the bid to see its documents.",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "putnam-county::27-03"
   },
@@ -4522,7 +4522,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-18T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "tamarac-bidsandtenders::86cb71f60eea"
   },
@@ -4543,7 +4543,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "duval-schools-demandstar::rfp-10-0-2027/lm"
   },
@@ -4564,7 +4564,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-25T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "fort-walton-beach-bidnet::27-001"
   },
@@ -4585,7 +4585,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-25T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::itbc 2027-018"
   },
@@ -4606,7 +4606,7 @@
    "notes": "Open the viewer and click the bid to see its documents.",
    "origin": "direct",
    "first_seen": "2026-11-24T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "putnam-county::27-02"
   },
@@ -4627,7 +4627,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-17T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "escambia-schools-bidnet::270502"
   },
@@ -4648,7 +4648,7 @@
    "notes": "Find event EVN0001094 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-17T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::evn0001094"
   },
@@ -4669,7 +4669,7 @@
    "notes": "Open the viewer and click the bid to see its documents.",
    "origin": "direct",
    "first_seen": "2026-11-26T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "putnam-county::27-04"
   },
@@ -4690,7 +4690,7 @@
    "notes": "Find event E26WS03 on the INFORMS public bidding page.",
    "origin": "direct",
    "first_seen": "2026-11-26T05:20-05:00",
-   "last_seen": "2026-11-26T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
    "extra": {},
    "key": "miami-dade-informs::e26ws03"
   },
@@ -4816,7 +4816,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T13:53-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "delray-beach-bidnet::cra no. 2026-05"
   },
@@ -4861,7 +4861,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2027-004-wg (a)"
   },
@@ -4903,7 +4903,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::itb 2022-045-wg_repost"
   },
@@ -4945,7 +4945,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-23T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "fort-pierce-civicplus::rfp no. 2027-011"
   },
@@ -4987,7 +4987,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2023-036-lb"
   },
@@ -5029,7 +5029,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-24T05:17-05:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2023-157-df"
   },
@@ -5050,7 +5050,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2023-508-jp"
   },
@@ -5155,7 +5155,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2024-004-df"
   },
@@ -5197,7 +5197,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::itb 2025-023-wg"
   },
@@ -5218,7 +5218,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2025-207-jp_repost"
   },
@@ -5239,7 +5239,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2025-141-mp_repost"
   },
@@ -5260,7 +5260,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2025-506-jp_repost"
   },
@@ -5281,7 +5281,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2026-112-jp_repost"
   },
@@ -5302,7 +5302,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-26T14:05-04:00",
-   "last_seen": "2026-11-26T05:17-05:00",
+   "last_seen": "2026-11-27T05:17-05:00",
    "extra": {},
    "key": "miami-beach-bidnet::2026-113-mp_repost"
   },
@@ -5866,7 +5866,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-05"
   },
@@ -5887,7 +5887,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-10"
   },
@@ -5908,7 +5908,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-13"
   },
@@ -5929,7 +5929,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-14 - re-bid"
   },
@@ -5950,7 +5950,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-15"
   },
@@ -5971,7 +5971,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2026-16"
   },
@@ -5992,7 +5992,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-01"
   },
@@ -6013,7 +6013,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-02"
   },
@@ -6034,7 +6034,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-29T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-03"
   },
@@ -6055,7 +6055,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-10-30T06:15-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-04"
   },
@@ -6076,7 +6076,7 @@
    "notes": "Closes: Upon Contract",
    "origin": "direct",
    "first_seen": "2026-11-20T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "wilton-manors-civicplus::2027-05"
   },
@@ -12129,6 +12129,30 @@
    "key": "opengov-flylcpa::#325957"
   },
   {
+   "source_id": "opengov-flylcpa",
+   "county": "Lee",
+   "agency": "Lee County Port Authority",
+   "title": "On-Site Conservation Area Treatment for Lee County Port Authority",
+   "number": "#327728",
+   "type": "",
+   "status": "Open",
+   "category": "Other",
+   "agency_category": "",
+   "posted": "",
+   "due": "",
+   "bid_url": "https://procurement.opengov.com/portal/flylcpa/projects/327728",
+   "source_url": "https://procurement.opengov.com/portal/flylcpa",
+   "notes": "From the agency's email alert.",
+   "origin": "email",
+   "first_seen": "2026-11-27T05:20-05:00",
+   "last_seen": "2026-11-27T05:20-05:00",
+   "extra": {
+    "project_id": "327728",
+    "subject": "New Opportunity Issued by Lee County Port Authority: On-Site Conservation Area Treatment for Lee County Port Authority"
+   },
+   "key": "opengov-flylcpa::#327728"
+  },
+  {
    "source_id": "opengov-cityftmyers",
    "county": "Lee",
    "agency": "City of Fort Myers",
@@ -15127,7 +15151,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::dq 27-012"
   },
@@ -15148,7 +15172,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::dq 27-011"
   },
@@ -15193,7 +15217,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-345"
   },
@@ -15214,7 +15238,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 25-396"
   },
@@ -15235,7 +15259,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 25-230"
   },
@@ -15256,7 +15280,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 24-330"
   },
@@ -15277,7 +15301,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 25-456"
   },
@@ -15298,7 +15322,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cq 26-353"
   },
@@ -15343,7 +15367,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 22-365"
   },
@@ -15364,7 +15388,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-395"
   },
@@ -15385,7 +15409,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 24-507"
   },
@@ -15406,7 +15430,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-07T05:15-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 27-035"
   },
@@ -15427,7 +15451,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::iss 26-065"
   },
@@ -15448,7 +15472,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-320"
   },
@@ -15469,7 +15493,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 13-294"
   },
@@ -15514,7 +15538,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-370"
   },
@@ -15535,7 +15559,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 20-667"
   },
@@ -15604,7 +15628,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 20-1111"
   },
@@ -15625,7 +15649,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-11-20T05:16-05:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 27-018"
   },
@@ -15646,7 +15670,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 20-633"
   },
@@ -15667,7 +15691,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 26-296"
   },
@@ -15688,7 +15712,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-352"
   },
@@ -15733,7 +15757,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-367"
   },
@@ -15754,7 +15778,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-295"
   },
@@ -15775,7 +15799,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 24-194"
   },
@@ -15796,7 +15820,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 24-195"
   },
@@ -15817,7 +15841,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cq 26-343"
   },
@@ -15838,7 +15862,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 09-007"
   },
@@ -15859,7 +15883,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 18-824"
   },
@@ -15880,7 +15904,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 25-303"
   },
@@ -15901,7 +15925,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-349"
   },
@@ -15946,7 +15970,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-387"
   },
@@ -15967,7 +15991,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 26-059"
   },
@@ -16012,7 +16036,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 17-633"
   },
@@ -16033,7 +16057,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::bid 26-372"
   },
@@ -16054,7 +16078,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 25-463"
   },
@@ -16075,7 +16099,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 19-642"
   },
@@ -16096,7 +16120,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 25-475"
   },
@@ -16117,7 +16141,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 26-238"
   },
@@ -16138,7 +16162,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::rfp 26-384"
   },
@@ -16159,7 +16183,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-25T14:39-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 24-022"
   },
@@ -16180,7 +16204,7 @@
    "notes": "",
    "origin": "direct",
    "first_seen": "2026-10-24T21:27-04:00",
-   "last_seen": "2026-11-26T05:16-05:00",
+   "last_seen": "2026-11-27T05:16-05:00",
    "extra": {},
    "key": "polk-county::cs 21-380"
   },
