@@ -1,14 +1,14 @@
 {
- "date": "2026-11-27",
- "weekday": "Friday",
- "nice_date": "Friday, November 27",
+ "date": "2026-11-28",
+ "weekday": "Saturday",
+ "nice_date": "Saturday, November 28",
  "post_days": "Mon-Sat",
  "posts_today": true,
  "stats": {
-  "open": 732,
+  "open": 731,
   "new_today": 1,
-  "new_this_week": 106,
-  "closing_7_days": 63
+  "new_this_week": 72,
+  "closing_7_days": 61
  },
  "am": {
   "theme": "new_today",
@@ -17,93 +17,94 @@
   "counties": 1,
   "items": [
    {
-    "county": "Lee",
-    "agency": "Lee County Port Authority",
-    "title": "On-Site Conservation Area Treatment for Lee County Port Authority",
-    "category": "Other",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/flylcpa/projects/327728"
+    "county": "Miami-Dade",
+    "agency": "City of Miami Beach",
+    "title": "Prequalification Pool for Real Estate Brokerage Services",
+    "category": "Consulting & Professional Services",
+    "due": "2027-10-26",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PREQUALIFICATION-POOL-FOR-REAL-ESTATE-BROKERAGE-SERVICES/0000382905?purchasingGroupId=8408751&origin=2"
    }
   ],
-  "caption_default": "🦎 1 new government bids posted in Florida today, across 1 county.\n\n📍 Lee: On-Site Conservation Area Treatment for Lee County Port Authority\n\nAll 732 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
-  "image": "social/2026-11-27-am.jpg",
-  "image_url": "https://floridabids.org/social/2026-11-27-am.jpg"
+  "caption_default": "🦎 1 new government bids posted in Florida today, across 1 county.\n\n📍 Miami-Dade: Prequalification Pool for Real Estate Brokerage Services\n\nAll 731 open bids, free, updated every morning 👉 https://floridabids.org\n\n#FloridaBids #GovernmentContracts #RFP #SmallBusiness",
+  "image": "social/2026-11-28-am.jpg",
+  "image_url": "https://floridabids.org/social/2026-11-28-am.jpg"
  },
  "pm": {
-  "theme": "week_recap",
-  "headline": "This week in Florida bids",
-  "count": 106,
-  "counties": [
+  "theme": "category_spotlight",
+  "headline": "IT & Technology",
+  "subject": "IT & Technology",
+  "count": 47,
+  "new_this_week": 6,
+  "items": [
    {
     "county": "Miami-Dade",
-    "new": 25
-   },
-   {
-    "county": "Hillsborough",
-    "new": 16
-   },
-   {
-    "county": "Polk",
-    "new": 6
-   },
-   {
-    "county": "Palm Beach",
-    "new": 5
-   },
-   {
-    "county": "Putnam",
-    "new": 5
+    "agency": "City of Miami Beach",
+    "title": "Contractor Pre-Qualification Application FOR STATE HOUSING INITIATIVES PARTNERS",
+    "category": "IT & Technology",
+    "due": "2030-02-25",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/Contractor-Pre-Qualification-Application-FOR-STATE-HOUSING-INITIATIVES-PARTNERS/0000435676?purchasingGroupId=8408751&origin=2"
    },
    {
     "county": "Orange",
-    "new": 5
+    "agency": "Greater Orlando Aviation Authority",
+    "title": "Express Baggage Handling Services Permit Application",
+    "category": "IT & Technology",
+    "due": "2027-10-30",
+    "url": "https://procurement.opengov.com/portal/goaa"
+   },
+   {
+    "county": "Putnam",
+    "agency": "Putnam County BOCC",
+    "title": "Veteran’s Services and Information Technology Departments Office Renovation Project",
+    "category": "IT & Technology",
+    "due": "2027-01-11",
+    "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
+   },
+   {
+    "county": "Martin",
+    "agency": "Martin County BOCC",
+    "title": "Security & Access Control Service, Equipment & Installation (Re-bid)",
+    "category": "IT & Technology",
+    "due": "2027-01-06",
+    "url": "https://www.demandstar.com/app/limited/bids/558478/details"
+   },
+   {
+    "county": "Palm Beach",
+    "agency": "City of Delray Beach",
+    "title": "Vertical Platform Lift Replacement for Sandoway Discovery Center",
+    "category": "IT & Technology",
+    "due": "2026-12-23",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/VERTICAL-PLATFORM-LIFT-REPLACEMENT-FOR-SANDOWAY-DISCOVERY-CENTER/0000444613?purchasingGroupId=8408751&origin=2"
    }
   ],
-  "open": 732,
-  "caption_default": "📊 This week: 106 new Florida government bids.\n\n• Miami-Dade: 25 new\n• Hillsborough: 16 new\n• Polk: 6 new\n• Palm Beach: 5 new\n• Putnam: 5 new\n\nGet them in your inbox every morning, free 👉 https://floridabids.org",
-  "image": "social/2026-11-27-pm.jpg",
-  "image_url": "https://floridabids.org/social/2026-11-27-pm.jpg"
+  "caption_default": "🔎 IT & Technology: 47 open Florida bids, 6 new this week.\n\n• Miami-Dade: Contractor Pre-Qualification Application FOR STATE HOUSING INITIATIVES PARTNERS\n• Orange: Express Baggage Handling Services Permit Application\n• Putnam: Veteran’s Services and Information Technology Departments Office Renovation Project\n• Martin: Security & Access Control Service, Equipment & Installation (Re-bid)\n\nFilter by your business 👉 https://floridabids.org",
+  "image": "social/2026-11-28-pm.jpg",
+  "image_url": "https://floridabids.org/social/2026-11-28-pm.jpg"
  },
  "video": {
   "note": "Pick 2-3 of these for the script: interesting to a small business, still time to respond.",
   "highlights": [
    {
-    "county": "Lee",
-    "agency": "Lee County Port Authority",
-    "title": "On-Site Conservation Area Treatment for Lee County Port Authority",
-    "category": "Other",
-    "due": "",
-    "url": "https://procurement.opengov.com/portal/flylcpa/projects/327728"
+    "county": "Miami-Dade",
+    "agency": "City of Miami Beach",
+    "title": "Prequalification Pool for Real Estate Brokerage Services",
+    "category": "Consulting & Professional Services",
+    "due": "2027-10-26",
+    "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PREQUALIFICATION-POOL-FOR-REAL-ESTATE-BROKERAGE-SERVICES/0000382905?purchasingGroupId=8408751&origin=2"
    }
   ]
  },
  "new_today": [
   {
-   "county": "Lee",
-   "agency": "Lee County Port Authority",
-   "title": "On-Site Conservation Area Treatment for Lee County Port Authority",
-   "category": "Other",
-   "due": "",
-   "url": "https://procurement.opengov.com/portal/flylcpa/projects/327728"
+   "county": "Miami-Dade",
+   "agency": "City of Miami Beach",
+   "title": "Prequalification Pool for Real Estate Brokerage Services",
+   "category": "Consulting & Professional Services",
+   "due": "2027-10-26",
+   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PREQUALIFICATION-POOL-FOR-REAL-ESTATE-BROKERAGE-SERVICES/0000382905?purchasingGroupId=8408751&origin=2"
   }
  ],
  "closing_soon": [
-  {
-   "county": "Miami-Dade",
-   "agency": "City of Miami Beach",
-   "title": "Purchase and Delivery of Hapco Streetlight Poles with Arms and Bases",
-   "category": "Goods & Supplies",
-   "due": "2026-11-27",
-   "url": "https://www.bidnetdirect.com/florida/solicitations/open-bids/PURCHASE-AND-DELIVERY-OF-HAPCO-STREETLIGHT-POLES-WITH-ARMS-AND-BASES/0000443867?purchasingGroupId=8408751&origin=2"
-  },
-  {
-   "county": "Putnam",
-   "agency": "Putnam County School District",
-   "title": "Request for Qualifications – Professional Architectural Services for Bond-Funded School Renovation Projects",
-   "category": "Engineering & Architecture",
-   "due": "2026-11-27",
-   "url": "https://procurement.opengov.com/portal/myputnamschools"
-  },
   {
    "county": "Clay",
    "agency": "Clay County BOCC",
@@ -287,6 +288,22 @@
    "category": "Construction",
    "due": "2026-12-02",
    "url": "https://www.polkfl.gov/bid-form/bid-26-227/"
+  },
+  {
+   "county": "St. Lucie",
+   "agency": "St. Lucie County BOCC",
+   "title": "Belt Maintenance for the St Lucie County Solid Waste Baling & Recycling Facility",
+   "category": "Facilities & Maintenance",
+   "due": "2026-12-02",
+   "url": "https://www.demandstar.com/app/limited/bids/554288/details"
+  },
+  {
+   "county": "St. Lucie",
+   "agency": "St. Lucie County BOCC",
+   "title": "General Marine and Artificial Reef Contracting",
+   "category": "Construction",
+   "due": "2026-12-02",
+   "url": "https://www.demandstar.com/app/limited/bids/555743/details"
   }
  ]
 }
