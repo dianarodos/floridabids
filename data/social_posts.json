@@ -419,11 +419,12 @@
  },
  {
   "date": "2026-11-28",
-  "slot": "am",
+  "slot": "pm",
   "platform": "facebook",
-  "theme": "new_today",
+  "theme": "category_spotlight",
   "at": "2026-11-28T06:40-05:00",
-  "id": "1471999489323697_122112521337546057",
-  "status": "posted"
+  "id": "122112521367546057",
+  "status": "scheduled",
+  "scheduled_for": "15:00"
  }
 ]
